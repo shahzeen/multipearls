@@ -959,7 +959,7 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
     display: table-cell;
     vertical-align: middle;
     height: 50px;
-    padding: 0 28px;
+    padding: 0 10px;
   }
   header .nav > .toggle_cont > li > a > i {
     margin-right: 5px;
@@ -1293,13 +1293,15 @@ section.top {
   font-size: 18px;
   line-height: 24px;
   width: 100%;
-  height: 50px;
-  padding: 14px 120px 14px 20px;
+  height: 40px;
+  padding: 10px 120px 10px 20px;
   background: #fff;
   border: 1px solid #e0e0e0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 .search input[type="text"]:focus {
   outline: none;
@@ -1646,6 +1648,7 @@ section.top {
   height: auto;
   margin-top: 15px;
   margin-left: 5px;
+  padding: 10px;
 }
 .product-list .product-thumb .aside .product-btn:hover {
   background: transparent;
@@ -1656,7 +1659,6 @@ section.top {
   width: 100%;
 }
 .product-list .product-thumb .aside .product-btn-add {
-  background: #333;
   color: #eac322;
   border: none;
 }
@@ -1689,7 +1691,14 @@ section.top {
   border-top: 1px solid #e0e0e0;
   padding-top: 30px;
 }
-
+.product-grid{
+  width: 20%;
+}
+.product-grid .product-thumb{
+  border: 1px solid #f2f2f2;
+  box-shadow: 1px 1px 3px 0 #f2f2f2;
+  padding: 10px;
+}
 .product-grid .product-thumb .image {
   float: none;
 }
@@ -1872,6 +1881,9 @@ html[lang="de"] .sale, html[lang="de"] .new_pr {
 }
 .quickview-style .cart-button {
   margin-top: 10px;
+}
+.cart-button{
+  overflow: hidden;
 }
 .quickview-style .rating {
   margin-top: 5px;
@@ -2424,9 +2436,9 @@ aside .row {
   float: left;
   border-left: 1px solid #e0e0e0;
   border-right: 1px solid #e0e0e0;
-  font-size: 25px;
-  line-height: 25px;
-  height: 50px;
+  font-size: 20px;
+  line-height: 20px;
+  height: 35px;
   background: #1e366b;
   color: #fff;
   padding: 0;
@@ -4052,7 +4064,7 @@ aside #blog-search a:hover {
 /* ===================   Breadcrumb   =================== */
 .breadcrumb {
   margin: 15px 0;
-  padding: 13px 15px;
+  padding: 5px 15px;
   border-radius: 0;
   background: #f5f5f5;
   font-size: 16px;
@@ -4563,7 +4575,7 @@ aside #blog-search a:hover {
 }
 .box-subcat li .thumb {
   padding: 10px 0;
-  background: #f5f5f5;
+  border: 1px solid #f5f5f5;
 }
 .box-subcat li .name {
   border-top: 1px solid #e0e0e0;
@@ -5729,7 +5741,7 @@ footer ul li + li {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1200px;
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
