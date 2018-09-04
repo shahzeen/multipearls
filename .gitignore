@@ -2605,3 +2605,5 @@ admin/controller/captcha/basic_captcha.php
 admin/controller/analytics/google_analytics.php
 admin/config.php
 .htaccess.txt
+image/cache/
+system/
