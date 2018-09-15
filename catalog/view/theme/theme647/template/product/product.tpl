@@ -445,7 +445,11 @@
 																			class="product-btn-add"><?php echo $button_cart; ?></button>
 																		</div>
 																	</div>
-
+																	<?php if ($minimum > 1) { ?>
+																	<div class="alert alert-info"><i
+																		class="material-design-round52"></i> <?php echo $text_minimum; ?>
+																	</div>
+																	<?php } ?>
 
 																</div>
 
@@ -485,14 +489,7 @@
 
 																		<!-- AddThis Button END -->
 																	</div>
-
-																	<?php if ($minimum > 1) { ?>
-																	<div class="alert alert-info"><i
-																		class="material-design-round52"></i> <?php echo $text_minimum; ?>
-																	</div>
-																	<?php } ?>
 																</div>
-
 															</div>
 														</div>
 
