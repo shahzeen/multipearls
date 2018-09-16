@@ -3030,7 +3030,7 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
 }
 .sf-menu>li>.simple_menu .simple_menu{
   background-color: rgba(30, 54, 107,1);
-  border: 1px solid #fff;
+  border: 1px solid #666;
 }
 .sf-menu>li>.simple_menu>li{
   width: 200px;
@@ -3059,7 +3059,8 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
   color: #fff;
   padding: 5px 30px 5px 20px;
   width: 100%;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #666;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.3);
 }
 
 /*================ Sub-menu lvl2 ===============*/
