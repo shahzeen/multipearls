@@ -86,12 +86,6 @@
 						<?php } ?>
 					</select>
 				</div>
-				<div class="product-filter_elem">
-					<div class="button-view">
-						<a href="<?php echo $compare; ?>" id="compare-total" class="compare-total material-icons-equalizer" data-toggle="tooltip" title="<?php echo $text_compare; ?>"><span><?php echo $text_compare; ?></span>
-						</a>
-					</div>
-				</div>
 
 
 			</div>
@@ -409,9 +403,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
 		<i class="material-icons-favorite_border"></i>
 	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-equalizer"></i>
-	</button>
 </div>
 <div class="aside">
 	<div class="cart-button">
@@ -420,9 +411,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 		</button>
 		<button class="product-btn" type="button" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
 			<span><?php echo $button_wishlist; ?></span>
-		</button>
-		<button class="product-btn" type="button" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-			<span><?php echo $button_compare; ?></span>
 		</button>
 	</div>
 </div>

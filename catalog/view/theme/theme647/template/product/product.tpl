@@ -458,11 +458,6 @@
 																		<button class="product-btn" onclick="wishlist.add('<?php echo $product_id; ?>');">
 																			<span><?php echo $button_wishlist; ?></span></button>
 																		</li>
-																		<li>
-																			<button type="button" class="product-btn"
-																			onclick="compare.add('<?php echo $product_id; ?>');">
-																			<span><?php echo $button_compare; ?></span></button>
-																		</li>
 																	</ul>
 
 																	<?php if ($tags) { ?>
@@ -947,9 +942,6 @@
 				</button>
 				<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
 					<i class="material-icons-favorite_border"></i>
-				</button>
-				<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-					<i class="material-icons-equalizer"></i>
 				</button>
 			</div>
 			<div class="clear"></div>
