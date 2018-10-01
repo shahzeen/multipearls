@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2018 at 09:07 AM
--- Server version: 10.1.22-MariaDB
+-- Generation Time: Oct 01, 2018 at 07:26 AM
+-- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -272,17 +272,17 @@ CREATE TABLE `oc_attribute` (
 --
 
 INSERT INTO `oc_attribute` (`attribute_id`, `attribute_group_id`, `sort_order`) VALUES
-(1, 6, 1),
-(2, 6, 5),
-(3, 6, 3),
-(4, 3, 1),
-(5, 3, 2),
-(6, 3, 3),
-(7, 3, 4),
-(8, 3, 5),
-(9, 3, 6),
-(10, 3, 7),
-(11, 3, 8);
+(1, 4, 1),
+(2, 4, 5),
+(3, 4, 3),
+(4, 4, 1),
+(5, 4, 2),
+(6, 4, 3),
+(7, 4, 4),
+(8, 4, 5),
+(9, 7, 2),
+(10, 4, 7),
+(11, 4, 8);
 
 -- --------------------------------------------------------
 
@@ -302,11 +302,11 @@ CREATE TABLE `oc_attribute_description` (
 
 INSERT INTO `oc_attribute_description` (`attribute_id`, `language_id`, `name`) VALUES
 (6, 1, 'Attribute 8'),
-(3, 1, 'Attribute 1'),
-(1, 1, 'Attribute 2'),
+(3, 1, 'Fabric'),
+(1, 1, 'Product Specification'),
 (2, 1, 'Attribute 3'),
-(5, 1, 'Attribute 1'),
-(9, 1, 'Attribute 2'),
+(5, 1, 'Product Specification'),
+(9, 1, 'Model Image'),
 (11, 1, 'Attribute 3'),
 (7, 1, 'Attribute 4'),
 (8, 1, 'Attribute 5'),
@@ -329,10 +329,8 @@ CREATE TABLE `oc_attribute_group` (
 --
 
 INSERT INTO `oc_attribute_group` (`attribute_group_id`, `sort_order`) VALUES
-(3, 2),
 (4, 1),
-(5, 3),
-(6, 4);
+(7, 2);
 
 -- --------------------------------------------------------
 
@@ -351,10 +349,8 @@ CREATE TABLE `oc_attribute_group_description` (
 --
 
 INSERT INTO `oc_attribute_group_description` (`attribute_group_id`, `language_id`, `name`) VALUES
-(6, 1, 'Attribute group 4'),
-(4, 1, 'Attribute group 1'),
-(3, 1, 'Attribute group 2'),
-(5, 1, 'Attribute group 3');
+(4, 1, 'Product Specifications'),
+(7, 1, 'Product Model Image');
 
 -- --------------------------------------------------------
 
@@ -434,54 +430,6 @@ INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `ba
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oc_bluepay_hosted_card`
---
-
-CREATE TABLE `oc_bluepay_hosted_card` (
-  `card_id` int(11) NOT NULL,
-  `customer_id` int(11) NOT NULL,
-  `token` varchar(50) NOT NULL,
-  `digits` varchar(4) NOT NULL,
-  `expiry` varchar(5) NOT NULL,
-  `type` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `oc_bluepay_hosted_order`
---
-
-CREATE TABLE `oc_bluepay_hosted_order` (
-  `bluepay_hosted_order_id` int(11) NOT NULL,
-  `order_id` int(11) NOT NULL,
-  `transaction_id` varchar(50) DEFAULT NULL,
-  `date_added` datetime NOT NULL,
-  `date_modified` datetime NOT NULL,
-  `release_status` int(1) DEFAULT '0',
-  `void_status` int(1) DEFAULT '0',
-  `rebate_status` int(1) DEFAULT '0',
-  `currency_code` char(3) NOT NULL,
-  `total` decimal(10,2) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `oc_bluepay_hosted_order_transaction`
---
-
-CREATE TABLE `oc_bluepay_hosted_order_transaction` (
-  `bluepay_hosted_order_transaction_id` int(11) NOT NULL,
-  `bluepay_hosted_order_id` int(11) NOT NULL,
-  `date_added` datetime NOT NULL,
-  `type` enum('auth','payment','rebate','void') DEFAULT NULL,
-  `amount` decimal(10,2) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `oc_cart`
 --
 
@@ -534,27 +482,27 @@ CREATE TABLE `oc_category` (
 --
 
 INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`, `sort_order`, `status`, `date_added`, `date_modified`) VALUES
-(18, '', 44, 1, 1, 1, 1, '2009-01-05 21:49:15', '2018-08-30 18:43:05'),
+(18, '', 44, 1, 1, 1, 1, '2009-01-05 21:49:15', '2018-09-18 09:25:17'),
 (38, '', 0, 1, 1, 2, 1, '2018-08-29 17:08:32', '2018-08-29 17:08:32'),
 (37, '', 0, 1, 1, 3, 1, '2018-08-29 17:05:05', '2018-08-29 17:05:24'),
-(28, 'catalog/blog/post-10.jpg', 18, 1, 2, 1, 1, '2009-02-02 13:11:12', '2018-08-26 18:25:02'),
-(29, 'catalog/product-40.png', 18, 1, 1, 2, 1, '2009-02-02 13:11:37', '2018-08-26 18:02:05'),
+(28, 'catalog/blog/post-10.jpg', 18, 1, 2, 2, 1, '2009-02-02 13:11:12', '2018-09-18 09:55:12'),
+(29, 'catalog/product-40.png', 18, 1, 0, 1, 1, '2009-02-02 13:11:37', '2018-09-18 09:54:35'),
 (30, 'catalog/product-11.png', 18, 0, 1, 3, 1, '2009-02-02 13:11:59', '2018-08-26 18:03:54'),
 (31, 'catalog/product-10.png', 18, 0, 1, 4, 1, '2009-02-03 14:17:24', '2018-08-30 19:16:46'),
 (32, 'catalog/product-1.png', 18, 1, 1, 5, 1, '2009-02-03 14:17:34', '2018-08-30 18:38:22'),
 (33, 'catalog/product-36.png', 18, 0, 1, 6, 1, '2009-02-03 14:17:55', '2018-08-26 18:11:58'),
-(43, '', 40, 0, 1, 1, 1, '2018-08-30 18:39:02', '2018-08-30 18:39:02'),
-(40, '', 37, 1, 1, 1, 1, '2018-08-29 17:09:16', '2018-08-29 17:09:16'),
+(54, '', 37, 0, 1, 2, 1, '2018-09-18 09:38:07', '2018-09-18 09:38:52'),
+(40, '', 37, 1, 1, 1, 1, '2018-08-29 17:09:16', '2018-09-18 09:38:39'),
 (44, '', 0, 1, 1, 1, 1, '2018-08-30 18:41:39', '2018-08-30 18:46:07'),
-(45, '', 38, 0, 1, 1, 1, '2018-08-30 19:20:08', '2018-08-30 19:20:08'),
-(46, '', 45, 0, 1, 1, 1, '2018-08-30 19:20:32', '2018-08-30 19:20:32'),
-(47, '', 45, 0, 1, 2, 1, '2018-08-30 19:53:09', '2018-08-30 19:53:09'),
-(48, '', 38, 0, 1, 2, 1, '2018-08-30 19:54:32', '2018-08-30 19:54:32'),
-(49, '', 48, 0, 1, 1, 1, '2018-08-30 19:54:56', '2018-08-30 19:54:56'),
-(50, '', 44, 0, 1, 2, 1, '2018-08-30 20:28:57', '2018-08-30 20:29:34'),
-(51, '', 0, 1, 1, 4, 1, '2018-09-01 23:29:08', '2018-09-01 23:29:08'),
+(45, '', 38, 0, 1, 1, 1, '2018-08-30 19:20:08', '2018-09-18 09:30:58'),
+(57, '', 51, 0, 1, 3, 1, '2018-09-18 09:42:27', '2018-09-18 09:43:18'),
+(56, '', 51, 0, 1, 2, 1, '2018-09-18 09:40:59', '2018-09-18 09:43:05'),
+(55, '', 51, 0, 1, 1, 1, '2018-09-18 09:40:34', '2018-09-18 09:40:34'),
+(50, '', 44, 0, 1, 2, 0, '2018-08-30 20:28:57', '2018-09-18 09:30:10'),
+(51, '', 0, 1, 1, 4, 1, '2018-09-01 23:29:08', '2018-09-18 09:39:55'),
 (52, '', 0, 1, 1, 5, 1, '2018-09-01 23:30:05', '2018-09-01 23:30:05'),
-(53, '', 0, 1, 1, 6, 1, '2018-09-01 23:30:56', '2018-09-01 23:42:49');
+(53, '', 0, 1, 1, 6, 1, '2018-09-01 23:30:56', '2018-09-01 23:42:49'),
+(58, '', 18, 0, 1, 7, 1, '2018-09-18 09:56:34', '2018-09-18 09:56:34');
 
 -- --------------------------------------------------------
 
@@ -577,27 +525,27 @@ CREATE TABLE `oc_category_description` (
 --
 
 INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(18, 1, 'Apparels', '&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', 'Apparels', '', ''),
+(18, 1, 'Clothing', '&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', 'Clothing', 'Clothing', 'Clothing'),
 (44, 1, 'Men', '&lt;p&gt;Men&lt;br&gt;&lt;/p&gt;', 'Men', '', ''),
 (38, 1, 'Women', '&lt;p&gt;Women&lt;br&gt;&lt;/p&gt;', 'Women', '', ''),
 (37, 1, 'Baby / Kids', '&lt;p&gt;Baby / Kids&lt;br&gt;&lt;/p&gt;', 'Baby / Kids', '', ''),
-(40, 1, 'Title 1', '&lt;p&gt;Title 1&lt;br&gt;&lt;/p&gt;', 'Title 1', '', ''),
-(28, 1, 'Round-Neck', '&lt;p&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; text-align: center;&quot;&gt;We have been &lt;span style=&quot;font-weight: bold;&quot;&gt;specialising&lt;/span&gt; in &lt;span style=&quot;font-weight: bold;&quot;&gt;personalised&lt;/span&gt; t shirt printing for over &lt;span style=&quot;font-weight: bold;&quot;&gt;10 years&lt;/span&gt;.Whether you\'re looking for something that is embroidered, printed with text or even featuring a photograph, we can help you design your own unique custom t shirts. We produce quality printed t shirts for all budgets, ranging from cheap t shirts for events and promotions to high quality workwear tees.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Round Neck ', '', ''),
-(29, 1, 'T-shirts', '&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '5X4/SUV', '', ''),
+(40, 1, 'Boys', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Boys', 'Boys', 'Boys'),
+(28, 1, 'Round-Neck', '&lt;p&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; text-align: center;&quot;&gt;We have been &lt;span style=&quot;font-weight: bold;&quot;&gt;specialising&lt;/span&gt; in &lt;span style=&quot;font-weight: bold;&quot;&gt;personalised&lt;/span&gt; t shirt printing for over &lt;span style=&quot;font-weight: bold;&quot;&gt;10 years&lt;/span&gt;.Whether you\'re looking for something that is embroidered, printed with text or even featuring a photograph, we can help you design your own unique custom t shirts. We produce quality printed t shirts for all budgets, ranging from cheap t shirts for events and promotions to high quality workwear tees.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Round Neck ', 'Round-Neck', 'Round-Neck'),
+(29, 1, 'T-shirts', '&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', 'T-shirts', 'T-shirts', 'T-shirts'),
 (30, 1, 'V-Neck ', '&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', 'Van', '', ''),
 (31, 1, 'Digital Print ', '&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', 'Motorhome', '', ''),
-(45, 1, 'Women 1', '&lt;p&gt;Women 1&lt;br&gt;&lt;/p&gt;', 'Women 1', '', ''),
-(46, 1, 'Women 11', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Women 11', '', ''),
-(47, 1, 'Women 12', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Women 12', '', ''),
-(48, 1, 'Women 2', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Women 2', '', ''),
-(49, 1, 'Women 21', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Women 21', '', ''),
+(45, 1, 'Clothing', '&lt;p&gt;Women 1&lt;br&gt;&lt;/p&gt;', 'Clothing', 'Clothing', 'Clothing'),
+(54, 1, 'Girls', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Girls', 'Girls', 'Girls'),
 (50, 1, 'Accessories', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Accessories', '', ''),
-(51, 1, 'Cat 3', '&lt;p&gt;Cat 3&lt;br&gt;&lt;/p&gt;', 'Cat 3', '', ''),
+(51, 1, 'Sports', '&lt;p&gt;Cat 3&lt;br&gt;&lt;/p&gt;', 'Sports', 'Sports', 'Sports'),
 (52, 1, 'Cat 5', '&lt;p&gt;Cat 5&lt;br&gt;&lt;/p&gt;', 'Cat 5', '', ''),
 (53, 1, 'Cat 6', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Cat 6', '', ''),
 (32, 1, 'Polo', '&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', 'Motorsports', '', ''),
-(43, 1, 'Kids1', '&lt;p&gt;Kids1&lt;br&gt;&lt;/p&gt;', 'Kids1', '', ''),
-(33, 1, 'Hoodie', '&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', 'Classic cars', '', '');
+(55, 1, 'Football', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Football', 'Football', 'Football'),
+(33, 1, 'Hoodie', '&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', 'Classic cars', '', ''),
+(56, 1, 'Cricket', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Cricket', 'Cricket', 'Cricket'),
+(57, 1, 'Others', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Others', 'Others', 'Others'),
+(58, 1, 'Track-Suit', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Track-Suit', 'Track-Suit', 'Track-Suit');
 
 -- --------------------------------------------------------
 
@@ -641,12 +589,12 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (33, 18, 1),
 (33, 33, 2),
 (38, 38, 0),
-(43, 40, 1),
+(54, 54, 1),
 (37, 37, 0),
-(43, 37, 0),
+(55, 51, 0),
 (40, 37, 0),
 (40, 40, 1),
-(43, 43, 2),
+(54, 37, 0),
 (44, 44, 0),
 (18, 44, 0),
 (28, 44, 0),
@@ -657,17 +605,14 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (33, 44, 0),
 (45, 38, 0),
 (45, 45, 1),
-(46, 38, 0),
-(46, 45, 1),
-(46, 46, 2),
-(47, 38, 0),
-(47, 45, 1),
-(47, 47, 2),
-(48, 38, 0),
-(48, 48, 1),
-(49, 38, 0),
-(49, 48, 1),
-(49, 49, 2),
+(58, 58, 2),
+(58, 18, 1),
+(58, 44, 0),
+(57, 57, 1),
+(57, 51, 0),
+(56, 56, 1),
+(56, 51, 0),
+(55, 55, 1),
 (50, 44, 0),
 (50, 50, 1),
 (51, 51, 0),
@@ -691,7 +636,7 @@ CREATE TABLE `oc_category_to_layout` (
 --
 
 INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VALUES
-(43, 0, 0),
+(54, 0, 0),
 (18, 0, 0),
 (29, 0, 0),
 (28, 0, 0),
@@ -704,10 +649,10 @@ INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VAL
 (40, 0, 0),
 (44, 0, 2),
 (45, 0, 0),
-(46, 0, 0),
-(47, 0, 0),
-(48, 0, 0),
-(49, 0, 0),
+(58, 0, 0),
+(57, 0, 0),
+(55, 0, 0),
+(56, 0, 0),
 (50, 0, 0),
 (51, 0, 0),
 (52, 0, 0),
@@ -739,17 +684,17 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (37, 0),
 (38, 0),
 (40, 0),
-(43, 0),
 (44, 0),
 (45, 0),
-(46, 0),
-(47, 0),
-(48, 0),
-(49, 0),
 (50, 0),
 (51, 0),
 (52, 0),
-(53, 0);
+(53, 0),
+(54, 0),
+(55, 0),
+(56, 0),
+(57, 0),
+(58, 0);
 
 -- --------------------------------------------------------
 
@@ -1122,7 +1067,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 (1, 'Pound Sterling', 'GBP', '£', '', '2', 0.67280000, 1, '2015-12-22 14:55:00'),
 (2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2018-08-28 13:56:55'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.91270000, 1, '2015-12-22 14:55:00'),
-(5, 'Indian Rupees', 'INR', '', 'Rs', '2', 1.00000000, 1, '2018-09-02 17:25:18');
+(5, 'Indian Rupees', 'INR', '', 'Rs', '2', 1.00000000, 1, '2018-10-01 07:23:36');
 
 -- --------------------------------------------------------
 
@@ -1159,7 +1104,7 @@ CREATE TABLE `oc_customer` (
 --
 
 INSERT INTO `oc_customer` (`customer_id`, `customer_group_id`, `store_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `password`, `salt`, `cart`, `wishlist`, `newsletter`, `address_id`, `custom_field`, `ip`, `status`, `approved`, `safe`, `token`, `date_added`) VALUES
-(1, 1, 0, 'admin', 'admin', 'admin@admin.com', '123123123', '', '0ca17250c0ce136a312dcdb00798f30fe6dd5d2b', 'qeY6v7tbl', NULL, NULL, 1, 1, '', '192.168.9.111', 1, 1, 0, '', '2015-12-04 13:51:43');
+(1, 1, 0, 'admin', 'admin', 'admin@admin.com', '123123123', '', '0ca17250c0ce136a312dcdb00798f30fe6dd5d2b', 'qeY6v7tbl', NULL, NULL, 1, 1, '', '::1', 1, 1, 0, '', '2015-12-04 13:51:43');
 
 -- --------------------------------------------------------
 
@@ -1301,7 +1246,8 @@ CREATE TABLE `oc_customer_ip` (
 INSERT INTO `oc_customer_ip` (`customer_ip_id`, `customer_id`, `ip`, `date_added`) VALUES
 (1, 1, '192.168.9.111', '2015-12-04 13:51:44'),
 (2, 1, '192.168.9.13', '2015-12-04 15:11:09'),
-(3, 3, '192.168.9.111', '2015-12-21 10:44:05');
+(3, 3, '192.168.9.111', '2015-12-21 10:44:05'),
+(4, 1, '::1', '2018-09-06 13:25:08');
 
 -- --------------------------------------------------------
 
@@ -1324,7 +1270,7 @@ CREATE TABLE `oc_customer_login` (
 
 INSERT INTO `oc_customer_login` (`customer_login_id`, `email`, `ip`, `total`, `date_added`, `date_modified`) VALUES
 (1, 'admin', '192.168.9.111', 1, '2015-12-21 09:43:20', '2015-12-21 09:43:20'),
-(2, 'admin', '::1', 2, '2018-08-26 11:15:23', '2018-09-02 11:36:58');
+(2, 'admin', '::1', 3, '2018-08-26 11:15:23', '2018-09-14 09:41:00');
 
 -- --------------------------------------------------------
 
@@ -1345,7 +1291,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls_opencart/index.php?route=product/category&amp;path=44', 'http://localhost/multipearls_opencart/', '2018-09-02 17:25:55');
+('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/', '2018-10-01 07:23:46');
 
 -- --------------------------------------------------------
 
@@ -1408,14 +1354,6 @@ CREATE TABLE `oc_customer_wishlist` (
   `product_id` int(11) NOT NULL,
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_customer_wishlist`
---
-
-INSERT INTO `oc_customer_wishlist` (`customer_id`, `product_id`, `date_added`) VALUES
-(1, 36, '2015-12-14 14:20:41'),
-(1, 32, '2015-12-14 14:20:41');
 
 -- --------------------------------------------------------
 
@@ -2113,7 +2051,8 @@ INSERT INTO `oc_manufacturer` (`manufacturer_id`, `name`, `image`, `sort_order`)
 (7, 'Fossil', 'catalog/demo/hp_logo.jpg', 0),
 (8, 'Citizen', 'catalog/demo/apple_logo.jpg', 0),
 (9, 'Casio', 'catalog/demo/canon_logo.jpg', 0),
-(10, 'Rotary', 'catalog/demo/sony_logo.jpg', 0);
+(10, 'Rotary', 'catalog/demo/sony_logo.jpg', 0),
+(11, 'Electro Sports', 'catalog/partner-1.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -2136,7 +2075,8 @@ INSERT INTO `oc_manufacturer_to_store` (`manufacturer_id`, `store_id`) VALUES
 (7, 0),
 (8, 0),
 (9, 0),
-(10, 0);
+(10, 0),
+(11, 0);
 
 -- --------------------------------------------------------
 
@@ -2392,7 +2332,9 @@ INSERT INTO `oc_option_value` (`option_value_id`, `option_id`, `image`, `sort_or
 (46, 11, '', 1),
 (49, 13, '', 2),
 (53, 13, '', 1),
-(52, 13, '', 0);
+(52, 13, '', 0),
+(55, 11, '', 5),
+(54, 11, '', 4);
 
 -- --------------------------------------------------------
 
@@ -2415,20 +2357,22 @@ INSERT INTO `oc_option_value_description` (`option_value_id`, `language_id`, `op
 (43, 1, 1, 'Large'),
 (42, 1, 5, 'Yellow'),
 (45, 1, 2, 'Checkbox 4'),
-(48, 1, 11, 'Large'),
+(47, 1, 11, 'Medium'),
 (44, 1, 2, 'Checkbox 3'),
 (31, 1, 1, 'Medium'),
 (41, 1, 5, 'Green'),
-(47, 1, 11, 'Medium'),
+(46, 1, 11, 'Small'),
 (24, 1, 2, 'Checkbox 2'),
 (32, 1, 1, 'Small'),
 (40, 1, 5, 'Blue'),
 (39, 1, 5, 'Red'),
 (23, 1, 2, 'Checkbox 1'),
-(46, 1, 11, 'Small'),
+(55, 1, 11, 'XXL'),
 (49, 1, 13, 'red'),
 (53, 1, 13, 'white'),
-(52, 1, 13, 'black');
+(52, 1, 13, 'black'),
+(54, 1, 11, 'Extra-Large'),
+(48, 1, 11, 'Large');
 
 -- --------------------------------------------------------
 
@@ -2805,26 +2749,42 @@ CREATE TABLE `oc_product` (
 --
 
 INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`) VALUES
-(28, 'ELE-RN-02', 'ELE-RN-02', '', '', '', '', '', '', 940, 7, 'catalog/2S5A6958-min.jpg', 5, 1, '90.0000', 200, 9, '2009-02-03', '146.40000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 100, 0, 1, 15, '2009-02-03 16:06:50', '2018-09-01 23:59:23'),
-(29, 'Product 2', '', '', '', '', '', '', '', 999, 6, 'catalog/product-4.png', 6, 1, '279.9900', 0, 9, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, 1, '2009-02-03 16:42:17', '2018-08-28 18:22:17'),
-(30, 'Product 3', '', '', '', '', '', '', '', 60000, 6, 'catalog/product-7.png', 9, 1, '100.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 16:59:00', '2015-10-13 11:13:35'),
-(31, 'Product 4', '', '', '', '', '', '', '', 1000, 6, 'catalog/product-10.png', 0, 1, '80.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, 0, '2009-02-03 17:00:10', '2015-09-29 17:14:58'),
-(32, 'Product 5', '', '', '', '', '', '', '', 999, 6, 'catalog/product-13.png', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 17:07:26', '2015-09-29 17:10:31'),
-(33, 'Product 6', '', '', '', '', '', '', '', 0, 5, 'catalog/product-16.png', 10, 1, '200.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 2, '2009-02-03 17:08:31', '2015-10-12 12:05:59'),
-(34, 'Product 7', '', '', '', '', '', '', '', 1000, 6, 'catalog/product-19.png', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:07:54', '2015-09-29 17:14:09'),
-(35, 'Product 8', '', '', '', '', '', '', '', 999, 5, 'catalog/product-22.png', 5, 0, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 18:08:31', '2015-10-12 12:05:44'),
-(36, 'Product 9', '', '', '', '', '', '', '', 994, 6, 'catalog/product-25.png', 8, 0, '100.0000', 100, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:09:19', '2015-12-17 13:07:37'),
-(40, 'product 11', '', '', '', '', '', '', '', 970, 5, 'catalog/product-28.png', 8, 1, '101.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:12', '2015-12-22 15:56:09'),
-(41, 'Product 14', '', '', '', '', '', '', '', 977, 5, 'catalog/product-31.png', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:26', '2015-12-22 15:55:42'),
-(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/product-34.png', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 0, '2009-02-03 21:07:37', '2015-10-12 10:30:27'),
-(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/product-37.png', 8, 0, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 1, '2009-02-03 21:07:49', '2015-12-22 15:58:10'),
-(44, 'Product 17', '', '', '', '', '', '', '', 1000, 5, 'catalog/product-40.png', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:00', '2015-09-29 17:08:28'),
-(45, 'Product 18', '', '', '', '', '', '', '', 998, 5, 'catalog/product-43.png', 8, 1, '200.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:17', '2015-09-29 17:11:21'),
-(46, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/product-46.png', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:29', '2015-09-29 17:15:23'),
-(47, 'Product 12', '', '', '', '', '', '', '', 1000, 5, 'catalog/product-49.png', 7, 1, '100.0000', 400, 9, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, 0, '2009-02-03 21:08:40', '2015-12-22 15:56:59'),
-(48, 'product 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'catalog/product-52.png', 8, 1, '100.0000', 0, 9, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-08 17:21:51', '2015-09-29 17:13:34'),
-(49, 'SAM1', '', '', '', '', '', '', '', 80000, 8, 'catalog/product-55.png', 8, 1, '199.9900', 0, 9, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2011-04-26 08:57:34', '2015-12-22 15:56:22'),
-(50, 'product 10', '', '', '', '', '', '', '', 100, 6, 'catalog/product-58.png', 8, 1, '100.0000', 0, 0, '2015-10-06', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 5, '2015-10-06 12:57:09', '2015-10-06 13:03:43');
+(28, 'JS01MM1920', 'JS01-WH', '', '', '', '', '', '', 1000, 7, 'catalog/JS-01.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 1, 1, 75, '2009-02-03 16:06:50', '2018-09-22 08:58:02'),
+(71, 'JS18MM1920', 'JS18-WH', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-18.jpg', 11, 1, '142.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 18, 1, 1, '2018-09-23 21:31:57', '0000-00-00 00:00:00'),
+(72, 'JS19MM1920', 'JS19-SKYB', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-19.jpg', 11, 1, '142.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 19, 1, 0, '2018-09-23 21:35:02', '2018-09-23 21:35:41'),
+(73, 'JS20MM1920', 'JS20-BKSB', '', '', '', '', '', '', 2000, 6, 'catalog/01-JS/JS-20.jpg', 11, 1, '152.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 20, 1, 1, '2018-09-23 21:38:11', '0000-00-00 00:00:00'),
+(74, 'NN21MM1920', 'NN21-WH', '', '', '', '', '', '', 2000, 6, 'catalog/02-NN/NN-21.jpg', 11, 1, '154.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 21, 1, 1, '2018-09-23 21:59:58', '0000-00-00 00:00:00'),
+(75, 'NN22MM1920', 'NN22-WH', '', '', '', '', '', '', 2000, 6, 'catalog/02-NN/NN-22.jpg', 11, 1, '175.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 22, 1, 2, '2018-09-23 22:03:32', '0000-00-00 00:00:00'),
+(76, 'NN23MM1920', 'NN23-NB', '', '', '', '', '', '', 2000, 6, 'catalog/02-NN/NN-23.jpg', 11, 1, '175.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 23, 1, 1, '2018-09-23 22:10:12', '0000-00-00 00:00:00'),
+(62, 'JS09MM1920', 'JS09-WH', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-09.jpg', 11, 1, '142.0000', 0, 0, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 9, 1, 1, '2018-09-22 09:06:01', '0000-00-00 00:00:00'),
+(63, 'JS10MM1920', 'JS10-YEL', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-10.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 10, 1, 1, '2018-09-22 09:09:42', '0000-00-00 00:00:00'),
+(64, 'JS11MM1920', 'JS11-NB', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-11.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 11, 1, 1, '2018-09-22 09:13:46', '0000-00-00 00:00:00'),
+(65, 'JS12MM1920', 'JS12-WH', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-12.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 12, 1, 0, '2018-09-22 09:26:14', '0000-00-00 00:00:00'),
+(66, 'JS13MM1920', 'JS13-OR', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-13.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 13, 1, 2, '2018-09-22 09:28:52', '0000-00-00 00:00:00'),
+(67, 'JS14MM1920', 'JS14-RB', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-14.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 14, 1, 2, '2018-09-22 09:32:24', '0000-00-00 00:00:00'),
+(68, 'JS15MM1920', 'JS15-RD', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-15.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 15, 1, 3, '2018-09-22 09:35:18', '0000-00-00 00:00:00'),
+(69, 'JS16MM1920', 'JS16-SKYB', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-16.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 16, 1, 1, '2018-09-22 09:39:16', '0000-00-00 00:00:00'),
+(70, 'JS17MM1920', 'JS17-BK', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-17.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 17, 1, 2, '2018-09-22 09:48:57', '0000-00-00 00:00:00'),
+(61, 'JS08MM1920', 'JS08-BK', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-08.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 8, 1, 1, '2018-09-22 09:01:33', '2018-09-22 09:02:15'),
+(56, 'JS03MM1920', 'JS03-PK', '', '', '', '', '', '', 1000, 7, 'catalog/01-JS/JS-03.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 3, 1, 3, '2018-09-20 12:04:07', '2018-09-22 08:57:32'),
+(55, 'JS02MM1920', 'JS02-BK', '', '', '', '', '', '', 1000, 7, 'catalog/JS-02.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 2, 1, 2, '2018-09-20 11:49:52', '2018-09-22 08:57:04'),
+(57, 'JS04MM1920', 'JS04-YEL', '', '', '', '', '', '', 1000, 7, 'catalog/01-JS/JS-04.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 4, 1, 0, '2018-09-20 12:06:55', '2018-09-22 08:58:14'),
+(58, 'JS05MM1920', 'JS05-RB', '', '', '', '', '', '', 1000, 7, 'catalog/01-JS/JS-05.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 5, 1, 1, '2018-09-20 12:16:46', '2018-09-22 08:57:42'),
+(59, 'JS06MM1920', 'JS06-WHSB', '', '', '', '', '', '', 1000, 7, 'catalog/01-JS/JS-06.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 6, 1, 2, '2018-09-20 12:20:03', '2018-09-22 08:57:53'),
+(60, 'JS07MM1920', 'JS07-NB', '', '', '', '', '', '', 1000, 7, 'catalog/01-JS/JS-07.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 7, 1, 5, '2018-09-20 13:46:08', '2018-09-20 13:52:40'),
+(77, 'NN24MM1920', 'NN24-OR', '', '', '', '', '', '', 2000, 6, 'catalog/02-NN/NN-24.jpg', 11, 1, '175.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 24, 1, 4, '2018-09-23 22:15:46', '0000-00-00 00:00:00'),
+(78, 'NN25MM1920', 'NN25-RB', '', '', '', '', '', '', 2000, 6, 'catalog/02-NN/NN-25.jpg', 11, 1, '175.0000', 0, 0, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 24, 1, 1, '2018-09-23 22:20:27', '0000-00-00 00:00:00'),
+(79, 'NN26MM1920', 'NN26-BK', '', '', '', '', '', '', 2500, 6, 'catalog/02-NN/NN-26.jpg', 11, 1, '175.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 26, 1, 4, '2018-09-23 22:26:24', '2018-09-23 22:26:46'),
+(80, 'DF27MM1920', 'DF27-WH', '', '', '', '', '', '', 2500, 6, 'catalog/03-DF/DF-27.jpg', 11, 1, '165.0000', 0, 9, '2018-09-24', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 27, 1, 1, '2018-09-24 11:30:09', '0000-00-00 00:00:00'),
+(81, 'DF28MM1920', 'DF28-NB', '', '', '', '', '', '', 2500, 6, 'catalog/03-DF/DF-28.jpg', 0, 1, '170.0000', 0, 9, '2018-09-24', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 28, 1, 2, '2018-09-24 11:34:36', '0000-00-00 00:00:00'),
+(82, 'JF29MM1920', 'JF29-BK', '', '', '', '', '', '', 2000, 6, 'catalog/04-JF/JF-29.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 29, 1, 0, '2018-09-27 23:24:01', '0000-00-00 00:00:00'),
+(83, 'JF30MM1920', 'JF30-YEL', '', '', '', '', '', '', 2000, 6, 'catalog/04-JF/JF-30.jpg', 0, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 30, 1, 0, '2018-09-27 23:25:54', '0000-00-00 00:00:00'),
+(84, 'JF31MM1920', 'JF31-NB', '', '', '', '', '', '', 2000, 6, 'catalog/04-JF/JF-31.jpg', 0, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 31, 1, 0, '2018-09-27 23:27:21', '0000-00-00 00:00:00'),
+(85, 'JF33MM1920', 'JF33-OR', '', '', '', '', '', '', 2500, 6, 'catalog/04-JF/JF-33.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 33, 1, 1, '2018-09-27 23:30:33', '0000-00-00 00:00:00'),
+(86, 'JF34MM1920', 'JF34-BK', '', '', '', '', '', '', 2000, 6, 'catalog/04-JF/JF-34.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 34, 1, 1, '2018-09-27 23:36:59', '0000-00-00 00:00:00'),
+(87, 'NF35MM1920', 'NF35-YEL', '', '', '', '', '', '', 1500, 6, 'catalog/05-NF/NF-35.jpg', 11, 1, '184.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 35, 1, 1, '2018-09-27 23:45:40', '0000-00-00 00:00:00'),
+(88, 'NF36MM1920', 'NF36-BLSB', '', '', '', '', '', '', 1500, 6, 'catalog/05-NF/NF-36.jpg', 0, 1, '207.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 36, 1, 1, '2018-09-27 23:48:16', '0000-00-00 00:00:00'),
+(89, 'NF37MM1920', 'NF37-GRY', '', '', '', '', '', '', 1500, 6, 'catalog/05-NF/NF-37.jpg', 11, 1, '194.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 37, 1, 1, '2018-09-27 23:51:16', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -2838,84 +2798,6 @@ CREATE TABLE `oc_product_attribute` (
   `language_id` int(11) NOT NULL,
   `text` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_product_attribute`
---
-
-INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`, `text`) VALUES
-(29, 8, 1, 'Attribute value 3'),
-(29, 9, 1, 'Attribute value 4'),
-(29, 5, 1, 'Attribute value 1'),
-(29, 7, 1, 'Attribute value 2'),
-(30, 5, 1, 'Attribute value 1'),
-(30, 7, 1, 'Attribute value 2'),
-(30, 8, 1, 'Attribute value 3'),
-(30, 11, 1, 'Attribute value 4'),
-(31, 5, 1, 'Attribute value 1'),
-(31, 7, 1, 'Attribute value 2'),
-(31, 8, 1, 'Attribute value 3'),
-(31, 9, 1, 'Attribute value 4'),
-(32, 5, 1, 'Attribute value 1'),
-(32, 7, 1, 'Attribute value 2'),
-(32, 8, 1, 'Attribute value 3'),
-(32, 9, 1, 'Attribute value 4'),
-(33, 5, 1, 'Attribute value 1'),
-(33, 7, 1, 'Attribute value 2'),
-(33, 8, 1, 'Attribute value 3'),
-(33, 9, 1, 'Attribute value 4'),
-(34, 5, 1, 'Attribute value 1'),
-(34, 7, 1, 'Attribute value 2'),
-(34, 8, 1, 'Attribute value 3'),
-(34, 9, 1, 'Attribute value 4'),
-(35, 5, 1, 'Attribute value 1'),
-(35, 7, 1, 'Attribute value 2'),
-(35, 9, 1, 'Attribute value 3'),
-(36, 8, 1, 'Attribute value 3'),
-(36, 7, 1, 'Attribute value 2'),
-(36, 5, 1, 'Attribute value 1'),
-(40, 8, 1, 'Attribute value 3'),
-(40, 7, 1, 'Attribute value 2'),
-(40, 5, 1, 'Attribute value 1'),
-(41, 8, 1, 'Attribute value 3'),
-(41, 7, 1, 'Attribute value 2'),
-(41, 5, 1, 'Attribute value 1'),
-(42, 5, 1, 'Attribute value 1'),
-(42, 7, 1, 'Attribute value 2'),
-(42, 8, 1, 'Attribute value 3'),
-(42, 9, 1, 'Attribute value 4'),
-(43, 4, 1, 'Attribute value 2'),
-(43, 2, 1, 'Attribute value 1'),
-(44, 5, 1, 'Attribute value 1'),
-(44, 7, 1, 'Attribute value 2'),
-(44, 8, 1, 'Attribute value 3'),
-(44, 9, 1, 'Attribute value 4'),
-(45, 5, 1, 'Attribute value 1'),
-(45, 7, 1, 'Attribute value 2'),
-(45, 8, 1, 'Attribute value 3'),
-(45, 9, 1, 'Attribute value 4'),
-(46, 5, 1, 'Attribute value 1'),
-(46, 7, 1, 'Attribute value 2'),
-(46, 8, 1, 'Attribute value 3'),
-(46, 9, 1, 'Attribute value 4'),
-(47, 8, 1, 'Attribute value 3'),
-(47, 7, 1, 'Attribute value 2'),
-(47, 5, 1, 'Attribute value 1'),
-(48, 5, 1, 'Attribute value 1'),
-(48, 7, 1, 'Attribute value 2'),
-(48, 8, 1, 'Attribute value 3'),
-(48, 9, 1, 'Attribute value 4'),
-(49, 8, 1, 'Attribute value 3'),
-(49, 7, 1, 'Attribute value 2'),
-(49, 5, 1, 'Attribute value 1'),
-(50, 5, 1, '10'),
-(50, 9, 1, '30'),
-(36, 11, 1, 'Attribute value 4'),
-(41, 9, 1, 'Attribute value 4'),
-(40, 9, 1, 'Attribute value 4'),
-(49, 9, 1, 'Attribute value 4'),
-(47, 9, 1, 'Attribute value 4'),
-(28, 5, 1, 'THIS IS ONE ');
 
 -- --------------------------------------------------------
 
@@ -2939,26 +2821,43 @@ CREATE TABLE `oc_product_description` (
 --
 
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(28, 1, 'Electro Sports Round Neck T-shirts Multiple colour', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\r\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', 'T-Shirts', 'Electro Sports Round Neck T-shirts Multiple colour', 'Electro Sports Round Neck T-shirts Multiple colour', 'Electro Sports Round Neck T-shirts Multiple colour'),
-(29, 1, 'Brand New 16 x 6.5 Replacement Wheel for Volkswagen Jetta', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\r\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Brand New 16 x 6.5 Replacement Wheel for Volkswagen Jetta', '', ''),
-(30, 1, 'Hankook DynaPro AS RH03 All-Season Tire - 235-65R17 103T', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Hankook DynaPro AS RH03 All-Season Tire - 235-65R17 103T', '', ''),
-(31, 1, 'Hankook DynaPro AS RH03 All-Season Tire - 235-70R17 108SR', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Hankook DynaPro AS RH03 All-Season Tire - 235-70R17 108SR', '', ''),
-(32, 1, 'Hankook DynaPro ATM RF10 Off-Road Tire - 265-75R16 114T', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Hankook DynaPro ATM RF10 Off-Road Tire - 265-75R16 114T', '', ''),
-(33, 1, 'Hankook DynaPro MT RT03 Off-Road Tire - 265-75R16 123Q', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Hankook DynaPro MT RT03 Off-Road Tire - 265-75R16 123Q', '', ''),
-(34, 1, 'Hankook Optimo H725 All-Season Tire - 235-55R19 101H', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Hankook Optimo H725 All-Season Tire - 235-55R19 101H', '', ''),
-(35, 1, 'Hankook Optimo H727 All-Season Tire - 225-60R16 97T', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Hankook Optimo H727 All-Season Tire - 225-60R16 97T', '', ''),
-(36, 1, 'Hankook Ventus V12 EVO K110 High Performance Tire - 305-30R19 102Z', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\r\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Hankook Ventus V12 EVO K110 High Performance Tire - 305-30R19 102Z', '', ''),
-(40, 1, 'Michelin 9800300 Easy Grip Composite Tire Snow Chain', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; height=&quot;315&quot; width=&quot;560&quot;&gt;&lt;/iframe&gt;\r\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Michelin 9800300 Easy Grip Composite Tire Snow Chain', '', ''),
-(41, 1, 'Peerless 0152005 Auto-Trac Tire Chain', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; height=&quot;315&quot; width=&quot;560&quot;&gt;&lt;/iframe&gt;\r\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Peerless 0152005 Auto-Trac Tire Chain', '', ''),
-(42, 1, 'Peerless 0231705 Auto-Trac Light Truck-SUV Tire Chain', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Peerless 0231705 Auto-Trac Light Truck-SUV Tire Chain', '', ''),
-(43, 1, 'Citizen Original Q Industries MV50 SuperFlow High-Volume 12-Volt Air Compressor', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; height=&quot;315&quot; width=&quot;560&quot;&gt;&lt;/iframe&gt;\r\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Citizen Original Q Industries MV50 SuperFlow High-Volume 12-Volt Air Compressor', '', ''),
-(44, 1, 'Set of 4 New Sport ATV Tires 21x7-10 Front &amp; 20x11-9 Rear -4PR', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Set of 4 New Sport ATV Tires 21x7-10 Front &amp; 20x11-9 Rear -4PR', '', ''),
-(45, 1, 'TerraGrips Tire Chains 23x10.5-11', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'TerraGrips Tire Chains 23x10.5-11', '', ''),
-(46, 1, 'Thule 10mm CS10 Super-Premium Passenger Car Snow Chain Size 086', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Thule 10mm CS10 Super-Premium Passenger Car Snow Chain Size 086', '', ''),
-(47, 1, 'Thule 16mm XB16 High Quality SUV-Truck Snow Chain Size 266', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; height=&quot;315&quot; width=&quot;560&quot;&gt;&lt;/iframe&gt;\r\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Thule 16mm XB16 High Quality SUV-Truck Snow Chain Size 266', '', ''),
-(48, 1, 'Thule CU-9 9mm Easy Fit SUV Snow Chain - Size 231', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Thule CU-9 9mm Easy Fit SUV Snow Chain - Size 231', '', ''),
-(49, 1, 'Vktech 20pcs JDM D1 Spec Wheel Lug Nuts M12 x 1.5mm for Honda Acura Civic Integra', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; height=&quot;315&quot; width=&quot;560&quot;&gt;&lt;/iframe&gt;\r\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Vktech 20pcs JDM D1 Spec Wheel Lug Nuts M12 x 1.5mm for Honda Acura Civic Integra', '', ''),
-(50, 1, 'Wheel Spacers 14x1.5 studs for Escalade Sierra Yukon Suburban Silverado', '&lt;iframe src=&quot;//www.youtube.com/embed/9U787T0kk0Q?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;wmode=transparent&quot; allowfullscreen=&quot;&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;\n&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', '', 'Wheel Spacers 14x1.5 studs for Escalade Sierra Yukon Suburban Silverado', '', '');
+(61, 1, 'Electro Black Jersey with ( Neon Matching )', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl63&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Black Jersey with ( Neon Matching )', 'Electro Black Jersey with ( Neon Matching )', 'Electro Black Jersey with ( Neon Matching )'),
+(62, 1, 'Electro White Jersey with (Neon Matching Patch)', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro White Jersey with (Neon Matching Patch)', 'Electro White Jersey with (Neon Matching Patch)', 'Electro White Jersey with (Neon Matching Patch)'),
+(63, 1, 'Electro Yellow matching Grey Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Yellow matching Grey Jersey ', 'Electro Yellow matching Grey Jersey \r\n', 'Electro Yellow matching Grey Jersey \r\n'),
+(64, 1, 'Electro Navy Blue Jersey (Red &amp; Grey Matching)', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'T-Shirts', 'Electro Navy Blue Jersey (Red &amp; Grey Matching)', 'Electro Navy Blue Jersey (Red &amp; Grey Matching)\r\n', 'Electro Navy Blue Jersey (Red &amp; Grey Matching)\r\n'),
+(65, 1, 'Electro white with (Light Blue Matching Jersey )', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro white with (Light Blue Matching Jersey )', 'Electro white with (Light Blue Matching Jersey )\r\n', 'Electro white with (Light Blue Matching Jersey )\r\n'),
+(66, 1, 'Electro Orange and White matching Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Orange and White matching Jersey ', 'Electro Orange and White matching Jersey \r\n', 'Electro Orange and White matching Jersey \r\n'),
+(67, 1, 'Electro Royal Blue with (white &amp; Black Matching )', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Royal Blue with (white &amp; Black Matching )', 'Electro Royal Blue with (white &amp; Black Matching )\r\n', 'Electro Royal Blue with (white &amp; Black Matching )\r\n'),
+(68, 1, 'Electro Red Colour Jersey with Colour Matching ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Red Colour Jersey with Colour Matching ', 'Electro Red Colour Jersey with Colour Matching \r\n', 'Electro Red Colour Jersey with Colour Matching \r\n'),
+(69, 1, 'Electro Dark Sky Blue Colour Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Dark Sky Blue Colour Jersey ', 'Electro Dark Sky Blue Colour Jersey \r\n', 'Electro Dark Sky Blue Colour Jersey \r\n'),
+(70, 1, 'Electro Black with Pink Matching Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Black with Pink Matching Jersey ', 'Electro Black with Pink Matching Jersey \r\n', 'Electro Black with Pink Matching Jersey \r\n'),
+(71, 1, 'Electro white white matching (Orange and Blue Jersey )', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl63&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro white white matching (Orange and Blue Jersey )', 'Electro white white matching (Orange and Blue Jersey )\r\n', 'Electro white white matching (Orange and Blue Jersey )\r\n'),
+(72, 1, 'Electro Sky blue Jersey with macthing Patches', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sky blue Jersey with macthing Patches', 'Electro Sky blue Jersey with macthing Patches\r\n', 'Electro Sky blue Jersey with macthing Patches\r\n'),
+(73, 1, 'Electro Black Jersey with (sublimation Patch)', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Black Jersey with (sublimation Patch)', 'Electro Black Jersey with (sublimation Patch)\r\n', 'Electro Black Jersey with (sublimation Patch)\r\n'),
+(74, 1, 'Electro  white Tri Pattern Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The Super Light Nirmal Net\r\n  (NETTED) Fabric. This Fabric Transports Moisture Away From The Body, Keeping\r\n  You Cool And Dry. Quick Dry Out and moisture management of the fabric offers\r\n  coolness &amp;amp; dryness even in during highest level of sweat.This T shirt is\r\n  ideal for all kinds of indoor and outdoor sports activities like Cricket,\r\n  Running, Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water\r\n  sports, Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Nirmal Netted&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro  white Tri Pattern Jersey ', 'Electro  white Tri Pattern Jersey \r\n', 'Electro  white Tri Pattern Jersey \r\n'),
+(75, 1, 'Electro White with matching (Pink &amp; Black Jersey )', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Nirmal Net\r\n  (NETTED) Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping\r\n  You Cool And Dry. Quick Dry Out and moisture management of the fabric offers\r\n  coolness &amp;amp; dryness even in during highest level of sweat.This T shirt is\r\n  ideal for all kinds of indoor and outdoor sports activities like Cricket,\r\n  Running, Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water\r\n  sports, Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Nirmal Netted&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; : Short Hand Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro White with matching (Pink &amp; Black Jersey )', 'Electro White with matching (Pink &amp; Black Jersey )\r\n', 'Electro White with matching (Pink &amp; Black Jersey )\r\n'),
+(76, 1, 'Electro Navy Blue Jersey Matching (red &amp; white)', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The Super Light Nirmal Net\r\n  (NETTED) Fabric. This Fabric Transports Moisture Away From The Body, Keeping\r\n  You Cool And Dry. Quick Dry Out and moisture management of the fabric offers\r\n  coolness &amp;amp; dryness even in during highest level of sweat.This T shirt is\r\n  ideal for all kinds of indoor and outdoor sports activities like Cricket,\r\n  Running, Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water\r\n  sports, Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Nirmal Netted&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Navy Blue Jersey Matching (red &amp; white)', 'Electro Navy Blue Jersey Matching (red &amp; white)\r\n', 'Electro Navy Blue Jersey Matching (red &amp; white)\r\n'),
+(28, 1, 'Electro Tri Colour Jersey With Collar', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;477&quot; style=&quot;width: 358pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;320&quot; style=&quot;height:240.0pt&quot;&gt;  &lt;td height=&quot;320&quot; class=&quot;xl63&quot; width=&quot;477&quot; style=&quot;height:240.0pt;width:358pt&quot;&gt;&lt;p&gt;Get  this Tri Colour Jersey from Electro.Electro&amp;nbsp;  Proudly Presents This Tshirt Made Out Of The &lt;b&gt;Super Light Polyester  Fabric&lt;/b&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool  And Dry. Quick Dry Out and moisture management of the fabric offers coolness  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for  all kinds of indoor and outdoor sports activities like Cricket, Running,  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Fabric&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :  Polyester(100%)&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Sleeve&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand  Sleeve&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Neck&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports Round Neck T-shirts Multiple colour', 'Electro Sports Round Neck T-shirts Multiple colour', 'Electro Sports Round Neck T-shirts Multiple colour'),
+(55, 1, 'Electro Black With (Neon Pattern) Jersey', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :\r\n  Polyester(100%)&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Black With (Neon Pattern) Jersey', 'Electro Black With (Neon Pattern) Jersey\r\n', 'Electro Black With (Neon Pattern) Jersey\r\n'),
+(56, 1, 'Electro Pink with (Sublimation Patch) Jersey', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;477&quot; style=&quot;width: 358pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;320&quot; style=&quot;height:240.0pt&quot;&gt;  &lt;td height=&quot;320&quot; class=&quot;xl63&quot; width=&quot;477&quot; style=&quot;height:240.0pt;width:358pt&quot;&gt;&lt;p&gt;Get  this Tri Colour Jersey from Electro.Electro&amp;nbsp;  Proudly Presents This Tshirt Made Out Of The &lt;b&gt;Super Light Polyester  Fabric&lt;/b&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool  And Dry. Quick Dry Out and moisture management of the fabric offers coolness  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for  all kinds of indoor and outdoor sports activities like Cricket, Running,  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Fabric&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :  Polyester(100%)&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Sleeve&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand  Sleeve&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Neck&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Pink with (Sublimation Patch) Jersey', 'Electro Pink with (Sublimation Patch) Jersey\r\n', 'Electro Pink with (Sublimation Patch) Jersey\r\n'),
+(57, 1, 'Electro Yellow Mix Colour Patch Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;477&quot; style=&quot;width: 358pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;320&quot; style=&quot;height:240.0pt&quot;&gt;  &lt;td height=&quot;320&quot; class=&quot;xl63&quot; width=&quot;477&quot; style=&quot;height:240.0pt;width:358pt&quot;&gt;&lt;p&gt;Get  this Tri Colour Jersey from Electro.Electro&amp;nbsp;  Proudly Presents This Tshirt Made Out Of The &lt;b&gt;Super Light Polyester  Fabric&lt;/b&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool  And Dry. Quick Dry Out and moisture management of the fabric offers coolness  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for  all kinds of indoor and outdoor sports activities like Cricket, Running,  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Fabric&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :  Polyester(100%)&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Sleeve&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand  Sleeve&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Neck&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Yellow Mix Colour Patch Jersey ', 'Electro Yellow Mix Colour Patch Jersey \r\n', 'Electro Yellow Mix Colour Patch Jersey \r\n'),
+(58, 1, 'Electro Royal Blue Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;477&quot; style=&quot;width: 358pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;320&quot; style=&quot;height:240.0pt&quot;&gt;  &lt;td height=&quot;320&quot; class=&quot;xl63&quot; width=&quot;477&quot; style=&quot;height:240.0pt;width:358pt&quot;&gt;&lt;p&gt;Get  this Tri Colour Jersey from Electro.Electro&amp;nbsp;  Proudly Presents This Tshirt Made Out Of The &lt;b&gt;Super Light Polyester  Fabric&lt;/b&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool  And Dry. Quick Dry Out and moisture management of the fabric offers coolness  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for  all kinds of indoor and outdoor sports activities like Cricket, Running,  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Fabric&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :  Polyester(100%)&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Sleeve&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand  Sleeve&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Neck&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Royal Blue Jersey ', 'Electro Royal Blue Jersey \r\n', 'Electro Royal Blue Jersey \r\n'),
+(59, 1, 'Electro Tri Colour Jersey With (Sublimation Print)', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;477&quot; style=&quot;width: 358pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;320&quot; style=&quot;height:240.0pt&quot;&gt;  &lt;td height=&quot;320&quot; class=&quot;xl63&quot; width=&quot;477&quot; style=&quot;height:240.0pt;width:358pt&quot;&gt;&lt;p&gt;Get  this Tri Colour Jersey from Electro.Electro&amp;nbsp;  Proudly Presents This Tshirt Made Out Of The &lt;b&gt;Super Light Polyester  Fabric&lt;/b&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool  And Dry. Quick Dry Out and moisture management of the fabric offers coolness  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for  all kinds of indoor and outdoor sports activities like Cricket, Running,  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Fabric&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :  Polyester(100%)&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Sleeve&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand  Sleeve&lt;br&gt;    &lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;    Neck&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Tri Colour Jersey With (Sublimation Print)', 'Electro Tri Colour Jersey With (Sublimation Print)\r\n', 'Electro Tri Colour Jersey With (Sublimation Print)\r\n'),
+(60, 1, 'Electro Navy blue  With (Neon Pattern Jersey)', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;477&quot; style=&quot;background-color: rgb(255, 255, 255); width: 358pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;320&quot; style=&quot;height: 240pt;&quot;&gt;&lt;td height=&quot;320&quot; class=&quot;xl63&quot; width=&quot;477&quot; style=&quot;height: 240pt; width: 358pt;&quot;&gt;&lt;p&gt;Get this Tri Colour Jersey from Electro.Electro&amp;nbsp; Proudly Presents This Tshirt Made Out Of The&amp;nbsp;&lt;b&gt;Super Light Polyester Fabric&lt;/b&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool And Dry. Quick Dry Out and moisture management of the fabric offers coolness &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for all kinds of indoor and outdoor sports activities like Cricket, Running, Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports, Swimming, Football, Surfing, Volleyball etc&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;Fabric&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester(100%)&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;Sleeve&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand Sleeve&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;Neck&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Navy blue  With (Neon Pattern Jersey)', 'Electro Navy blue  With (Neon Pattern Jersey)\r\n', 'Electro Navy blue  With (Neon Pattern Jersey)\r\n'),
+(77, 1, 'Electro Orange Pattern Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Nirmal Net\r\n  (NETTED) Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping\r\n  You Cool And Dry. Quick Dry Out and moisture management of the fabric offers\r\n  coolness &amp;amp; dryness even in during highest level of sweat.This T shirt is\r\n  ideal for all kinds of indoor and outdoor sports activities like Cricket,\r\n  Running, Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water\r\n  sports, Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Nirmal Netted&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Orange Pattern Jersey ', 'Electro Orange Pattern Jersey \r\n', 'Electro Orange Pattern Jersey \r\n'),
+(78, 1, 'Electro Royal Blue &amp; white matching Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Nirmal Net\r\n  (NETTED) Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping\r\n  You Cool And Dry. Quick Dry Out and moisture management of the fabric offers\r\n  coolness &amp;amp; dryness even in during highest level of sweat.This T shirt is\r\n  ideal for all kinds of indoor and outdoor sports activities like Cricket,\r\n  Running, Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water\r\n  sports, Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Nirmal Netted&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Royal Blue &amp; white matching Jersey ', 'Electro Royal Blue &amp; white matching Jersey \r\n', 'Electro Royal Blue &amp; white matching Jersey \r\n'),
+(79, 1, 'Electro Black Jersey with matching (Red &amp; grey)', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This Tshirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Nirmal Net\r\n  (NETTED) Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping\r\n  You Cool And Dry. Quick Dry Out and moisture management of the fabric offers\r\n  coolness &amp;amp; dryness even in during highest level of sweat.This T shirt is\r\n  ideal for all kinds of indoor and outdoor sports activities like Cricket,\r\n  Running, Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water\r\n  sports, Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Nirmal Netted&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Colar Neck &lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Black Jersey with matching (Red &amp; grey)', 'Electro Black Jersey with matching (Red &amp; grey)\r\n', 'Electro Black Jersey with matching (Red &amp; grey)\r\n'),
+(80, 1, 'Electro Dry-Fit white Jersey with Navy Blue &amp; Orange Matching ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl63&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Dry-Fit Fabric&lt;/span&gt;. This\r\n  Fabric Transports Moisture Away From The Body, Keeping You Cool And Dry.\r\n  Quick Dry Out and moisture management of the fabric offers coolness &amp;amp;\r\n  dryness even in during highest level of sweat.This T shirt is ideal for all\r\n  kinds of indoor and outdoor sports activities like Cricket, Running, Walking,\r\n  Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports, Swimming,\r\n  Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Dry - Fit&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Crew Neck&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Dry-Fit white Jersey with Navy Blue &amp; Orange Matching ', 'Electro Dry-Fit white Jersey with Navy Blue &amp; Orange Matching \r\n', 'Electro Dry-Fit white Jersey with Navy Blue &amp; Orange Matching \r\n'),
+(81, 1, 'Electro Dry-fit Navy Blue Jersey with Matching Patterns', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Dry-Fit Fabric&lt;/span&gt;. This\r\n  Fabric Transports Moisture Away From The Body, Keeping You Cool And Dry.\r\n  Quick Dry Out and moisture management of the fabric offers coolness &amp;amp;\r\n  dryness even in during highest level of sweat.This T shirt is ideal for all\r\n  kinds of indoor and outdoor sports activities like Cricket, Running, Walking,\r\n  Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports, Swimming,\r\n  Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Dry - Fit&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Crew Neck&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Dry-fit Navy Blue Jersey with Matching Patterns', 'Electro Dry-fit Navy Blue Jersey with Matching Patterns\r\n', 'Electro Dry-fit Navy Blue Jersey with Matching Patterns\r\n');
+INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
+(82, 1, 'Electro  Black full Sleeves Jersey with ( Neon Matching ) ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl63&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\r\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro  Black full Sleeves Jersey with ( Neon Matching ) ', 'Electro  Black full Sleeves Jersey with ( Neon Matching ) ', 'Electro  Black full Sleeves Jersey with ( Neon Matching ) '),
+(83, 1, 'Electro yellow full sleeves  Jersey with Matching Pattern', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\r\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro yellow full sleeves  Jersey with Matching Pattern', 'Electro yellow full sleeves  Jersey with Matching Pattern\r\n', 'Electro yellow full sleeves  Jersey with Matching Pattern\r\n'),
+(84, 1, 'Electro Navy Blue Full Sleeves Jersey with ( Neon Matching ) Pattern', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\r\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Navy Blue Full Sleeves Jersey with ( Neon Matching ) Pattern', 'Electro Navy Blue Full Sleeves Jersey with ( Neon Matching ) Pattern\r\n', 'Electro Navy Blue Full Sleeves Jersey with ( Neon Matching ) Pattern\r\n'),
+(85, 1, 'Electro Orange Full Sleeves Jersey with Navy Blue Matching ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro. Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\r\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Orange Full Sleeves Jersey with Navy Blue Matching ', 'Electro Orange Full Sleeves Jersey with Navy Blue Matching \r\n', 'Electro Orange Full Sleeves Jersey with Navy Blue Matching \r\n'),
+(86, 1, 'Electro Black Full Sleeves Jersey With ( Neon Matching ) ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\r\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;V-Neck Collar&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Black Full Sleeves Jersey With ( Neon Matching ) ', 'Electro Black Full Sleeves Jersey With ( Neon Matching ) \r\n', 'Electro Black Full Sleeves Jersey With ( Neon Matching ) \r\n'),
+(87, 1, 'Electro Yellow Full Sleeves with Red &amp; black matching Pattern', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Netted Fabric&lt;/span&gt;. This\r\n  Fabric Transports Moisture Away From The Body, Keeping You Cool And Dry.\r\n  Quick Dry Out and moisture management of the fabric offers coolness &amp;amp;\r\n  dryness even in during highest level of sweat.This T shirt is ideal for all\r\n  kinds of indoor and outdoor sports activities like Cricket, Running, Walking,\r\n  Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports, Swimming,\r\n  Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Nirmal Net ( NETTED\r\n  )&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Collar&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Yellow Full Sleeves with Red &amp; black matching Pattern', 'Electro Yellow Full Sleeves with Red &amp; black matching Pattern\r\n', 'Electro Yellow Full Sleeves with Red &amp; black matching Pattern\r\n'),
+(88, 1, 'Electro Light Blue Full Sleeves with Sublimation Sleeves', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Netted Fabric. &lt;/span&gt;This\r\n  Fabric Transports Moisture Away From The Body, Keeping You Cool And Dry.\r\n  Quick Dry Out and moisture management of the fabric offers coolness &amp;amp;\r\n  dryness even in during highest level of sweat.This T shirt is ideal for all\r\n  kinds of indoor and outdoor sports activities like Cricket, Running, Walking,\r\n  Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports, Swimming,\r\n  Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Nirmal Net ( NETTED\r\n  )&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;:&lt;span style=&quot;font-weight: bold;&quot;&gt; Full Sleeves&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Collar&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Light Blue Full Sleeves with Sublimation Sleeves', 'Electro Light Blue Full Sleeves with Sublimation Sleeves', 'Electro Light Blue Full Sleeves with Sublimation Sleeves'),
+(89, 1, 'Electro Grey Full Sleeves with Red and White Patch', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Netted Fabric&lt;/span&gt;. This\r\n  Fabric Transports Moisture Away From The Body, Keeping You Cool And Dry.\r\n  Quick Dry Out and moisture management of the fabric offers coolness &amp;amp;\r\n  dryness even in during highest level of sweat.This T shirt is ideal for all\r\n  kinds of indoor and outdoor sports activities like Cricket, Running, Walking,\r\n  Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports, Swimming,\r\n  Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Nirmal Net ( NETTED\r\n  )&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Collar&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Grey Full Sleeves with Red and White Patch', 'Electro Grey Full Sleeves with Red and White Patch\r\n', 'Electro Grey Full Sleeves with Red and White Patch\r\n');
 
 -- --------------------------------------------------------
 
@@ -2982,9 +2881,13 @@ CREATE TABLE `oc_product_discount` (
 --
 
 INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `customer_group_id`, `quantity`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(1, 42, 1, 10, 1, '88.0000', '0000-00-00', '0000-00-00'),
-(2, 42, 1, 20, 1, '77.0000', '0000-00-00', '0000-00-00'),
-(3, 42, 1, 30, 1, '66.0000', '0000-00-00', '0000-00-00');
+(34, 28, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
+(30, 55, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
+(31, 56, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
+(35, 57, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
+(32, 58, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
+(33, 59, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
+(26, 60, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -3015,82 +2918,61 @@ CREATE TABLE `oc_product_image` (
 --
 
 INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
-(158, 28, 'catalog/2S5A6958-min.jpg', 1),
-(157, 29, 'catalog/product-6.png', 0),
-(156, 29, 'catalog/product-5.png', 0),
-(155, 29, 'catalog/product-4.png', 0),
-(8, 30, 'catalog/product-7.png', 0),
-(9, 30, 'catalog/product-8.png', 0),
-(10, 30, 'catalog/product-9.png', 0),
-(11, 31, 'catalog/product-10.png', 0),
-(12, 31, 'catalog/product-11.png', 0),
-(13, 31, 'catalog/product-11.png', 0),
-(14, 31, 'catalog/product-12.png', 0),
-(15, 32, 'catalog/product-13.png', 1),
-(16, 32, 'catalog/product-14.png', 2),
-(17, 32, 'catalog/product-15.png', 3),
-(18, 32, 'catalog/product-13.png', 4),
-(19, 33, 'catalog/product-16.png', 0),
-(20, 33, 'catalog/product-16.png', 0),
-(21, 33, 'catalog/product-17.png', 0),
-(22, 33, 'catalog/product-18.png', 0),
-(23, 34, 'catalog/product-19.png', 0),
-(24, 34, 'catalog/product-20.png', 0),
-(25, 34, 'catalog/product-20.png', 0),
-(26, 34, 'catalog/product-21.png', 0),
-(27, 35, 'catalog/product-22.png', 0),
-(28, 35, 'catalog/product-23.png', 0),
-(29, 35, 'catalog/product-24.png', 0),
-(104, 36, 'catalog/product-27.png', 0),
-(103, 36, 'catalog/product-26.png', 0),
-(102, 36, 'catalog/product-26.png', 0),
-(101, 36, 'catalog/product-25.png', 0),
-(113, 40, 'catalog/product-30.png', 0),
-(112, 40, 'catalog/product-30.png', 0),
-(111, 40, 'catalog/product-29.png', 0),
-(110, 40, 'catalog/product-28.png', 0),
-(109, 40, 'catalog/product-28.png', 0),
-(108, 41, 'catalog/product-33.png', 0),
-(107, 41, 'catalog/product-32.png', 0),
-(106, 41, 'catalog/product-32.png', 0),
-(105, 41, 'catalog/product-31.png', 0),
-(43, 42, 'catalog/product-34.png', 0),
-(44, 42, 'catalog/product-34.png', 0),
-(45, 42, 'catalog/product-35.png', 0),
-(46, 42, 'catalog/product-36.png', 0),
-(126, 43, 'catalog/product-39.png', 0),
-(125, 43, 'catalog/product-38.png', 0),
-(124, 43, 'catalog/product-37.png', 0),
-(123, 43, 'catalog/product-37.png', 0),
-(51, 44, 'catalog/product-40.png', 0),
-(52, 44, 'catalog/product-41.png', 0),
-(53, 44, 'catalog/product-42.png', 0),
-(54, 45, 'catalog/product-43.png', 0),
-(55, 45, 'catalog/product-44.png', 0),
-(56, 45, 'catalog/product-45.png', 0),
-(57, 46, 'catalog/product-46.png', 0),
-(58, 46, 'catalog/product-47.png', 0),
-(59, 46, 'catalog/product-47.png', 0),
-(60, 46, 'catalog/product-48.png', 0),
-(122, 47, 'catalog/product-51.png', 0),
-(121, 47, 'catalog/product-50.png', 0),
-(120, 47, 'catalog/product-49.png', 0),
-(64, 48, 'catalog/product-52.png', 0),
-(65, 48, 'catalog/product-53.png', 0),
-(66, 48, 'catalog/product-54.png', 0),
-(119, 49, 'catalog/product-57.png', 0),
-(118, 49, 'catalog/product-57.png', 0),
-(117, 49, 'catalog/product-56.png', 0),
-(116, 49, 'catalog/product-56.png', 0),
-(115, 49, 'catalog/product-55.png', 0),
-(114, 49, 'catalog/product-55.png', 0),
-(73, 50, 'catalog/product-58.png', 0),
-(74, 50, 'catalog/product-59.png', 0),
-(75, 50, 'catalog/product-60.png', 0),
-(76, 50, 'catalog/product-60.png', 0),
-(159, 28, 'catalog/2S5A6505.jpg', 2),
-(160, 28, 'catalog/2S5A7052.jpg', 3),
-(161, 28, 'catalog/2S5A6958-min.jpg', 4);
+(237, 61, 'catalog/01-JS/neon matching.jpg', 1),
+(238, 62, 'catalog/01-JS/Ultra Coling System Matching Fabric pink.jpg', 1),
+(258, 77, 'catalog/02-NN/NN-24-CUT-1.jpg', 2),
+(260, 78, 'catalog/02-NN/NN-25-CUT-1.jpg', 2),
+(259, 78, 'catalog/02-NN/NN-25-CUT.jpg', 1),
+(268, 82, 'catalog/04-JF/JF-29-cut.jpg', 1),
+(266, 79, 'catalog/02-NN/NN-26-CUT-1.jpg', 2),
+(267, 81, 'catalog/03-DF/DF-28-cut.jpg', 1),
+(264, 79, 'catalog/02-NN/NN-26-CUT-2.jpg', 3),
+(265, 79, 'catalog/02-NN/NN-26-CUT.jpg', 1),
+(269, 83, 'catalog/04-JF/JF-30-cut.jpg', 1),
+(271, 85, 'catalog/04-JF/JF-33-cut.jpg', 1),
+(270, 83, 'catalog/04-JF/JF-30-cut-1.jpg', 2),
+(272, 85, 'catalog/04-JF/JF-33-cut-3.jpg', 2),
+(242, 66, 'catalog/01-JS/js-12-cut-1.jpg', 1),
+(241, 65, 'catalog/01-JS/white and blue matching.jpg', 1),
+(246, 68, 'catalog/01-JS/JS-15-cut.jpg', 1),
+(245, 67, 'catalog/01-JS/JS-14-cut-1.jpg', 2),
+(248, 70, 'catalog/01-JS/JS-17-cut.jpg', 1),
+(247, 69, 'catalog/01-JS/JS-16-cut.jpg', 1),
+(250, 73, 'catalog/01-JS/JS-20-cut.jpg', 1),
+(249, 70, 'catalog/01-JS/JS-17-cut-1.jpg', 2),
+(252, 74, 'catalog/02-NN/NN-21-CUT-1.jpg', 2),
+(251, 74, 'catalog/02-NN/NN-21-CUT.jpg', 1),
+(254, 75, 'catalog/02-NN/NN-22-CUT-1.jpg', 2),
+(253, 75, 'catalog/02-NN/NN-22-CUT.jpg', 1),
+(255, 76, 'catalog/02-NN/NN-23-CUT.jpg', 1),
+(244, 67, 'catalog/01-JS/JS-14-cut.jpg', 1),
+(243, 66, 'catalog/01-JS/js-12-cut-2.jpg', 2),
+(257, 77, 'catalog/02-NN/NN-24-CUT.jpg', 1),
+(256, 76, 'catalog/02-NN/NN-23-CUT-1.jpg', 2),
+(274, 85, 'catalog/04-JF/JF-33-cut-2.jpg', 4),
+(273, 85, 'catalog/04-JF/JF-33-cut-1.jpg', 3),
+(240, 64, 'catalog/01-JS/Ultra Coling System Matching Fabric on front.jpg', 1),
+(239, 63, 'catalog/01-JS/jersey matching pattern yellow and grey.jpg', 1),
+(230, 55, 'catalog/Ultra Coling System Matching Fabric.jpg', 0),
+(234, 28, 'catalog/Tri Colour Matching.jpg', 1),
+(231, 56, 'catalog/01-JS/Sublimation Patch.jpg', 1),
+(235, 57, 'catalog/01-JS/Black and Red Matching.jpg', 1),
+(232, 58, 'catalog/01-JS/white and royal blue matching.jpg', 1),
+(233, 59, 'catalog/01-JS/tri color sublimation print.jpg', 1),
+(226, 60, 'catalog/01-JS/Ultra Coling System Matching Fabric red.jpg', 1),
+(275, 86, 'catalog/04-JF/JF-34-cut.jpg', 1),
+(276, 86, 'catalog/04-JF/JF-34-cut-1.jpg', 2),
+(277, 86, 'catalog/04-JF/JF-34-cut-2.jpg', 3),
+(278, 87, 'catalog/05-NF/NF-35-cut.jpg', 1),
+(279, 87, 'catalog/05-NF/NF-35-cut-3.jpg', 2),
+(280, 87, 'catalog/05-NF/NF-35-cut-1.jpg', 4),
+(281, 87, 'catalog/05-NF/NF-35-cut-2.jpg', 3),
+(282, 88, 'catalog/05-NF/NF-36-cut-1.jpg', 1),
+(283, 88, 'catalog/05-NF/NF-36-cut.jpg', 2),
+(284, 88, 'catalog/05-NF/NF-36-cut-2.jpg', 3),
+(285, 89, 'catalog/05-NF/NF-37-cut.jpg', 1),
+(286, 89, 'catalog/05-NF/NF-37-cut-1.jpg', 2),
+(287, 89, 'catalog/05-NF/NF-37-cut-2.jpg', 3);
 
 -- --------------------------------------------------------
 
@@ -3111,48 +2993,13 @@ CREATE TABLE `oc_product_option` (
 --
 
 INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`, `value`, `required`) VALUES
+(56, 55, 11, '', 1),
 (1, 28, 11, '', 1),
-(2, 28, 13, '', 1),
-(4, 29, 13, '', 1),
-(3, 29, 11, '', 1),
-(5, 30, 11, '', 1),
-(6, 30, 13, '', 1),
-(7, 31, 11, '', 1),
-(8, 31, 13, '', 1),
-(9, 32, 11, '', 1),
-(10, 32, 13, '', 1),
-(11, 33, 2, '', 1),
-(12, 34, 11, '', 1),
-(13, 34, 13, '', 1),
-(14, 35, 2, '', 1),
-(15, 35, 11, '', 1),
-(16, 35, 13, '', 1),
-(18, 36, 13, '', 1),
-(17, 36, 11, '', 1),
-(20, 40, 13, '', 1),
-(19, 40, 11, '', 1),
-(21, 41, 11, '', 1),
-(22, 42, 9, '', 1),
-(23, 42, 10, '2014-12-18 12:25', 1),
-(24, 42, 11, '', 1),
-(25, 42, 12, '2014-12-18', 1),
-(26, 42, 13, '', 1),
-(29, 44, 11, '', 1),
-(30, 45, 11, '', 0),
-(31, 45, 13, '', 1),
-(32, 46, 11, '', 1),
-(34, 47, 13, '', 1),
-(33, 47, 11, '', 1),
-(35, 48, 11, '', 1),
-(36, 48, 13, '', 1),
-(38, 49, 13, '', 1),
-(37, 49, 11, '', 1),
-(39, 50, 11, '', 1),
-(55, 36, 7, '', 1),
-(54, 36, 6, '', 1),
-(53, 43, 6, '', 1),
-(52, 43, 4, '', 1),
-(51, 43, 7, '', 1);
+(57, 56, 11, '', 1),
+(58, 57, 11, '', 1),
+(59, 58, 11, '', 1),
+(60, 59, 11, '', 1),
+(61, 60, 11, '', 1);
 
 -- --------------------------------------------------------
 
@@ -3181,91 +3028,41 @@ CREATE TABLE `oc_product_option_value` (
 --
 
 INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
-(1, 1, 28, 11, 46, 144, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(2, 1, 28, 11, 47, 145, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(3, 1, 28, 11, 48, 144, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(4, 2, 28, 13, 49, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(5, 2, 28, 13, 52, 1001, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(6, 2, 28, 13, 53, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(9, 3, 29, 11, 48, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(8, 3, 29, 11, 47, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(7, 3, 29, 11, 46, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(11, 5, 30, 11, 46, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(12, 5, 30, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(13, 5, 30, 11, 48, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(14, 6, 30, 13, 49, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(15, 6, 30, 13, 52, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(16, 6, 30, 13, 52, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(17, 7, 31, 11, 46, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(18, 7, 31, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(19, 7, 31, 11, 48, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(20, 8, 31, 13, 49, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(21, 9, 32, 11, 46, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(22, 9, 32, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(23, 9, 32, 11, 48, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(24, 10, 32, 13, 49, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(25, 11, 33, 2, 23, 30, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(26, 11, 33, 2, 24, 30, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(27, 12, 34, 11, 46, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(28, 12, 34, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(29, 12, 34, 11, 48, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(30, 13, 34, 13, 49, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(31, 14, 35, 2, 23, 12, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(32, 14, 35, 2, 24, 11, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(33, 14, 35, 2, 44, 12, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(34, 15, 35, 11, 46, 11, 1, '5.0000', '+', 0, '+', '0.00000000', '+'),
-(35, 15, 35, 11, 47, 10, 1, '10.0000', '+', 0, '+', '0.00000000', '+'),
-(36, 15, 35, 11, 48, 15, 1, '15.0000', '+', 0, '+', '0.00000000', '+'),
-(37, 16, 35, 13, 49, 122, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(38, 16, 35, 13, 52, 122, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(39, 16, 35, 13, 52, 122, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(45, 18, 36, 13, 52, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(44, 18, 36, 13, 52, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(43, 18, 36, 13, 49, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(42, 17, 36, 11, 48, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(41, 17, 36, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(40, 17, 36, 11, 46, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(51, 20, 40, 13, 52, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(50, 20, 40, 13, 52, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(49, 20, 40, 13, 49, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(48, 19, 40, 11, 48, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(47, 19, 40, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(46, 19, 40, 11, 46, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(54, 21, 41, 11, 48, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(53, 21, 41, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(52, 21, 41, 11, 46, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(55, 24, 42, 11, 46, 1500, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(56, 24, 42, 11, 47, 1500, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(57, 24, 42, 11, 48, 1500, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(58, 26, 42, 13, 49, 1500, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(59, 26, 42, 13, 52, 1500, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(60, 26, 42, 13, 53, 1500, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(65, 29, 44, 11, 46, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(66, 29, 44, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(67, 29, 44, 11, 48, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(68, 30, 45, 11, 46, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(69, 30, 45, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(70, 30, 45, 11, 48, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(71, 31, 45, 13, 49, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(72, 32, 46, 11, 46, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(73, 32, 46, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(74, 32, 46, 11, 48, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(78, 34, 47, 13, 49, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(77, 33, 47, 11, 48, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(76, 33, 47, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(75, 33, 47, 11, 46, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(79, 35, 48, 11, 46, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(80, 35, 48, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(81, 35, 48, 11, 48, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(82, 36, 48, 13, 49, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(86, 38, 49, 13, 49, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(85, 37, 49, 11, 48, 1000, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(84, 37, 49, 11, 47, 1000, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(83, 37, 49, 11, 46, 1000, 1, '20.0000', '+', 20, '+', '20.00000000', '+'),
-(87, 39, 50, 11, 46, 10, 1, '15.0000', '+', 15, '+', '15.00000000', '+'),
-(88, 39, 50, 11, 47, 10, 1, '10.0000', '+', 10, '+', '10.00000000', '+'),
-(89, 39, 50, 11, 48, 10, 1, '5.0000', '+', 5, '+', '5.00000000', '+'),
-(10, 4, 29, 13, 49, 1000, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
+(110, 56, 55, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(105, 1, 28, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(104, 1, 28, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(3, 1, 28, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(2, 1, 28, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(1, 1, 28, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(109, 56, 55, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(108, 56, 55, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(107, 56, 55, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(106, 56, 55, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(111, 57, 56, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(112, 57, 56, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(113, 57, 56, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(114, 57, 56, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(115, 57, 56, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(116, 58, 57, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(117, 58, 57, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(118, 58, 57, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(119, 58, 57, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(120, 58, 57, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(125, 59, 58, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(124, 59, 58, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(123, 59, 58, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(122, 59, 58, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(121, 59, 58, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(126, 60, 59, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(127, 60, 59, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(128, 60, 59, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(129, 60, 59, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(130, 60, 59, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(135, 61, 60, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(134, 61, 60, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(133, 61, 60, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(132, 61, 60, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(131, 61, 60, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
 
 -- --------------------------------------------------------
 
@@ -3296,219 +3093,175 @@ CREATE TABLE `oc_product_related` (
 
 INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
 (28, 28),
-(28, 29),
-(28, 30),
-(28, 31),
-(28, 32),
-(28, 33),
-(28, 34),
-(28, 35),
-(28, 36),
-(28, 40),
-(28, 41),
-(28, 42),
-(28, 43),
-(28, 44),
-(28, 45),
-(28, 46),
-(28, 47),
-(28, 48),
-(28, 49),
-(29, 28),
-(29, 30),
-(29, 33),
-(29, 35),
-(29, 41),
-(29, 42),
-(29, 47),
-(30, 28),
-(30, 29),
-(30, 30),
-(30, 31),
-(30, 32),
-(30, 33),
-(30, 34),
-(30, 35),
-(30, 36),
-(30, 40),
-(30, 41),
-(30, 43),
-(30, 44),
-(30, 45),
-(30, 46),
-(30, 47),
-(30, 48),
-(30, 49),
-(30, 50),
-(31, 28),
-(31, 30),
-(31, 33),
-(31, 35),
-(31, 47),
-(32, 28),
-(32, 30),
-(32, 33),
-(32, 35),
-(32, 41),
-(32, 42),
-(32, 47),
-(33, 28),
-(33, 29),
-(33, 30),
-(33, 31),
-(33, 32),
-(33, 33),
-(33, 34),
-(33, 35),
-(33, 36),
-(33, 40),
-(33, 41),
-(33, 42),
-(33, 43),
-(33, 44),
-(33, 45),
-(33, 46),
-(33, 47),
-(33, 48),
-(33, 49),
-(33, 50),
-(34, 28),
-(34, 30),
-(34, 33),
-(34, 35),
-(34, 41),
-(34, 42),
-(34, 47),
-(35, 28),
-(35, 29),
-(35, 30),
-(35, 31),
-(35, 32),
-(35, 33),
-(35, 34),
-(35, 35),
-(35, 36),
-(35, 40),
-(35, 41),
-(35, 42),
-(35, 43),
-(35, 44),
-(35, 45),
-(35, 46),
-(35, 47),
-(35, 48),
-(35, 49),
-(35, 50),
-(36, 28),
-(36, 30),
-(36, 33),
-(36, 35),
-(36, 41),
-(36, 42),
-(36, 47),
-(40, 28),
-(40, 30),
-(40, 33),
-(40, 35),
-(40, 41),
-(40, 42),
-(40, 47),
-(41, 28),
-(41, 29),
-(41, 30),
-(41, 32),
-(41, 33),
-(41, 34),
-(41, 35),
-(41, 36),
-(41, 40),
-(41, 41),
-(41, 42),
-(41, 45),
-(41, 46),
-(41, 47),
-(41, 48),
-(41, 49),
-(42, 28),
-(42, 29),
-(42, 32),
-(42, 33),
-(42, 34),
-(42, 35),
-(42, 36),
-(42, 40),
-(42, 41),
-(42, 44),
-(42, 45),
-(42, 46),
-(42, 47),
-(42, 48),
-(42, 49),
-(42, 50),
-(43, 28),
-(43, 30),
-(43, 33),
-(43, 35),
-(43, 47),
-(44, 28),
-(44, 30),
-(44, 33),
-(44, 35),
-(44, 42),
-(44, 47),
-(44, 50),
-(45, 28),
-(45, 30),
-(45, 33),
-(45, 35),
-(45, 41),
-(45, 42),
-(45, 47),
-(46, 28),
-(46, 30),
-(46, 33),
-(46, 35),
-(46, 41),
-(46, 42),
-(46, 47),
-(47, 28),
-(47, 29),
-(47, 30),
-(47, 31),
-(47, 32),
-(47, 33),
-(47, 34),
-(47, 35),
-(47, 36),
-(47, 40),
-(47, 41),
-(47, 42),
-(47, 43),
-(47, 44),
-(47, 45),
-(47, 46),
-(47, 47),
-(47, 48),
-(47, 49),
-(48, 28),
-(48, 30),
-(48, 33),
-(48, 35),
-(48, 41),
-(48, 42),
-(48, 47),
-(49, 28),
-(49, 30),
-(49, 33),
-(49, 35),
-(49, 41),
-(49, 42),
-(49, 47),
-(50, 30),
-(50, 33),
-(50, 35),
-(50, 42),
-(50, 44);
+(28, 55),
+(28, 56),
+(28, 57),
+(28, 58),
+(28, 59),
+(28, 60),
+(28, 65),
+(28, 75),
+(55, 28),
+(55, 58),
+(55, 59),
+(55, 60),
+(55, 61),
+(55, 62),
+(55, 65),
+(55, 69),
+(55, 70),
+(55, 72),
+(55, 73),
+(56, 28),
+(56, 58),
+(56, 59),
+(56, 60),
+(56, 61),
+(56, 63),
+(56, 66),
+(57, 28),
+(57, 58),
+(57, 59),
+(57, 60),
+(57, 64),
+(57, 67),
+(57, 69),
+(57, 70),
+(58, 28),
+(58, 55),
+(58, 56),
+(58, 57),
+(58, 63),
+(58, 65),
+(59, 28),
+(59, 55),
+(59, 56),
+(59, 57),
+(59, 68),
+(60, 28),
+(60, 55),
+(60, 56),
+(60, 57),
+(60, 61),
+(60, 62),
+(60, 63),
+(60, 64),
+(60, 66),
+(60, 67),
+(60, 72),
+(61, 55),
+(61, 56),
+(61, 60),
+(61, 61),
+(61, 62),
+(61, 67),
+(61, 70),
+(61, 71),
+(61, 73),
+(61, 74),
+(62, 55),
+(62, 60),
+(62, 61),
+(62, 63),
+(62, 65),
+(62, 66),
+(62, 68),
+(62, 80),
+(63, 56),
+(63, 58),
+(63, 60),
+(63, 62),
+(63, 64),
+(63, 66),
+(63, 68),
+(63, 69),
+(63, 70),
+(63, 71),
+(64, 57),
+(64, 60),
+(64, 63),
+(64, 67),
+(64, 68),
+(65, 28),
+(65, 55),
+(65, 58),
+(65, 62),
+(65, 80),
+(66, 56),
+(66, 60),
+(66, 62),
+(66, 63),
+(66, 77),
+(67, 57),
+(67, 60),
+(67, 61),
+(67, 64),
+(68, 59),
+(68, 62),
+(68, 63),
+(68, 64),
+(68, 69),
+(68, 71),
+(68, 72),
+(69, 55),
+(69, 57),
+(69, 63),
+(69, 68),
+(69, 71),
+(69, 72),
+(70, 55),
+(70, 57),
+(70, 61),
+(70, 63),
+(70, 73),
+(71, 61),
+(71, 63),
+(71, 68),
+(71, 69),
+(71, 80),
+(72, 55),
+(72, 60),
+(72, 68),
+(72, 69),
+(73, 55),
+(73, 61),
+(73, 70),
+(73, 80),
+(74, 61),
+(74, 76),
+(74, 77),
+(74, 78),
+(74, 79),
+(75, 28),
+(75, 76),
+(75, 77),
+(75, 78),
+(75, 79),
+(76, 74),
+(76, 75),
+(76, 78),
+(76, 79),
+(77, 66),
+(77, 74),
+(77, 75),
+(77, 78),
+(77, 79),
+(78, 74),
+(78, 75),
+(78, 76),
+(78, 77),
+(78, 79),
+(79, 74),
+(79, 75),
+(79, 76),
+(79, 77),
+(79, 78),
+(80, 62),
+(80, 65),
+(80, 71),
+(80, 73),
+(80, 81),
+(81, 80);
 
 -- --------------------------------------------------------
 
@@ -3522,20 +3275,6 @@ CREATE TABLE `oc_product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_product_reward`
---
-
-INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_group_id`, `points`) VALUES
-(25, 28, 1, 400),
-(2, 30, 1, 200),
-(3, 42, 1, 100),
-(17, 43, 1, 600),
-(5, 44, 1, 700),
-(6, 45, 1, 800),
-(16, 47, 1, 300),
-(15, 49, 1, 1000);
 
 -- --------------------------------------------------------
 
@@ -3553,25 +3292,6 @@ CREATE TABLE `oc_product_special` (
   `date_end` date NOT NULL DEFAULT '0000-00-00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `oc_product_special`
---
-
-INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(32, 28, 1, 0, '80.0000', '0000-00-00', '0000-00-00'),
-(31, 29, 1, 0, '200.0000', '0000-00-00', '0000-00-00'),
-(3, 30, 1, 1, '80.0000', '0000-00-00', '0000-00-00'),
-(4, 30, 1, 2, '90.0000', '0000-00-00', '0000-00-00'),
-(5, 32, 1, 0, '90.0000', '0000-00-00', '0000-00-00'),
-(6, 33, 1, 0, '150.0000', '0000-00-00', '0000-00-00'),
-(20, 41, 1, 0, '90.0000', '0000-00-00', '0000-00-00'),
-(8, 42, 1, 1, '90.0000', '0000-00-00', '0000-00-00'),
-(23, 43, 1, 0, '400.0000', '0000-00-00', '0000-00-00'),
-(10, 44, 1, 0, '90.0000', '0000-00-00', '0000-00-00'),
-(11, 45, 1, 0, '150.0000', '0000-00-00', '0000-00-00'),
-(22, 47, 1, 0, '60.0000', '0000-00-00', '0000-00-00'),
-(21, 49, 1, 0, '150.0000', '0000-00-00', '0000-00-00');
-
 -- --------------------------------------------------------
 
 --
@@ -3588,44 +3308,39 @@ CREATE TABLE `oc_product_to_category` (
 --
 
 INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
-(28, 28),
-(29, 18),
-(30, 31),
-(30, 32),
-(30, 33),
-(31, 34),
-(32, 18),
-(33, 28),
-(33, 29),
-(33, 30),
-(34, 31),
-(34, 32),
-(34, 33),
-(35, 34),
-(36, 18),
-(40, 28),
-(40, 29),
-(40, 30),
-(41, 31),
-(41, 32),
-(41, 33),
-(42, 34),
-(43, 18),
-(44, 28),
-(44, 29),
-(44, 30),
-(45, 31),
-(45, 32),
-(45, 33),
-(46, 34),
-(47, 18),
-(48, 28),
-(48, 29),
-(48, 30),
-(49, 31),
-(49, 32),
-(49, 33),
-(50, 34);
+(28, 29),
+(55, 29),
+(56, 29),
+(57, 29),
+(58, 29),
+(59, 29),
+(60, 29),
+(61, 29),
+(62, 29),
+(63, 29),
+(64, 29),
+(65, 29),
+(66, 29),
+(67, 29),
+(68, 29),
+(69, 29),
+(70, 29),
+(71, 29),
+(72, 29),
+(73, 29),
+(74, 29),
+(75, 29),
+(76, 29),
+(77, 29),
+(78, 29),
+(79, 29),
+(80, 29),
+(81, 29),
+(82, 29),
+(85, 29),
+(86, 29),
+(87, 29),
+(89, 29);
 
 -- --------------------------------------------------------
 
@@ -3655,14 +3370,42 @@ CREATE TABLE `oc_product_to_layout` (
 --
 
 INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUES
-(43, 0, 0),
-(36, 0, 0),
-(41, 0, 0),
-(40, 0, 0),
-(49, 0, 0),
-(47, 0, 0),
+(64, 0, 0),
+(66, 0, 0),
+(63, 0, 0),
+(61, 0, 0),
+(67, 0, 0),
+(62, 0, 0),
 (28, 0, 0),
-(29, 0, 0);
+(65, 0, 0),
+(56, 0, 0),
+(55, 0, 0),
+(57, 0, 0),
+(58, 0, 0),
+(59, 0, 0),
+(60, 0, 0),
+(68, 0, 0),
+(69, 0, 0),
+(70, 0, 0),
+(71, 0, 0),
+(72, 0, 0),
+(73, 0, 0),
+(74, 0, 0),
+(75, 0, 0),
+(76, 0, 0),
+(77, 0, 0),
+(78, 0, 0),
+(79, 0, 0),
+(80, 0, 0),
+(81, 0, 0),
+(82, 0, 0),
+(83, 0, 0),
+(84, 0, 0),
+(85, 0, 0),
+(86, 0, 0),
+(87, 0, 0),
+(88, 0, 0),
+(89, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -3681,25 +3424,41 @@ CREATE TABLE `oc_product_to_store` (
 
 INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
 (28, 0),
-(29, 0),
-(30, 0),
-(31, 0),
-(32, 0),
-(33, 0),
-(34, 0),
-(35, 0),
-(36, 0),
-(40, 0),
-(41, 0),
-(42, 0),
-(43, 0),
-(44, 0),
-(45, 0),
-(46, 0),
-(47, 0),
-(48, 0),
-(49, 0),
-(50, 0);
+(55, 0),
+(56, 0),
+(57, 0),
+(58, 0),
+(59, 0),
+(60, 0),
+(61, 0),
+(62, 0),
+(63, 0),
+(64, 0),
+(65, 0),
+(66, 0),
+(67, 0),
+(68, 0),
+(69, 0),
+(70, 0),
+(71, 0),
+(72, 0),
+(73, 0),
+(74, 0),
+(75, 0),
+(76, 0),
+(77, 0),
+(78, 0),
+(79, 0),
+(80, 0),
+(81, 0),
+(82, 0),
+(83, 0),
+(84, 0),
+(85, 0),
+(86, 0),
+(87, 0),
+(88, 0),
+(89, 0);
 
 -- --------------------------------------------------------
 
@@ -3865,21 +3624,7 @@ CREATE TABLE `oc_review` (
 --
 
 INSERT INTO `oc_review` (`review_id`, `product_id`, `customer_id`, `author`, `text`, `rating`, `status`, `date_added`, `date_modified`) VALUES
-(3, 47, 0, 'Otto', 'I\'m very happy. Good choice for everyone!', 5, 1, '2014-12-03 12:03:04', '2015-11-20 18:12:41'),
-(5, 30, 0, 'Jenifer', 'Wonderful! It\'s what i was looking for long time. ', 5, 1, '2014-12-03 12:03:47', '2015-09-24 10:56:40'),
-(9, 29, 0, 'Donald', 'Hi, my order arrived yesterday. I love it! Thank you! What a fast service...you guys are great! I wish every site was like this one ', 5, 1, '2014-12-03 12:05:27', '2015-09-24 10:38:10'),
-(12, 45, 0, 'David', 'Thank you again and again! I have experienced the fastest support ever. My order arrived on my door step the following day. Your team is always, friendly and very helpful. You managed to exceed my expectations! ', 5, 1, '2014-12-03 12:06:13', '2015-09-24 10:37:41'),
-(13, 45, 0, 'Irene', 'Very good product.', 4, 1, '2014-12-03 12:06:18', '2015-09-24 10:45:46'),
-(17, 48, 0, 'Cooper', 'Hi, guys! I want to thank you for my very very quick delivery and I just love my order… Your company efficient services and customer care are second to none! I am very happy! I will surely share my experience with my friends!', 5, 1, '2014-12-03 12:07:18', '2015-09-24 10:37:14'),
-(21, 34, 0, 'Cate', 'I love your store! There is the largest selection of products of the exceptional quality and the lowest prices like in no other store. My family appreciated my purchase, I have no words to describe how pleased I am...Thanks a lot to your store, to your team and the delivery in time!!! Go on your great business, stay the best!', 5, 1, '2014-12-03 12:08:39', '2015-09-24 10:36:21'),
-(22, 31, 0, 'Elizabeth', 'Great Job, 100 percent satisfaction guarantee!', 4, 1, '2014-12-03 12:10:01', '2015-09-24 10:43:10'),
-(25, 40, 0, 'Bob', 'Hi guys! I\'m soo impressed!!! Your service is unbeaten, support staff is so friendly...very knowledgeable and professional team! The product I received is of the highest quality ever! And in addition I\'ve saved my money!', 5, 1, '2014-12-03 12:10:41', '2015-09-24 10:35:49'),
-(28, 49, 0, 'Bernard', 'WOW!!! I have no words! It was a unique and very enjoyable experience. You have such a diverse variety of beautiful products of the highest quality plus superb service. I am now a fan of your site! I can\'t wait to buy from you again! ', 5, 1, '2014-12-03 12:11:12', '2015-09-24 10:35:17'),
-(33, 35, 0, 'Barry', 'I loved everything about buying from you! My purchase was carefully packaged and quickly shipped. I was also pleased with great service and delivery times. There is no such awesome store on the web that can match you :)', 5, 1, '2014-12-03 12:13:02', '2015-09-24 10:02:21'),
-(39, 28, 0, 'Albert', 'I wanted to say thank you for the amazing product and for the fast processing and delivery. It was impressive, you weren\'t kidding. I was surprised with such an excellent quality...My family is very happy. I would definitely use this site again and again and recommend it to others.', 5, 1, '2014-12-03 12:14:08', '2015-09-24 10:01:24'),
-(42, 43, 0, 'Tom', 'Thank you again and again! I have experienced the fastest support ever. My order arrived on my door step the following day. Your team is always, friendly and very helpful. You managed to exceed my expectations! ', 5, 1, '2014-12-03 12:33:45', '2015-09-24 09:59:33'),
-(43, 42, 0, 'Mark', 'Hi, my order arrived yesterday. I love it! Thank you! What a fast service...you guys are great! I wish every site was like this one ', 5, 1, '2014-12-03 12:34:03', '2015-09-24 09:58:50'),
-(47, 46, 0, 'Jessica', 'Hi, guys! I want to thank you for my very very quick delivery and I just love my order…  Your company efficient services and customer care are second to none! I am very happy! I will surely share my experience with my friends!', 5, 1, '2014-12-03 12:35:09', '2015-09-24 09:59:03');
+(39, 28, 0, 'Albert', 'I wanted to say thank you for the amazing product and for the fast processing and delivery. It was impressive, you weren\'t kidding. I was surprised with such an excellent quality...My family is very happy. I would definitely use this site again and again and recommend it to others.', 5, 1, '2014-12-03 12:14:08', '2015-09-24 10:01:24');
 
 -- --------------------------------------------------------
 
@@ -4037,7 +3782,6 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (43, 0, 'credit', 'credit_status', '1', 0),
 (53, 0, 'reward', 'reward_sort_order', '2', 0),
 (54, 0, 'reward', 'reward_status', '1', 0),
-(16908, 0, 'config', 'config_simple_blog_share_social_site', '1', 0),
 (158, 0, 'account', 'account_status', '1', 0),
 (954, 0, 'affiliate', 'affiliate_status', '1', 0),
 (94, 0, 'voucher', 'voucher_sort_order', '8', 0),
@@ -4055,131 +3799,132 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (15438, 0, 'tm_social_list', 'tm_social_list_facebook', '//www.youtube.com', 0),
 (15437, 0, 'tm_social_list', 'tm_social_list_youtube', '', 0),
 (15436, 0, 'tm_social_list', 'tm_social_list_status', '1', 0),
-(16907, 0, 'config', 'config_simple_blog_related_articles', '1', 0),
-(16906, 0, 'config', 'config_simple_blog_author_information', '1', 0),
-(16905, 0, 'config', 'config_simple_blog_comment_auto_approval', '0', 0),
-(16904, 0, 'config', 'config_simple_blog_description_limit', '250', 0),
-(16903, 0, 'config', 'config_simple_blog_limit', '4', 0),
-(16902, 0, 'config', 'config_simple_blog_status', '1', 0),
-(16898, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet', 0),
-(16901, 0, 'config', 'config_error_filename', 'error.log', 0),
-(16900, 0, 'config', 'config_error_log', '1', 0),
-(16899, 0, 'config', 'config_error_display', '1', 0),
-(16897, 0, 'config', 'config_file_ext_allowed', 'txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods', 0),
-(16893, 0, 'config', 'config_password', '1', 0),
-(16894, 0, 'config', 'config_shared', '0', 0),
-(16895, 0, 'config', 'config_encryption', 'OZt8CNy70T7coHVq0hef3oy4WYqxCjE4uqyBht2BHtXnax1kFQCumEoUuzHM9id0L4qN2ChICOhz5JjlKPlS1AzfVfzJXRBJsnOfOUqE8X6i0QB4P1y9EodvEz17XIhUfwPkH6rtdFm2WGNjDz26ubjdwksHJFwbNKvnrKKwWLua1yjrzSVNjT0apnADENubrfIKGHvrP5d5iVZ0VCBGygNCH09Gp34llwtNSKR1JSLFZhbgi11Lznp1wCkDFbQODrGY9NvRwiPO9I1cCcHJvL1G3R40Lzc8qyS2kITqQRUMSiPYzvjbtVHIH7GZfmP1NiQER5Rx8vWvSSWE55nAEUH8Av6hCdA5VyUI0R7tsmAIiGuOkx48pbXvQ8T8i6HWnUkfTI6LyQb9ek4NyzuS1NzZ0WLufmz8092A7FHIGyI1Iscd8t4OHy76zYLwxIQNvUmfOIWaUSo3Dy1WPYPv4liqUKY6NKZsxuiKBS9iacA806iXx5WgeSenYtpoVlZrtSbExQCGGQNQpyA22yOq9osh47vWGlmUbMaytaFM5zBGSY9L2SCRhKTCot4T1m3Qefm3EBDoFqD548H21x4G5aLWkROPqloOzguptGsouTUUd8GurPmgPYSxD2G60RXapBV8Cy5YtlmU2qVFaF1EIEMRziQOx6Sw3mxTxnRwDTRQ1BeipFxvCF3pP4uMYk2UirhaE9R7QaPBpxwHScwt8Q7v4VkSJuIoyUKAWpAEWNCWBEfJaUycNdgYk7kQavwHN5jnz2aEtmeNwSJWxG8QiyTdOtzG8mXNmKYt2rhpkXAiD9BMhM7Bu9fZ3H2jCx4wfLxbubwDBVvJ1MFHV7V2YBXdaB4Kd1p7v2eWv5A6O2cEi5Gi8ypnfARaz00qhmAgJgnv2kn8pmSNt1SFUsTUzkb8AmZhVzyGarEXfETXsUOGPIoe2nSHmqtXT0ZTylpdvI080y2A8oxJFfULu0lcMqBZcQ9ErmX6p84kELBl13ieV0ndlOJhIqNhoNVtjqph', 0),
-(16896, 0, 'config', 'config_file_max_size', '300000', 0),
-(16889, 0, 'config', 'config_seo_url', '0', 0),
-(16890, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
-(16892, 0, 'config', 'config_secure', '0', 0),
-(16891, 0, 'config', 'config_compression', '0', 0),
-(16888, 0, 'config', 'config_maintenance', '0', 0),
-(16887, 0, 'config', 'config_mail_alert', '', 0),
-(16886, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
-(16885, 0, 'config', 'config_mail_smtp_port', '25', 0),
-(16884, 0, 'config', 'config_mail_smtp_password', '', 0),
-(16883, 0, 'config', 'config_mail_smtp_username', '', 0),
-(16882, 0, 'config', 'config_mail_smtp_hostname', '', 0),
-(16881, 0, 'config', 'config_mail_parameter', '', 0),
-(16879, 0, 'config', 'config_ftp_status', '0', 0),
-(16880, 0, 'config', 'config_mail_protocol', 'mail', 0),
-(16878, 0, 'config', 'config_ftp_root', '', 0),
-(16877, 0, 'config', 'config_ftp_password', '', 0),
-(16876, 0, 'config', 'config_ftp_username', '', 0),
-(16875, 0, 'config', 'config_ftp_port', '21', 0),
-(16874, 0, 'config', 'config_ftp_hostname', '192.168.9.2', 0),
-(16873, 0, 'config', 'config_image_location_height', '64', 0),
-(16872, 0, 'config', 'config_image_location_width', '234', 0),
-(16871, 0, 'config', 'config_image_cart_height', '100', 0),
-(16870, 0, 'config', 'config_image_cart_width', '100', 0),
-(16869, 0, 'config', 'config_image_wishlist_height', '47', 0),
-(16868, 0, 'config', 'config_image_wishlist_width', '47', 0),
-(16867, 0, 'config', 'config_image_compare_height', '180', 0),
-(16866, 0, 'config', 'config_image_compare_width', '180', 0),
-(16865, 0, 'config', 'config_image_related_height', '270', 0),
-(16864, 0, 'config', 'config_image_related_width', '270', 0),
-(16863, 0, 'config', 'config_image_additional_height', '88', 0),
-(16856, 0, 'config', 'config_image_thumb_width', '800', 0),
-(16857, 0, 'config', 'config_image_thumb_height', '800', 0),
-(16858, 0, 'config', 'config_image_popup_width', '800', 0),
-(16859, 0, 'config', 'config_image_popup_height', '800', 0),
-(16860, 0, 'config', 'config_image_product_width', '220', 0),
-(16861, 0, 'config', 'config_image_product_height', '220', 0),
-(16862, 0, 'config', 'config_image_additional_width', '88', 0),
-(16855, 0, 'config', 'config_image_category_height', '190', 0),
-(16854, 0, 'config', 'config_image_category_width', '190', 0),
-(16853, 0, 'config', 'config_icon', 'catalog/favicon.png', 0),
-(16852, 0, 'config', 'config_logo', 'catalog/mplogo.jpg', 0),
-(16850, 0, 'config', 'config_captcha', '', 0),
-(16851, 0, 'config', 'config_captcha_page', '[\"review\",\"return\",\"contact\"]', 1),
-(16848, 0, 'config', 'config_return_id', '0', 0),
-(16849, 0, 'config', 'config_return_status_id', '2', 0),
-(16847, 0, 'config', 'config_affiliate_mail', '1', 0),
-(16846, 0, 'config', 'config_affiliate_id', '4', 0),
-(16845, 0, 'config', 'config_affiliate_commission', '10', 0),
-(16844, 0, 'config', 'config_affiliate_auto', '1', 0),
-(16843, 0, 'config', 'config_affiliate_approval', '1', 0),
-(16842, 0, 'config', 'config_stock_checkout', '1', 0),
-(16841, 0, 'config', 'config_stock_warning', '0', 0),
-(16840, 0, 'config', 'config_stock_display', '1', 0),
-(16838, 0, 'config', 'config_order_mail', '1', 0),
-(16839, 0, 'config', 'config_api_id', '3', 0),
-(16837, 0, 'config', 'config_fraud_status_id', '7', 0),
-(16836, 0, 'config', 'config_complete_status', '[\"5\",\"3\"]', 1),
-(16833, 0, 'config', 'config_checkout_id', '5', 0),
-(16834, 0, 'config', 'config_order_status_id', '1', 0),
-(16835, 0, 'config', 'config_processing_status', '[\"5\",\"1\",\"2\",\"12\",\"3\"]', 1),
-(16832, 0, 'config', 'config_checkout_guest', '1', 0),
-(16831, 0, 'config', 'config_cart_weight', '1', 0),
-(16828, 0, 'config', 'config_account_id', '3', 0),
-(16829, 0, 'config', 'config_account_mail', '0', 0),
-(16830, 0, 'config', 'config_invoice_prefix', 'INV-2018-20', 0),
-(16827, 0, 'config', 'config_login_attempts', '5', 0),
-(16826, 0, 'config', 'config_customer_price', '0', 0),
-(16825, 0, 'config', 'config_customer_group_display', '[\"1\"]', 1),
-(16824, 0, 'config', 'config_customer_group_id', '1', 0),
-(16823, 0, 'config', 'config_customer_online', '1', 0),
-(16822, 0, 'config', 'config_tax_customer', 'shipping', 0),
-(16821, 0, 'config', 'config_tax_default', 'shipping', 0),
-(16820, 0, 'config', 'config_tax', '0', 0),
+(17012, 0, 'config', 'config_compression', '0', 0),
+(17013, 0, 'config', 'config_secure', '0', 0),
+(17014, 0, 'config', 'config_password', '1', 0),
+(17015, 0, 'config', 'config_shared', '0', 0),
+(17016, 0, 'config', 'config_encryption', 'OZt8CNy70T7coHVq0hef3oy4WYqxCjE4uqyBht2BHtXnax1kFQCumEoUuzHM9id0L4qN2ChICOhz5JjlKPlS1AzfVfzJXRBJsnOfOUqE8X6i0QB4P1y9EodvEz17XIhUfwPkH6rtdFm2WGNjDz26ubjdwksHJFwbNKvnrKKwWLua1yjrzSVNjT0apnADENubrfIKGHvrP5d5iVZ0VCBGygNCH09Gp34llwtNSKR1JSLFZhbgi11Lznp1wCkDFbQODrGY9NvRwiPO9I1cCcHJvL1G3R40Lzc8qyS2kITqQRUMSiPYzvjbtVHIH7GZfmP1NiQER5Rx8vWvSSWE55nAEUH8Av6hCdA5VyUI0R7tsmAIiGuOkx48pbXvQ8T8i6HWnUkfTI6LyQb9ek4NyzuS1NzZ0WLufmz8092A7FHIGyI1Iscd8t4OHy76zYLwxIQNvUmfOIWaUSo3Dy1WPYPv4liqUKY6NKZsxuiKBS9iacA806iXx5WgeSenYtpoVlZrtSbExQCGGQNQpyA22yOq9osh47vWGlmUbMaytaFM5zBGSY9L2SCRhKTCot4T1m3Qefm3EBDoFqD548H21x4G5aLWkROPqloOzguptGsouTUUd8GurPmgPYSxD2G60RXapBV8Cy5YtlmU2qVFaF1EIEMRziQOx6Sw3mxTxnRwDTRQ1BeipFxvCF3pP4uMYk2UirhaE9R7QaPBpxwHScwt8Q7v4VkSJuIoyUKAWpAEWNCWBEfJaUycNdgYk7kQavwHN5jnz2aEtmeNwSJWxG8QiyTdOtzG8mXNmKYt2rhpkXAiD9BMhM7Bu9fZ3H2jCx4wfLxbubwDBVvJ1MFHV7V2YBXdaB4Kd1p7v2eWv5A6O2cEi5Gi8ypnfARaz00qhmAgJgnv2kn8pmSNt1SFUsTUzkb8AmZhVzyGarEXfETXsUOGPIoe2nSHmqtXT0ZTylpdvI080y2A8oxJFfULu0lcMqBZcQ9ErmX6p84kELBl13ieV0ndlOJhIqNhoNVtjqph', 0),
+(16985, 0, 'config', 'config_image_related_width', '270', 0),
+(16986, 0, 'config', 'config_image_related_height', '270', 0),
+(16987, 0, 'config', 'config_image_compare_width', '180', 0),
+(16988, 0, 'config', 'config_image_compare_height', '180', 0),
+(16989, 0, 'config', 'config_image_wishlist_width', '47', 0),
+(16990, 0, 'config', 'config_image_wishlist_height', '47', 0),
+(16991, 0, 'config', 'config_image_cart_width', '100', 0),
+(16992, 0, 'config', 'config_image_cart_height', '100', 0),
+(16993, 0, 'config', 'config_image_location_width', '234', 0),
+(16994, 0, 'config', 'config_image_location_height', '64', 0),
+(16995, 0, 'config', 'config_ftp_hostname', '192.168.9.2', 0),
+(16996, 0, 'config', 'config_ftp_port', '21', 0),
+(16997, 0, 'config', 'config_ftp_username', '', 0),
+(16998, 0, 'config', 'config_ftp_password', '', 0),
+(16999, 0, 'config', 'config_ftp_root', '', 0),
+(17000, 0, 'config', 'config_ftp_status', '0', 0),
+(17001, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(17002, 0, 'config', 'config_mail_parameter', '', 0),
+(17003, 0, 'config', 'config_mail_smtp_hostname', '', 0),
+(17004, 0, 'config', 'config_mail_smtp_username', '', 0),
+(17005, 0, 'config', 'config_mail_smtp_password', '', 0),
+(17006, 0, 'config', 'config_mail_smtp_port', '25', 0),
+(17007, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
+(17008, 0, 'config', 'config_mail_alert', '', 0),
+(17009, 0, 'config', 'config_maintenance', '0', 0),
+(17010, 0, 'config', 'config_seo_url', '0', 0),
+(17011, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
+(16984, 0, 'config', 'config_image_additional_height', '88', 0),
+(16983, 0, 'config', 'config_image_additional_width', '88', 0),
+(16982, 0, 'config', 'config_image_product_height', '220', 0),
+(16981, 0, 'config', 'config_image_product_width', '220', 0),
+(16980, 0, 'config', 'config_image_popup_height', '800', 0),
+(16979, 0, 'config', 'config_image_popup_width', '800', 0),
+(16978, 0, 'config', 'config_image_thumb_height', '800', 0),
+(16977, 0, 'config', 'config_image_thumb_width', '800', 0),
+(16976, 0, 'config', 'config_image_category_height', '190', 0),
+(16975, 0, 'config', 'config_image_category_width', '190', 0),
+(16974, 0, 'config', 'config_icon', 'catalog/favicon.png', 0),
+(16973, 0, 'config', 'config_logo', 'catalog/mplogo.jpg', 0),
+(16972, 0, 'config', 'config_captcha_page', '[\"review\",\"return\",\"contact\"]', 1),
+(16971, 0, 'config', 'config_captcha', '', 0),
+(16970, 0, 'config', 'config_return_status_id', '2', 0),
+(16969, 0, 'config', 'config_return_id', '0', 0),
+(16968, 0, 'config', 'config_affiliate_mail', '1', 0),
+(16967, 0, 'config', 'config_affiliate_id', '4', 0),
+(16966, 0, 'config', 'config_affiliate_commission', '10', 0),
+(16965, 0, 'config', 'config_affiliate_auto', '1', 0),
+(16964, 0, 'config', 'config_affiliate_approval', '1', 0),
+(16963, 0, 'config', 'config_stock_checkout', '1', 0),
+(16962, 0, 'config', 'config_stock_warning', '0', 0),
+(16961, 0, 'config', 'config_stock_display', '1', 0),
+(16960, 0, 'config', 'config_api_id', '3', 0),
+(16959, 0, 'config', 'config_order_mail', '1', 0),
+(16958, 0, 'config', 'config_fraud_status_id', '7', 0),
+(16957, 0, 'config', 'config_complete_status', '[\"5\",\"3\"]', 1),
+(16956, 0, 'config', 'config_processing_status', '[\"5\",\"1\",\"2\",\"12\",\"3\"]', 1),
+(16955, 0, 'config', 'config_order_status_id', '1', 0),
+(16954, 0, 'config', 'config_checkout_id', '5', 0),
+(16953, 0, 'config', 'config_checkout_guest', '1', 0),
+(16952, 0, 'config', 'config_cart_weight', '1', 0),
+(16951, 0, 'config', 'config_invoice_prefix', 'INV-2018-20', 0),
+(16950, 0, 'config', 'config_account_mail', '0', 0),
+(16949, 0, 'config', 'config_account_id', '3', 0),
+(16948, 0, 'config', 'config_login_attempts', '5', 0),
+(16947, 0, 'config', 'config_customer_price', '0', 0),
+(16946, 0, 'config', 'config_customer_group_display', '[\"1\"]', 1),
+(16945, 0, 'config', 'config_customer_group_id', '1', 0),
+(16944, 0, 'config', 'config_customer_online', '1', 0),
+(16943, 0, 'config', 'config_tax_customer', 'shipping', 0),
+(16942, 0, 'config', 'config_tax_default', 'shipping', 0),
+(16941, 0, 'config', 'config_tax', '0', 0),
+(16940, 0, 'config', 'config_voucher_max', '1000', 0),
+(16939, 0, 'config', 'config_voucher_min', '1', 0),
+(16938, 0, 'config', 'config_review_mail', '0', 0),
+(16937, 0, 'config', 'config_review_guest', '1', 0),
+(16936, 0, 'config', 'config_review_status', '1', 0),
+(16935, 0, 'config', 'config_limit_admin', '20', 0),
+(16934, 0, 'config', 'config_product_description_length', '100', 0),
+(16933, 0, 'config', 'config_product_limit', '25', 0),
+(16932, 0, 'config', 'config_product_count', '1', 0),
 (16178, 0, 'fraudlabspro', 'fraudlabspro_score', '80', 0),
 (16179, 0, 'fraudlabspro', 'fraudlabspro_order_status_id', '17', 0),
 (16180, 0, 'fraudlabspro', 'fraudlabspro_review_status_id', '18', 0),
 (16181, 0, 'fraudlabspro', 'fraudlabspro_approve_status_id', '2', 0),
 (16182, 0, 'fraudlabspro', 'fraudlabspro_reject_status_id', '8', 0),
-(16819, 0, 'config', 'config_voucher_max', '1000', 0),
-(16818, 0, 'config', 'config_voucher_min', '1', 0),
-(16817, 0, 'config', 'config_review_mail', '0', 0),
-(16814, 0, 'config', 'config_limit_admin', '20', 0),
-(16815, 0, 'config', 'config_review_status', '1', 0),
-(16816, 0, 'config', 'config_review_guest', '1', 0),
-(16813, 0, 'config', 'config_product_description_length', '100', 0),
-(16812, 0, 'config', 'config_product_limit', '6', 0),
-(16811, 0, 'config', 'config_product_count', '1', 0),
-(16810, 0, 'config', 'config_weight_class_id', '1', 0),
-(16809, 0, 'config', 'config_length_class_id', '1', 0),
-(16808, 0, 'config', 'config_currency_auto', '1', 0),
-(16807, 0, 'config', 'config_currency', 'INR', 0),
-(16806, 0, 'config', 'config_admin_language', 'en', 0),
-(16805, 0, 'config', 'config_language', 'en', 0),
-(16804, 0, 'config', 'config_zone_id', '1493', 0),
-(16803, 0, 'config', 'config_country_id', '99', 0),
-(16802, 0, 'config', 'config_comment', 'We are glad to see you here!', 0),
-(16800, 0, 'config', 'config_image', 'catalog/logo.png', 0),
-(16801, 0, 'config', 'config_open', '7 Days a week from 9:00 am to 7:00 pm', 0),
-(16799, 0, 'config', 'config_fax', '80023456789', 0),
-(16798, 0, 'config', 'config_telephone', '+917666009599', 0),
-(16797, 0, 'config', 'config_email', 'sharfraz.2008@rediffmail.com', 0),
-(16796, 0, 'config', 'config_geocode', '40.6700, -73.9400', 0),
-(16795, 0, 'config', 'config_address', '103/A Wing 1st Floor Nagree Apartment Co-operative Housing Society', 0),
-(16794, 0, 'config', 'config_owner', 'Multipearls Traders ', 0),
-(16793, 0, 'config', 'config_name', 'Multipearls Traders ', 0),
-(16792, 0, 'config', 'config_layout_id', '4', 0),
-(16790, 0, 'config', 'config_meta_keyword', '', 0),
-(16791, 0, 'config', 'config_template', 'theme647', 0),
-(16789, 0, 'config', 'config_meta_description', 'Multipearls Traders ', 0),
-(16788, 0, 'config', 'config_meta_title', 'Multipearls Traders', 0);
+(16931, 0, 'config', 'config_weight_class_id', '1', 0),
+(16930, 0, 'config', 'config_length_class_id', '1', 0),
+(16929, 0, 'config', 'config_currency_auto', '1', 0),
+(16928, 0, 'config', 'config_currency', 'INR', 0),
+(16927, 0, 'config', 'config_admin_language', 'en', 0),
+(16926, 0, 'config', 'config_language', 'en', 0),
+(16925, 0, 'config', 'config_zone_id', '1493', 0),
+(16924, 0, 'config', 'config_country_id', '99', 0),
+(16923, 0, 'config', 'config_comment', 'We are glad to see you here!', 0),
+(16922, 0, 'config', 'config_open', '7 Days a week from 9:00 am to 7:00 pm', 0),
+(16921, 0, 'config', 'config_image', 'catalog/logo.png', 0),
+(16920, 0, 'config', 'config_fax', '80023456789', 0),
+(16919, 0, 'config', 'config_telephone', '+917666009599', 0),
+(16918, 0, 'config', 'config_email', 'sharfraz.2008@rediffmail.com', 0),
+(16917, 0, 'config', 'config_geocode', '40.6700, -73.9400', 0),
+(16915, 0, 'config', 'config_owner', 'Multipearls Traders ', 0),
+(16916, 0, 'config', 'config_address', '103/A Wing 1st Floor Nagree Apartment Co-operative Housing Society', 0),
+(16914, 0, 'config', 'config_name', 'Multipearls Traders ', 0),
+(16913, 0, 'config', 'config_layout_id', '4', 0),
+(16912, 0, 'config', 'config_template', 'theme647', 0),
+(16911, 0, 'config', 'config_meta_keyword', '', 0),
+(16910, 0, 'config', 'config_meta_description', 'Multipearls Traders ', 0),
+(16909, 0, 'config', 'config_meta_title', 'Multipearls Traders', 0),
+(17017, 0, 'config', 'config_file_max_size', '400000', 0),
+(17018, 0, 'config', 'config_file_ext_allowed', 'txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods', 0),
+(17019, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet', 0),
+(17020, 0, 'config', 'config_error_display', '1', 0),
+(17021, 0, 'config', 'config_error_log', '1', 0),
+(17022, 0, 'config', 'config_error_filename', 'error.log', 0),
+(17023, 0, 'config', 'config_simple_blog_status', '1', 0),
+(17024, 0, 'config', 'config_simple_blog_limit', '4', 0),
+(17025, 0, 'config', 'config_simple_blog_description_limit', '250', 0),
+(17026, 0, 'config', 'config_simple_blog_comment_auto_approval', '0', 0),
+(17027, 0, 'config', 'config_simple_blog_author_information', '1', 0),
+(17028, 0, 'config', 'config_simple_blog_related_articles', '1', 0),
+(17029, 0, 'config', 'config_simple_blog_share_social_site', '1', 0);
 
 -- --------------------------------------------------------
 
@@ -4964,41 +4709,45 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (1252, 'simple_blog_article_id=9', 'repellat'),
 (1185, 'simple_blog_category_id=4', 'management'),
 (1254, 'simple_blog_article_id=10', 'post10'),
-(1335, 'category_id=18', 'Men'),
+(1368, 'category_id=18', 'Men'),
 (1326, 'category_id=38', ''),
-(1332, 'category_id=43', ''),
-(1296, 'category_id=29', '4X4/SUV'),
+(1374, 'category_id=29', 'T-shirts'),
 (1299, 'category_id=30', 'Van'),
 (1337, 'category_id=31', 'Motorhome'),
 (1331, 'category_id=32', 'Motorsports'),
 (1301, 'category_id=33', 'Classic cars'),
-(1347, 'product_id=28', 'Afauto 7pcs BMW Black-Silver Carbon Fiber Style Emblem Logo Badge Set 73-82mm'),
-(1317, 'product_id=29', 'Brand New 16 x 6.5 Replacement Wheel for Volkswagen Jetta'),
-(1244, 'product_id=30', 'Hankook DynaPro AS RH03 All-Season Tire - 235-65R17 103T'),
-(1221, 'product_id=31', 'Hankook DynaPro AS RH03 All-Season Tire - 235-70R17 108SR'),
-(1215, 'product_id=32', 'Hankook DynaPro ATM RF10 Off-Road Tire - 265-75R16 114T'),
-(1241, 'product_id=33', 'Hankook DynaPro MT RT03 Off-Road Tire - 265-75R16 123Q'),
-(1219, 'product_id=34', 'Hankook Optimo H725 All-Season Tire - 235-55R19 101H'),
-(1240, 'product_id=35', 'Hankook Optimo H727 All-Season Tire - 225-60R16 97T'),
-(1287, 'product_id=36', 'Hankook Ventus V12 EVO K110 High Performance Tire - 305-30R19 102Z'),
-(1289, 'product_id=40', 'Michelin 9800300 Easy Grip Composite Tire Snow Chain'),
-(1288, 'product_id=41', 'Peerless 0152005 Auto-Trac Tire Chain'),
-(1237, 'product_id=42', 'Peerless 0231705 Auto-Trac Light Truck-SUV Tire Chain'),
-(1292, 'product_id=43', 'Citizen Original Q Industries MV50 SuperFlow High-Volume 12-Volt Air Compressor'),
-(1210, 'product_id=44', 'Set of 4 New Sport ATV Tires 21x7-10 Front & 20x11-9 Rear -4PR'),
-(1217, 'product_id=45', 'TerraGrips Tire Chains 23x10.5-12'),
-(1222, 'product_id=46', 'Thule 10mm CS10 Super-Premium Passenger Car Snow Chain Size 085'),
-(1291, 'product_id=47', 'Thule 16mm XB16 High Quality SUV-Truck Snow Chain Size 265'),
-(1218, 'product_id=48', 'Thule CU-9 9mm Easy Fit SUV Snow Chain - Size 230'),
-(1290, 'product_id=49', 'Vktech 20pcs JDM D1 Spec Wheel Lug Nuts M12 x 1.5mm for Honda Acura Civic Integra'),
-(1268, 'product_id=50', 'Wheel Spacers 14x1.5 studs for Escalade Sierra Yukon Suburban Silverado'),
-(1328, 'category_id=40', ''),
-(1338, 'category_id=45', 'Women 1'),
-(1339, 'category_id=46', ''),
-(1340, 'category_id=47', ''),
-(1341, 'category_id=48', ''),
-(1342, 'category_id=49', ''),
-(1344, 'category_id=51', ''),
+(1410, 'product_id=28', 'Electro Tri Colour Jersey With Collar'),
+(1412, 'product_id=62', ''),
+(1413, 'product_id=63', ''),
+(1414, 'product_id=64', ''),
+(1415, 'product_id=65', ''),
+(1416, 'product_id=66', ''),
+(1417, 'product_id=67', ''),
+(1418, 'product_id=68', ''),
+(1419, 'product_id=69', ''),
+(1420, 'product_id=70', ''),
+(1421, 'product_id=71', ''),
+(1423, 'product_id=73', ''),
+(1424, 'product_id=74', ''),
+(1425, 'product_id=75', ''),
+(1426, 'product_id=76', ''),
+(1427, 'product_id=77', ''),
+(1428, 'product_id=78', ''),
+(1430, 'product_id=80', ''),
+(1431, 'product_id=81', ''),
+(1432, 'product_id=82', ''),
+(1433, 'product_id=83', ''),
+(1434, 'product_id=84', ''),
+(1435, 'product_id=85', ''),
+(1436, 'product_id=86', ''),
+(1437, 'product_id=87', ''),
+(1438, 'product_id=88', ''),
+(1439, 'product_id=89', ''),
+(1375, 'category_id=28', 'Round-Neck'),
+(1369, 'category_id=45', 'Women 1'),
+(1397, 'manufacturer_id=11', 'ELECTRO SPORTS TSHIRTS ELECTRO SPORTS WHOLE SALE JERSEY ELECTRO SPPORTS ONLINE SHOPPING '),
+(1376, 'category_id=58', ''),
+(1371, 'category_id=55', ''),
 (1345, 'category_id=52', '');
 
 -- --------------------------------------------------------
@@ -9548,24 +9297,6 @@ ALTER TABLE `oc_banner_image_description`
   ADD PRIMARY KEY (`banner_image_id`,`language_id`);
 
 --
--- Indexes for table `oc_bluepay_hosted_card`
---
-ALTER TABLE `oc_bluepay_hosted_card`
-  ADD PRIMARY KEY (`card_id`);
-
---
--- Indexes for table `oc_bluepay_hosted_order`
---
-ALTER TABLE `oc_bluepay_hosted_order`
-  ADD PRIMARY KEY (`bluepay_hosted_order_id`);
-
---
--- Indexes for table `oc_bluepay_hosted_order_transaction`
---
-ALTER TABLE `oc_bluepay_hosted_order_transaction`
-  ADD PRIMARY KEY (`bluepay_hosted_order_transaction_id`);
-
---
 -- Indexes for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
@@ -10435,571 +10166,667 @@ ALTER TABLE `oc_zone_to_geo_zone`
 --
 ALTER TABLE `oc_address`
   MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `oc_affiliate`
 --
 ALTER TABLE `oc_affiliate`
   MODIFY `affiliate_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_affiliate_activity`
 --
 ALTER TABLE `oc_affiliate_activity`
   MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_affiliate_login`
 --
 ALTER TABLE `oc_affiliate_login`
   MODIFY `affiliate_login_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_affiliate_transaction`
 --
 ALTER TABLE `oc_affiliate_transaction`
   MODIFY `affiliate_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_amazon_login_pay_order`
 --
 ALTER TABLE `oc_amazon_login_pay_order`
   MODIFY `amazon_login_pay_order_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_amazon_login_pay_order_transaction`
 --
 ALTER TABLE `oc_amazon_login_pay_order_transaction`
   MODIFY `amazon_login_pay_order_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_api`
 --
 ALTER TABLE `oc_api`
   MODIFY `api_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `oc_api_ip`
 --
 ALTER TABLE `oc_api_ip`
   MODIFY `api_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `oc_api_session`
 --
 ALTER TABLE `oc_api_session`
   MODIFY `api_session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `oc_attribute`
 --
 ALTER TABLE `oc_attribute`
   MODIFY `attribute_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
 -- AUTO_INCREMENT for table `oc_attribute_group`
 --
 ALTER TABLE `oc_attribute_group`
-  MODIFY `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `oc_banner`
 --
 ALTER TABLE `oc_banner`
   MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
 --
 -- AUTO_INCREMENT for table `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
   MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
---
--- AUTO_INCREMENT for table `oc_bluepay_hosted_card`
---
-ALTER TABLE `oc_bluepay_hosted_card`
-  MODIFY `card_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `oc_bluepay_hosted_order`
---
-ALTER TABLE `oc_bluepay_hosted_order`
-  MODIFY `bluepay_hosted_order_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `oc_bluepay_hosted_order_transaction`
---
-ALTER TABLE `oc_bluepay_hosted_order_transaction`
-  MODIFY `bluepay_hosted_order_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
   MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
 --
 -- AUTO_INCREMENT for table `oc_category`
 --
 ALTER TABLE `oc_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+
 --
 -- AUTO_INCREMENT for table `oc_country`
 --
 ALTER TABLE `oc_country`
   MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=258;
+
 --
 -- AUTO_INCREMENT for table `oc_coupon`
 --
 ALTER TABLE `oc_coupon`
   MODIFY `coupon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `oc_coupon_history`
 --
 ALTER TABLE `oc_coupon_history`
   MODIFY `coupon_history_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_coupon_product`
 --
 ALTER TABLE `oc_coupon_product`
   MODIFY `coupon_product_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_currency`
 --
 ALTER TABLE `oc_currency`
   MODIFY `currency_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `oc_customer`
 --
 ALTER TABLE `oc_customer`
   MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `oc_customer_activity`
 --
 ALTER TABLE `oc_customer_activity`
   MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `oc_customer_approval`
 --
 ALTER TABLE `oc_customer_approval`
   MODIFY `customer_approval_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_customer_group`
 --
 ALTER TABLE `oc_customer_group`
   MODIFY `customer_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `oc_customer_history`
 --
 ALTER TABLE `oc_customer_history`
   MODIFY `customer_history_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_customer_ip`
 --
 ALTER TABLE `oc_customer_ip`
-  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `oc_customer_login`
 --
 ALTER TABLE `oc_customer_login`
   MODIFY `customer_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `oc_customer_reward`
 --
 ALTER TABLE `oc_customer_reward`
   MODIFY `customer_reward_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_customer_search`
 --
 ALTER TABLE `oc_customer_search`
   MODIFY `customer_search_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_customer_transaction`
 --
 ALTER TABLE `oc_customer_transaction`
   MODIFY `customer_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_custom_field`
 --
 ALTER TABLE `oc_custom_field`
   MODIFY `custom_field_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_custom_field_value`
 --
 ALTER TABLE `oc_custom_field_value`
   MODIFY `custom_field_value_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_download`
 --
 ALTER TABLE `oc_download`
   MODIFY `download_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_event`
 --
 ALTER TABLE `oc_event`
   MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `oc_extension`
 --
 ALTER TABLE `oc_extension`
   MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=499;
+
 --
 -- AUTO_INCREMENT for table `oc_extension_install`
 --
 ALTER TABLE `oc_extension_install`
   MODIFY `extension_install_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_extension_path`
 --
 ALTER TABLE `oc_extension_path`
   MODIFY `extension_path_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_filter`
 --
 ALTER TABLE `oc_filter`
   MODIFY `filter_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_filter_group`
 --
 ALTER TABLE `oc_filter_group`
   MODIFY `filter_group_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_geo_zone`
 --
 ALTER TABLE `oc_geo_zone`
   MODIFY `geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `oc_information`
 --
 ALTER TABLE `oc_information`
   MODIFY `information_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
 -- AUTO_INCREMENT for table `oc_language`
 --
 ALTER TABLE `oc_language`
   MODIFY `language_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `oc_layout`
 --
 ALTER TABLE `oc_layout`
   MODIFY `layout_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT for table `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
   MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1244;
+
 --
 -- AUTO_INCREMENT for table `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
   MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=329;
+
 --
 -- AUTO_INCREMENT for table `oc_length_class`
 --
 ALTER TABLE `oc_length_class`
   MODIFY `length_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `oc_length_class_description`
 --
 ALTER TABLE `oc_length_class_description`
   MODIFY `length_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `oc_location`
 --
 ALTER TABLE `oc_location`
   MODIFY `location_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_manufacturer`
 --
 ALTER TABLE `oc_manufacturer`
-  MODIFY `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
 -- AUTO_INCREMENT for table `oc_marketing`
 --
 ALTER TABLE `oc_marketing`
   MODIFY `marketing_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_modification`
 --
 ALTER TABLE `oc_modification`
   MODIFY `modification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=335;
+
 --
 -- AUTO_INCREMENT for table `oc_module`
 --
 ALTER TABLE `oc_module`
   MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+
 --
 -- AUTO_INCREMENT for table `oc_option`
 --
 ALTER TABLE `oc_option`
   MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
 --
 -- AUTO_INCREMENT for table `oc_option_value`
 --
 ALTER TABLE `oc_option_value`
-  MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+
 --
 -- AUTO_INCREMENT for table `oc_order`
 --
 ALTER TABLE `oc_order`
   MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `oc_order_custom_field`
 --
 ALTER TABLE `oc_order_custom_field`
   MODIFY `order_custom_field_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_order_history`
 --
 ALTER TABLE `oc_order_history`
   MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `oc_order_option`
 --
 ALTER TABLE `oc_order_option`
   MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `oc_order_product`
 --
 ALTER TABLE `oc_order_product`
   MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `oc_order_recurring`
 --
 ALTER TABLE `oc_order_recurring`
   MODIFY `order_recurring_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_order_recurring_transaction`
 --
 ALTER TABLE `oc_order_recurring_transaction`
   MODIFY `order_recurring_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_order_shipment`
 --
 ALTER TABLE `oc_order_shipment`
   MODIFY `order_shipment_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_order_status`
 --
 ALTER TABLE `oc_order_status`
   MODIFY `order_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
 --
 -- AUTO_INCREMENT for table `oc_order_total`
 --
 ALTER TABLE `oc_order_total`
   MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
 --
 -- AUTO_INCREMENT for table `oc_order_voucher`
 --
 ALTER TABLE `oc_order_voucher`
   MODIFY `order_voucher_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_product`
 --
 ALTER TABLE `oc_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+
 --
 -- AUTO_INCREMENT for table `oc_product_discount`
 --
 ALTER TABLE `oc_product_discount`
-  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
 --
 -- AUTO_INCREMENT for table `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=288;
+
 --
 -- AUTO_INCREMENT for table `oc_product_option`
 --
 ALTER TABLE `oc_product_option`
-  MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
 --
 -- AUTO_INCREMENT for table `oc_product_option_value`
 --
 ALTER TABLE `oc_product_option_value`
-  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
+
 --
 -- AUTO_INCREMENT for table `oc_product_reward`
 --
 ALTER TABLE `oc_product_reward`
-  MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
 --
 -- AUTO_INCREMENT for table `oc_product_special`
 --
 ALTER TABLE `oc_product_special`
-  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
 --
 -- AUTO_INCREMENT for table `oc_recurring`
 --
 ALTER TABLE `oc_recurring`
   MODIFY `recurring_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_return`
 --
 ALTER TABLE `oc_return`
   MODIFY `return_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_return_action`
 --
 ALTER TABLE `oc_return_action`
   MODIFY `return_action_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `oc_return_history`
 --
 ALTER TABLE `oc_return_history`
   MODIFY `return_history_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_return_reason`
 --
 ALTER TABLE `oc_return_reason`
   MODIFY `return_reason_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `oc_return_status`
 --
 ALTER TABLE `oc_return_status`
   MODIFY `return_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `oc_review`
 --
 ALTER TABLE `oc_review`
   MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
 --
 -- AUTO_INCREMENT for table `oc_seo_url`
 --
 ALTER TABLE `oc_seo_url`
   MODIFY `seo_url_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=844;
+
 --
 -- AUTO_INCREMENT for table `oc_setting`
 --
 ALTER TABLE `oc_setting`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16909;
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17030;
+
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_article`
 --
 ALTER TABLE `oc_simple_blog_article`
   MODIFY `simple_blog_article_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_article_description`
 --
 ALTER TABLE `oc_simple_blog_article_description`
   MODIFY `simple_blog_article_description_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
+
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_author`
 --
 ALTER TABLE `oc_simple_blog_author`
   MODIFY `simple_blog_author_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_author_description`
 --
 ALTER TABLE `oc_simple_blog_author_description`
   MODIFY `simple_blog_author_description_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_category`
 --
 ALTER TABLE `oc_simple_blog_category`
   MODIFY `simple_blog_category_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_category_description`
 --
 ALTER TABLE `oc_simple_blog_category_description`
   MODIFY `simple_blog_category_description_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_comment`
 --
 ALTER TABLE `oc_simple_blog_comment`
   MODIFY `simple_blog_comment_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_related_article`
 --
 ALTER TABLE `oc_simple_blog_related_article`
   MODIFY `simple_blog_related_article_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_view`
 --
 ALTER TABLE `oc_simple_blog_view`
   MODIFY `simple_blog_view_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
 -- AUTO_INCREMENT for table `oc_statistics`
 --
 ALTER TABLE `oc_statistics`
   MODIFY `statistics_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `oc_stock_status`
 --
 ALTER TABLE `oc_stock_status`
   MODIFY `stock_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `oc_store`
 --
 ALTER TABLE `oc_store`
   MODIFY `store_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_tax_class`
 --
 ALTER TABLE `oc_tax_class`
   MODIFY `tax_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
 -- AUTO_INCREMENT for table `oc_tax_rate`
 --
 ALTER TABLE `oc_tax_rate`
   MODIFY `tax_rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+
 --
 -- AUTO_INCREMENT for table `oc_tax_rule`
 --
 ALTER TABLE `oc_tax_rule`
   MODIFY `tax_rule_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+
 --
 -- AUTO_INCREMENT for table `oc_theme`
 --
 ALTER TABLE `oc_theme`
   MODIFY `theme_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_tm_newsletter`
 --
 ALTER TABLE `oc_tm_newsletter`
   MODIFY `tm_newsletter_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_translation`
 --
 ALTER TABLE `oc_translation`
   MODIFY `translation_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_upload`
 --
 ALTER TABLE `oc_upload`
   MODIFY `upload_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1348;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1440;
+
 --
 -- AUTO_INCREMENT for table `oc_user`
 --
 ALTER TABLE `oc_user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `oc_user_group`
 --
 ALTER TABLE `oc_user_group`
   MODIFY `user_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
 -- AUTO_INCREMENT for table `oc_voucher`
 --
 ALTER TABLE `oc_voucher`
   MODIFY `voucher_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_voucher_history`
 --
 ALTER TABLE `oc_voucher_history`
   MODIFY `voucher_history_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `oc_voucher_theme`
 --
 ALTER TABLE `oc_voucher_theme`
   MODIFY `voucher_theme_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `oc_weight_class`
 --
 ALTER TABLE `oc_weight_class`
   MODIFY `weight_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `oc_weight_class_description`
 --
 ALTER TABLE `oc_weight_class_description`
   MODIFY `weight_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `oc_zone`
 --
 ALTER TABLE `oc_zone`
   MODIFY `zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4232;
+
 --
 -- AUTO_INCREMENT for table `oc_zone_to_geo_zone`
 --
 ALTER TABLE `oc_zone_to_geo_zone`
-  MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;COMMIT;
+  MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
