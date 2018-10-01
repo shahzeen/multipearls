@@ -601,7 +601,7 @@ blockquote {
 =========================================================*/
 body {
   font: 300 16px/24px "Ubuntu", sans-serif;
-  color: #999;
+  color: #333;
   background: #fff;
 }
 
@@ -624,19 +624,13 @@ h1 {
 }
 h1 i {
   margin-right: 10px;
-  color: #eac322;
+  color: #333;
   font-size: 45px;
 }
 h1 i:before {
   vertical-align: middle;
 }
-h1:after {
-  content: '';
-  height: 1px;
-  display: block;
-  background: #e0e0e0;
-  margin: 20px 0 40px;
-}
+
 h1.no-line {
   margin-bottom: 30px;
 }
@@ -672,7 +666,8 @@ h4 + hr, h5 + hr, .article-title + hr, .caption + hr, .description + hr {
   display: inline-block;
   width: 51px;
   border-top-width: 4px;
-  border-color: #eac322;
+  border-color: #333;
+  display: none;
 }
 
 a {
@@ -696,7 +691,7 @@ a:visited, a:focus {
 }
 a:hover {
   text-decoration: none;
-  color: #f8c30d;
+  color: #8D8D8D;
 }
 
 p a, p a:visited, p a:focus {
@@ -767,7 +762,7 @@ header .logo + .box-cart {
   margin-right: 0;
 }
 header hr + .container {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 header .box-telephone {
   margin-top: 7px;
@@ -814,7 +809,7 @@ header .nav, header .box-telephone, header .box-cart, header .box-wishlist, head
   float: right;
 }
 header .navigation {
-  background: #1e366b;
+  background: #000;
 }
 header > hr {
   margin: 0;
@@ -824,7 +819,9 @@ header > hr {
   height: 1px;
 }
 header .search {
-  width: 539px;
+  margin: 0 auto;
+  float: none;
+  width: 750px;
 }
 
 .box-wishlist i, .box-wishlist span, .box-wishlist i:before,
@@ -860,11 +857,11 @@ header .search {
   line-height: 42px;
   font-weight: 400;
   text-align: center;
-  background: #eac322;
+  border: 1px solid #000;
 }
 .box-wishlist > a:hover i,
 .box-compare > a:hover i {
-  color: #eac322;
+  color: #8D8D8D;
 }
 
 /*================  Toggle ===============*/
@@ -890,10 +887,6 @@ header .search {
   padding: 5px 5px 5px 10px;
   text-transform: capitalize;
 }
-.toggle_cont > li > a:hover, .toggle_cont > li > button:hover {
-  background: #eac322;
-  color: #333;
-}
 .toggle_cont ul {
   text-align: right;
   font-size: 16px;
@@ -916,7 +909,6 @@ header .nav {
 header .nav i {
   font-size: 19px;
   line-height: 19px;
-  color: #eac322;
 }
 @media (min-width: 768px) {
   html[lang="ru"] header .nav {
@@ -937,7 +929,6 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   header .nav > .toggle_cont {
     display: block !important;
     position: static;
-    border: 1px solid #e0e0e0;
     padding: 0;
     margin: 0;
     background: none;
@@ -968,15 +959,14 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
     -webkit-transition: color 0.5s ease;
     transition: color 0.5s ease;
   }
-  header .nav > .toggle_cont > li > a:hover, header .nav > .toggle_cont > li > a.active {
-    background: #eac322;
-  }
   header .nav > .toggle_cont > li > a:hover, header .nav > .toggle_cont > li > a:hover i, header .nav > .toggle_cont > li > a.active, header .nav > .toggle_cont > li > a.active i {
     color: #333;
   }
-  header .nav > .toggle_cont > li:not(:first-child) + li {
-    border-left: 1px solid #e0e0e0;
-  }
+}
+@media (max-width: 991px) {
+  header .search{
+  float: left;
+}
 }
 @media (min-width: 768px) and (max-width: 991px) {
   header .nav > .toggle_cont > li > a {
@@ -987,6 +977,7 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   }
 }
 @media (max-width: 767px) {
+
   header .nav {
     position: fixed;
     top: 0;
@@ -1025,7 +1016,7 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   }
   header .nav .toggle_cont li > a:hover {
     background: #333;
-    color: #eac322;
+    color: #333;
   }
 }
 
@@ -1033,6 +1024,7 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
 .box-language,
 .box-currency {
   text-transform: capitalize;
+  display: none;
 }
 .box-language + .box-language,
 .box-currency + .box-language, .box-language +
@@ -1106,7 +1098,7 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   margin: 0;
 }
 .box-telephone:before {
-  color: #eac322;
+  color: #000;
   font-size: 25px;
   margin-right: 10px;
 }
@@ -1116,9 +1108,6 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   line-height: 20px;
   font-weight: 700;
   color: #333;
-}
-.box-telephone > a:hover {
-  color: #eac322;
 }
 
 /*========================================================
@@ -1238,7 +1227,7 @@ section.top {
   font-weight: 400;
   font-size: 20px;
   font-family: "material-design";
-  color: #eac322;
+  color: #333;
 }
 
 #content .product-info ul.list-unstyled a:before {
@@ -1344,15 +1333,11 @@ section.top {
   color: #fff;
   font-size: 25px;
   border: 1px solid #e0e0e0;
-  background: #1e366b;
+  background: #000;
 }
 .search button::-moz-focus-inner, .search button:focus::-moz-focus-inner, .search button:active::-moz-focus-inner {
   border: none;
   padding: 0;
-}
-.search button:hover, .search button:focus:hover, .search button:active:hover {
-  color: #eac322;
-  border-color: #1e366b;
 }
 
 #livesearch_search_results {
@@ -1379,10 +1364,10 @@ section.top {
   background: transparent;
 }
 #livesearch_search_results li:hover, #livesearch_search_results li.highlighted {
-  background-color: #eac322;
+  background-color: #333;
 }
 #livesearch_search_results li:hover a, #livesearch_search_results li:hover a:visited, #livesearch_search_results li.highlighted a, #livesearch_search_results li.highlighted a:visited {
-  color: #333;
+  color: #fff;
 }
 #livesearch_search_results a, #livesearch_search_results a:visited {
   display: block;
@@ -1415,7 +1400,7 @@ section.top {
   background: none;
 }
 .box-cart .btn-danger:hover, .box-cart .btn-danger:focus:hover {
-  color: #eac322;
+  color: #333;
   background: none;
 }
 .box-cart .btn-danger:focus, .box-cart .btn-danger:focus:focus {
@@ -1445,7 +1430,7 @@ section.top {
   color: #333;
 }
 .cart > button:hover i {
-  color: #eac322;
+  color: #8D8D8D;
 }
 .cart .cart-total2 {
   display: inline-block;
@@ -1460,19 +1445,19 @@ section.top {
   margin-left: 9px;
   text-align: center;
   color: #333;
-  background: #eac322;
+  border: 1px solid #000;
 }
 .cart .cart-remove-btn {
   margin-bottom: 10px;
   margin-left: 5px;
   background: #333;
-  color: #eac322;
+  color: #333;
   padding: 10px 15px;
   text-transform: uppercase;
   font-weight: 700;
 }
 .cart .cart-remove-btn:hover {
-  background: #eac322;
+  background: #333;
   color: #333;
 }
 
@@ -1652,25 +1637,25 @@ section.top {
 }
 .product-list .product-thumb .aside .product-btn:hover {
   background: transparent;
-  color: #f8c30d;
+  color: #333;
 }
 .product-list .product-thumb .aside .product-btn, .product-list .product-thumb .aside .product-btn-add {
   display: block;
   width: 100%;
 }
 .product-list .product-thumb .aside .product-btn-add {
-  color: #eac322;
-  border: none;
-}
-.product-list .product-thumb .aside .product-btn-add:hover {
-  background: #eac322;
   color: #333;
+  border: none;
 }
 .product-list .product-thumb .caption {
   border-right: 1px solid #e0e0e0;
 }
 .product-list .product-thumb > .price, .product-list .product-thumb > .cart-button {
   display: none;
+}
+.camera_prev:hover, .camera_next:hover{
+  background: #9f9d9d;
+  color: #333;
 }
 @media (min-width: 768px) {
   .product-list .product-thumb .caption {
@@ -2138,7 +2123,6 @@ aside .row {
   text-transform: uppercase;
 }
 .single-category .nav-tabs > li > a:hover, .single-category .nav-tabs > li > a:focus {
-  background: #eac322;
   color: #333;
 }
 .single-category .nav-tabs > li.active > a, .single-category .nav-tabs > li.active > a:focus, .single-category .nav-tabs > li.active > a:hover {
@@ -2341,13 +2325,9 @@ aside .row {
   line-height: 24px;
 }
 .buttons .pull-right .btn {
-  background: #eac322;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
   margin-right: 10px;
-}
-.buttons .pull-right .btn:hover, .buttons .pull-right .btn:focus {
-  background: #333;
-  color: #eac322;
+  border: 1px solid #111;
 }
 
 .input-group-btn .btn {
@@ -2376,7 +2356,6 @@ aside .row {
 .btn:visited, .btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn {
   font-size: 14px;
   color: #333;
-  background: #eac322;
   text-shadow: none;
   border-radius: 0;
   border: none;
@@ -2387,7 +2366,7 @@ aside .row {
 .btn:hover,
 .btn:focus {
   background: #333;
-  color: #eac322;
+  color: #fff;
   outline: none !important;
 }
 
@@ -2417,7 +2396,6 @@ aside .row {
 }
 
 .product-btn-add {
-  background-color: #eac322;
   color: #333;
   padding: 10px 20px;
   font-weight: 700;
@@ -2426,28 +2404,18 @@ aside .row {
 .product-btn-add i {
   margin-right: 5px;
 }
-.product-btn-add:hover {
-  color: #eac322;
-  background: #333;
-}
 
 .product-thumb .product-btn, .product-thumb .product-btn-add {
   width: 33.33333333%;
-  float: left;
-  border-left: 1px solid #e0e0e0;
-  border-right: 1px solid #e0e0e0;
   font-size: 20px;
   line-height: 20px;
   height: 35px;
-  background: #1e366b;
+  background: #333;
   color: #fff;
   padding: 0;
 }
 .product-thumb .product-btn i, .product-thumb .product-btn-add i {
   margin: 0;
-}
-.product-thumb .product-btn:hover, .product-thumb .product-btn-add:hover {
-  color: #eac322;
 }
 .product-thumb .product-btn + .product-btn,
 .product-thumb .product-btn + .product-btn-add, .product-thumb .product-btn-add + .product-btn,
@@ -2471,8 +2439,9 @@ aside .row {
   -o-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: #eac322;
-  color: #1e366b;
+  background: #fff;
+  color: #333;
+  border: 1px solid #333;
   font-weight: 400;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -2480,8 +2449,8 @@ aside .row {
   z-index: 1;
 }
 .product-thumb .image > .quickview:hover {
-  background: #1e366b;
-  color: #eac322;
+  background: #111;
+  color: #fff;
 }
 
 /* ================   Product page buttons  =============== */
@@ -2985,18 +2954,14 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
 .sf-menu li {
   position: relative;
 }
-.sf-menu li.sfHover > a, .sf-menu li > a:hover, .sf-menu li > a.active {
-  color: #333;
-  background: #eac322;
-  border-bottom: 1px solid rgba(30, 54, 107,1);
+.sf-menu li.sfHover > a, .sf-menu li > a:hover {
+  color: #8D8D8D;
 }
 .sf-menu li.sf-with-mega {
   position: static;
 }
 .sf-menu > li {
   max-width: 190px;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
 }
 .sf-menu > li + li {
   border-left: none;
@@ -3010,11 +2975,12 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
   color: #fff;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-top: 2px solid #000;
 }
-.sf-menu > li.sfHover > a, .sf-menu > li > a:hover, .sf-menu > li > a.active {
-  color: #1e366b;
-  background: #eac322;
+.sf-menu > li.sfHover > a, .sf-menu > li > a:hover {
+  background: #fff;
 }
 
 /*================ Sub-menu lvl1  ===============*/
@@ -3027,7 +2993,7 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
 }
 .sf-menu>li>.simple_menu .simple_menu{
   background-color: rgba(30, 54, 107,1);
-  border: 1px solid #666;
+  border: 1px solid #8D8D8D;
 }
 .sf-menu>li>.simple_menu>li{
   width: 200px;
@@ -3056,7 +3022,7 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
   color: #fff;
   padding: 5px 30px 5px 20px;
   width: 100%;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #8D8D8D;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -3085,7 +3051,7 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
   width: 100%;
   height: 442px;
   padding: 56px 75px;
-  background-color: #f5f5f5;
+  background-color: #fff;
   background-repeat: no-repeat;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.3);
 }
@@ -3098,6 +3064,8 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
 font-size: 20px;
 margin-bottom: 20px;
 color: #565353;
+font-weight: 600;
+text-transform: uppercase;
 }
 .sf-menu .sf-mega .container, .sf-menu .sf-mega [class*="col-"], .sf-menu .sf-mega .row {
   width: 100%;
@@ -4072,6 +4040,7 @@ aside #blog-search a:hover {
   background: #f5f5f5;
   font-size: 16px;
   line-height: 24px;
+  display: none;
 }
 .breadcrumb a {
   display: inline-block;

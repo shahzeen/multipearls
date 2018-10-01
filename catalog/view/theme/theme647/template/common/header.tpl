@@ -132,12 +132,6 @@
 										<span><?php echo $text_shopping_cart; ?></span>
 									</a>
 								</li>
-								<li>
-									<a href="<?php echo $checkout; ?>" title="<?php echo $text_checkout; ?>">
-										<!-- <i class="material-design-forward18"></i> -->
-										<span><?php echo $text_checkout; ?></span>
-									</a>
-								</li>
 							</ul>
 						</nav>
 						<address class="material-design-phone370 box-telephone">
@@ -163,12 +157,6 @@
 								<i class="material-icons-favorite_border"></i>
 							</a>
 							<span id="wishlist-total"><?php echo $text_wishlist; ?></span>
-						</div>
-						<div class="box-compare">
-							<a href="<?php echo $compare; ?>">
-								<i class="material-icons-equalizer"></i>
-							</a>
-							<span id="compare-total2"><?php echo $text_compare; ?></span>
 						</div>
 						<?php echo $search; ?>
 					</div>

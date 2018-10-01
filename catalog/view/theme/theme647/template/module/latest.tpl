@@ -252,11 +252,6 @@
 											<span><?php echo $button_wishlist; ?></span>
 										</button>
 									</li>
-									<li>
-										<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-											<span><?php echo $button_compare; ?></span>
-										</button>
-									</li>
 								</ul>
 								<div class="clear"></div>
 							</div>
@@ -323,9 +318,6 @@
 						</button>
 						<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
 							<i class="material-icons-favorite_border"></i>
-						</button>
-						<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-							<i class="material-icons-equalizer"></i>
 						</button>
 					</div>
 				</div>
