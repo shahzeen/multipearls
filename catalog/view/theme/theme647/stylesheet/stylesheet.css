@@ -2990,9 +2990,6 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
   background: #eac322;
   border-bottom: 1px solid rgba(30, 54, 107,1);
 }
-.sf-menu li.sfHover, .sf-menu li:hover{
-  background-color: #eee;
-}
 .sf-menu li.sf-with-mega {
   position: static;
 }
@@ -3096,6 +3093,11 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
   .sf-menu .sf-mega {
     width: 720px;
   }
+}
+submenu_title{
+font-size: 20px;
+margin-bottom: 20px;
+color: #565353;
 }
 .sf-menu .sf-mega .container, .sf-menu .sf-mega [class*="col-"], .sf-menu .sf-mega .row {
   width: 100%;

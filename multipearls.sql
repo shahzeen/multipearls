@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2018 at 07:26 AM
--- Server version: 10.1.30-MariaDB
+-- Generation Time: Oct 01, 2018 at 10:01 AM
+-- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -1067,7 +1067,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 (1, 'Pound Sterling', 'GBP', '£', '', '2', 0.67280000, 1, '2015-12-22 14:55:00'),
 (2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2018-08-28 13:56:55'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.91270000, 1, '2015-12-22 14:55:00'),
-(5, 'Indian Rupees', 'INR', '', 'Rs', '2', 1.00000000, 1, '2018-10-01 07:23:36');
+(5, 'Indian Rupees', 'INR', '', 'Rs', '2', 1.00000000, 1, '2018-10-01 09:42:11');
 
 -- --------------------------------------------------------
 
@@ -1291,7 +1291,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/', '2018-10-01 07:23:46');
+('::1', 0, 'http://localhost/multipearls/index.php?route=product/category&amp;path=44', '', '2018-10-01 09:58:31');
 
 -- --------------------------------------------------------
 
@@ -1928,7 +1928,6 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1139, 13, 'tm_newsletter.104', 'footer_top', 2),
 (1142, 9, 'tm_newsletter.104', 'footer_top', 2),
 (1228, 1, 'olark.50', 'footer_top', 1),
-(1227, 1, 'tm_single_category_product.105', 'content_top', 3),
 (1226, 1, 'tm_single_category_product.106', 'content_top', 4),
 (1236, 1, 'tm_newsletter_popup.108', 'content_top', 6);
 
@@ -2221,7 +2220,7 @@ CREATE TABLE `oc_module` (
 
 INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (33, 'banners', 'banner', '{\"name\":\"banners\",\"banner_id\":\"14\",\"width\":\"370\",\"height\":\"370\",\"status\":\"1\"}'),
-(28, 'Featured  Aside', 'featured', '{\"name\":\"Featured  Aside\",\"product\":[\"43\",\"40\",\"30\",\"41\",\"33\",\"46\",\"32\",\"28\"],\"limit\":\"1\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
+(28, 'Featured  Aside', 'featured', '{\"name\":\"Featured  Aside\",\"product\":[\"68\"],\"limit\":\"1\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
 (46, 'Tm Slideshow', 'tm_slideshow', '{\"name\":\"Tm Slideshow\",\"banner_id\":\"15\",\"width\":\"2048\",\"height\":\"680\",\"status\":\"1\"}'),
 (50, 'Olark Chat', 'olark', '{\"name\":\"Olark Chat\",\"olark_version\":\"2.0.0\",\"olark_site_id\":\"7830-582-10-3714\",\"status\":\"1\"}'),
 (43, 'Bestsellers Aside', 'bestseller', '{\"name\":\"Bestsellers Aside\",\"limit\":\"1\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
@@ -2231,9 +2230,8 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (69, 'Latest Aside', 'latest', '{\"name\":\"Latest Aside\",\"limit\":\"1\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
 (90, 'Blog Categories', 'tm_blog_category', '{\"status\":\"1\",\"name\":\"Blog Categories\",\"category_search_article\":\"1\"}'),
 (91, 'Blog Popular Articles', 'tm_blog_articles', '{\"status\":\"1\",\"name\":\"Blog Popular Articles\",\"article_limit\":\"3\",\"show_readmore\":\"0\",\"show_date\":\"0\",\"show_author\":\"0\",\"show_comments\":\"0\",\"show_image\":\"0\",\"image_width\":\"0\",\"image_height\":\"0\",\"description_limit\":\"150\",\"category_id\":\"popular\"}'),
-(103, 'TM Megamenu', 'tm_megamenu', '{\"name\":\"TM Megamenu\",\"status\":\"1\",\"menu_item\":[{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"0\",\"columns\":\"1\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"100%\",\"content\":\"1\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"103\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"0\",\"columns\":\"1\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"100%\",\"content\":\"1\",\"limit\":\"6\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"0\",\"columns\":\"1\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"100%\",\"content\":\"1\",\"limit\":\"6\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"0\",\"columns\":\"1\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"100%\",\"content\":\"1\",\"limit\":\"6\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"0\",\"columns\":\"1\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"100%\",\"content\":\"1\",\"limit\":\"6\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"0\",\"columns\":\"0\",\"columns-per-row\":\"0\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\"}]}'),
-(105, 'Tm Single Category Products 1', 'tm_single_category_product', '{\"name\":\"Tm Single Category Products 1\",\"path\":\"Summer tyres\",\"category\":\"18\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"1\",\"bestseller\":\"0\",\"latest\":\"1\",\"featured\":\"1\",\"product\":[\"36\",\"28\",\"32\",\"47\",\"43\"],\"limit\":\"5\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
-(106, 'Tm Single Category Products 2', 'tm_single_category_product', '{\"name\":\"Tm Single Category Products 2\",\"path\":\"Winter tyres\",\"category\":\"20\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"1\",\"bestseller\":\"0\",\"latest\":\"1\",\"featured\":\"1\",\"product\":[\"36\",\"28\",\"32\",\"47\",\"43\"],\"limit\":\"5\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
+(103, 'TM Megamenu', 'tm_megamenu', '{\"name\":\"TM Megamenu\",\"status\":\"1\",\"menu_item\":[{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"2\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"50%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"103\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"50%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"\",\"category_id\":\"\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"0\",\"columns\":\"1\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"100%\",\"content\":\"1\",\"limit\":\"6\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"0\",\"columns\":\"1\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"100%\",\"content\":\"1\",\"limit\":\"6\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"0\",\"columns\":\"1\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"100%\",\"content\":\"1\",\"limit\":\"6\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"0\",\"columns\":\"1\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"100%\",\"content\":\"1\",\"limit\":\"6\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"0\",\"columns\":\"0\",\"columns-per-row\":\"0\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\"}]}'),
+(106, 'Tm Single Category Products 2', 'tm_single_category_product', '{\"name\":\"Tm Single Category Products 2\",\"path\":\"Men\\u00a0\\u00a0&gt;\\u00a0\\u00a0Clothing\\u00a0\\u00a0&gt;\\u00a0\\u00a0T-shirts\",\"category\":\"29\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"1\",\"bestseller\":\"0\",\"latest\":\"1\",\"featured\":\"1\",\"product\":[\"82\",\"70\",\"28\",\"87\",\"63\"],\"limit\":\"5\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
 (107, 'Partners', 'html', '{\"name\":\"Partners\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"&lt;ul class=&quot;flex-list&quot;&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-1.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-2.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-3.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-4.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-5.png&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-6.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\"},\"2\":{\"title\":\"\",\"description\":\"&lt;ul class=&quot;flex-list&quot;&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-1.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-2.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-3.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-4.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-5.png&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-6.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\"},\"3\":{\"title\":\"\",\"description\":\"&lt;ul class=&quot;flex-list&quot;&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-1.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-2.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-3.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-4.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-5.png&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-6.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\"}},\"status\":\"1\"}'),
 (101, 'Blog Home Articles', 'tm_blog_articles', '{\"status\":\"1\",\"name\":\"Blog Home Articles\",\"article_limit\":\"3\",\"show_readmore\":\"1\",\"show_date\":\"1\",\"show_author\":\"1\",\"show_comments\":\"0\",\"show_image\":\"1\",\"image_width\":\"1170\",\"image_height\":\"780\",\"description_limit\":\"150\",\"category_id\":\"2\"}'),
 (108, 'TM Newsletter Popup', 'tm_newsletter_popup', '{\"name\":\"TM Newsletter Popup\",\"newsletter_popup_bg\":\"\",\"newsletter_popup_bg_width\":\"\",\"newsletter_popup_bg_height\":\"\",\"newsletter_popup_cookie\":\"60\",\"tm_newsletter_popup_description\":{\"1\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"2\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"3\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"}},\"status\":\"1\"}');
@@ -10166,667 +10164,556 @@ ALTER TABLE `oc_zone_to_geo_zone`
 --
 ALTER TABLE `oc_address`
   MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_affiliate`
 --
 ALTER TABLE `oc_affiliate`
   MODIFY `affiliate_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_affiliate_activity`
 --
 ALTER TABLE `oc_affiliate_activity`
   MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_affiliate_login`
 --
 ALTER TABLE `oc_affiliate_login`
   MODIFY `affiliate_login_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_affiliate_transaction`
 --
 ALTER TABLE `oc_affiliate_transaction`
   MODIFY `affiliate_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_amazon_login_pay_order`
 --
 ALTER TABLE `oc_amazon_login_pay_order`
   MODIFY `amazon_login_pay_order_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_amazon_login_pay_order_transaction`
 --
 ALTER TABLE `oc_amazon_login_pay_order_transaction`
   MODIFY `amazon_login_pay_order_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_api`
 --
 ALTER TABLE `oc_api`
   MODIFY `api_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_api_ip`
 --
 ALTER TABLE `oc_api_ip`
   MODIFY `api_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_api_session`
 --
 ALTER TABLE `oc_api_session`
   MODIFY `api_session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_attribute`
 --
 ALTER TABLE `oc_attribute`
   MODIFY `attribute_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
 --
 -- AUTO_INCREMENT for table `oc_attribute_group`
 --
 ALTER TABLE `oc_attribute_group`
   MODIFY `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT for table `oc_banner`
 --
 ALTER TABLE `oc_banner`
   MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
 --
 -- AUTO_INCREMENT for table `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
   MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
-
 --
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
   MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-
 --
 -- AUTO_INCREMENT for table `oc_category`
 --
 ALTER TABLE `oc_category`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
-
 --
 -- AUTO_INCREMENT for table `oc_country`
 --
 ALTER TABLE `oc_country`
   MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=258;
-
 --
 -- AUTO_INCREMENT for table `oc_coupon`
 --
 ALTER TABLE `oc_coupon`
   MODIFY `coupon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `oc_coupon_history`
 --
 ALTER TABLE `oc_coupon_history`
   MODIFY `coupon_history_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_coupon_product`
 --
 ALTER TABLE `oc_coupon_product`
   MODIFY `coupon_product_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_currency`
 --
 ALTER TABLE `oc_currency`
   MODIFY `currency_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `oc_customer`
 --
 ALTER TABLE `oc_customer`
   MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_activity`
 --
 ALTER TABLE `oc_customer_activity`
   MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_approval`
 --
 ALTER TABLE `oc_customer_approval`
   MODIFY `customer_approval_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_group`
 --
 ALTER TABLE `oc_customer_group`
   MODIFY `customer_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_history`
 --
 ALTER TABLE `oc_customer_history`
   MODIFY `customer_history_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_ip`
 --
 ALTER TABLE `oc_customer_ip`
   MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_login`
 --
 ALTER TABLE `oc_customer_login`
   MODIFY `customer_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_reward`
 --
 ALTER TABLE `oc_customer_reward`
   MODIFY `customer_reward_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_search`
 --
 ALTER TABLE `oc_customer_search`
   MODIFY `customer_search_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_transaction`
 --
 ALTER TABLE `oc_customer_transaction`
   MODIFY `customer_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_custom_field`
 --
 ALTER TABLE `oc_custom_field`
   MODIFY `custom_field_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_custom_field_value`
 --
 ALTER TABLE `oc_custom_field_value`
   MODIFY `custom_field_value_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_download`
 --
 ALTER TABLE `oc_download`
   MODIFY `download_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_event`
 --
 ALTER TABLE `oc_event`
   MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_extension`
 --
 ALTER TABLE `oc_extension`
   MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=499;
-
 --
 -- AUTO_INCREMENT for table `oc_extension_install`
 --
 ALTER TABLE `oc_extension_install`
   MODIFY `extension_install_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_extension_path`
 --
 ALTER TABLE `oc_extension_path`
   MODIFY `extension_path_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_filter`
 --
 ALTER TABLE `oc_filter`
   MODIFY `filter_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_filter_group`
 --
 ALTER TABLE `oc_filter_group`
   MODIFY `filter_group_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_geo_zone`
 --
 ALTER TABLE `oc_geo_zone`
   MODIFY `geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `oc_information`
 --
 ALTER TABLE `oc_information`
   MODIFY `information_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `oc_language`
 --
 ALTER TABLE `oc_language`
   MODIFY `language_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_layout`
 --
 ALTER TABLE `oc_layout`
   MODIFY `layout_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
 --
 -- AUTO_INCREMENT for table `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
   MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1244;
-
 --
 -- AUTO_INCREMENT for table `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
   MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=329;
-
 --
 -- AUTO_INCREMENT for table `oc_length_class`
 --
 ALTER TABLE `oc_length_class`
   MODIFY `length_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_length_class_description`
 --
 ALTER TABLE `oc_length_class_description`
   MODIFY `length_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_location`
 --
 ALTER TABLE `oc_location`
   MODIFY `location_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_manufacturer`
 --
 ALTER TABLE `oc_manufacturer`
   MODIFY `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
 --
 -- AUTO_INCREMENT for table `oc_marketing`
 --
 ALTER TABLE `oc_marketing`
   MODIFY `marketing_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_modification`
 --
 ALTER TABLE `oc_modification`
   MODIFY `modification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=335;
-
 --
 -- AUTO_INCREMENT for table `oc_module`
 --
 ALTER TABLE `oc_module`
-  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
-
+  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 --
 -- AUTO_INCREMENT for table `oc_option`
 --
 ALTER TABLE `oc_option`
   MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
 --
 -- AUTO_INCREMENT for table `oc_option_value`
 --
 ALTER TABLE `oc_option_value`
   MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
-
 --
 -- AUTO_INCREMENT for table `oc_order`
 --
 ALTER TABLE `oc_order`
   MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_order_custom_field`
 --
 ALTER TABLE `oc_order_custom_field`
   MODIFY `order_custom_field_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_order_history`
 --
 ALTER TABLE `oc_order_history`
   MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `oc_order_option`
 --
 ALTER TABLE `oc_order_option`
   MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `oc_order_product`
 --
 ALTER TABLE `oc_order_product`
   MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_order_recurring`
 --
 ALTER TABLE `oc_order_recurring`
   MODIFY `order_recurring_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_order_recurring_transaction`
 --
 ALTER TABLE `oc_order_recurring_transaction`
   MODIFY `order_recurring_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_order_shipment`
 --
 ALTER TABLE `oc_order_shipment`
   MODIFY `order_shipment_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_order_status`
 --
 ALTER TABLE `oc_order_status`
   MODIFY `order_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
 --
 -- AUTO_INCREMENT for table `oc_order_total`
 --
 ALTER TABLE `oc_order_total`
   MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
 --
 -- AUTO_INCREMENT for table `oc_order_voucher`
 --
 ALTER TABLE `oc_order_voucher`
   MODIFY `order_voucher_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_product`
 --
 ALTER TABLE `oc_product`
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
-
 --
 -- AUTO_INCREMENT for table `oc_product_discount`
 --
 ALTER TABLE `oc_product_discount`
   MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
-
 --
 -- AUTO_INCREMENT for table `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
   MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=288;
-
 --
 -- AUTO_INCREMENT for table `oc_product_option`
 --
 ALTER TABLE `oc_product_option`
   MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
-
 --
 -- AUTO_INCREMENT for table `oc_product_option_value`
 --
 ALTER TABLE `oc_product_option_value`
   MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
-
 --
 -- AUTO_INCREMENT for table `oc_product_reward`
 --
 ALTER TABLE `oc_product_reward`
   MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
-
 --
 -- AUTO_INCREMENT for table `oc_product_special`
 --
 ALTER TABLE `oc_product_special`
   MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
-
 --
 -- AUTO_INCREMENT for table `oc_recurring`
 --
 ALTER TABLE `oc_recurring`
   MODIFY `recurring_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_return`
 --
 ALTER TABLE `oc_return`
   MODIFY `return_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_return_action`
 --
 ALTER TABLE `oc_return_action`
   MODIFY `return_action_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_return_history`
 --
 ALTER TABLE `oc_return_history`
   MODIFY `return_history_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_return_reason`
 --
 ALTER TABLE `oc_return_reason`
   MODIFY `return_reason_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `oc_return_status`
 --
 ALTER TABLE `oc_return_status`
   MODIFY `return_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_review`
 --
 ALTER TABLE `oc_review`
   MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
-
 --
 -- AUTO_INCREMENT for table `oc_seo_url`
 --
 ALTER TABLE `oc_seo_url`
   MODIFY `seo_url_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=844;
-
 --
 -- AUTO_INCREMENT for table `oc_setting`
 --
 ALTER TABLE `oc_setting`
   MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17030;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_article`
 --
 ALTER TABLE `oc_simple_blog_article`
   MODIFY `simple_blog_article_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_article_description`
 --
 ALTER TABLE `oc_simple_blog_article_description`
   MODIFY `simple_blog_article_description_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_author`
 --
 ALTER TABLE `oc_simple_blog_author`
   MODIFY `simple_blog_author_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_author_description`
 --
 ALTER TABLE `oc_simple_blog_author_description`
   MODIFY `simple_blog_author_description_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_category`
 --
 ALTER TABLE `oc_simple_blog_category`
   MODIFY `simple_blog_category_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_category_description`
 --
 ALTER TABLE `oc_simple_blog_category_description`
   MODIFY `simple_blog_category_description_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_comment`
 --
 ALTER TABLE `oc_simple_blog_comment`
   MODIFY `simple_blog_comment_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_related_article`
 --
 ALTER TABLE `oc_simple_blog_related_article`
   MODIFY `simple_blog_related_article_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_view`
 --
 ALTER TABLE `oc_simple_blog_view`
   MODIFY `simple_blog_view_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
 --
 -- AUTO_INCREMENT for table `oc_statistics`
 --
 ALTER TABLE `oc_statistics`
   MODIFY `statistics_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT for table `oc_stock_status`
 --
 ALTER TABLE `oc_stock_status`
   MODIFY `stock_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
 -- AUTO_INCREMENT for table `oc_store`
 --
 ALTER TABLE `oc_store`
   MODIFY `store_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_tax_class`
 --
 ALTER TABLE `oc_tax_class`
   MODIFY `tax_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `oc_tax_rate`
 --
 ALTER TABLE `oc_tax_rate`
   MODIFY `tax_rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
-
 --
 -- AUTO_INCREMENT for table `oc_tax_rule`
 --
 ALTER TABLE `oc_tax_rule`
   MODIFY `tax_rule_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
-
 --
 -- AUTO_INCREMENT for table `oc_theme`
 --
 ALTER TABLE `oc_theme`
   MODIFY `theme_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_tm_newsletter`
 --
 ALTER TABLE `oc_tm_newsletter`
   MODIFY `tm_newsletter_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_translation`
 --
 ALTER TABLE `oc_translation`
   MODIFY `translation_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_upload`
 --
 ALTER TABLE `oc_upload`
   MODIFY `upload_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
   MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1440;
-
 --
 -- AUTO_INCREMENT for table `oc_user`
 --
 ALTER TABLE `oc_user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_user_group`
 --
 ALTER TABLE `oc_user_group`
   MODIFY `user_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `oc_voucher`
 --
 ALTER TABLE `oc_voucher`
   MODIFY `voucher_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_voucher_history`
 --
 ALTER TABLE `oc_voucher_history`
   MODIFY `voucher_history_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_voucher_theme`
 --
 ALTER TABLE `oc_voucher_theme`
   MODIFY `voucher_theme_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_weight_class`
 --
 ALTER TABLE `oc_weight_class`
   MODIFY `weight_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `oc_weight_class_description`
 --
 ALTER TABLE `oc_weight_class_description`
   MODIFY `weight_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `oc_zone`
 --
 ALTER TABLE `oc_zone`
   MODIFY `zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4232;
-
 --
 -- AUTO_INCREMENT for table `oc_zone_to_geo_zone`
 --
 ALTER TABLE `oc_zone_to_geo_zone`
-  MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
-COMMIT;
+  MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
