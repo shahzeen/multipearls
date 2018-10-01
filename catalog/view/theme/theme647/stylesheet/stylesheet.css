@@ -3094,7 +3094,7 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
     width: 720px;
   }
 }
-submenu_title{
+.submenu_title{
 font-size: 20px;
 margin-bottom: 20px;
 color: #565353;
