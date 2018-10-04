@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2018 at 08:53 PM
+-- Generation Time: Oct 04, 2018 at 11:07 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.4
 
@@ -1067,7 +1067,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 (1, 'Pound Sterling', 'GBP', '£', '', '2', 0.67280000, 1, '2015-12-22 14:55:00'),
 (2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2018-08-28 13:56:55'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.91270000, 1, '2015-12-22 14:55:00'),
-(5, 'Indian Rupees', 'INR', '', 'Rs', '2', 1.00000000, 1, '2018-10-02 20:28:59');
+(5, 'Indian Rupees', 'INR', '', 'Rs', '2', 1.00000000, 1, '2018-10-04 09:26:02');
 
 -- --------------------------------------------------------
 
@@ -1291,7 +1291,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls/', '', '2018-10-02 20:52:19');
+('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/index.php?route=common/home', '2018-10-04 10:13:00');
 
 -- --------------------------------------------------------
 
@@ -2747,7 +2747,7 @@ CREATE TABLE `oc_product` (
 --
 
 INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`) VALUES
-(28, 'JS01MM1920', 'JS01-WH', '', '', '', '', '', '', 1000, 7, 'catalog/JS-01.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 1, 1, 75, '2009-02-03 16:06:50', '2018-09-22 08:58:02'),
+(28, 'JS01MM1920', 'JS01-WH', '', '', '', '', '', '', 1000, 7, 'catalog/JS-01.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 1, 1, 76, '2009-02-03 16:06:50', '2018-09-22 08:58:02'),
 (71, 'JS18MM1920', 'JS18-WH', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-18.jpg', 11, 1, '142.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 18, 1, 1, '2018-09-23 21:31:57', '0000-00-00 00:00:00'),
 (72, 'JS19MM1920', 'JS19-SKYB', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-19.jpg', 11, 1, '142.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 19, 1, 0, '2018-09-23 21:35:02', '2018-09-23 21:35:41'),
 (73, 'JS20MM1920', 'JS20-BKSB', '', '', '', '', '', '', 2000, 6, 'catalog/01-JS/JS-20.jpg', 11, 1, '152.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 20, 1, 3, '2018-09-23 21:38:11', '0000-00-00 00:00:00'),
@@ -2765,7 +2765,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (70, 'JS17MM1920', 'JS17-BK', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-17.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 17, 1, 3, '2018-09-22 09:48:57', '0000-00-00 00:00:00'),
 (61, 'JS08MM1920', 'JS08-BK', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-08.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 8, 1, 1, '2018-09-22 09:01:33', '2018-09-22 09:02:15'),
 (56, 'JS03MM1920', 'JS03-PK', '', '', '', '', '', '', 1000, 7, 'catalog/01-JS/JS-03.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 3, 1, 3, '2018-09-20 12:04:07', '2018-09-22 08:57:32'),
-(55, 'JS02MM1920', 'JS02-BK', '', '', '', '', '', '', 1000, 7, 'catalog/JS-02.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 2, 1, 2, '2018-09-20 11:49:52', '2018-09-22 08:57:04'),
+(55, 'JS02MM1920', 'JS02-BK', '', '', '', '', '', '', 1000, 7, 'catalog/JS-02.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 2, 1, 3, '2018-09-20 11:49:52', '2018-09-22 08:57:04'),
 (57, 'JS04MM1920', 'JS04-YEL', '', '', '', '', '', '', 1000, 7, 'catalog/01-JS/JS-04.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 4, 1, 0, '2018-09-20 12:06:55', '2018-09-22 08:58:14'),
 (58, 'JS05MM1920', 'JS05-RB', '', '', '', '', '', '', 1000, 7, 'catalog/01-JS/JS-05.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 5, 1, 1, '2018-09-20 12:16:46', '2018-09-22 08:57:42'),
 (59, 'JS06MM1920', 'JS06-WHSB', '', '', '', '', '', '', 1000, 7, 'catalog/01-JS/JS-06.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 6, 1, 2, '2018-09-20 12:20:03', '2018-09-22 08:57:53'),
@@ -2790,10 +2790,29 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (94, 'DF42MM1920', 'DF42-BK', '', '', '', '', '', '', 2000, 6, 'catalog/06-DF/DF-42.jpg', 11, 1, '180.0000', 0, 9, '2018-10-02', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 42, 1, 0, '2018-10-02 11:11:26', '0000-00-00 00:00:00'),
 (95, 'DF43MM1920', 'DF43-BK', '', '', '', '', '', '', 2000, 6, 'catalog/06-DF/DF-43.jpg', 11, 1, '180.0000', 0, 9, '2018-10-02', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 43, 1, 1, '2018-10-02 11:13:14', '0000-00-00 00:00:00'),
 (96, 'DF44MM1920', 'DF44-WH', '', '', '', '', '', '', 2000, 6, 'catalog/06-DF/DF-44.jpg', 11, 1, '180.0000', 0, 9, '2018-10-02', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 180, 1, 0, '2018-10-02 11:15:58', '0000-00-00 00:00:00'),
-(97, 'DF45MM1920', 'DF45-RDSB', '', '', '', '', '', '', 1000, 6, 'catalog/06-DF/DF-45.jpg', 11, 1, '207.0000', 0, 9, '2018-10-02', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 45, 1, 2, '2018-10-02 11:20:01', '2018-10-02 11:23:33'),
+(97, 'DF45MM1920', 'DF45-RDSB', '', '', '', '', '', '', 1000, 6, 'catalog/06-DF/DF-45.jpg', 11, 1, '207.0000', 0, 9, '2018-10-02', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 45, 1, 3, '2018-10-02 11:20:01', '2018-10-02 11:23:33'),
 (98, 'SB46MM1920', 'SB46-YEL', '', '', '', '', '', '', 2500, 6, 'catalog/07-SBFULL/SB-46.jpg', 11, 1, '181.0000', 0, 9, '2018-10-02', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 46, 1, 2, '2018-10-03 00:07:36', '2018-10-03 00:08:21'),
 (99, 'SB47MM1920', 'SB47-OTHER', '', '', '', '', '', '', 1500, 6, 'catalog/07-SBFULL/SB-47.jpg', 11, 1, '181.0000', 0, 9, '2018-10-02', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 47, 1, 2, '2018-10-03 00:10:23', '0000-00-00 00:00:00'),
-(100, 'SB48MM1920', 'SB48-NEON', '', '', '', '', '', '', 1500, 6, 'catalog/07-SBFULL/SB-48.jpg', 11, 1, '181.0000', 0, 9, '2018-10-02', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 48, 1, 1, '2018-10-03 00:13:21', '0000-00-00 00:00:00');
+(100, 'SB48MM1920', 'SB48-NEON', '', '', '', '', '', '', 1500, 6, 'catalog/07-SBFULL/SB-48.jpg', 11, 1, '181.0000', 0, 9, '2018-10-02', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 48, 1, 2, '2018-10-03 00:13:21', '0000-00-00 00:00:00'),
+(101, 'SB49MM1920', 'SB49-SKYB', '', '', '', '', '', '', 1500, 6, 'catalog/07-SBFULL/SB-49.jpg', 0, 1, '181.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 49, 1, 1, '2018-10-04 08:34:21', '0000-00-00 00:00:00'),
+(102, 'SB50MM1920', 'SB50-PITCH', '', '', '', '', '', '', 1500, 6, 'catalog/07-SBFULL/SB-50.jpg', 11, 1, '181.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 50, 1, 1, '2018-10-04 08:41:32', '0000-00-00 00:00:00'),
+(103, 'SB51MM1920', 'SB51-BK', '', '', '', '', '', '', 2000, 6, 'catalog/07-SBFULL/SB-51.jpg', 11, 1, '181.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 51, 1, 1, '2018-10-04 08:49:44', '0000-00-00 00:00:00'),
+(104, 'SB52MM1920', 'SB52-SKYBL', '', '', '', '', '', '', 1500, 6, 'catalog/07-SBFULL/SB-52.jpg', 11, 1, '181.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 52, 1, 1, '2018-10-04 08:54:58', '0000-00-00 00:00:00'),
+(105, 'SB53MM1920', 'SB53-WH', '', '', '', '', '', '', 1500, 6, 'catalog/07-SBFULL/SB-53.jpg', 11, 1, '181.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 53, 1, 0, '2018-10-04 09:14:51', '0000-00-00 00:00:00'),
+(106, 'SB54MM1920', 'SB54-RD', '', '', '', '', '', '', 1500, 6, 'catalog/07-SBFULL/SB-54.jpg', 11, 1, '181.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 54, 1, 0, '2018-10-04 09:18:04', '0000-00-00 00:00:00'),
+(107, 'SB55MM1920', 'SB55-YEL', '', '', '', '', '', '', 2000, 6, 'catalog/07-SBFULL/SB-55.jpg', 11, 1, '181.0000', 0, 0, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 55, 1, 2, '2018-10-04 09:20:15', '2018-10-04 09:22:47'),
+(108, 'SB56MM1920', 'SB56-GRY', '', '', '', '', '', '', 2000, 6, 'catalog/08-SBHLF/SB-56.jpg', 0, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 56, 1, 1, '2018-10-04 10:31:19', '0000-00-00 00:00:00'),
+(109, 'SB57MM1920', 'SB57-WH', '', '', '', '', '', '', 2000, 6, 'catalog/08-SBHLF/SB-57.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 57, 1, 0, '2018-10-04 10:34:39', '0000-00-00 00:00:00'),
+(110, 'SB58MM1920', 'SB58-YEL', '', '', '', '', '', '', 1500, 6, 'catalog/08-SBHLF/SB-58.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 58, 1, 0, '2018-10-04 10:37:29', '0000-00-00 00:00:00'),
+(111, 'SB59MM1920', 'SB59-NB', '', '', '', '', '', '', 1500, 6, 'catalog/08-SBHLF/SB-59.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 59, 1, 0, '2018-10-04 10:39:42', '0000-00-00 00:00:00'),
+(113, 'SB60MM1920', 'SB60-POP', '', '', '', '', '', '', 2000, 6, 'catalog/08-SBHLF/SB-60.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 60, 1, 0, '2018-10-04 13:04:29', '0000-00-00 00:00:00'),
+(114, 'SB61MM1920', 'SB61-BK', '', '', '', '', '', '', 2000, 6, 'catalog/08-SBHLF/SB-61.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 61, 1, 0, '2018-10-04 13:09:42', '0000-00-00 00:00:00'),
+(115, 'SB62MM1920', 'SB62-WH', '', '', '', '', '', '', 2000, 6, 'catalog/08-SBHLF/SB-62.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 62, 1, 0, '2018-10-04 13:13:54', '0000-00-00 00:00:00'),
+(116, 'SB63MM1920', 'SB63-OR', '', '', '', '', '', '', 2000, 6, 'catalog/08-SBHLF/SB-63.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2018-10-04 13:18:04', '0000-00-00 00:00:00'),
+(117, 'SB64MM1920', 'SB64-PK', '', '', '', '', '', '', 2000, 6, 'catalog/08-SBHLF/SB-64.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 64, 1, 0, '2018-10-04 13:21:34', '0000-00-00 00:00:00'),
+(118, 'SB64MM1920', 'SB65-WH', '', '', '', '', '', '', 2000, 6, 'catalog/08-SBHLF/SB-65.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 65, 1, 0, '2018-10-04 13:30:35', '0000-00-00 00:00:00'),
+(119, 'SB66MM1920', 'SB66-LIYEL', '', '', '', '', '', '', 2000, 6, 'catalog/08-SBHLF/SB-66.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 66, 1, 0, '2018-10-04 13:37:56', '0000-00-00 00:00:00'),
+(120, 'SB67MM1920', 'SB67-NB', '', '', '', '', '', '', 2000, 6, 'catalog/08-SBHLF/SB-67.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 67, 1, 0, '2018-10-04 13:41:36', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -2877,7 +2896,27 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (97, 1, 'Electro Dry-fit full sleeves Jersey with Sublimation Full Sleeves ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Dry-Fit Fabric. This\r\n  Fabric Transports Moisture Away From The Body, Keeping You Cool And Dry.\r\n  Quick Dry Out and moisture management of the fabric offers coolness &amp;amp;\r\n  dryness even in during highest level of sweat.This T shirt is ideal for all\r\n  kinds of indoor and outdoor sports activities like Cricket, Running, Walking,\r\n  Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports, Swimming,\r\n  Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Dry-Fit&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Full Sleeves&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Round V-neck&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Dry-fit full sleeves Jersey with Sublimation Full Sleeves ', 'Electro Dry-fit full sleeves Jersey with Sublimation Full Sleeves \r\n', 'Electro Dry-fit full sleeves Jersey with Sublimation Full Sleeves \r\n'),
 (98, 1, 'Electro Full Sleeves Sublimation Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl63&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Full Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Full Sleeves Sublimation Jersey ', 'Electro Full Sleeves Sublimation Jersey \r\n', 'Electro Full Sleeves Sublimation Jersey \r\n'),
 (99, 1, 'Electro Full Sleeves Sublimation Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Full Hand\r\n  Sleeve&lt;br&gt;\r\n    &amp;nbsp;&lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Full Sleeves Sublimation Jersey ', 'Electro Full Sleeves Sublimation Jersey \r\n', 'Electro Full Sleeves Sublimation Jersey \r\n'),
-(100, 1, 'Electro Full Sleeves Sublimation Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Full Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Full Sleeves Sublimation Jersey ', 'Electro Full Sleeves Sublimation Jersey \r\n', 'Electro Full Sleeves Sublimation Jersey \r\n');
+(100, 1, 'Electro Full Sleeves Sublimation Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Full Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Full Sleeves Sublimation Jersey ', 'Electro Full Sleeves Sublimation Jersey \r\n', 'Electro Full Sleeves Sublimation Jersey \r\n'),
+(101, 1, 'Electro Full Sleeves Sublimation Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Full Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Full Sleeves Sublimation Jersey ', 'Electro Full Sleeves Sublimation Jersey \r\n', 'Electro Full Sleeves Sublimation Jersey \r\n'),
+(102, 1, 'Electro Full Sleeves Sublimation Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Full Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Full Sleeves Sublimation Jersey ', 'Electro Full Sleeves Sublimation Jersey \r\n', 'Electro Full Sleeves Sublimation Jersey \r\n'),
+(103, 1, 'Electro Full Sleeves Sublimation Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Full Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Full Sleeves Sublimation Jersey ', 'Electro Full Sleeves Sublimation Jersey \r\n', 'Electro Full Sleeves Sublimation Jersey \r\n'),
+(104, 1, 'Electro Full Sleeves Sublimation Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Full Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Full Sleeves Sublimation Jersey ', 'Electro Full Sleeves Sublimation Jersey \r\n', 'Electro Full Sleeves Sublimation Jersey \r\n'),
+(105, 1, 'Electro Full Sleeves Sublimation Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Full Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Full Sleeves Sublimation Jersey ', 'Electro Full Sleeves Sublimation Jersey \r\n', 'Electro Full Sleeves Sublimation Jersey \r\n'),
+(106, 1, 'Electro Full Sleeves Sublimation Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Full Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Full Sleeves Sublimation Jersey ', 'Electro Full Sleeves Sublimation Jersey \r\n', 'Electro Full Sleeves Sublimation Jersey \r\n'),
+(107, 1, 'Electro Full Sleeves Sublimation Jersey ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Full Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Full Sleeves Sublimation Jersey ', 'Electro Full Sleeves Sublimation Jersey \r\n', 'Electro Full Sleeves Sublimation Jersey \r\n');
+INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
+(108, 1, 'Electro Digital Print Sublimation T-shirt ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Digital Print Sublimation T-shirt ', 'Electro Digital Print Sublimation T-shirt \r\n', 'Electro Digital Print Sublimation T-shirt \r\n'),
+(109, 1, 'Electro Digital Print Sublimation T-shirt ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Digital Print Sublimation T-shirt ', 'Electro Digital Print Sublimation T-shirt \r\n', 'Electro Digital Print Sublimation T-shirt \r\n'),
+(110, 1, 'Electro Digital Print Sublimation T-shirt ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Digital Print Sublimation T-shirt ', 'Electro Digital Print Sublimation T-shirt \r\n', 'Electro Digital Print Sublimation T-shirt \r\n'),
+(111, 1, 'Electro Digital Print Sublimation T-shirt ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Digital Print Sublimation T-shirt ', 'Electro Digital Print Sublimation T-shirt \r\n', 'Electro Digital Print Sublimation T-shirt \r\n'),
+(113, 1, 'Electro Digital Print Sublimation T-shirt ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;border-collapse:\r\n collapse;width:646pt&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Digital Print Sublimation T-shirt ', 'Electro Digital Print Sublimation T-shirt \r\n', 'Electro Digital Print Sublimation T-shirt \r\n'),
+(114, 1, 'Electro Digital Print Sublimation T-shirt ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Digital Print Sublimation T-shirt ', 'Electro Digital Print Sublimation T-shirt \r\n', 'Electro Digital Print Sublimation T-shirt \r\n'),
+(115, 1, 'Electro Digital Print Sublimation T-shirt ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Digital Print Sublimation T-shirt ', 'Electro Digital Print Sublimation T-shirt \r\n', 'Electro Digital Print Sublimation T-shirt \r\n'),
+(116, 1, 'Electro Digital Print Sublimation T-shirt ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Digital Print Sublimation T-shirt ', 'Electro Digital Print Sublimation T-shirt \r\n', 'Electro Digital Print Sublimation T-shirt \r\n'),
+(117, 1, 'Electro Digital Print Sublimation T-shirt ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Digital Print Sublimation T-shirt ', 'Electro Digital Print Sublimation T-shirt \r\n', 'Electro Digital Print Sublimation T-shirt \r\n'),
+(118, 1, 'Electro Digital Print Sublimation T-shirt ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Digital Print Sublimation T-shirt ', 'Electro Digital Print Sublimation T-shirt \r\n', 'Electro Digital Print Sublimation T-shirt \r\n'),
+(119, 1, 'Electro Digital Print Sublimation T-shirt ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Digital Print Sublimation T-shirt ', 'Electro Digital Print Sublimation T-shirt \r\n', 'Electro Digital Print Sublimation T-shirt \r\n'),
+(120, 1, 'Electro Digital Print Sublimation T-shirt ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro.Electro&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The Super Light Polyester\r\n  Fabric. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Polyester (\r\n  Sublimation Print On Front Side )&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\r\n  Sleeve&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Collar&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Digital Print Sublimation T-shirt ', 'Electro Digital Print Sublimation T-shirt \r\n', 'Electro Digital Print Sublimation T-shirt \r\n');
 
 -- --------------------------------------------------------
 
@@ -3015,7 +3054,16 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (314, 99, 'catalog/07-SBFULL/SB-47-cut.jpg', 1),
 (313, 98, 'catalog/07-SBFULL/SB-46-cut.jpg', 1),
 (315, 100, 'catalog/07-SBFULL/SB-48SB.jpg', 1),
-(316, 100, 'catalog/07-SBFULL/SB-48-cut.jpg', 2);
+(316, 100, 'catalog/07-SBFULL/SB-48-cut.jpg', 2),
+(317, 101, 'catalog/07-SBFULL/SB-49SB.jpg', 1),
+(318, 101, 'catalog/07-SBFULL/SB-49-cut.jpg', 2),
+(319, 102, 'catalog/07-SBFULL/SB-50-cut.jpg', 1),
+(320, 103, 'catalog/07-SBFULL/SB-51-cut.jpg', 1),
+(321, 104, 'catalog/07-SBFULL/SB-52-cut.jpg', 1),
+(322, 105, 'catalog/07-SBFULL/SB-54-cut.jpg', 1),
+(323, 106, 'catalog/07-SBFULL/SB-54-cut.jpg', 1),
+(325, 107, 'catalog/07-SBFULL/SB-55SB.JPG', 1),
+(326, 108, 'catalog/08-SBHLF/SB-56SB.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -3053,7 +3101,26 @@ INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`,
 (69, 97, 11, '', 1),
 (70, 98, 11, '', 1),
 (71, 99, 11, '', 1),
-(72, 100, 11, '', 1);
+(72, 100, 11, '', 1),
+(73, 101, 11, '', 1),
+(74, 102, 11, '', 1),
+(75, 103, 11, '', 1),
+(76, 104, 11, '', 1),
+(77, 105, 11, '', 1),
+(78, 106, 11, '', 1),
+(79, 107, 11, '', 1),
+(80, 108, 11, '', 1),
+(81, 109, 11, '', 1),
+(82, 110, 11, '', 1),
+(83, 111, 11, '', 1),
+(85, 113, 11, '', 1),
+(86, 114, 11, '', 1),
+(87, 115, 11, '', 1),
+(88, 116, 11, '', 1),
+(89, 117, 11, '', 1),
+(90, 118, 11, '', 1),
+(91, 119, 11, '', 1),
+(92, 120, 11, '', 1);
 
 -- --------------------------------------------------------
 
@@ -3171,7 +3238,102 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (187, 72, 100, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (188, 72, 100, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (189, 72, 100, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(190, 72, 100, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
+(190, 72, 100, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(191, 73, 101, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(192, 73, 101, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(193, 73, 101, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(194, 73, 101, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(195, 73, 101, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(196, 74, 102, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(197, 74, 102, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(198, 74, 102, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(199, 74, 102, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(200, 74, 102, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(201, 75, 103, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(202, 75, 103, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(203, 75, 103, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(204, 75, 103, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(205, 75, 103, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(206, 76, 104, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(207, 76, 104, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(208, 76, 104, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(209, 76, 104, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(210, 76, 104, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(211, 77, 105, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(212, 77, 105, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(213, 77, 105, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(214, 77, 105, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(215, 77, 105, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(216, 78, 106, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(217, 78, 106, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(218, 78, 106, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(219, 78, 106, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(220, 78, 106, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(225, 79, 107, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(224, 79, 107, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(223, 79, 107, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(222, 79, 107, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(221, 79, 107, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(226, 80, 108, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(227, 80, 108, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(228, 80, 108, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(229, 80, 108, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(230, 80, 108, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(231, 81, 109, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(232, 81, 109, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(233, 81, 109, 11, 47, 144, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(234, 81, 109, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(235, 81, 109, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(236, 82, 110, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(237, 82, 110, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(238, 82, 110, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(239, 82, 110, 11, 54, 144, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(240, 82, 110, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(241, 83, 111, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(242, 83, 111, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(243, 83, 111, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(244, 83, 111, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(245, 83, 111, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(255, 85, 113, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(254, 85, 113, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(253, 85, 113, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(252, 85, 113, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(251, 85, 113, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(256, 86, 114, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(257, 86, 114, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(258, 86, 114, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(259, 86, 114, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(260, 86, 114, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(261, 87, 115, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(262, 87, 115, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(263, 87, 115, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(264, 87, 115, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(265, 87, 115, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(266, 88, 116, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(267, 88, 116, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(268, 88, 116, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(269, 88, 116, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(270, 88, 116, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(271, 89, 117, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(272, 89, 117, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(273, 89, 117, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(274, 89, 117, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(275, 89, 117, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(276, 90, 118, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(277, 90, 118, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(278, 90, 118, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(279, 90, 118, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(280, 90, 118, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(281, 91, 119, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(282, 91, 119, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(283, 91, 119, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(284, 91, 119, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(285, 91, 119, 11, 55, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(286, 92, 120, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(287, 92, 120, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(288, 92, 120, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(289, 92, 120, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(290, 92, 120, 11, 55, 0, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
 
 -- --------------------------------------------------------
 
@@ -3449,10 +3611,160 @@ INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
 (97, 91),
 (98, 99),
 (98, 100),
+(98, 101),
+(98, 102),
+(98, 103),
+(98, 105),
+(98, 107),
 (99, 98),
 (99, 100),
+(99, 101),
+(99, 102),
+(99, 103),
+(99, 104),
+(99, 105),
+(99, 106),
+(99, 107),
 (100, 98),
-(100, 99);
+(100, 99),
+(100, 101),
+(100, 102),
+(100, 103),
+(100, 104),
+(100, 105),
+(100, 106),
+(100, 107),
+(101, 98),
+(101, 99),
+(101, 100),
+(101, 102),
+(101, 103),
+(101, 104),
+(101, 105),
+(101, 106),
+(101, 107),
+(102, 98),
+(102, 99),
+(102, 100),
+(102, 101),
+(102, 103),
+(102, 104),
+(102, 105),
+(102, 106),
+(102, 107),
+(103, 98),
+(103, 99),
+(103, 100),
+(103, 101),
+(103, 102),
+(104, 99),
+(104, 100),
+(104, 101),
+(104, 102),
+(105, 98),
+(105, 99),
+(105, 100),
+(105, 101),
+(105, 102),
+(106, 99),
+(106, 100),
+(106, 101),
+(106, 102),
+(107, 98),
+(107, 99),
+(107, 100),
+(107, 101),
+(107, 102),
+(108, 109),
+(108, 110),
+(108, 111),
+(108, 113),
+(108, 114),
+(108, 115),
+(108, 116),
+(108, 117),
+(108, 118),
+(108, 119),
+(108, 120),
+(109, 108),
+(109, 110),
+(109, 111),
+(109, 113),
+(109, 114),
+(109, 115),
+(109, 116),
+(109, 117),
+(109, 118),
+(109, 119),
+(109, 120),
+(110, 108),
+(110, 109),
+(110, 111),
+(110, 113),
+(110, 114),
+(110, 115),
+(110, 116),
+(110, 117),
+(110, 118),
+(110, 119),
+(110, 120),
+(111, 108),
+(111, 109),
+(111, 110),
+(111, 113),
+(111, 114),
+(111, 115),
+(111, 116),
+(111, 117),
+(111, 118),
+(111, 119),
+(111, 120),
+(113, 108),
+(113, 109),
+(113, 110),
+(113, 111),
+(113, 114),
+(113, 115),
+(113, 116),
+(113, 117),
+(113, 118),
+(113, 119),
+(113, 120),
+(114, 108),
+(114, 109),
+(114, 110),
+(114, 111),
+(114, 113),
+(115, 108),
+(115, 109),
+(115, 110),
+(115, 111),
+(115, 113),
+(116, 108),
+(116, 109),
+(116, 110),
+(116, 111),
+(116, 113),
+(117, 108),
+(117, 109),
+(117, 110),
+(117, 111),
+(117, 113),
+(118, 108),
+(118, 109),
+(118, 110),
+(118, 111),
+(118, 113),
+(119, 108),
+(119, 109),
+(119, 110),
+(119, 111),
+(119, 113),
+(120, 108),
+(120, 109),
+(120, 110),
+(120, 111),
+(120, 113);
 
 -- --------------------------------------------------------
 
@@ -3542,7 +3854,25 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (97, 29),
 (98, 31),
 (99, 31),
-(100, 31);
+(100, 31),
+(101, 31),
+(102, 31),
+(103, 31),
+(104, 31),
+(105, 31),
+(106, 31),
+(107, 31),
+(109, 31),
+(110, 31),
+(111, 31),
+(113, 31),
+(114, 31),
+(115, 31),
+(116, 31),
+(117, 31),
+(118, 31),
+(119, 31),
+(120, 31);
 
 -- --------------------------------------------------------
 
@@ -3618,7 +3948,26 @@ INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUE
 (97, 0, 0),
 (98, 0, 0),
 (99, 0, 0),
-(100, 0, 0);
+(100, 0, 0),
+(101, 0, 0),
+(102, 0, 0),
+(103, 0, 0),
+(104, 0, 0),
+(105, 0, 0),
+(106, 0, 0),
+(107, 0, 0),
+(108, 0, 0),
+(109, 0, 0),
+(110, 0, 0),
+(111, 0, 0),
+(113, 0, 0),
+(114, 0, 0),
+(115, 0, 0),
+(116, 0, 0),
+(117, 0, 0),
+(118, 0, 0),
+(119, 0, 0),
+(120, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -3682,7 +4031,26 @@ INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
 (97, 0),
 (98, 0),
 (99, 0),
-(100, 0);
+(100, 0),
+(101, 0),
+(102, 0),
+(103, 0),
+(104, 0),
+(105, 0),
+(106, 0),
+(107, 0),
+(108, 0),
+(109, 0),
+(110, 0),
+(111, 0),
+(113, 0),
+(114, 0),
+(115, 0),
+(116, 0),
+(117, 0),
+(118, 0),
+(119, 0),
+(120, 0);
 
 -- --------------------------------------------------------
 
@@ -4980,7 +5348,25 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (1445, 'product_id=95', ''),
 (1446, 'product_id=96', ''),
 (1449, 'product_id=99', ''),
-(1450, 'product_id=100', '');
+(1450, 'product_id=100', ''),
+(1451, 'product_id=101', ''),
+(1452, 'product_id=102', ''),
+(1453, 'product_id=103', ''),
+(1454, 'product_id=104', ''),
+(1455, 'product_id=105', ''),
+(1456, 'product_id=106', ''),
+(1458, 'product_id=108', ''),
+(1459, 'product_id=109', ''),
+(1460, 'product_id=110', ''),
+(1461, 'product_id=111', ''),
+(1463, 'product_id=113', ''),
+(1464, 'product_id=114', ''),
+(1465, 'product_id=115', ''),
+(1466, 'product_id=116', ''),
+(1467, 'product_id=117', ''),
+(1468, 'product_id=118', ''),
+(1469, 'product_id=119', ''),
+(1470, 'product_id=120', '');
 
 -- --------------------------------------------------------
 
@@ -10481,7 +10867,7 @@ ALTER TABLE `oc_banner_image`
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `oc_category`
@@ -10793,7 +11179,7 @@ ALTER TABLE `oc_order_voucher`
 -- AUTO_INCREMENT for table `oc_product`
 --
 ALTER TABLE `oc_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 
 --
 -- AUTO_INCREMENT for table `oc_product_discount`
@@ -10805,19 +11191,19 @@ ALTER TABLE `oc_product_discount`
 -- AUTO_INCREMENT for table `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=317;
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=327;
 
 --
 -- AUTO_INCREMENT for table `oc_product_option`
 --
 ALTER TABLE `oc_product_option`
-  MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
 -- AUTO_INCREMENT for table `oc_product_option_value`
 --
 ALTER TABLE `oc_product_option_value`
-  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=191;
+  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=291;
 
 --
 -- AUTO_INCREMENT for table `oc_product_reward`
@@ -11003,7 +11389,7 @@ ALTER TABLE `oc_upload`
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1451;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1471;
 
 --
 -- AUTO_INCREMENT for table `oc_user`
