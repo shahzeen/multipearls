@@ -269,6 +269,10 @@ blockquote {
     font-size: 0;
   }
 }
+.product_page{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .product_page-right .alert {
   margin-top: 20px;
 }
@@ -457,9 +461,10 @@ blockquote {
 .table thead td, .table th {
   text-transform: uppercase;
   font-weight: bold;
-  color: #333;
+  color: #fff;
   font-size: 13px;
-  background-color: #f5f5f5;
+  background-color: #555;
+  padding: 5px 10px!important;
 }
 
 .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
@@ -498,14 +503,22 @@ blockquote {
 }
 
 .panel-default > .panel-heading {
-  padding: 20px;
-  background: #f5f5f5;
-  color: #333;
+  padding: 5px 10px;
+  background: #555;
+  color: #fff;
+  border-radius: 4px;
 }
 .panel-default > .panel-heading > * > a {
   display: block;
   margin: -20px;
   padding: 20px;
+}
+.panel-title{
+  font-size: 14px;
+}
+.panel-default{
+  border-color: #555;
+  border-radius: 4px !important;
 }
 
 .addthis_sharing_toolbox a {
@@ -600,7 +613,7 @@ blockquote {
                       Main Styles
 =========================================================*/
 body {
-  font: 300 16px/24px "Ubuntu", sans-serif;
+  font: 300 14px/24px "Arial", sans-serif;
   color: #333;
   background: #fff;
 }
@@ -2358,12 +2371,13 @@ aside .row {
 /* ================   Default Buttons BEGIN   =============== */
 .btn:visited, .btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn {
   font-size: 14px;
-  color: #333;
+  color: #fff;
   text-shadow: none;
   border-radius: 0;
   border: none;
   padding: 12px 16px;
   outline: none;
+  background: #333;
 }
 
 .btn:hover,
@@ -2417,6 +2431,9 @@ aside .row {
   color: #fff;
   padding: 0;
 }
+.product-thumb .product-btn:hover, .product-thumb .product-btn-add:hover{
+  background: #555;
+}
 .product-thumb .product-btn i, .product-thumb .product-btn-add i {
   margin: 0;
 }
@@ -2452,8 +2469,9 @@ aside .row {
   z-index: 1;
 }
 .product-thumb .image > .quickview:hover {
-  background: #fff;
-  color: #333;
+  background: #555;
+  border: 1px solid #555;
+  color: #fff;
 }
 
 /* ================   Product page buttons  =============== */
@@ -2496,11 +2514,13 @@ aside .row {
 /* ================   Tooltip  ================= */
 .tooltip-inner {
   background: #555;
-  color: #333;
+  color: #fff;
+  display: none;
 }
 
 [class][class].tooltip-arrow {
   border-top-color: #555;
+  display: none;
 }
 
 /*========================================================
@@ -4091,22 +4111,18 @@ aside #blog-search a:hover {
   height: 32px;
   margin-top: 1em;
 }
-
-.review-form-title {
-  text-align: center;
-}
 .review-form-title h3 {
   cursor: pointer;
   position: relative;
   border-bottom: 1px solid #e0e0e0;
-  padding: 0 10px 5px;
+  padding: 5px 10px;
   display: inline-block;
   -moz-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
-.review-form-title h3:before {
+/* .review-form-title h3:before {
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -4116,9 +4132,9 @@ aside #blog-search a:hover {
   border-top-color: #e0e0e0;
   content: '';
   margin-left: -10px;
-}
+} */
 .review-form-title h3:hover {
-  color: #eac322;
+  color: #8D8D8D;
 }
 
 .product-rating-status .review-link {
@@ -4193,7 +4209,7 @@ aside #blog-search a:hover {
 }
 
 .product_tabs {
-  border-top: 2px solid #eac322;
+  border-top: 2px solid #555;
   margin: 50px 0;
 }
 .product_tabs:before, .product_tabs:after {
@@ -4208,7 +4224,7 @@ aside #blog-search a:hover {
   width: 30%;
   float: left;
   margin-bottom: 0;
-  box-shadow: 0 1px 0 #e0e0e0;
+  box-shadow: 0 1px 0 #555;
 }
 .product_tabs .nav-tabs > li {
   float: none;
@@ -4217,14 +4233,14 @@ aside #blog-search a:hover {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  background: #f5f5f5;
+  background: #555;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 16px;
-  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  border: 1px solid #555;
   border-top: none;
   margin-right: 0;
-  color: #333;
+  color: #fff;
   position: relative;
   z-index: 0;
 }
@@ -4243,14 +4259,14 @@ aside #blog-search a:hover {
   transition: 0.3s all ease;
 }
 .product_tabs .nav-tabs > li > a:hover {
-  background: #ededed;
-  color: #333;
+  background: #555;
+  color: #fff;
 }
 .product_tabs .nav-tabs > li > a:focus {
   border-top: none;
 }
 .product_tabs .nav-tabs > li.active > a {
-  color: #eac322;
+  color: #555;
 }
 .product_tabs .nav-tabs > li.active > a:before {
   right: -2px;
@@ -4268,9 +4284,13 @@ aside #blog-search a:hover {
   box-sizing: border-box;
   border-top: none;
 }
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+  border: 1px solid #555;
+}
 @media (min-width: 768px) {
   .product_tabs .tab-content {
-    border: 1px solid #e0e0e0;
+    border: 1px solid #555;
+    border-top: 0;
   }
 }
 @media (max-width: 767px) {

@@ -105,9 +105,7 @@
 											<a class="counter counter-minus material-design-horizontal39" href='#'></a>
 											<input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" class="form-control cart-q" id="cart-q"/>
 											<a class="counter counter-plus material-design-add186" href='#'></a>
-											<p>
-												<button type="submit" class="link"><?php echo $button_update; ?></button>
-											</p>
+											<button type="submit" class="link"><?php echo $button_update; ?></button>
 										</div>
 									</td>
 									<td class="text-right">

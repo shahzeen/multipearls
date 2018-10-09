@@ -555,7 +555,7 @@
 
 																		<!-- Review form -->
 																		<div class="review-form-title">
-																			<h3 class="product-section_title"
+																			<h3 class="btn product-section_title"
 																			id="reviews_form_title"><?php echo $text_write; ?></h3>
 																		</div>
 																		<div class="product-review-form" id="reviews_form">
