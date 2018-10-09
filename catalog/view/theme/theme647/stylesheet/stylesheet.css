@@ -81,7 +81,7 @@ blockquote {
 
 .bootstrap-datetimepicker-widget td.day.active,
 .bootstrap-datetimepicker-widget td.day.active:hover {
-  background: #eac322;
+  background: #555;
   color: #333;
   cursor: inherit;
 }
@@ -2130,8 +2130,8 @@ aside .row {
 }
 .single-category .nav-tabs > li.active > a, .single-category .nav-tabs > li.active > a:focus, .single-category .nav-tabs > li.active > a:hover {
   cursor: default;
-  color: #333;
-  background: #eac322;
+  color: #fff;
+  background: #555;
   border: none;
 }
 .single-category .owl-controls .owl-buttons div {
@@ -2348,7 +2348,7 @@ aside .row {
   transition: 0.3s all ease;
 }
 .agree:hover b {
-  color: #f8c30d;
+  color: #555;
 }
 
 [for="agree1"] + .btn {
@@ -2376,13 +2376,13 @@ aside .row {
 .btn-primary.active, .btn-primary:active, .open > .dropdown-toggle.btn-primary, .btn-primary.disabled, .btn-primary.disabled:active,
 .btn-primary.disabled:hover {
   background: #333;
-  color: #eac322;
+  color: #555;
   opacity: 1;
 }
 
 .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary.focus:active, .btn-primary:active:focus, .btn-primary:active:hover, .open > .dropdown-toggle.btn-primary.focus, .open > .dropdown-toggle.btn-primary:focus, .open > .dropdown-toggle.btn-primary:hover {
   background: #333;
-  color: #eac322;
+  color: #555;
 }
 
 /*================   Product Buttons BEGIN   ===============*/
@@ -2395,7 +2395,7 @@ aside .row {
   margin-right: 5px;
 }
 .product-btn:hover {
-  background: #f8c30d;
+  background: #555;
 }
 
 .product-btn-add {
@@ -2481,7 +2481,7 @@ aside .row {
   padding: 0;
 }
 .product-buttons li button:hover, .product-buttons li button:focus {
-  color: #f8c30d;
+  color: #555;
   background: transparent;
 }
 .product-buttons li button:active {
@@ -2495,12 +2495,12 @@ aside .row {
 
 /* ================   Tooltip  ================= */
 .tooltip-inner {
-  background: #f8c30d;
+  background: #555;
   color: #333;
 }
 
 [class][class].tooltip-arrow {
-  border-top-color: #f8c30d;
+  border-top-color: #555;
 }
 
 /*========================================================
@@ -3467,6 +3467,7 @@ text-transform: uppercase;
 
 .banners > div {
   margin-bottom: 30px;
+  padding: 1px;
 }
 .banners > div .banner-box {
   position: relative;
@@ -3483,7 +3484,7 @@ text-transform: uppercase;
   bottom: -5px;
   left: 0;
   right: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(172,18,18,0.8);
   color: #fff;
   font-weight: 600;
   text-align: center;
@@ -3498,6 +3499,7 @@ text-transform: uppercase;
   font-size: 30px;
   line-height: 40px;
   font-weight: 400;
+  color: #fff;
 }
 .banner-1 h2 span {
   display: inline-block;
@@ -3519,10 +3521,10 @@ text-transform: uppercase;
   left: 100%;
   bottom: 7px;
   margin-left: 10px;
-  background: #eac322;
+  background: #fff;
 }
 .banner-1:hover h2 span {
-  color: #eac322;
+  color: #fff;
 }
 
 /*========================================================
