@@ -1,4 +1,15 @@
 @charset "UTF-8";
+@font-face {
+	font-family: "multipearls-font";
+	src: url("../fonts/multipearls-font");
+  src: url("../fonts/multipearls-font/MultipearlsBol.otf")  format("opentype"),
+      url("../fonts/multipearls-font/MultipearlsLig.otf")  format("opentype"),
+      url("../fonts/multipearls-font/MultipearlsMed.otf")  format("opentype"),
+      url("../fonts/multipearls-font/MultipearlsReg.otf")  format("opentype"),
+      url("../fonts/multipearls-font/MultipearlsThi.otf")  format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
 /*========================================================
                    Bootstrap Reset
 =========================================================*/
@@ -613,7 +624,7 @@ blockquote {
                       Main Styles
 =========================================================*/
 body {
-  font: 300 14px/24px "Arial", sans-serif;
+  font: 300 14px/24px "multipearls-font", sans-serif;
   color: #333;
   background: #fff;
 }
@@ -1116,7 +1127,7 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   margin-right: 10px;
 }
 .box-telephone > a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "multipearls-font";
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
@@ -2976,6 +2987,7 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
 }
 .sf-menu li {
   position: relative;
+  text-transform: uppercase;
 }
 .sf-menu li.sfHover > a, .sf-menu li > a:hover {
   color: #8D8D8D;
@@ -3116,9 +3128,6 @@ text-transform: uppercase;
 .sf-menu .sf-mega_section {
   float: left;
   padding: 0 15px;
-}
-.sf-menu .sf-mega_section ul > li + li {
-  margin-top: 9px;
 }
 
 @media (max-width: 767px) {
@@ -3515,7 +3524,7 @@ text-transform: uppercase;
   padding-bottom: 5px;
 }
 .banner-1 h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "multipearls-font";
   font-size: 30px;
   line-height: 40px;
   font-weight: 400;
@@ -3784,7 +3793,7 @@ aside .blog_articles > hr {
   line-height: 50px;
   font-weight: 700;
   color: #333;
-  font-family: "Montserrat", sans-serif;
+  font-family: "multipearls-font";
 }
 .article-title > a {
   display: inline;
@@ -3859,7 +3868,7 @@ aside .blog_articles > hr {
 
 .related-article h4 {
   color: #333;
-  font-family: "Montserrat", sans-serif;
+  font-family: "multipearls-font";
 }
 .related-article h4 a:hover {
   color: #eac322;
