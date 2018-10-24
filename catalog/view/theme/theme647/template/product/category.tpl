@@ -355,6 +355,9 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </div>
 <div class="caption">
 	<?php if ($product['price']) { ?>
+	<div class="name">
+		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+	</div>
 	<div class="price">
 		<?php if (!$product['special']) { ?>
 		<?php echo $product['price']; ?>
@@ -383,9 +386,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 		<?php } ?>
 	</div>
 	<?php } ?>
-	<div class="name">
-		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
-	</div>
 	<div class="description"><?php echo $product['description']; ?></div>
 	<hr>
 </div>

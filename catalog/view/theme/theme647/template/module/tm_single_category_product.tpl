@@ -431,21 +431,8 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 	</a>
 </div>
 <div class="caption">
-	<div class="rating">
-		<?php if ($product['rating']) { ?>
-		<?php for ($i = 1; $i <= 5; $i++) { ?>
-		<?php if ($product['rating'] < $i) { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-		</span>
-		<?php } else { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-			<i class="material-icons-star star fa-stack-1x"></i>
-		</span>
-		<?php } ?>
-		<?php } ?>
-		<?php } ?>
+	<div class="name">
+		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
 	</div>
 	<?php if ($product['price']) { ?>
 	<div class="price">
@@ -463,8 +450,21 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 		<?php } ?>
 	</div>
 	<?php } ?>
-	<div class="name">
-		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+	<div class="rating">
+		<?php if ($product['rating']) { ?>
+		<?php for ($i = 1; $i <= 5; $i++) { ?>
+		<?php if ($product['rating'] < $i) { ?>
+		<span class="fa-stack"><i
+			class="material-icons-star fa-stack-1x"></i>
+		</span>
+		<?php } else { ?>
+		<span class="fa-stack"><i
+			class="material-icons-star fa-stack-1x"></i>
+			<i class="material-icons-star star fa-stack-1x"></i>
+		</span>
+		<?php } ?>
+		<?php } ?>
+		<?php } ?>
 	</div>
 </div>
 <hr>

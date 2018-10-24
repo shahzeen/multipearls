@@ -1,13 +1,25 @@
 @charset "UTF-8";
 @font-face {
-	font-family: "multipearls-font";
-	src: url("../fonts/multipearls-font");
-  src: url("../fonts/multipearls-font/MultipearlsBol.otf")  format("opentype"),
-      url("../fonts/multipearls-font/MultipearlsLig.otf")  format("opentype"),
-      url("../fonts/multipearls-font/MultipearlsMed.otf")  format("opentype"),
-      url("../fonts/multipearls-font/MultipearlsReg.otf")  format("opentype"),
-      url("../fonts/multipearls-font/MultipearlsThi.otf")  format("opentype");
-	font-weight: normal;
+  font-family: "multipearls-font";
+      src: url("../fonts/multipearls-font/Lato-Regular.ttf")  format("truetype");
+  /* src: url("../fonts/multipearls-font/Lato-Black.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-BlackItalic.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-Bold.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-BoldItalic.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-Hairline.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-HairlineItalic.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-Heavy.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-HeavyItalic.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-Italic.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-Light.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-LightItalic.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-Medium.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-MediumItalic.ttf")  format("truetype"), */
+      /* url("../fonts/multipearls-font/Lato-Semibold.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-SemiboldItalic.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-Thin.ttf")  format("truetype"),
+      url("../fonts/multipearls-font/Lato-ThinItalic.ttf")  format("truetype"); */
+	font-weight: 300;
 	font-style: normal;
 }
 /*========================================================
@@ -624,8 +636,7 @@ blockquote {
                       Main Styles
 =========================================================*/
 body {
-  font: 300 14px/24px "multipearls-font", sans-serif;
-  color: #333;
+  font: 12px "multipearls-font", sans-serif;
   background: #fff;
 }
 
@@ -1128,7 +1139,7 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
 }
 .box-telephone > a {
   font-family: "multipearls-font";
-  font-size: 20px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 700;
   color: #333;
@@ -1559,12 +1570,8 @@ section.top {
 .product-layout {
   margin-bottom: 30px;
 }
-
-.product-thumb * + .price {
-  margin-top: 18px;
-}
-.product-thumb * + .name {
-  margin-top: 11px;
+.product-thumb * + .rating {
+  margin-bottom: 11px;
 }
 .product-thumb * + .description {
   margin-top: 15px;
@@ -1606,15 +1613,11 @@ section.top {
   display: none;
 }
 .product-thumb .name {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
-  font-weight: 700;
+  font-weight: 600;
   color: #333;
-  text-transform: uppercase;
-}
-.product-thumb .name > a {
-  height: 3.2em;
-  overflow: hidden;
+  text-transform: capitalize;
 }
 .product-thumb .description {
   display: none;
@@ -1754,16 +1757,15 @@ html[lang="de"] .sale, html[lang="de"] .new_pr {
 
 /* ===================   Product Price    =================== */
 .product-thumb .price-new, .product-thumb .price {
-  font-size: 23px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .product-thumb .price-old {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .price-new, .price-old, .price {
   display: inline-block;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
 }
 
@@ -1772,10 +1774,8 @@ html[lang="de"] .sale, html[lang="de"] .new_pr {
   color: #f8c30d;
   font-weight: 300;
 }
-
 .price-section {
   margin-top: 20px;
-  font-weight: 700;
 }
 .price-section .price-new, .price-section .price-section .price-old {
   font-size: 30px;
@@ -2434,7 +2434,7 @@ aside .row {
 }
 
 .product-thumb .product-btn, .product-thumb .product-btn-add {
-  width: 33.33333333%;
+  width: 49%;
   font-size: 20px;
   line-height: 20px;
   height: 35px;
@@ -3017,11 +3017,11 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
   padding: 0 30px;
   text-align: center;
   color: #fff;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 20px;
-  font-weight: 600;
   text-transform: uppercase;
   border-top: 2px solid #000;
+  letter-spacing: 2px;
 }
 .sf-menu > li.sfHover > a, .sf-menu > li > a:hover {
   background: #fff;
@@ -3099,17 +3099,20 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
   background-repeat: no-repeat;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
+.sf-menu .sf-mega li{
+  margin-bottom: 10px;
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .sf-menu .sf-mega {
     width: 720px;
   }
 }
 .submenu_title{
-font-size: 20px;
 margin-bottom: 20px;
-color: #565353;
-font-weight: 600;
 text-transform: uppercase;
+font-size: 16px;
+letter-spacing: 1px;
+font-weight: 600;
 }
 .sf-menu .sf-mega .container, .sf-menu .sf-mega [class*="col-"], .sf-menu .sf-mega .row {
   width: 100%;
