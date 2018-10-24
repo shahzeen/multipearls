@@ -280,7 +280,7 @@ blockquote {
     font-size: 0;
   }
 }
-.product_page{
+.product_page, .tb-space{
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -2779,8 +2779,16 @@ select {
   font-size: 28px;
 }
 .sbToggle:before {
-  content: "";
-  display: block;
+  content: '';
+  position: absolute;
+  right: 7px;
+  top: 40%;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #000;
+  clear: both;
   -moz-transition: 0.5s all ease;
   -o-transition: 0.5s all ease;
   -webkit-transition: 0.5s all ease;
@@ -2803,11 +2811,11 @@ select {
 }
 
 .sbOptions {
-  background-color: #f5f5f5;
+  background-color: #fff;
   list-style: none;
   left: 0;
   margin: 0;
-  padding: 10px 0;
+  padding: 0;
   position: absolute;
   right: 0;
   z-index: 1;
@@ -2817,11 +2825,12 @@ select {
   -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
   border-top: 1px solid #e0e0e0;
+  width: 200px;
 }
 .sbOptions li a {
   display: block;
   padding: 8px 20px 8px 10px;
-  color: #333;
+  color: #222;
 }
 .sbOptions li a:hover {
   background: #ededed;
@@ -4583,14 +4592,16 @@ aside #blog-search a:hover {
 .box-subcat li {
   text-align: center;
   margin-bottom: 15px;
+  margin-right: 15px;
+  display: inline-block;
 }
 .box-subcat li .thumb {
   padding: 10px 0;
   border: 1px solid #f5f5f5;
 }
 .box-subcat li .name {
-  border-top: 1px solid #e0e0e0;
-  padding: 10px 5px 0;
+  border: 1px solid #e0e0e0;
+  padding: 5px 10px;
 }
 .box-subcat li .name a {
   text-transform: capitalize;
@@ -4700,7 +4711,6 @@ aside #blog-search a:hover {
   float: left;
 }
 .product-filter_elem .sbHolder, .product-filter_elem select {
-  height: 50px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -4708,18 +4718,8 @@ aside #blog-search a:hover {
   /* border-top: none; */
   /* border-bottom: none; */
 }
-.product-filter_elem .sbHolder .sbSelector, .product-filter_elem select .sbSelector {
-  padding: 13px 10px;
-}
-.product-filter_elem .sbHolder .sbToggle, .product-filter_elem select .sbToggle {
-  line-height: 50px;
-}
 .product-filter_elem.show .sbHolder {
   width: auto;
-  border-right: none;
-}
-.product-filter .sort {
-  width: 31%;
 }
 .product-filter .sort label {
   display: none;

@@ -13,18 +13,16 @@
 		<?php } else { ?>
 		<?php $class = 'col-sm-12'; ?>
 		<?php } ?>
-		<div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+		<div id="content" class="tb-space <?php echo $class; ?>"><?php echo $content_top; ?>
 			<h2><?php echo $heading_title; ?></h2>
 			
 			<?php if ($categories) { ?>
-			<h3><?php echo $text_refine; ?></h3>
-
 			<div class="row">
-				<div >
+				<div class="col-sm-12">
 					<ul class="box-subcat">
 						<?php $i=0; foreach ($categories as $category) { $i++; ?>
 						<?php 
-						$perLine = 4;
+						$perLine = 10;
 						$last_line = "";
 						$total = count($products);
 						$totModule = $total%$perLine;
@@ -40,13 +38,8 @@
 							$a='';
 						}
 						?>
-						<li class="col-sm-3  <?php echo $a. $last_line ;?>">
-							<div class="thumb">
-								<?php if ($category['thumb']) { ?>
-								<div class="image"><a href="<?php echo $category['href']; ?>"><img src="<?php echo $category['thumb']; ?>" alt="<?php echo $category['name']; ?>" /></a></div>
-								<?php } ?>
+						<li class=" <?php echo $a. $last_line ;?>">
 								<div class="name subcatname"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></div>
-							</div>
 						</li>
 						<?php } ?>
 					</ul>
