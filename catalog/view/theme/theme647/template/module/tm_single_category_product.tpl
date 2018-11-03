@@ -14,8 +14,8 @@
 			<?php }?>
 
 		</script>
-		<div class="box single-category">
 			<hr>
+		<div class="box single-category">
 			<div class="box-content">
 				<div role="tabpanel" class="module_tab" id="single-category<?php echo $module; ?>">
 					<?php if ($tabs == '1') { ?>
