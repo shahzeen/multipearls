@@ -1,7 +1,7 @@
 
+<hr>
 <footer>
 	<div class="container">
-		<hr>
 		<div class="row">
 			<div class="col-xs-6 col-sm-4 col-md-2">
 				<?php if ($informations) { ?>
@@ -78,43 +78,12 @@
 					</ul>
 				</div>
 			</div>
-			<?php if ($footer_top) { ?>
-			<div class="col-xs-12 col-sm-8 col-md-4">
-				<div class="footer">
-					<?php echo $footer_top; ?>
-				</div>
-			</div>
-			<?php } ?>
-		</div>
-		<hr>
-		<div class="row">
-			<div class="col-sm-5 col-md-4">
-				<div class="logo">
-					<?php if ($logo) { ?>
-					<a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive"/></a>
-					<?php } else { ?>
-					<h1>
-						<a href="<?php echo $home; ?>"><?php echo $name; ?></a>
-					</h1>
-					<?php } ?>
-				</div>
-			</div>
-			<div class="pull-right">
-				<?php echo $tm_social_list; ?>
-			</div>
-			<address class="material-design-phone370 box-telephone pull-right">
-				<a href="callto:<?php echo $telephone ?>">
-					<?php echo $telephone; ?>
-				</a>
-			</address>
-			<p class="material-design-clock100 pull-right">
-				<?php echo $open; ?>
-			</p>
-		</div>
-		<div class="copyright">
-			<?php echo $powered; ?><!-- [[%FOOTER_LINK]] -->
+		
 		</div>
 	</div>
+	<div class="copyright">
+			<?php echo $powered; ?><!-- [[%FOOTER_LINK]] -->
+		</div>
 </footer>
 <script src="catalog/view/theme/<?php echo $theme_path; ?>/js/livesearch.min.js" type="text/javascript"></script>
 <script src="catalog/view/theme/<?php echo $theme_path; ?>/js/script.js" type="text/javascript"></script>

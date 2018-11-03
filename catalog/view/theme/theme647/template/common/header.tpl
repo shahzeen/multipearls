@@ -92,7 +92,6 @@
 								</li>
 								<li>
 									<a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>">
-										<i class="material-design-user157 hidden-xs"></i>
 										<span><?php echo $text_account; ?></span>
 									</a>
 								</li>
@@ -111,7 +110,6 @@
 								</li>
 								<li>
 									<a href="<?php echo $logout; ?>">
-										<i class="material-icons-reply_all"></i>
 										<?php echo $text_logout; ?>
 									</a>
 								</li>
@@ -121,7 +119,6 @@
 								</li>
 								<li>
 									<a href="<?php echo $login; ?>">
-										<i class="material-icons-vpn_key hidden-xs"></i>
 										<?php echo $text_login; ?>
 									</a>
 								</li>

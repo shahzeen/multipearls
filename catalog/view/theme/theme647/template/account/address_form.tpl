@@ -13,7 +13,7 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"> <?php echo $content_top; ?>
+    <div id="content" class="<?php echo $class; ?> tb-space"> <?php echo $content_top; ?>
       <h2><?php echo $text_edit_address; ?></h2>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>

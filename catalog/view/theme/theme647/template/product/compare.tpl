@@ -20,7 +20,7 @@
 		<?php } else { ?>
 		<?php $class = 'col-sm-12'; ?>
 		<?php } ?>
-		<div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+		<div id="content" class="<?php echo $class; ?> tb-space"><?php echo $content_top; ?>
 			<h1 class="no-line"><i class="material-icons-equalizer"></i><?php echo $heading_title; ?></h1>
 			<?php if ($products) { ?>
 			<div class="table-responsive">

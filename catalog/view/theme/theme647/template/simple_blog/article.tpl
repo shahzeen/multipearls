@@ -16,7 +16,7 @@
 		<?php $class = 'col-sm-12'; ?>
 		<?php } ?>
 
-		<div id="content" class="<?php echo $class; ?>">
+		<div id="content" class="<?php echo $class; ?> tb-space">
 			<?php echo $content_top; ?>
 			<h1><?php echo $heading_title; ?></h1>
 

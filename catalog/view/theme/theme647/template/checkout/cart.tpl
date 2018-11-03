@@ -35,7 +35,7 @@
 		<?php } else { ?>
 		<?php $class = 'col-sm-12'; ?>
 		<?php } ?>
-		<div id="content" class="<?php echo $class; ?>">
+		<div id="content" class="<?php echo $class; ?> tb-space">
 			<?php echo $content_top; ?>
 			<h1><i class="material-design-shopping232"></i><?php echo $heading_title; ?>
 				<?php if ($weight) { ?>

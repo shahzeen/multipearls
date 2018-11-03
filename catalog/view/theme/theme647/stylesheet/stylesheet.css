@@ -780,13 +780,10 @@ div.required .control-label:after {
 header * + .box-wishlist,
 header * + .box-compare,
 header * + .box-cart {
-  margin-right: 33px;
+  margin-right: 8px;
 }
 header * + .search {
   margin-right: 45px;
-}
-header * + .box-telephone {
-  margin-right: 25px;
 }
 header * + .navigation {
   margin-top: 17px;
@@ -800,7 +797,7 @@ header hr + .container {
   margin-top: 20px;
 }
 header .box-telephone {
-  margin-top: 7px;
+  margin-top: 10px;
 }
 @media (max-width: 1199px) {
   header * + .search {
@@ -881,18 +878,21 @@ header .search {
   -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
-.box-wishlist span,
+#wishlist-total span,
 .box-compare span {
-  width: 42px;
-  height: 42px;
+  width: 20px;
+  height: 20px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  font-size: 16px;
-  line-height: 42px;
+  font-size: 10px;
+  line-height: 20px;
   font-weight: 400;
   text-align: center;
   border: 1px solid #000;
+  color: red;
+  margin-left: -17px;
+  margin-top: -20px;
 }
 .box-wishlist > a:hover i,
 .box-compare > a:hover i {
@@ -936,7 +936,7 @@ header .search {
 
 /*================   Top Links style   ===============*/
 header .nav {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 16px;
   font-weight: 400;
   color: #333;
@@ -1133,16 +1133,16 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   margin: 0;
 }
 .box-telephone:before {
-  color: #000;
   font-size: 25px;
-  margin-right: 10px;
+  vertical-align: middle;
 }
 .box-telephone > a {
   font-family: "multipearls-font";
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
-  color: #333;
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
 }
 
 /*========================================================
@@ -1455,8 +1455,11 @@ section.top {
 .cart > button, .cart .cart-total2 {
   vertical-align: middle;
 }
+.cart > button{
+  margin-top: 5px;
+}
 .cart > button i {
-  font-size: 25px;
+  font-size: 37px;
   line-height: 25px;
   -moz-transition: color 0.5s ease;
   -o-transition: color 0.5s ease;
@@ -1469,18 +1472,19 @@ section.top {
 }
 .cart .cart-total2 {
   display: inline-block;
-  width: 42px;
-  height: 42px;
+  width: 20px;
+  height: 20px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  font-size: 16px;
-  line-height: 42px;
+  font-size: 10px;
+  line-height: 18px;
   font-weight: 400;
-  margin-left: 9px;
   text-align: center;
-  color: #333;
   border: 1px solid #000;
+  color: red;
+  margin-left: -9px;
+  margin-top: -20px;
 }
 .cart .cart-remove-btn {
   margin-bottom: 10px;
@@ -4820,14 +4824,14 @@ aside #blog-search a:hover {
 
 .cart-remove-btn, .cart-remove-btn:visited {
   display: inline-block;
-  font-size: 22px;
+  font-size: 12px;
   color: #eac322;
 }
 .cart-remove-btn:focus, .cart-remove-btn:visited:focus {
   text-decoration: none;
 }
 .cart-remove-btn span, .cart-remove-btn:visited span {
-  font-size: 14px;
+  font-size: 12px;
   color: #fff;
 }
 .cart-remove-btn:hover, .cart-remove-btn:visited:hover {
@@ -5384,7 +5388,7 @@ html[lang="de"] .rating .review {
 .well {
   background-color: #fff;
   border: 1px solid #e0e0e0;
-  border-top: 2px solid #eac322;
+  border-top: 2px solid #111;
   margin-bottom: 30px;
   padding: 30px;
   border-radius: 0;
@@ -5402,7 +5406,7 @@ html[lang="de"] .rating .review {
   clear: both;
 }
 .well .heading i {
-  color: #eac322;
+  color: #111;
   float: left;
   font-size: 56px;
   margin-right: 14px;
@@ -5507,14 +5511,14 @@ input#input-coupon {
 * + footer {
   margin-top: 25px;
 }
-footer * + hr {
-  margin-top: 12px;
-}
-footer * + ul {
-  margin-top: 37px;
-}
 footer * + .copyright {
   margin-top: 10px;
+  color: #9b9b9b;
+  background: #111;
+  text-align: center;
+}
+.footer_box{
+  color: #ddd;
 }
 @media (max-width: 767px) {
   footer * + .copyright {
@@ -5616,8 +5620,8 @@ footer p.pull-right {
 }
 
 footer {
-  padding: 20px 0 105px 0;
-  background: #fff;
+  padding: 20px 0 0;
+  background: #232f3e;
 }
 footer hr {
   border-top-color: #e0e0e0;
@@ -5627,6 +5631,7 @@ footer h5 {
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
+  color: #fff;
 }
 footer h5 + hr {
   border-top-color: #eac322;
@@ -5655,6 +5660,7 @@ footer ul li + li {
 .copyright {
   font-size: 14px;
   line-height: 14px;
+  padding: 10px 20px;
 }
 
 /*========================================================
