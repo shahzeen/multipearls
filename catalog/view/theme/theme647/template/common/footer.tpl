@@ -2,8 +2,9 @@
 <hr>
 <footer>
 	<div class="container">
+	<div class="custom-center-align">
 		<div class="row">
-			<div class="col-xs-6 col-sm-4 col-md-2">
+			<div class="col-xs-6 col-sm-4 col-md-3">
 				<?php if ($informations) { ?>
 				<div class="footer_box">
 					<h5><?php echo $text_information; ?></h5>
@@ -21,7 +22,7 @@
 				</div>
 				<?php } ?>
 			</div>
-			<div class="col-xs-6 col-sm-4 col-md-2">
+			<div class="col-xs-6 col-sm-4 col-md-3">
 				<div class="footer_box">
 					<h5><?php echo $text_service; ?></h5>
 					<hr>
@@ -38,7 +39,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-xs-6 col-sm-4 col-md-2">
+			<div class="col-xs-6 col-sm-4 col-md-3">
 				<div class="footer_box">
 					<h5><?php echo $text_extra; ?></h5>
 					<hr>
@@ -58,7 +59,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-xs-6 col-sm-4 col-md-2">
+			<div class="col-xs-6 col-sm-4 col-md-3">
 				<div class="footer_box">
 					<h5><?php echo $text_account; ?></h5>
 					<hr>
@@ -79,6 +80,7 @@
 				</div>
 			</div>
 		
+		</div>
 		</div>
 	</div>
 	<div class="copyright">
