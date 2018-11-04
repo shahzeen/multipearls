@@ -12,7 +12,7 @@
                 <?php } else { ?>
                     <?php $class = 'col-sm-12'; ?>
                 <?php } ?>
-                <div id="content" class="<?php echo $class; ?> tb-space"><?php echo $content_top; ?></div>
+                <div id="content" class="<?php echo $class; ?> tb-space home"><?php echo $content_top; ?></div>
                 <?php echo $column_right; ?></div>
         </div>
     </section>

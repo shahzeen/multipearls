@@ -445,7 +445,7 @@ blockquote {
 }
 .pagination > li > a, .pagination > li > span {
   display: inline-block;
-  color: #999;
+  color: #111;
   background: #f5f5f5;
   border: none;
   float: none;
@@ -456,18 +456,13 @@ blockquote {
   text-align: center;
   padding: 0;
   border: 1px solid #e0e0e0;
+  font-size: 13px;
 }
 .pagination > li + li > a, .pagination > li + li > span {
   border-left: none;
 }
-.pagination > li + li:nth-child(5n+6) {
-  clear: left;
-}
 .pagination > li + li:nth-child(5n+6) > a, .pagination > li + li:nth-child(5n+6) > span {
   border-left: 1px solid #e0e0e0;
-}
-.pagination > li + li:nth-child(n+6) {
-  margin-top: 2px;
 }
 .pagination > li.active > a, .pagination > li.active > span, .pagination > li.active > a:hover, .pagination > li.active > span:hover, .pagination > li.active > a:focus, .pagination > li.active > span:focus {
   background-color: #ededed;
@@ -1206,9 +1201,11 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   background: #fff;
   overflow: hidden;
 }
-
 #content {
   padding-bottom: 30px;
+}
+#content.home{
+  background: #f1efef;
 }
 .common-home #content > *:first-child {
   margin-top: 75px;
@@ -1698,6 +1695,12 @@ section.top {
   background: #9f9d9d;
   color: #333;
 }
+.camera_prev, .camera_next{
+background: rgba(165, 165, 165, 0.4);
+color: #f3eeee;
+transition: 0.5s all ease;
+text-shadow: 1px 1px black;
+}
 @media (min-width: 768px) {
   .product-list .product-thumb .caption {
     margin-top: 0;
@@ -2127,6 +2130,11 @@ aside .row {
 
 .single-category {
   position: relative;
+  background: #fff;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: 2px 2px 14px #666;
 }
 .single-category > hr {
   margin-top: 77px;
@@ -2142,7 +2150,6 @@ aside .row {
   border-bottom: none;
   text-align: center;
   padding: 0 30%;
-  margin-bottom: 50px;
 }
 .single-category .nav-tabs > li {
   float: none;
@@ -2174,15 +2181,16 @@ aside .row {
 }
 .single-category .owl-controls .owl-buttons div {
   opacity: 1;
-  margin: 0;
-  text-shadow: none;
-  color: #999;
-  font-size: 28px;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  background: #f6f6f6;
-  text-align: center;
+    margin: 0;
+    text-shadow: 1px 1px black;
+    color: #b4adad;
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: transparent;
+    text-align: center;
+    box-shadow: 2px 2px 8px #ddd;
 }
 .single-category .owl-carousel:hover .owl-buttons div {
   opacity: 1;
@@ -2196,8 +2204,11 @@ aside .row {
   }
   .single-category .owl-controls .owl-buttons .owl-prev,
   .single-category .owl-controls .owl-buttons .owl-next {
-    top: -100px;
+    top: 100%;
     left: auto;
+  }
+  #tab-single-latest-0 .owl-wrapper{
+    margin-bottom: 10px;
   }
   .single-category .owl-controls .owl-buttons .owl-next {
     right: 15px;
@@ -2207,7 +2218,6 @@ aside .row {
   }
   .single-category .owl-carousel:hover .owl-buttons .owl-prev,
   .single-category .owl-carousel:hover .owl-buttons .owl-next {
-    top: -100px;
     left: auto;
   }
   .single-category .owl-carousel:hover .owl-buttons .owl-next {
@@ -3602,11 +3612,17 @@ font-weight: 600;
 /*========================================================
                       HTML boxes
 =========================================================*/
-* + .box_html {
+/* * + .box_html {
   margin-top: 75px;
+} */
+.box_html.Order.Specification{
+  box-shadow: 2px 5px 10px #ccc;
+  padding: 10px;
 }
-
-/*==================   Flex List   ======================*/
+.box_html.Order.Specification a{
+  font-weight: 600;
+}
+  /*==================   Flex List   ======================*/
 .flex-list {
   display: table;
   table-layout: fixed;
@@ -3655,7 +3671,6 @@ font-weight: 600;
 }
 .owl-carousel .owl-item {
   padding: 0 15px;
-  width: 253px !important;
 }
 
 .owl-carousel .owl-buttons div {
@@ -4619,7 +4634,7 @@ aside #blog-search a:hover {
   padding: 5px 10px;
 }
 .box-subcat li .name a {
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 .box-subcat li .image {
   overflow: hidden;

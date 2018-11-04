@@ -14,7 +14,6 @@
 			<?php }?>
 
 		</script>
-			<hr>
 		<div class="box single-category">
 			<div class="box-content">
 				<div role="tabpanel" class="module_tab" id="single-category<?php echo $module; ?>">
