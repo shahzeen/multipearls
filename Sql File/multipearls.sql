@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 04, 2018 at 02:53 PM
+-- Generation Time: Nov 04, 2018 at 05:25 PM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -343,11 +343,11 @@ CREATE TABLE `oc_banner_image` (
 
 INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `link`, `image`, `sort_order`) VALUES
 (215, 14, 'index.php?route=product/category&amp;path=28', 'catalog/10-JS(RG)/JS(RG)-99.jpg', 2),
-(205, 15, 'index.php?route=product/category&amp;path=29', 'catalog/02-NN/NN-24.jpg', 2),
-(204, 15, 'index.php?route=product/category&amp;path=28', 'catalog/01-JS/JS-06.jpg', 1),
+(221, 15, 'index.php?route=product/category&amp;path=30', 'catalog/slide-3.jpg', 3),
+(220, 15, 'index.php?route=product/category&amp;path=29', 'catalog/slide-1.jpg', 2),
 (214, 14, 'index.php?route=product/category&amp;path=31', 'catalog/07-SBFULL/SB-47.jpg', 1),
 (213, 14, 'index.php?route=product/category&amp;path=29', 'catalog/01-JS/JS-09.jpg', 0),
-(206, 15, 'index.php?route=product/category&amp;path=30', 'catalog/05-NF/NF-35.jpg', 3);
+(219, 15, 'index.php?route=product/category&amp;path=28', 'catalog/slide-2.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -371,11 +371,11 @@ INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `ba
 (99, 1, 9, 'slide-1', ''),
 (100, 1, 9, 'slide-2', ''),
 (101, 1, 9, 'slide-3', ''),
-(206, 1, 15, 'slide-3', '&lt;h2&gt;A great&lt;span&gt;all vehicle models&lt;/span&gt;&lt;/h2&gt;'),
-(205, 1, 15, 'slide-2', '&lt;h2&gt;High quality&lt;span&gt;products at fair prices&lt;/span&gt;&lt;/h2&gt;'),
+(221, 1, 15, 'slide-3', '&lt;h2&gt;A great&lt;span&gt;all vehicle models&lt;/span&gt;&lt;/h2&gt;'),
+(220, 1, 15, 'slide-2', '&lt;h2&gt;High quality&lt;span&gt;products at fair prices&lt;/span&gt;&lt;/h2&gt;'),
 (215, 1, 14, 'banner-1', '&lt;h2&gt;&lt;span&gt;Plain&lt;/span&gt;&lt;br&gt;T-shirt\'s&lt;/h2&gt;'),
 (213, 1, 14, 'banner-1', '&lt;h2&gt;&lt;span&gt;Jersey\'s&lt;/span&gt;&lt;br&gt;T-shirt\'s&lt;/h2&gt;'),
-(204, 1, 15, 'slide-1', '&lt;h2&gt;Find tyres for&lt;span&gt;all vehicle models&lt;/span&gt;&lt;/h2&gt;'),
+(219, 1, 15, 'slide-1', '&lt;h2&gt;Find tyres for&lt;span&gt;all vehicle models&lt;/span&gt;&lt;/h2&gt;'),
 (214, 1, 14, 'banner-1', '&lt;h2&gt;&lt;span&gt;Digital&lt;/span&gt;&lt;br&gt;T-shirt\'s&lt;/h2&gt;');
 
 -- --------------------------------------------------------
@@ -1063,7 +1063,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 (1, 'Pound Sterling', 'GBP', '£', '', '2', 0.67280000, 1, '2015-12-22 14:55:00'),
 (2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2018-08-28 13:56:55'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.91270000, 1, '2015-12-22 14:55:00'),
-(5, 'Indian Rupees', 'INR', '₹', '', '0', 1.00000000, 1, '2018-11-04 12:39:34');
+(5, 'Indian Rupees', 'INR', '₹', '', '0', 1.00000000, 1, '2018-11-04 15:22:24');
 
 -- --------------------------------------------------------
 
@@ -1292,7 +1292,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls/index.php?route=product/manufacturer', 'http://localhost/multipearls/index.php?route=common/home', '2018-11-04 14:51:02');
+('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/', '2018-11-04 17:24:28');
 
 -- --------------------------------------------------------
 
@@ -1896,13 +1896,14 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1141, 9, 'tm_megamenu.103', 'navigation', 1),
 (1243, 3, 'tm_megamenu.103', 'navigation', 1),
 (1101, 14, 'olark.50', 'footer_top', 2),
-(1235, 1, 'tm_megamenu.103', 'navigation', 1),
+(1560, 1, 'html.117', 'content_top', 9),
+(1558, 1, 'html.112', 'top', 7),
 (1120, 4, 'olark.50', 'footer_top', 1),
-(1232, 1, 'html.107', 'content_top', 2),
-(1233, 1, 'banner.33', 'content_top', 1),
-(1231, 1, 'tm_newsletter.104', 'footer_top', 2),
-(1230, 1, 'tm_blog_articles.101', 'content_top', 5),
+(1559, 1, 'tm_single_category_product.106', 'content_top', 8),
+(1557, 1, 'tm_single_category_product.106', 'content_top', 3),
+(1556, 1, 'html.116', 'content_top', 6),
 (1091, 6, 'olark.50', 'footer_top', 1),
+(1554, 1, 'html.114', 'content_top', 10),
 (1100, 14, 'tm_blog_articles.91', 'column_left', 1),
 (1099, 14, 'tm_blog_category.90', 'column_left', 0),
 (1242, 3, 'olark.50', 'footer_top', 1),
@@ -1916,13 +1917,14 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1132, 2, 'olark.50', 'footer_top', 1),
 (1135, 13, 'olark.50', 'footer_top', 1),
 (1140, 9, 'olark.50', 'footer_top', 1),
-(1229, 1, 'tm_slideshow.46', 'top', 1),
+(1555, 1, 'html.115', 'content_top', 4),
 (1093, 6, 'tm_newsletter.104', 'footer_top', 2),
 (1097, 10, 'tm_megamenu.103', 'navigation', 1),
 (1098, 10, 'tm_newsletter.104', 'footer_top', 2),
 (1102, 14, 'tm_megamenu.103', 'navigation', 1),
 (1103, 14, 'tm_newsletter.104', 'footer_top', 2),
 (1241, 3, 'featured.28', 'column_left', 1),
+(1553, 1, 'tm_newsletter_popup.108', 'content_top', 15),
 (1111, 7, 'tm_newsletter.104', 'footer_top', 2),
 (1114, 12, 'tm_newsletter.104', 'footer_top', 2),
 (1118, 8, 'tm_newsletter.104', 'footer_top', 2),
@@ -1934,9 +1936,13 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1138, 13, 'tm_megamenu.103', 'navigation', 1),
 (1139, 13, 'tm_newsletter.104', 'footer_top', 2),
 (1142, 9, 'tm_newsletter.104', 'footer_top', 2),
-(1228, 1, 'olark.50', 'footer_top', 1),
-(1226, 1, 'tm_single_category_product.106', 'content_top', 4),
-(1236, 1, 'tm_newsletter_popup.108', 'content_top', 6);
+(1550, 1, 'olark.50', 'footer_top', 5),
+(1551, 1, 'tm_slideshow.46', 'top', 2),
+(1552, 1, 'tm_single_category_product.106', 'content_top', 1),
+(1549, 1, 'tm_newsletter.104', 'footer_top', 13),
+(1548, 1, 'tm_megamenu.103', 'navigation', 14),
+(1547, 1, 'tm_single_category_product.106', 'content_top', 11),
+(1546, 1, 'html.107', 'content_top', 12);
 
 -- --------------------------------------------------------
 
@@ -1959,7 +1965,7 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (301, 6, 0, 'account/%'),
 (302, 10, 0, 'affiliate/%'),
 (328, 3, 0, 'product/category'),
-(326, 1, 0, 'common/home'),
+(356, 1, 0, 'common/home'),
 (314, 2, 0, 'product/product'),
 (312, 11, 0, 'information/information'),
 (308, 7, 0, 'checkout/%'),
@@ -2219,16 +2225,21 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (28, 'Featured  Aside', 'featured', '{\"name\":\"Featured  Aside\",\"product\":[\"82\",\"74\",\"61\",\"161\"],\"limit\":\"7\",\"width\":\"270\",\"height\":\"270\",\"status\":\"0\"}'),
 (46, 'Tm Slideshow', 'tm_slideshow', '{\"name\":\"Tm Slideshow\",\"banner_id\":\"15\",\"width\":\"2048\",\"height\":\"680\",\"status\":\"1\"}'),
 (50, 'Olark Chat', 'olark', '{\"name\":\"Olark Chat\",\"olark_version\":\"2.0.0\",\"olark_site_id\":\"7830-582-10-3714\",\"status\":\"1\"}'),
+(112, 'Order Specification', 'html', '{\"name\":\"Order Specification\",\"module_description\":{\"1\":{\"title\":\"Order Specification\",\"description\":\"&lt;ul class=&quot;flex-list&quot;&gt;\\r\\n\\r\\n\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\tDispatch within 24 hours&lt;br\\/&gt;On Printing &amp; Embroidery\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\r\\n\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\tNo Minimum order&lt;br\\/&gt;Order From 100 to 50000+\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\r\\n\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\tEvery Order Checked&lt;br\\/&gt;By Our Expert Team\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\r\\n\\r\\n&lt;\\/ul&gt;\"}},\"status\":\"1\"}'),
 (104, 'TM Newsletter', 'tm_newsletter', '{\"name\":\"TM Newsletter\",\"status\":\"1\",\"tm_newsletter_description\":{\"1\":{\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"2\":{\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"3\":{\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"}}}'),
 (54, 'Google Map', 'tm_google_map', '{\"name\":\"Google Map\",\"tm_google_map_key\":\"\",\"status\":\"1\",\"tm_google_map_zoom\":\"14\",\"tm_google_map_type\":\"1\",\"tm_google_map_sensor\":\"true\",\"tm_google_map_width\":\"100%\",\"tm_google_map_height\":\"440px\",\"tm_google_map_styles\":\"                                                                                                                                                                                                                                                                                              [{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:65},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:51},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:30},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:40},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;labels&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:-25},{&quot;saturation&quot;:-100}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#ffff00&quot;},{&quot;lightness&quot;:-25},{&quot;saturation&quot;:-97}]}]                                                                                                                                                                                                                                                                                                                                                                                      \",\"tm_google_map_disable_ui\":\"false\",\"tm_google_map_scrollwheel\":\"false\",\"tm_google_map_draggable\":\"true\",\"tm_google_map_marker\":\"\",\"tm_google_map_marker_active\":\"\",\"tm_google_map_marker_width\":\"\",\"tm_google_map_marker_height\":\"\"}'),
 (67, 'Specials Aside', 'special', '{\"name\":\"Specials Aside\",\"limit\":\"1\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
 (90, 'Blog Categories', 'tm_blog_category', '{\"status\":\"1\",\"name\":\"Blog Categories\",\"category_search_article\":\"1\"}'),
 (91, 'Blog Popular Articles', 'tm_blog_articles', '{\"status\":\"1\",\"name\":\"Blog Popular Articles\",\"article_limit\":\"3\",\"show_readmore\":\"0\",\"show_date\":\"0\",\"show_author\":\"0\",\"show_comments\":\"0\",\"show_image\":\"0\",\"image_width\":\"0\",\"image_height\":\"0\",\"description_limit\":\"150\",\"category_id\":\"popular\"}'),
 (103, 'TM Megamenu', 'tm_megamenu', '{\"name\":\"TM Megamenu\",\"status\":\"1\",\"menu_item\":[{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"3\",\"image\":\"\",\"image_width\":\"230\",\"image_height\":\"230\",\"column\":[{\"width\":\"33%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"103\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"33%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"33%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"4\",\"limit\":\"0\",\"prod_limit\":\"10\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"4\",\"limit\":\"0\",\"prod_limit\":\"10\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]}]}'),
-(106, 'Tm Single Category Products 2', 'tm_single_category_product', '{\"name\":\"Tm Single Category Products 2\",\"path\":\"Men\\u00a0\\u00a0&gt;\\u00a0\\u00a0Clothing\\u00a0\\u00a0&gt;\\u00a0\\u00a0T-shirts\",\"category\":\"29\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"1\",\"bestseller\":\"0\",\"latest\":\"1\",\"featured\":\"1\",\"product\":[\"82\",\"70\",\"28\",\"87\",\"63\"],\"limit\":\"5\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
+(106, 'Tm Single Category Products 2', 'tm_single_category_product', '{\"name\":\"Tm Single Category Products 2\",\"path\":\"Men\\u00a0\\u00a0&gt;\\u00a0\\u00a0Clothing\\u00a0\\u00a0&gt;\\u00a0\\u00a0T-shirts\",\"category\":\"29\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"1\",\"bestseller\":\"0\",\"latest\":\"1\",\"featured\":\"1\",\"product\":[\"82\",\"70\",\"28\",\"87\",\"63\"],\"limit\":\"10\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
 (107, 'Partners', 'html', '{\"name\":\"Partners\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"&lt;ul class=&quot;flex-list&quot;&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-1.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-2.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-3.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-4.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-5.png&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-6.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\"},\"2\":{\"title\":\"\",\"description\":\"&lt;ul class=&quot;flex-list&quot;&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-1.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-2.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-3.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-4.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-5.png&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-6.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\"},\"3\":{\"title\":\"\",\"description\":\"&lt;ul class=&quot;flex-list&quot;&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-1.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-2.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-3.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-4.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-5.png&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-6.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\"}},\"status\":\"1\"}'),
 (101, 'Blog Home Articles', 'tm_blog_articles', '{\"status\":\"1\",\"name\":\"Blog Home Articles\",\"article_limit\":\"3\",\"show_readmore\":\"1\",\"show_date\":\"1\",\"show_author\":\"1\",\"show_comments\":\"0\",\"show_image\":\"1\",\"image_width\":\"1170\",\"image_height\":\"780\",\"description_limit\":\"150\",\"category_id\":\"2\"}'),
-(108, 'TM Newsletter Popup', 'tm_newsletter_popup', '{\"name\":\"TM Newsletter Popup\",\"newsletter_popup_bg\":\"\",\"newsletter_popup_bg_width\":\"\",\"newsletter_popup_bg_height\":\"\",\"newsletter_popup_cookie\":\"60\",\"tm_newsletter_popup_description\":{\"1\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"2\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"3\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"}},\"status\":\"1\"}');
+(108, 'TM Newsletter Popup', 'tm_newsletter_popup', '{\"name\":\"TM Newsletter Popup\",\"newsletter_popup_bg\":\"\",\"newsletter_popup_bg_width\":\"\",\"newsletter_popup_bg_height\":\"\",\"newsletter_popup_cookie\":\"60\",\"tm_newsletter_popup_description\":{\"1\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"2\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"3\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"}},\"status\":\"1\"}'),
+(114, 'men aside', 'html', '{\"name\":\"men aside\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"&lt;h3&gt;Test&lt;\\/h3&gt;\"}},\"status\":\"1\"}'),
+(115, 'Women Aside', 'html', '{\"name\":\"Women Aside\",\"module_description\":{\"1\":{\"title\":\"Women Aside\",\"description\":\"&lt;p&gt;Test&lt;\\/p&gt;\"}},\"status\":\"1\"}'),
+(116, 'Boy Aside', 'html', '{\"name\":\"Boy Aside\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"&lt;p&gt;Test&lt;br&gt;&lt;\\/p&gt;\"}},\"status\":\"1\"}'),
+(117, 'Girl Aside', 'html', '{\"name\":\"Girl Aside\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"&lt;p&gt;Test&lt;br&gt;&lt;\\/p&gt;\"}},\"status\":\"1\"}');
 
 -- --------------------------------------------------------
 
@@ -5607,134 +5618,134 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (15438, 0, 'tm_social_list', 'tm_social_list_facebook', '//www.youtube.com', 0),
 (15437, 0, 'tm_social_list', 'tm_social_list_youtube', '', 0),
 (15436, 0, 'tm_social_list', 'tm_social_list_status', '1', 0),
-(17012, 0, 'config', 'config_compression', '0', 0),
-(17013, 0, 'config', 'config_secure', '0', 0),
-(17014, 0, 'config', 'config_password', '1', 0),
-(17015, 0, 'config', 'config_shared', '0', 0),
-(17016, 0, 'config', 'config_encryption', 'OZt8CNy70T7coHVq0hef3oy4WYqxCjE4uqyBht2BHtXnax1kFQCumEoUuzHM9id0L4qN2ChICOhz5JjlKPlS1AzfVfzJXRBJsnOfOUqE8X6i0QB4P1y9EodvEz17XIhUfwPkH6rtdFm2WGNjDz26ubjdwksHJFwbNKvnrKKwWLua1yjrzSVNjT0apnADENubrfIKGHvrP5d5iVZ0VCBGygNCH09Gp34llwtNSKR1JSLFZhbgi11Lznp1wCkDFbQODrGY9NvRwiPO9I1cCcHJvL1G3R40Lzc8qyS2kITqQRUMSiPYzvjbtVHIH7GZfmP1NiQER5Rx8vWvSSWE55nAEUH8Av6hCdA5VyUI0R7tsmAIiGuOkx48pbXvQ8T8i6HWnUkfTI6LyQb9ek4NyzuS1NzZ0WLufmz8092A7FHIGyI1Iscd8t4OHy76zYLwxIQNvUmfOIWaUSo3Dy1WPYPv4liqUKY6NKZsxuiKBS9iacA806iXx5WgeSenYtpoVlZrtSbExQCGGQNQpyA22yOq9osh47vWGlmUbMaytaFM5zBGSY9L2SCRhKTCot4T1m3Qefm3EBDoFqD548H21x4G5aLWkROPqloOzguptGsouTUUd8GurPmgPYSxD2G60RXapBV8Cy5YtlmU2qVFaF1EIEMRziQOx6Sw3mxTxnRwDTRQ1BeipFxvCF3pP4uMYk2UirhaE9R7QaPBpxwHScwt8Q7v4VkSJuIoyUKAWpAEWNCWBEfJaUycNdgYk7kQavwHN5jnz2aEtmeNwSJWxG8QiyTdOtzG8mXNmKYt2rhpkXAiD9BMhM7Bu9fZ3H2jCx4wfLxbubwDBVvJ1MFHV7V2YBXdaB4Kd1p7v2eWv5A6O2cEi5Gi8ypnfARaz00qhmAgJgnv2kn8pmSNt1SFUsTUzkb8AmZhVzyGarEXfETXsUOGPIoe2nSHmqtXT0ZTylpdvI080y2A8oxJFfULu0lcMqBZcQ9ErmX6p84kELBl13ieV0ndlOJhIqNhoNVtjqph', 0),
-(16985, 0, 'config', 'config_image_related_width', '270', 0),
-(16986, 0, 'config', 'config_image_related_height', '270', 0),
-(16987, 0, 'config', 'config_image_compare_width', '180', 0),
-(16988, 0, 'config', 'config_image_compare_height', '180', 0),
-(16989, 0, 'config', 'config_image_wishlist_width', '47', 0),
-(16990, 0, 'config', 'config_image_wishlist_height', '47', 0),
-(16991, 0, 'config', 'config_image_cart_width', '100', 0),
-(16992, 0, 'config', 'config_image_cart_height', '100', 0),
-(16993, 0, 'config', 'config_image_location_width', '234', 0),
-(16994, 0, 'config', 'config_image_location_height', '64', 0),
-(16995, 0, 'config', 'config_ftp_hostname', '192.168.9.2', 0),
-(16996, 0, 'config', 'config_ftp_port', '21', 0),
-(16997, 0, 'config', 'config_ftp_username', '', 0),
-(16998, 0, 'config', 'config_ftp_password', '', 0),
-(16999, 0, 'config', 'config_ftp_root', '', 0),
-(17000, 0, 'config', 'config_ftp_status', '0', 0),
-(17001, 0, 'config', 'config_mail_protocol', 'mail', 0),
-(17002, 0, 'config', 'config_mail_parameter', '', 0),
-(17003, 0, 'config', 'config_mail_smtp_hostname', '', 0),
-(17004, 0, 'config', 'config_mail_smtp_username', '', 0),
-(17005, 0, 'config', 'config_mail_smtp_password', '', 0),
-(17006, 0, 'config', 'config_mail_smtp_port', '25', 0),
-(17007, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
-(17008, 0, 'config', 'config_mail_alert', '', 0),
-(17009, 0, 'config', 'config_maintenance', '0', 0),
-(17010, 0, 'config', 'config_seo_url', '0', 0),
-(17011, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
-(16984, 0, 'config', 'config_image_additional_height', '88', 0),
-(16983, 0, 'config', 'config_image_additional_width', '88', 0),
-(16982, 0, 'config', 'config_image_product_height', '220', 0),
-(16981, 0, 'config', 'config_image_product_width', '220', 0),
-(16980, 0, 'config', 'config_image_popup_height', '800', 0),
-(16979, 0, 'config', 'config_image_popup_width', '800', 0),
-(16978, 0, 'config', 'config_image_thumb_height', '800', 0),
-(16977, 0, 'config', 'config_image_thumb_width', '800', 0),
-(16976, 0, 'config', 'config_image_category_height', '190', 0),
-(16975, 0, 'config', 'config_image_category_width', '190', 0),
-(16974, 0, 'config', 'config_icon', 'catalog/favicon.png', 0),
-(16973, 0, 'config', 'config_logo', 'catalog/mplogo.jpg', 0),
-(16972, 0, 'config', 'config_captcha_page', '[\"review\",\"return\",\"contact\"]', 1),
-(16971, 0, 'config', 'config_captcha', '', 0),
-(16970, 0, 'config', 'config_return_status_id', '2', 0),
-(16969, 0, 'config', 'config_return_id', '0', 0),
-(16968, 0, 'config', 'config_affiliate_mail', '1', 0),
-(16967, 0, 'config', 'config_affiliate_id', '4', 0),
-(16966, 0, 'config', 'config_affiliate_commission', '10', 0),
-(16965, 0, 'config', 'config_affiliate_auto', '1', 0),
-(16964, 0, 'config', 'config_affiliate_approval', '1', 0),
-(16963, 0, 'config', 'config_stock_checkout', '1', 0),
-(16962, 0, 'config', 'config_stock_warning', '0', 0),
-(16961, 0, 'config', 'config_stock_display', '1', 0),
-(16960, 0, 'config', 'config_api_id', '3', 0),
-(16959, 0, 'config', 'config_order_mail', '1', 0),
-(16958, 0, 'config', 'config_fraud_status_id', '7', 0),
-(16957, 0, 'config', 'config_complete_status', '[\"5\",\"3\"]', 1),
-(16956, 0, 'config', 'config_processing_status', '[\"5\",\"1\",\"2\",\"12\",\"3\"]', 1),
-(16955, 0, 'config', 'config_order_status_id', '1', 0),
-(16954, 0, 'config', 'config_checkout_id', '5', 0),
-(16953, 0, 'config', 'config_checkout_guest', '1', 0),
-(16952, 0, 'config', 'config_cart_weight', '1', 0),
-(16951, 0, 'config', 'config_invoice_prefix', 'INV-2018-20', 0),
-(16950, 0, 'config', 'config_account_mail', '0', 0),
-(16949, 0, 'config', 'config_account_id', '3', 0),
-(16948, 0, 'config', 'config_login_attempts', '5', 0),
-(16947, 0, 'config', 'config_customer_price', '0', 0),
-(16946, 0, 'config', 'config_customer_group_display', '[\"1\"]', 1),
-(16945, 0, 'config', 'config_customer_group_id', '1', 0),
-(16944, 0, 'config', 'config_customer_online', '1', 0),
-(16943, 0, 'config', 'config_tax_customer', 'shipping', 0),
-(16942, 0, 'config', 'config_tax_default', 'shipping', 0),
-(16941, 0, 'config', 'config_tax', '0', 0),
-(16940, 0, 'config', 'config_voucher_max', '1000', 0),
-(16939, 0, 'config', 'config_voucher_min', '1', 0),
-(16938, 0, 'config', 'config_review_mail', '0', 0),
-(16937, 0, 'config', 'config_review_guest', '1', 0),
-(16936, 0, 'config', 'config_review_status', '1', 0),
-(16935, 0, 'config', 'config_limit_admin', '20', 0),
-(16934, 0, 'config', 'config_product_description_length', '100', 0),
-(16933, 0, 'config', 'config_product_limit', '25', 0),
-(16932, 0, 'config', 'config_product_count', '1', 0),
+(17637, 0, 'config', 'config_simple_blog_share_social_site', '1', 0),
+(17636, 0, 'config', 'config_simple_blog_related_articles', '1', 0),
+(17635, 0, 'config', 'config_simple_blog_author_information', '1', 0),
+(17632, 0, 'config', 'config_simple_blog_limit', '4', 0),
+(17633, 0, 'config', 'config_simple_blog_description_limit', '250', 0),
+(17634, 0, 'config', 'config_simple_blog_comment_auto_approval', '1', 0),
+(17630, 0, 'config', 'config_error_filename', 'error.log', 0),
+(17631, 0, 'config', 'config_simple_blog_status', '1', 0),
+(17620, 0, 'config', 'config_compression', '0', 0),
+(17621, 0, 'config', 'config_secure', '0', 0),
+(17622, 0, 'config', 'config_password', '1', 0),
+(17623, 0, 'config', 'config_shared', '0', 0),
+(17624, 0, 'config', 'config_encryption', 'OZt8CNy70T7coHVq0hef3oy4WYqxCjE4uqyBht2BHtXnax1kFQCumEoUuzHM9id0L4qN2ChICOhz5JjlKPlS1AzfVfzJXRBJsnOfOUqE8X6i0QB4P1y9EodvEz17XIhUfwPkH6rtdFm2WGNjDz26ubjdwksHJFwbNKvnrKKwWLua1yjrzSVNjT0apnADENubrfIKGHvrP5d5iVZ0VCBGygNCH09Gp34llwtNSKR1JSLFZhbgi11Lznp1wCkDFbQODrGY9NvRwiPO9I1cCcHJvL1G3R40Lzc8qyS2kITqQRUMSiPYzvjbtVHIH7GZfmP1NiQER5Rx8vWvSSWE55nAEUH8Av6hCdA5VyUI0R7tsmAIiGuOkx48pbXvQ8T8i6HWnUkfTI6LyQb9ek4NyzuS1NzZ0WLufmz8092A7FHIGyI1Iscd8t4OHy76zYLwxIQNvUmfOIWaUSo3Dy1WPYPv4liqUKY6NKZsxuiKBS9iacA806iXx5WgeSenYtpoVlZrtSbExQCGGQNQpyA22yOq9osh47vWGlmUbMaytaFM5zBGSY9L2SCRhKTCot4T1m3Qefm3EBDoFqD548H21x4G5aLWkROPqloOzguptGsouTUUd8GurPmgPYSxD2G60RXapBV8Cy5YtlmU2qVFaF1EIEMRziQOx6Sw3mxTxnRwDTRQ1BeipFxvCF3pP4uMYk2UirhaE9R7QaPBpxwHScwt8Q7v4VkSJuIoyUKAWpAEWNCWBEfJaUycNdgYk7kQavwHN5jnz2aEtmeNwSJWxG8QiyTdOtzG8mXNmKYt2rhpkXAiD9BMhM7Bu9fZ3H2jCx4wfLxbubwDBVvJ1MFHV7V2YBXdaB4Kd1p7v2eWv5A6O2cEi5Gi8ypnfARaz00qhmAgJgnv2kn8pmSNt1SFUsTUzkb8AmZhVzyGarEXfETXsUOGPIoe2nSHmqtXT0ZTylpdvI080y2A8oxJFfULu0lcMqBZcQ9ErmX6p84kELBl13ieV0ndlOJhIqNhoNVtjqph', 0),
+(17625, 0, 'config', 'config_file_max_size', '400000', 0),
+(17626, 0, 'config', 'config_file_ext_allowed', 'txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods', 0),
+(17627, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet', 0),
+(17628, 0, 'config', 'config_error_display', '1', 0),
+(17629, 0, 'config', 'config_error_log', '1', 0),
+(17619, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
+(17618, 0, 'config', 'config_seo_url', '0', 0),
+(17616, 0, 'config', 'config_mail_alert', '', 0),
+(17617, 0, 'config', 'config_maintenance', '0', 0),
+(17615, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
+(17614, 0, 'config', 'config_mail_smtp_port', '25', 0),
+(17613, 0, 'config', 'config_mail_smtp_password', '', 0),
+(17612, 0, 'config', 'config_mail_smtp_username', '', 0),
+(17610, 0, 'config', 'config_mail_parameter', '', 0),
+(17611, 0, 'config', 'config_mail_smtp_hostname', '', 0),
+(17609, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(17608, 0, 'config', 'config_ftp_status', '1', 0),
+(17607, 0, 'config', 'config_ftp_root', '', 0),
+(17606, 0, 'config', 'config_ftp_password', '123456', 0),
+(17605, 0, 'config', 'config_ftp_username', 'root', 0),
+(17604, 0, 'config', 'config_ftp_port', '80', 0),
+(17603, 0, 'config', 'config_ftp_hostname', '192.168.9.2', 0),
+(17602, 0, 'config', 'config_image_location_height', '64', 0),
+(17601, 0, 'config', 'config_image_location_width', '234', 0),
+(17600, 0, 'config', 'config_image_cart_height', '100', 0),
+(17596, 0, 'config', 'config_image_compare_height', '180', 0),
+(17597, 0, 'config', 'config_image_wishlist_width', '47', 0),
+(17598, 0, 'config', 'config_image_wishlist_height', '47', 0),
+(17595, 0, 'config', 'config_image_compare_width', '180', 0),
 (16178, 0, 'fraudlabspro', 'fraudlabspro_score', '80', 0),
 (16179, 0, 'fraudlabspro', 'fraudlabspro_order_status_id', '17', 0),
 (16180, 0, 'fraudlabspro', 'fraudlabspro_review_status_id', '18', 0),
 (16181, 0, 'fraudlabspro', 'fraudlabspro_approve_status_id', '2', 0),
 (16182, 0, 'fraudlabspro', 'fraudlabspro_reject_status_id', '8', 0),
-(16931, 0, 'config', 'config_weight_class_id', '1', 0),
-(16930, 0, 'config', 'config_length_class_id', '1', 0),
-(16929, 0, 'config', 'config_currency_auto', '1', 0),
-(16928, 0, 'config', 'config_currency', 'INR', 0),
-(16927, 0, 'config', 'config_admin_language', 'en', 0),
-(16926, 0, 'config', 'config_language', 'en', 0),
-(16925, 0, 'config', 'config_zone_id', '1493', 0),
-(16924, 0, 'config', 'config_country_id', '99', 0),
-(16923, 0, 'config', 'config_comment', 'We are glad to see you here!', 0),
-(16922, 0, 'config', 'config_open', '7 Days a week from 9:00 am to 7:00 pm', 0),
-(16921, 0, 'config', 'config_image', 'catalog/logo.png', 0),
-(16920, 0, 'config', 'config_fax', '80023456789', 0),
-(16919, 0, 'config', 'config_telephone', '+917666009599', 0),
-(16918, 0, 'config', 'config_email', 'sharfraz.2008@rediffmail.com', 0),
-(16917, 0, 'config', 'config_geocode', '40.6700, -73.9400', 0),
-(16915, 0, 'config', 'config_owner', 'Multipearls Traders ', 0),
-(16916, 0, 'config', 'config_address', '103/A Wing 1st Floor Nagree Apartment Co-operative Housing Society', 0),
-(16914, 0, 'config', 'config_name', 'Multipearls Traders ', 0),
-(16913, 0, 'config', 'config_layout_id', '4', 0),
-(16912, 0, 'config', 'config_template', 'theme647', 0),
-(16911, 0, 'config', 'config_meta_keyword', '', 0),
-(16910, 0, 'config', 'config_meta_description', 'Multipearls Traders ', 0),
-(16909, 0, 'config', 'config_meta_title', 'Multipearls Traders', 0),
-(17017, 0, 'config', 'config_file_max_size', '400000', 0),
-(17018, 0, 'config', 'config_file_ext_allowed', 'txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods', 0),
-(17019, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet', 0),
-(17020, 0, 'config', 'config_error_display', '1', 0),
-(17021, 0, 'config', 'config_error_log', '1', 0),
-(17022, 0, 'config', 'config_error_filename', 'error.log', 0),
-(17023, 0, 'config', 'config_simple_blog_status', '1', 0),
-(17024, 0, 'config', 'config_simple_blog_limit', '4', 0),
-(17025, 0, 'config', 'config_simple_blog_description_limit', '250', 0),
-(17026, 0, 'config', 'config_simple_blog_comment_auto_approval', '0', 0),
-(17027, 0, 'config', 'config_simple_blog_author_information', '1', 0),
-(17028, 0, 'config', 'config_simple_blog_related_articles', '1', 0),
-(17029, 0, 'config', 'config_simple_blog_share_social_site', '1', 0),
+(17599, 0, 'config', 'config_image_cart_width', '100', 0),
+(17592, 0, 'config', 'config_image_additional_height', '88', 0),
+(17594, 0, 'config', 'config_image_related_height', '270', 0),
+(17593, 0, 'config', 'config_image_related_width', '270', 0),
+(17591, 0, 'config', 'config_image_additional_width', '88', 0),
+(17590, 0, 'config', 'config_image_product_height', '220', 0),
+(17585, 0, 'config', 'config_image_thumb_width', '800', 0),
+(17586, 0, 'config', 'config_image_thumb_height', '800', 0),
+(17587, 0, 'config', 'config_image_popup_width', '800', 0),
+(17588, 0, 'config', 'config_image_popup_height', '800', 0),
+(17589, 0, 'config', 'config_image_product_width', '220', 0),
+(17584, 0, 'config', 'config_image_category_height', '190', 0),
+(17583, 0, 'config', 'config_image_category_width', '190', 0),
+(17582, 0, 'config', 'config_icon', 'catalog/favicon.png', 0),
+(17581, 0, 'config', 'config_logo', 'catalog/mplogo.jpg', 0),
+(17579, 0, 'config', 'config_captcha', '', 0),
+(17580, 0, 'config', 'config_captcha_page', '[\"review\",\"return\",\"contact\"]', 1),
+(17578, 0, 'config', 'config_return_status_id', '2', 0),
+(17577, 0, 'config', 'config_return_id', '0', 0),
+(17576, 0, 'config', 'config_affiliate_mail', '1', 0),
+(17575, 0, 'config', 'config_affiliate_id', '4', 0),
+(17574, 0, 'config', 'config_affiliate_commission', '10', 0),
+(17573, 0, 'config', 'config_affiliate_auto', '1', 0),
+(17572, 0, 'config', 'config_affiliate_approval', '1', 0),
+(17571, 0, 'config', 'config_stock_checkout', '1', 0),
+(17570, 0, 'config', 'config_stock_warning', '0', 0),
+(17568, 0, 'config', 'config_api_id', '3', 0),
+(17569, 0, 'config', 'config_stock_display', '1', 0),
+(17567, 0, 'config', 'config_order_mail', '1', 0),
+(17566, 0, 'config', 'config_fraud_status_id', '7', 0),
+(17565, 0, 'config', 'config_complete_status', '[\"5\",\"3\"]', 1),
+(17564, 0, 'config', 'config_processing_status', '[\"5\",\"1\",\"2\",\"12\",\"3\"]', 1),
+(17563, 0, 'config', 'config_order_status_id', '1', 0),
+(17562, 0, 'config', 'config_checkout_id', '5', 0),
+(17561, 0, 'config', 'config_checkout_guest', '1', 0),
+(17560, 0, 'config', 'config_cart_weight', '1', 0),
+(17559, 0, 'config', 'config_invoice_prefix', 'INV-2018-20', 0),
+(17558, 0, 'config', 'config_account_mail', '0', 0),
 (17031, 0, 'category', 'category_status', '0', 0),
-(17032, 0, 'basic_captcha', 'basic_captcha_status', '1', 0);
+(17032, 0, 'basic_captcha', 'basic_captcha_status', '1', 0),
+(17557, 0, 'config', 'config_account_id', '3', 0),
+(17556, 0, 'config', 'config_login_attempts', '5', 0),
+(17555, 0, 'config', 'config_customer_price', '0', 0),
+(17554, 0, 'config', 'config_customer_group_display', '[\"1\"]', 1),
+(17553, 0, 'config', 'config_customer_group_id', '1', 0),
+(17552, 0, 'config', 'config_customer_online', '1', 0),
+(17551, 0, 'config', 'config_tax_customer', 'shipping', 0),
+(17550, 0, 'config', 'config_tax_default', 'shipping', 0),
+(17549, 0, 'config', 'config_tax', '0', 0),
+(17548, 0, 'config', 'config_voucher_max', '1000', 0),
+(17546, 0, 'config', 'config_review_mail', '0', 0),
+(17547, 0, 'config', 'config_voucher_min', '1', 0),
+(17545, 0, 'config', 'config_review_guest', '1', 0),
+(17544, 0, 'config', 'config_review_status', '1', 0),
+(17543, 0, 'config', 'config_limit_admin', '20', 0),
+(17542, 0, 'config', 'config_product_description_length', '100', 0),
+(17541, 0, 'config', 'config_product_limit', '25', 0),
+(17540, 0, 'config', 'config_product_count', '1', 0),
+(17539, 0, 'config', 'config_weight_class_id', '1', 0),
+(17538, 0, 'config', 'config_length_class_id', '1', 0),
+(17537, 0, 'config', 'config_currency_auto', '1', 0),
+(17534, 0, 'config', 'config_language', 'en', 0),
+(17536, 0, 'config', 'config_currency', 'INR', 0),
+(17535, 0, 'config', 'config_admin_language', 'en', 0),
+(17531, 0, 'config', 'config_comment', 'We are glad to see you here!', 0),
+(17532, 0, 'config', 'config_country_id', '99', 0),
+(17533, 0, 'config', 'config_zone_id', '1493', 0),
+(17527, 0, 'config', 'config_telephone', '+917666009599', 0),
+(17528, 0, 'config', 'config_fax', '80023456789', 0),
+(17529, 0, 'config', 'config_image', 'catalog/logo.png', 0),
+(17530, 0, 'config', 'config_open', '7 Days a week from 9:00 am to 7:00 pm', 0),
+(17525, 0, 'config', 'config_geocode', '40.6700, -73.9400', 0),
+(17526, 0, 'config', 'config_email', 'sharfraz.2008@rediffmail.com', 0),
+(17524, 0, 'config', 'config_address', '103/A Wing 1st Floor Nagree Apartment Co-operative Housing Society', 0),
+(17523, 0, 'config', 'config_owner', 'Multipearls Traders ', 0),
+(17522, 0, 'config', 'config_name', 'Multipearls Traders ', 0),
+(17521, 0, 'config', 'config_layout_id', '4', 0),
+(17519, 0, 'config', 'config_meta_keyword', '', 0),
+(17520, 0, 'config', 'config_template', 'theme647', 0),
+(17518, 0, 'config', 'config_meta_description', 'Multipearls Traders ', 0),
+(17517, 0, 'config', 'config_meta_title', 'Multipearls Traders', 0);
 
 -- --------------------------------------------------------
 
@@ -12016,7 +12027,7 @@ ALTER TABLE `oc_banner`
 -- AUTO_INCREMENT for table `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
-  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=216;
+  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=222;
 --
 -- AUTO_INCREMENT for table `oc_cart`
 --
@@ -12171,12 +12182,12 @@ ALTER TABLE `oc_layout`
 -- AUTO_INCREMENT for table `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
-  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1244;
+  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1561;
 --
 -- AUTO_INCREMENT for table `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
-  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=329;
+  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=357;
 --
 -- AUTO_INCREMENT for table `oc_length_class`
 --
@@ -12211,7 +12222,7 @@ ALTER TABLE `oc_modification`
 -- AUTO_INCREMENT for table `oc_module`
 --
 ALTER TABLE `oc_module`
-  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 --
 -- AUTO_INCREMENT for table `oc_option`
 --
@@ -12356,7 +12367,7 @@ ALTER TABLE `oc_seo_url`
 -- AUTO_INCREMENT for table `oc_setting`
 --
 ALTER TABLE `oc_setting`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17033;
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17638;
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_article`
 --
