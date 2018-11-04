@@ -119,7 +119,7 @@
 								</li>
 								<li>
 									<a href="<?php echo $login; ?>">
-										<?php echo $text_login; ?>
+										<?php echo $text_login; ?> / <?php echo $text_register; ?>
 									</a>
 								</li>
 								<?php } ?>
