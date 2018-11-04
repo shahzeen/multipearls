@@ -797,7 +797,7 @@ header hr + .container {
   margin-top: 20px;
 }
 header .box-telephone {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 @media (max-width: 1199px) {
   header * + .search {
@@ -1319,7 +1319,7 @@ section.top {
   color: #333;
   display: block;
   margin: 0;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 24px;
   width: 100%;
   height: 40px;
@@ -1388,9 +1388,11 @@ section.top {
   width: 100%;
   left: 0;
   background-color: #fff;
+  box-shadow: 1px 1px 3px 0 #f2f2f2;
+  border: 1px solid #f2f2f2;
   list-style-type: none;
   z-index: 12;
-  font-size: 16px;
+  font-size: 14px;
   max-height: 500px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -3011,7 +3013,7 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
   text-transform: uppercase;
 }
 .sf-menu li.sfHover > a, .sf-menu li > a:hover {
-  color: #8D8D8D;
+  color: #333;
 }
 .sf-menu li.sf-with-mega {
   position: static;
@@ -3154,7 +3156,10 @@ font-weight: 600;
   float: left;
   padding: 0 15px;
 }
-
+.sf-menu .sf-mega_section li a:hover{
+  font-weight: 600;
+  transition: 0.1s;
+}
 @media (max-width: 767px) {
   .sf-menu {
     display: none;
@@ -4824,11 +4829,14 @@ aside #blog-search a:hover {
   border: 1px solid #e0e0e0;
   border-top-width: 2px;
 }
+.cart-wrapper .cart-remove-btn, .cart-wrapper .cart-remove-btn{
+  font-size: 26px;
+}
 
 .cart-remove-btn, .cart-remove-btn:visited {
   display: inline-block;
   font-size: 12px;
-  color: #eac322;
+  color: #111;
 }
 .cart-remove-btn:focus, .cart-remove-btn:visited:focus {
   text-decoration: none;

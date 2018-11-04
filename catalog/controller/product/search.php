@@ -286,23 +286,23 @@ class ControllerProductSearch extends Controller {
 
 			$data['sorts'] = array();
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_default'),
-				'value' => 'p.sort_order-ASC',
-				'href'  => $this->url->link('product/search', 'sort=p.sort_order&order=ASC' . $url)
-			);
+			// $data['sorts'][] = array(
+			// 	'text'  => $this->language->get('text_default'),
+			// 	'value' => 'p.sort_order-ASC',
+			// 	'href'  => $this->url->link('product/search', 'sort=p.sort_order&order=ASC' . $url)
+			// );
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_name_asc'),
-				'value' => 'pd.name-ASC',
-				'href'  => $this->url->link('product/search', 'sort=pd.name&order=ASC' . $url)
-			);
+			// $data['sorts'][] = array(
+			// 	'text'  => $this->language->get('text_name_asc'),
+			// 	'value' => 'pd.name-ASC',
+			// 	'href'  => $this->url->link('product/search', 'sort=pd.name&order=ASC' . $url)
+			// );
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_name_desc'),
-				'value' => 'pd.name-DESC',
-				'href'  => $this->url->link('product/search', 'sort=pd.name&order=DESC' . $url)
-			);
+			// $data['sorts'][] = array(
+			// 	'text'  => $this->language->get('text_name_desc'),
+			// 	'value' => 'pd.name-DESC',
+			// 	'href'  => $this->url->link('product/search', 'sort=pd.name&order=DESC' . $url)
+			// );
 
 			$data['sorts'][] = array(
 				'text'  => $this->language->get('text_price_asc'),
@@ -330,17 +330,17 @@ class ControllerProductSearch extends Controller {
 				);
 			}
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_model_asc'),
-				'value' => 'p.model-ASC',
-				'href'  => $this->url->link('product/search', 'sort=p.model&order=ASC' . $url)
-			);
+			// $data['sorts'][] = array(
+			// 	'text'  => $this->language->get('text_model_asc'),
+			// 	'value' => 'p.model-ASC',
+			// 	'href'  => $this->url->link('product/search', 'sort=p.model&order=ASC' . $url)
+			// );
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_model_desc'),
-				'value' => 'p.model-DESC',
-				'href'  => $this->url->link('product/search', 'sort=p.model&order=DESC' . $url)
-			);
+			// $data['sorts'][] = array(
+			// 	'text'  => $this->language->get('text_model_desc'),
+			// 	'value' => 'p.model-DESC',
+			// 	'href'  => $this->url->link('product/search', 'sort=p.model&order=DESC' . $url)
+			// );
 
 			$url = '';
 

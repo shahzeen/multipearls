@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 04, 2018 at 11:29 AM
--- Server version: 10.1.30-MariaDB
+-- Generation Time: Nov 04, 2018 at 02:53 PM
+-- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -50,7 +50,8 @@ CREATE TABLE `oc_address` (
 INSERT INTO `oc_address` (`address_id`, `customer_id`, `firstname`, `lastname`, `company`, `address_1`, `address_2`, `city`, `postcode`, `country_id`, `zone_id`, `custom_field`) VALUES
 (1, 1, 'admin', 'admin', '', 'asdasdasd', 'asdasdasdasdasd', 'asdasdasd', '123123', 222, 3514, ''),
 (2, 2, 'asdakjshdjkh', 'jhjashdjahsdjh', '', 'ahsdjhasjdhajsdh', '', 'ajsdhjashdh', '123123', 222, 3518, ''),
-(3, 3, 'admin', 'admin', '', 'asdasdasd', '', 'asdasdasd', '123123', 222, 3513, '');
+(3, 3, 'admin', 'admin', '', 'asdasdasd', '', 'asdasdasd', '123123', 222, 3513, ''),
+(4, 4, 'Shahzeen', 'shaikh', '', '603/aditya darshan chs ltd,haidri chowk,naya nagar,mira road east', '', 'Mumbai', '401107', 99, 1493, '');
 
 -- --------------------------------------------------------
 
@@ -407,7 +408,8 @@ INSERT INTO `oc_cart` (`cart_id`, `customer_id`, `session_id`, `product_id`, `re
 (22, 9, '1tthnm17qa05hh83g1btjpejg6', 35, 0, '{\"14\":[\"32\"],\"15\":\"34\",\"16\":\"39\"}', 1, '2015-11-27 16:53:11'),
 (27, 10, 'nmbvfm83biutlabejbgat2bdf4', 35, 0, '{\"14\":[\"32\",\"33\"],\"15\":\"35\",\"16\":\"39\"}', 1, '2015-11-27 17:07:13'),
 (28, 10, 'nmbvfm83biutlabejbgat2bdf4', 47, 0, '{\"33\":\"75\",\"34\":\"78\"}', 1, '2015-11-27 17:07:13'),
-(29, 10, 'nmbvfm83biutlabejbgat2bdf4', 28, 0, '{\"1\":\"2\",\"2\":\"6\"}', 1, '2015-11-27 17:07:36');
+(29, 10, 'nmbvfm83biutlabejbgat2bdf4', 28, 0, '{\"1\":\"2\",\"2\":\"6\"}', 1, '2015-11-27 17:07:36'),
+(36, 4, 'mn9reu8imagt11i18psu3hk91j', 174, 0, '{\"146\":\"560\"}', 1, '2018-11-04 18:56:48');
 
 -- --------------------------------------------------------
 
@@ -441,8 +443,8 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (31, 'catalog/product-10.png', 18, 0, 1, 4, 1, '2009-02-03 14:17:24', '2018-08-30 19:16:46'),
 (32, 'catalog/product-1.png', 18, 1, 1, 5, 1, '2009-02-03 14:17:34', '2018-08-30 18:38:22'),
 (33, 'catalog/product-36.png', 18, 0, 1, 6, 1, '2009-02-03 14:17:55', '2018-08-26 18:11:58'),
-(54, '', 37, 0, 1, 2, 1, '2018-09-18 09:38:07', '2018-09-18 09:38:52'),
-(40, '', 37, 1, 1, 1, 1, '2018-08-29 17:09:16', '2018-09-18 09:38:39'),
+(54, '', 37, 0, 1, 2, 1, '2018-09-18 09:38:07', '2018-11-04 17:26:00'),
+(40, '', 37, 1, 1, 1, 1, '2018-08-29 17:09:16', '2018-11-04 17:25:14'),
 (44, '', 0, 1, 1, 1, 1, '2018-08-30 18:41:39', '2018-08-30 18:46:07'),
 (45, '', 38, 0, 1, 1, 1, '2018-08-30 19:20:08', '2018-09-18 09:30:58'),
 (57, '', 51, 0, 1, 3, 1, '2018-09-18 09:42:27', '2018-09-18 09:43:18'),
@@ -453,7 +455,13 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (60, '', 44, 0, 1, 2, 1, '2018-10-10 12:43:27', '2018-10-10 12:43:27'),
 (58, '', 18, 0, 1, 7, 1, '2018-09-18 09:56:34', '2018-09-18 09:56:34'),
 (59, '', 0, 0, 1, 4, 1, '2018-10-10 12:41:29', '2018-10-10 12:41:29'),
-(62, '', 50, 0, 1, 1, 1, '2018-10-10 12:45:10', '2018-10-10 12:46:09');
+(62, '', 50, 0, 1, 1, 1, '2018-10-10 12:45:10', '2018-10-10 12:46:09'),
+(63, '', 37, 0, 1, 3, 1, '2018-11-04 17:26:54', '2018-11-04 17:26:54'),
+(64, '', 38, 0, 1, 2, 1, '2018-11-04 17:27:33', '2018-11-04 17:27:33'),
+(65, '', 38, 0, 1, 3, 1, '2018-11-04 17:28:01', '2018-11-04 17:28:01'),
+(66, '', 59, 0, 1, 2, 1, '2018-11-04 17:28:40', '2018-11-04 17:28:40'),
+(67, '', 59, 0, 1, 3, 1, '2018-11-04 17:29:09', '2018-11-04 17:29:33'),
+(68, '', 59, 0, 1, 1, 1, '2018-11-04 17:30:50', '2018-11-04 17:30:50');
 
 -- --------------------------------------------------------
 
@@ -480,13 +488,13 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (44, 1, 'Men', '&lt;p&gt;Men&lt;br&gt;&lt;/p&gt;', 'Men', '', ''),
 (38, 1, 'Women', '&lt;p&gt;Women&lt;br&gt;&lt;/p&gt;', 'Women', '', ''),
 (37, 1, 'BOYS', '&lt;p&gt;Baby / Kids&lt;br&gt;&lt;/p&gt;', 'Baby / Kids', '', ''),
-(40, 1, 'Boys', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Boys', 'Boys', 'Boys'),
+(40, 1, 'Clothing', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Boys Clothing', 'Boys Clothing', 'Boys Clothing'),
 (28, 1, 'Round-Neck', '&lt;p&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; text-align: center;&quot;&gt;We have been &lt;span style=&quot;font-weight: bold;&quot;&gt;specialising&lt;/span&gt; in &lt;span style=&quot;font-weight: bold;&quot;&gt;personalised&lt;/span&gt; t shirt printing for over &lt;span style=&quot;font-weight: bold;&quot;&gt;10 years&lt;/span&gt;.Whether you\'re looking for something that is embroidered, printed with text or even featuring a photograph, we can help you design your own unique custom t shirts. We produce quality printed t shirts for all budgets, ranging from cheap t shirts for events and promotions to high quality workwear tees.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Round Neck ', 'Round-Neck', 'Round-Neck'),
 (29, 1, 'T-shirts', '&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', 'T-shirts', 'T-shirts', 'T-shirts'),
 (30, 1, 'V-Neck ', '&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', 'Van', '', ''),
 (31, 1, 'Digital Print ', '&lt;p&gt;&lt;b&gt;Nowadays we have great opportunities to satisfy your demands with the high quality products.&lt;/b&gt; We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the leading company in this sphere. Our company is the pioneer of this business because we provide a great number of new technologies concerning design solutions and some technological specialties. We guarantee the premium quality and fair prices of our goods.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;The interesting design is very important thing in our sphere and we are trying to stay in touch with the latest fashion trends.&lt;/b&gt; We care about the durability of our products and we are sure that it is perfect. As you understand the products of our store are a unique combination of original design, reasonable price and undoubted reliability. Our assortment can satisfy any client’s whim because it’s literally unlimited.&lt;/p&gt;', 'Motorhome', '', ''),
 (45, 1, 'Clothing', '&lt;p&gt;Women 1&lt;br&gt;&lt;/p&gt;', 'Clothing', 'Clothing', 'Clothing'),
-(54, 1, 'Girls', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Girls', 'Girls', 'Girls'),
+(54, 1, 'Footwear', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Boys Footwear', 'Boys Footwear', 'Boys Footwear'),
 (50, 1, 'Accessories', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Accessories', '', ''),
 (51, 1, 'Sports', '&lt;p&gt;Cat 3&lt;br&gt;&lt;/p&gt;', 'Sports', 'Sports', 'Sports'),
 (60, 1, 'FootWear', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Men\'s FootWear', 'Men\'s FootWear', 'Men\'s FootWear'),
@@ -497,7 +505,13 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (57, 1, 'Others', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Others', 'Others', 'Others'),
 (58, 1, 'Track-Suit', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Track-Suit', 'Track-Suit', 'Track-Suit'),
 (59, 1, 'Girls', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Girls', '', ''),
-(62, 1, 'Bags', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bags', '', '');
+(62, 1, 'Bags', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bags', '', ''),
+(63, 1, 'Accessories', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Boys Accessories', 'Boys Accessories', 'Boys Accessories'),
+(64, 1, 'Footwear', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Womens Footwear', 'Womens Footwear', 'Womens Footwear'),
+(65, 1, 'Accessories', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Womens Accessories', 'Womens Accessories', 'Womens Accessories'),
+(66, 1, 'Footwear', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Girls Footwear', 'Girls Footwear', 'Girls Footwear'),
+(67, 1, 'Accessories', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Girls Accessories', 'Girls Accessories', 'Girls Accessories'),
+(68, 1, 'Clothing', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Girls Clothing', 'Girls Clothing', 'Girls Clothing');
 
 -- --------------------------------------------------------
 
@@ -573,7 +587,19 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (59, 59, 0),
 (62, 50, 1),
 (62, 44, 0),
-(62, 62, 2);
+(62, 62, 2),
+(63, 37, 0),
+(63, 63, 1),
+(64, 38, 0),
+(64, 64, 1),
+(65, 38, 0),
+(65, 65, 1),
+(66, 59, 0),
+(66, 66, 1),
+(67, 67, 1),
+(67, 59, 0),
+(68, 59, 0),
+(68, 68, 1);
 
 -- --------------------------------------------------------
 
@@ -613,7 +639,13 @@ INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VAL
 (51, 0, 0),
 (60, 0, 0),
 (59, 0, 0),
-(62, 0, 0);
+(62, 0, 0),
+(63, 0, 0),
+(64, 0, 0),
+(65, 0, 0),
+(66, 0, 0),
+(67, 0, 0),
+(68, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -652,7 +684,13 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (58, 0),
 (59, 0),
 (60, 0),
-(62, 0);
+(62, 0),
+(63, 0),
+(64, 0),
+(65, 0),
+(66, 0),
+(67, 0),
+(68, 0);
 
 -- --------------------------------------------------------
 
@@ -1025,7 +1063,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 (1, 'Pound Sterling', 'GBP', '£', '', '2', 0.67280000, 1, '2015-12-22 14:55:00'),
 (2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2018-08-28 13:56:55'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.91270000, 1, '2015-12-22 14:55:00'),
-(5, 'Indian Rupees', 'INR', '₹', '', '0', 1.00000000, 1, '2018-11-04 07:27:56');
+(5, 'Indian Rupees', 'INR', '₹', '', '0', 1.00000000, 1, '2018-11-04 12:39:34');
 
 -- --------------------------------------------------------
 
@@ -1062,7 +1100,8 @@ CREATE TABLE `oc_customer` (
 --
 
 INSERT INTO `oc_customer` (`customer_id`, `customer_group_id`, `store_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `password`, `salt`, `cart`, `wishlist`, `newsletter`, `address_id`, `custom_field`, `ip`, `status`, `approved`, `safe`, `token`, `date_added`) VALUES
-(1, 1, 0, 'admin', 'admin', 'admin@admin.com', '123123123', '', '0ca17250c0ce136a312dcdb00798f30fe6dd5d2b', 'qeY6v7tbl', NULL, NULL, 1, 1, '', '::1', 1, 1, 0, '', '2015-12-04 13:51:43');
+(1, 1, 0, 'admin', 'admin', 'admin@admin.com', '123123123', '', '0ca17250c0ce136a312dcdb00798f30fe6dd5d2b', 'qeY6v7tbl', NULL, NULL, 1, 1, '', '::1', 1, 1, 0, '', '2015-12-04 13:51:43'),
+(4, 1, 0, 'Shahzeen', 'shaikh', 'shahzeensk@rediffmail.com', '08898751072', '', '2416e1f3ef2784956f3aa842ccc494184c9e57f1', 'JqcWgDvq2', NULL, NULL, 0, 4, '', '::1', 1, 1, 0, '', '2018-11-04 17:19:07');
 
 -- --------------------------------------------------------
 
@@ -1091,7 +1130,10 @@ INSERT INTO `oc_customer_activity` (`activity_id`, `customer_id`, `key`, `data`,
 (5, 1, 'login', '{\"customer_id\":\"1\",\"name\":\"admin admin\"}', '192.168.9.111', '2015-12-14 14:20:41'),
 (6, 3, 'register', '{\"customer_id\":3,\"name\":\"admin admin\"}', '192.168.9.111', '2015-12-21 10:44:04'),
 (7, 3, 'login', '{\"customer_id\":\"3\",\"name\":\"admin admin\"}', '192.168.9.111', '2015-12-21 10:46:26'),
-(8, 3, 'login', '{\"customer_id\":\"3\",\"name\":\"admin admin\"}', '192.168.9.111', '2015-12-21 11:26:06');
+(8, 3, 'login', '{\"customer_id\":\"3\",\"name\":\"admin admin\"}', '192.168.9.111', '2015-12-21 11:26:06'),
+(9, 4, 'register', '{\"customer_id\":4,\"name\":\"Shahzeen shaikh\"}', '::1', '2018-11-04 17:19:08'),
+(10, 4, 'login', '{\"customer_id\":\"4\",\"name\":\"Shahzeen shaikh\"}', '::1', '2018-11-04 17:19:44'),
+(11, 4, 'login', '{\"customer_id\":\"4\",\"name\":\"Shahzeen shaikh\"}', '::1', '2018-11-04 18:51:35');
 
 -- --------------------------------------------------------
 
@@ -1205,7 +1247,8 @@ INSERT INTO `oc_customer_ip` (`customer_ip_id`, `customer_id`, `ip`, `date_added
 (1, 1, '192.168.9.111', '2015-12-04 13:51:44'),
 (2, 1, '192.168.9.13', '2015-12-04 15:11:09'),
 (3, 3, '192.168.9.111', '2015-12-21 10:44:05'),
-(4, 1, '::1', '2018-09-06 13:25:08');
+(4, 1, '::1', '2018-09-06 13:25:08'),
+(5, 4, '::1', '2018-11-04 17:19:08');
 
 -- --------------------------------------------------------
 
@@ -1228,7 +1271,7 @@ CREATE TABLE `oc_customer_login` (
 
 INSERT INTO `oc_customer_login` (`customer_login_id`, `email`, `ip`, `total`, `date_added`, `date_modified`) VALUES
 (1, 'admin', '192.168.9.111', 1, '2015-12-21 09:43:20', '2015-12-21 09:43:20'),
-(2, 'admin', '::1', 5, '2018-08-26 11:15:23', '2018-11-04 07:26:31');
+(2, 'admin', '::1', 6, '2018-08-26 11:15:23', '2018-11-04 14:31:57');
 
 -- --------------------------------------------------------
 
@@ -1249,7 +1292,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/index.php?route=product/category&amp;path=44&amp;page=4', '2018-11-04 11:27:15');
+('::1', 0, 'http://localhost/multipearls/index.php?route=product/manufacturer', 'http://localhost/multipearls/index.php?route=common/home', '2018-11-04 14:51:02');
 
 -- --------------------------------------------------------
 
@@ -1312,6 +1355,14 @@ CREATE TABLE `oc_customer_wishlist` (
   `product_id` int(11) NOT NULL,
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_customer_wishlist`
+--
+
+INSERT INTO `oc_customer_wishlist` (`customer_id`, `product_id`, `date_added`) VALUES
+(4, 183, '2018-11-04 17:20:47'),
+(4, 188, '2018-11-04 17:20:15');
 
 -- --------------------------------------------------------
 
@@ -1483,7 +1534,8 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 (494, 'module', 'tm_module_tab'),
 (498, 'payment', 'bluepay_hosted'),
 (499, 'module', 'carousel'),
-(500, 'module', 'filter');
+(500, 'module', 'filter'),
+(501, 'captcha', 'basic_captcha');
 
 -- --------------------------------------------------------
 
@@ -1832,7 +1884,6 @@ CREATE TABLE `oc_layout_module` (
 INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `position`, `sort_order`) VALUES
 (1113, 12, 'tm_megamenu.103', 'navigation', 1),
 (1096, 10, 'affiliate', 'column_left', 1),
-(1137, 13, 'latest.69', 'column_left', 2),
 (1130, 5, 'tm_megamenu.103', 'navigation', 1),
 (1125, 11, 'tm_megamenu.103', 'navigation', 1),
 (1129, 5, 'account', 'column_left', 1),
@@ -1846,14 +1897,12 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1243, 3, 'tm_megamenu.103', 'navigation', 1),
 (1101, 14, 'olark.50', 'footer_top', 2),
 (1235, 1, 'tm_megamenu.103', 'navigation', 1),
-(1121, 4, 'latest.69', 'column_left', 2),
 (1120, 4, 'olark.50', 'footer_top', 1),
 (1232, 1, 'html.107', 'content_top', 2),
 (1233, 1, 'banner.33', 'content_top', 1),
 (1231, 1, 'tm_newsletter.104', 'footer_top', 2),
 (1230, 1, 'tm_blog_articles.101', 'content_top', 5),
 (1091, 6, 'olark.50', 'footer_top', 1),
-(1094, 10, 'bestseller.43', 'column_left', 2),
 (1100, 14, 'tm_blog_articles.91', 'column_left', 1),
 (1099, 14, 'tm_blog_category.90', 'column_left', 0),
 (1242, 3, 'olark.50', 'footer_top', 1),
@@ -1865,7 +1914,6 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1124, 11, 'olark.50', 'footer_top', 1),
 (1127, 5, 'featured.28', 'column_left', 2),
 (1132, 2, 'olark.50', 'footer_top', 1),
-(1136, 13, 'bestseller.43', 'column_left', 1),
 (1135, 13, 'olark.50', 'footer_top', 1),
 (1140, 9, 'olark.50', 'footer_top', 1),
 (1229, 1, 'tm_slideshow.46', 'top', 1),
@@ -1875,7 +1923,6 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1102, 14, 'tm_megamenu.103', 'navigation', 1),
 (1103, 14, 'tm_newsletter.104', 'footer_top', 2),
 (1241, 3, 'featured.28', 'column_left', 1),
-(1240, 3, 'bestseller.43', 'column_left', 2),
 (1111, 7, 'tm_newsletter.104', 'footer_top', 2),
 (1114, 12, 'tm_newsletter.104', 'footer_top', 2),
 (1118, 8, 'tm_newsletter.104', 'footer_top', 2),
@@ -2005,7 +2052,7 @@ CREATE TABLE `oc_manufacturer` (
 --
 
 INSERT INTO `oc_manufacturer` (`manufacturer_id`, `name`, `image`, `sort_order`) VALUES
-(11, 'Electro Sports', 'catalog/partner-1.jpg', 1);
+(11, 'Electro Sports', 'catalog/Logo.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -2147,7 +2194,8 @@ INSERT INTO `oc_modification` (`modification_id`, `name`, `code`, `author`, `ver
 (310, 'Blog Catalog', 'blog_catalog', 'http://www.templatemonster.com', '2', '', '<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<!-- Based on Simple Blog Module -->\r\n<modification>\r\n	<name>Blog Catalog</name>\r\n	<code>blog_catalog</code>\r\n	<version>2</version>\r\n	<author>http://www.templatemonster.com</author>\r\n    \r\n	<file path=\"catalog/controller/common/footer.php\">\r\n		<operation>\r\n			<search><![CDATA[$data[\'powered\']]]></search>\r\n			<add position=\"after\"><![CDATA[\r\n						if(($this->config->has(\'config_simple_blog_status\')) && ($this->config->get(\'config_simple_blog_status\'))) {\r\n				    $data[\'simple_blog_found\'] = 1;\r\n                    $tmp = $this->config->get(\'config_simple_blog_footer_heading\');\r\n				    if (!empty($tmp)) {\r\n				        $data[\'simple_blog_footer_heading\'] = $this->config->get(\'config_simple_blog_footer_heading\');\r\n				    } else {\r\n				        $data[\'simple_blog_footer_heading\'] = $this->language->get(\'text_simple_blog\');\r\n				    }\r\n                    $data[\'simple_blog\']	= $this->url->link(\'simple_blog/article\');\r\n				}\r\n			]]></add>\r\n		</operation>\r\n	</file>\r\n    \r\n	<file path=\"catalog/language/english/common/footer.php\">\r\n		<operation>\r\n			<search><![CDATA[$_[\'text_powered\']]]></search>\r\n			<add position=\"after\"><![CDATA[\r\n				$_[\'text_simple_blog\']   = \'Blog\';\r\n			]]></add>\r\n		</operation>\r\n	</file>\r\n    <file path=\"catalog/language/de-DE/common/footer.php\">\r\n        <operation>\r\n            <search><![CDATA[$_[\'text_powered\']]]></search>\r\n            <add position=\"after\"><![CDATA[\r\n				$_[\'text_simple_blog\']   = \'Blog\';\r\n			]]></add>\r\n        </operation>\r\n    </file>\r\n    <file path=\"catalog/language/russian/common/footer.php\">\r\n        <operation>\r\n            <search><![CDATA[$_[\'text_powered\']]]></search>\r\n            <add position=\"after\"><![CDATA[\r\n				$_[\'text_simple_blog\']   = \'Блог\';\r\n			]]></add>\r\n        </operation>\r\n    </file>\r\n    \r\n    <file path=\"catalog/controller/common/seo_url.php\">\r\n		\r\n        <operation>\r\n			<search><![CDATA[$this->request->get[\'route\'] = \'error/not_found\';]]></search>\r\n			<add position=\"replace\" offset=\"2\"><![CDATA[\r\n                /*if($this->db->escape($part) == \'simple-blog\') {\r\n                    \r\n                } else {\r\n                    $this->request->get[\'route\'] = \'error/not_found\';\r\n\r\n					break;\r\n                }*/\r\n                \r\n                if(($this->config->has(\'simple_blog_seo_keyword\')) && ($this->db->escape($part) == $this->config->get(\'simple_blog_seo_keyword\'))) {\r\n                    \r\n                } else if($this->db->escape($part) == \'simple-blog\') {\r\n                    \r\n                } else {\r\n                    $this->request->get[\'route\'] = \'error/not_found\';\r\n\r\n					break;\r\n                }\r\n                \r\n            ]]></add>\r\n		</operation>\r\n        \r\n		<operation>\r\n			<search><![CDATA[if ($url[0] == \'category_id\') {]]></search>\r\n			<add position=\"before\"><![CDATA[\r\n				if($url[0] == \'simple_blog_article_id\') {					\r\n					$this->request->get[\'simple_blog_article_id\'] = $url[1];\r\n				}\r\n				\r\n				if($url[0] == \'simple_blog_author_id\') {\r\n					$this->request->get[\'simple_blog_author_id\'] = $url[1];\r\n				}\r\n				\r\n				if ($url[0] == \'simple_blog_category_id\') {\r\n					if (!isset($this->request->get[\'simple_blog_category_id\'])) {\r\n						$this->request->get[\'simple_blog_category_id\'] = $url[1];\r\n					} else {\r\n						$this->request->get[\'simple_blog_category_id\'] .= \'_\' . $url[1];\r\n					}\r\n				}\r\n				\r\n			]]></add>\r\n		</operation>\r\n        \r\n		\r\n		<operation>\r\n			<search><![CDATA[$this->request->get[\'route\'] = \'information/information\';]]></search>\r\n			<add position=\"replace\"><![CDATA[\r\n					$this->request->get[\'route\'] = \'information/information\';\r\n				} else if (isset($this->request->get[\'simple_blog_article_id\'])) {\r\n					$this->request->get[\'route\'] = \'simple_blog/article/view\';\r\n				} else if (isset($this->request->get[\'simple_blog_author_id\'])) {\r\n					$this->request->get[\'route\'] = \'simple_blog/author\';\r\n				} else if (isset($this->request->get[\'simple_blog_category_id\'])) {\r\n					$this->request->get[\'route\'] = \'simple_blog/category\';\r\n				} /*else if ($this->request->get[\'_route_\'] ==  \'simple-blog\') {\r\n					$this->request->get[\'route\'] = \'simple_blog/article\';*/\r\n                    \r\n                    else {\r\n                        if(($this->config->has(\'simple_blog_seo_keyword\'))) {\r\n                            if($this->request->get[\'_route_\'] == $this->config->get(\'simple_blog_seo_keyword\')) {\r\n                                $this->request->get[\'route\'] = \'simple_blog/article\';\r\n                            }\r\n                        } if($this->request->get[\'_route_\'] == \'simple-blog\') {\r\n                            $this->request->get[\'route\'] = \'simple_blog/article\';\r\n                        }\r\n		\r\n			]]></add>\r\n		</operation>\r\n		\r\n		<operation>\r\n			<search><![CDATA[} elseif ($key == \'path\') {]]></search>\r\n			<add position=\"replace\"><![CDATA[\r\n				} else if($data[\'route\'] == \'simple_blog/article/view\' && $key == \'simple_blog_article_id\') {\r\n					\r\n					$query = $this->db->query(\"SELECT * FROM \" . DB_PREFIX . \"url_alias WHERE `query` = \'\" . $this->db->escape($key . \'=\' . (int)$value) . \"\'\");\r\n					\r\n					if ($query->num_rows) {\r\n						$url .= \'/\' . $query->row[\'keyword\'];\r\n						unset($data[$key]);\r\n					} else {\r\n						$url .= \'/simple-blog/\' . (int)$value;	\r\n						unset($data[$key]);\r\n					}\r\n					\r\n				} else if($data[\'route\'] == \'simple_blog/author\' && $key == \'simple_blog_author_id\') {\r\n					$query = $this->db->query(\"SELECT * FROM \" . DB_PREFIX . \"url_alias WHERE `query` = \'\" . $this->db->escape($key . \'=\' . (int)$value) . \"\'\");\r\n					\r\n					if ($query->num_rows) {\r\n						$url .= \'/\' . $query->row[\'keyword\'];\r\n						unset($data[$key]);\r\n					} else {\r\n						$url .= \'/simple-blog/\' . (int)$value;	\r\n						unset($data[$key]);\r\n					}\r\n				} else if($data[\'route\'] == \'simple_blog/category\' && $key == \'simple_blog_category_id\') {\r\n				\r\n					$blog_categories = explode(\"_\", $value);\r\n					\r\n					foreach ($blog_categories as $blog_category) {\r\n						$query = $this->db->query(\"SELECT * FROM \" . DB_PREFIX . \"url_alias WHERE `query` = \'simple_blog_category_id=\" . (int)$blog_category . \"\'\");\r\n						\r\n						if ($query->num_rows) {\r\n							$url .= \'/\' . $query->row[\'keyword\'];\r\n						} else {\r\n							$url .= \'/simple-category\' . $blog_category;\r\n						}\r\n					}\r\n					unset($data[$key]);\r\n										\r\n				} else if($data[\'route\'] == \'simple_blog/search\') {\r\n					//echo $data[\'route\'];\r\n					if(isset($key) && ($key == \'blog_search\')) {\r\n						$url .= \'/search&blog_search=\' . $value;\r\n					} else {\r\n						$url .= \'/search\';\r\n					}		\r\n					//echo $url; \r\n				} else if(isset($data[\'route\']) && $data[\'route\'] == \'simple_blog/article\' && $key != \'simple_blog_article_id\' && $key != \'simple_blog_author_id\' && $key != \'simple_blog_category_id\' && $key != \'page\') {\r\n				    \r\n                    if($this->config->has(\'simple_blog_seo_keyword\')) {\r\n                        $url .=  \'/\' . $this->config->get(\'simple_blog_seo_keyword\');\r\n                    } else {\r\n                        $url .=  \'/simple-blog\';\r\n                    }\r\n				} elseif ($key == \'path\') {\r\n			]]></add>\r\n		</operation>\r\n	</file>	\r\n	\r\n</modification>', 1, '2015-12-08 10:40:16');
 INSERT INTO `oc_modification` (`modification_id`, `name`, `code`, `author`, `version`, `link`, `xml`, `status`, `date_added`) VALUES
 (329, 'TM label sale', '13', 'http://www.templatemonster.com', '1.0', 'http://www.templatemonster.com', '<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<modification>\r\n	<name>TM label sale</name>\r\n	<version>1.0</version>\r\n	<author>http://www.templatemonster.com</author>\r\n	<link>http://www.templatemonster.com</link>\r\n	<code>13</code>\r\n	<file path=\"catalog/controller/module/featured.php|catalog/controller/module/special.php|catalog/controller/module/latest.php|catalog/controller/product/product.php|catalog/controller/module/bestseller.php\">\r\n		<operation>\r\n			<search><![CDATA[\r\n			$data[\'button_compare\'] = $this->language->get(\'button_compare\');\r\n			]]></search>\r\n			<add position=\"after\"><![CDATA[\r\n			$data[\'text_sale\'] = $this->language->get(\'text_sale\');\r\n			]]></add>\r\n		</operation>\r\n	</file>\r\n	<file path=\"catalog/language/english/module/featured.php|catalog/language/english/module/special.php|catalog/language/english/module/latest.php|catalog/language/english/product/product.php|catalog/language/english/module/bestseller.php\">\r\n		<operation>\r\n			<search><![CDATA[\r\n			$_[\'text_tax\']\r\n			]]></search>\r\n			<add position=\"after\"><![CDATA[\r\n			$_[\'text_sale\']      = \'Sale\';\r\n			]]></add>\r\n		</operation>\r\n	</file>\r\n\r\n	<file path=\"catalog/language/de-DE/module/featured.php|catalog/language/de-DE/module/special.php|catalog/language/de-DE/module/latest.php|catalog/language/de-DE/product/product.php|catalog/language/de-DE/module/bestseller.php\">\r\n		<operation>\r\n			<search><![CDATA[\r\n			$_[\'text_tax\']\r\n			]]></search>\r\n			<add position=\"before\"><![CDATA[\r\n			$_[\'text_sale\']      = \'Verkauf\';\r\n			]]></add>\r\n		</operation>\r\n	</file>\r\n	<file path=\"catalog/language/russian/module/featured.php|catalog/language/russian/module/special.php|catalog/language/russian/module/latest.php|catalog/language/russian/product/product.php|catalog/language/russian/module/bestseller.php\">\r\n		<operation>\r\n			<search><![CDATA[\r\n			$_[\'text_tax\']\r\n			]]></search>\r\n			<add position=\"before\"><![CDATA[\r\n			$_[\'text_sale\']      = \'Скидка\';\r\n			]]></add>\r\n		</operation>\r\n	</file>\r\n</modification>', 1, '2015-12-08 10:47:24'),
-(334, 'Google captcha fix', 'captcha', 'http://www.templatemonster.com', '1.0', 'http://www.templatemonster.com', '<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<modification>\r\n	<name>Google captcha fix</name>\r\n	<version>1.0</version>\r\n	<author>http://www.templatemonster.com</author>\r\n	<link>http://www.templatemonster.com</link>\r\n	<code>captcha</code>\r\n	<file path=\"catalog/controller/captcha/google_captcha.php\">\r\n		<operation>\r\n			<search><![CDATA[$this->document->addScript(\'https://www.google.com/recaptcha/api.js\');]]></search>\r\n			<add position=\"replace\"><![CDATA[// $this->document->addScript(\'https://www.google.com/recaptcha/api.js\');]]></add>\r\n		</operation>\r\n	</file>\r\n</modification>', 1, '2015-12-17 14:34:39');
+(334, 'Google captcha fix', 'captcha', 'http://www.templatemonster.com', '1.0', 'http://www.templatemonster.com', '<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<modification>\r\n	<name>Google captcha fix</name>\r\n	<version>1.0</version>\r\n	<author>http://www.templatemonster.com</author>\r\n	<link>http://www.templatemonster.com</link>\r\n	<code>captcha</code>\r\n	<file path=\"catalog/controller/captcha/google_captcha.php\">\r\n		<operation>\r\n			<search><![CDATA[$this->document->addScript(\'https://www.google.com/recaptcha/api.js\');]]></search>\r\n			<add position=\"replace\"><![CDATA[// $this->document->addScript(\'https://www.google.com/recaptcha/api.js\');]]></add>\r\n		</operation>\r\n	</file>\r\n</modification>', 1, '2015-12-17 14:34:39'),
+(335, '', 'multipearlsemailverificationext', 'KollanH - KollanH@gmail.com', '1.0.7', '', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<modification>\r\n		<code>multipearlsemailverificationext</code>\r\n        <id>Confirm Email Registration/Checkout</id>\r\n        <version>1.0.7</version>\r\n        <vqmver>2.2.1</vqmver>\r\n        <author>KollanH - KollanH@gmail.com</author>\r\n		<!-- ++ Checkout ++ -->\r\n		<!-- Add to template -->\r\n		<!-- Guest -->\r\n		<file name=\"catalog/view/theme/*/template/checkout/guest.tpl\">\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[<span class=\"required\">*</span> <?php echo $entry_telephone; ?><br />]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[<span class=\"required\">*</span> <?php echo $entry_email_confirm; ?><br />\r\n  <input type=\"text\" name=\"email_confirm\" value=\"\" class=\"large-field\" />\r\n  <br />\r\n  <br />]]>\r\n			</add>	\r\n		</operation>\r\n        </file>\r\n		<!-- Register -->\r\n		<file name=\"catalog/view/theme/*/template/checkout/register.tpl\">\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[<span class=\"required\">*</span> <?php echo $entry_telephone; ?><br />]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[<span class=\"required\">*</span> <?php echo $entry_email_confirm; ?><br />\r\n  <input type=\"text\" name=\"email_confirm\" value=\"\" class=\"large-field\" />\r\n  <br />\r\n  <br />]]>\r\n			</add>	\r\n		</operation>\r\n        </file>\r\n		<!-- Checkout -->\r\n		<file name=\"catalog/view/theme/*/template/checkout/checkout.tpl\">\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[if (json[\'error\'][\'confirm\']) {]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[if (json[\'error\'][\'email_confirm\']) {\r\n					$(\'#payment-address input[name=\\\'email_confirm\\\'] + br\').after(\'<span class=\"error\">\' + json[\'error\'][\'email_confirm\'] + \'</span>\');\r\n				}]]>\r\n			</add>	\r\n		</operation>\r\n		<operation error=\"log\">\r\n			<search position=\"before\" index=\"4\">\r\n				<![CDATA[if (json[\'error\'][\'zone\']) {]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[if (json[\'error\'][\'email_confirm\']) {\r\n					$(\'#payment-address input[name=\\\'email_confirm\\\'] + br\').after(\'<span class=\"error\">\' + json[\'error\'][\'email_confirm\'] + \'</span>\');\r\n				}]]>\r\n			</add>	\r\n		</operation>\r\n        </file>\r\n		<!-- Add to language -->\r\n		<file name=\"catalog/language/*/checkout/checkout.php\">\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[$_[\'entry_email\']]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[$_[\'entry_email_confirm\']                    = \'Confirm E-Mail:\';\r\n				]]>\r\n			</add>\r\n		</operation>\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[$_[\'error_confirm\']]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[$_[\'error_email_confirm\']                  = \'Emails do not match!\';]]>\r\n			</add>	\r\n		</operation>\r\n        </file>\r\n		<!-- Add to controller -->\r\n		<!-- Guest -->\r\n		<file name=\"catalog/controller/checkout/guest.php\">\r\n		<operation error=\"log\">\r\n			<search position=\"after\">\r\n				<![CDATA[$this->data[\'entry_email\'] = $this->language->get(\'entry_email\');]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[$this->data[\'entry_email_confirm\'] = $this->language->get(\'entry_email_confirm\');]]>\r\n			</add>	\r\n		</operation>\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[if ((utf8_strlen($this->request->post[\'telephone\']) < 3) || (utf8_strlen($this->request->post[\'telephone\']) > 32)) {]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[if ($this->request->post[\'email_confirm\'] != $this->request->post[\'email\']) {\r\n\r\n				$json[\'error\'][\'email_confirm\'] = $this->language->get(\'error_email_confirm\');\r\n\r\n			}]]>\r\n			</add>\r\n		</operation>\r\n        </file>\r\n		<!-- Register -->\r\n		<file name=\"catalog/controller/checkout/register.php\">\r\n		<operation error=\"log\">\r\n			<search position=\"after\">\r\n				<![CDATA[$this->data[\'entry_email\'] = $this->language->get(\'entry_email\');]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[$this->data[\'entry_email_confirm\'] = $this->language->get(\'entry_email_confirm\');]]>\r\n			</add>	\r\n		</operation>\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[if ($this->request->post[\'confirm\'] != $this->request->post[\'password\']) {]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[if ($this->request->post[\'email_confirm\'] != $this->request->post[\'email\']) {\r\n\r\n				$json[\'error\'][\'email_confirm\'] = $this->language->get(\'error_email_confirm\');\r\n\r\n			}]]>\r\n			</add>\r\n		</operation>\r\n        </file>\r\n		<!-- ++ Account ++ -->\r\n		<!-- Add to template -->\r\n		<!-- Register -->\r\n		<file name=\"catalog/view/theme/*/template/account/register.tpl\">\r\n		<operation error=\"log\">\r\n			<search position=\"before\" index=\"4\">\r\n				<![CDATA[<tr>]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[<tr>\r\n          <td><span class=\"required\">*</span> <?php echo $entry_email_confirm; ?></td>\r\n          <td><input type=\"text\" name=\"email_confirm\" value=\"<?php echo $email_confirm; ?>\" />\r\n            <?php if ($error_email_confirm) { ?>\r\n            <span class=\"error\"><?php echo $error_email_confirm; ?></span>\r\n            <?php } ?></td>\r\n        </tr>]]>\r\n			</add>	\r\n		</operation>\r\n        </file>\r\n		<!-- Add to the controller -->\r\n		<file name=\"catalog/controller/account/register.php\">\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[if (isset($this->error[\'telephone\'])) {]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[if (isset($this->error[\'email_confirm\'])) {\r\n\r\n			$this->data[\'error_email_confirm\'] = $this->error[\'email_confirm\'];\r\n\r\n		} else {\r\n\r\n			$this->data[\'error_email_confirm\'] = \'\';\r\n\r\n		}]]>\r\n			</add>	\r\n		</operation>\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[if ($this->model_account_customer->getTotalCustomersByEmail($this->request->post[\'email\'])) {]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[if ($this->request->post[\'email\'] !== $this->request->post[\'email_confirm\']) {\r\n\r\n      		$this->error[\'email_confirm\'] = $this->language->get(\'error_email_confirm\');\r\n\r\n    	}]]>\r\n			</add>	\r\n		</operation>\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[$this->data[\'entry_email\'] = $this->language->get(\'entry_email\');]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[$this->data[\'entry_email_confirm\'] = $this->language->get(\'entry_email_confirm\');]]>\r\n			</add>	\r\n		</operation>\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[if (isset($this->request->post[\'confirm\'])) {]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[if (isset($this->request->post[\'email_confirm\'])) {\r\n\r\n    		$this->data[\'email_confirm\'] = $this->request->post[\'email_confirm\'];\r\n\r\n		} else {\r\n\r\n			$this->data[\'email_confirm\'] = \'\';\r\n\r\n		}]]>\r\n			</add>	\r\n		</operation>\r\n        </file>\r\n		<!-- Add to language -->\r\n		<file name=\"catalog/language/*/account/register.php\">\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[$_[\'entry_email\']]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[$_[\'entry_email_confirm\']                    = \'Confirm E-Mail:\';\r\n				]]>\r\n			</add>\r\n		</operation>\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[$_[\'error_confirm\']]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[$_[\'error_email_confirm\']                  = \'Emails do not match!\';]]>\r\n			</add>	\r\n		</operation>\r\n        </file>\r\n		<!-- ++ Affiliate ++ -->\r\n		<!-- Add to template -->\r\n		<!-- Register -->\r\n		<file name=\"catalog/view/theme/*/template/affiliate/register.tpl\">\r\n		<operation error=\"log\">\r\n			<search position=\"before\" index=\"4\">\r\n				<![CDATA[<tr>]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[<tr>\r\n          <td><span class=\"required\">*</span> <?php echo $entry_email_confirm; ?></td>\r\n          <td><input type=\"text\" name=\"email_confirm\" value=\"<?php echo $email_confirm; ?>\" />\r\n            <?php if ($error_email_confirm) { ?>\r\n            <span class=\"error\"><?php echo $error_email_confirm; ?></span>\r\n            <?php } ?></td>\r\n        </tr>]]>\r\n			</add>	\r\n		</operation>\r\n        </file>\r\n		<!-- Add to the controller -->\r\n		<file name=\"catalog/controller/affiliate/register.php\">\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[if (isset($this->error[\'telephone\'])) {]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[if (isset($this->error[\'email_confirm\'])) {\r\n\r\n			$this->data[\'error_email_confirm\'] = $this->error[\'email_confirm\'];\r\n\r\n		} else {\r\n\r\n			$this->data[\'error_email_confirm\'] = \'\';\r\n\r\n		}]]>\r\n			</add>	\r\n		</operation>\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[if ($this->model_affiliate_affiliate->getTotalAffiliatesByEmail($this->request->post[\'email\'])) {]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[if ($this->request->post[\'email\'] !== $this->request->post[\'email_confirm\']) {\r\n\r\n      		$this->error[\'email_confirm\'] = $this->language->get(\'error_email_confirm\');\r\n\r\n    	}]]>\r\n			</add>	\r\n		</operation>\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[$this->data[\'entry_email\'] = $this->language->get(\'entry_email\');]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[$this->data[\'entry_email_confirm\'] = $this->language->get(\'entry_email_confirm\');]]>\r\n			</add>	\r\n		</operation>\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[if (isset($this->request->post[\'confirm\'])) {]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[if (isset($this->request->post[\'email_confirm\'])) {\r\n\r\n    		$this->data[\'email_confirm\'] = $this->request->post[\'email_confirm\'];\r\n\r\n		} else {\r\n\r\n			$this->data[\'email_confirm\'] = \'\';\r\n\r\n		}]]>\r\n			</add>	\r\n		</operation>\r\n        </file>\r\n		<!-- Add to language -->\r\n		<file name=\"catalog/language/*/affiliate/register.php\">\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[$_[\'entry_email\']]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[$_[\'entry_email_confirm\']                    = \'Confirm E-Mail:\';\r\n				]]>\r\n			</add>\r\n		</operation>\r\n		<operation error=\"log\">\r\n			<search position=\"before\">\r\n				<![CDATA[$_[\'error_confirm\']]]>\r\n			</search>\r\n			\r\n			<add>\r\n				<![CDATA[$_[\'error_email_confirm\']                  = \'Emails do not match!\';]]>\r\n			</add>	\r\n		</operation>\r\n        </file>\r\n		\r\n</modification>', 1, '2018-11-04 17:13:27');
 
 -- --------------------------------------------------------
 
@@ -2171,14 +2219,12 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (28, 'Featured  Aside', 'featured', '{\"name\":\"Featured  Aside\",\"product\":[\"82\",\"74\",\"61\",\"161\"],\"limit\":\"7\",\"width\":\"270\",\"height\":\"270\",\"status\":\"0\"}'),
 (46, 'Tm Slideshow', 'tm_slideshow', '{\"name\":\"Tm Slideshow\",\"banner_id\":\"15\",\"width\":\"2048\",\"height\":\"680\",\"status\":\"1\"}'),
 (50, 'Olark Chat', 'olark', '{\"name\":\"Olark Chat\",\"olark_version\":\"2.0.0\",\"olark_site_id\":\"7830-582-10-3714\",\"status\":\"1\"}'),
-(43, 'Bestsellers Aside', 'bestseller', '{\"name\":\"Bestsellers Aside\",\"limit\":\"1\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
 (104, 'TM Newsletter', 'tm_newsletter', '{\"name\":\"TM Newsletter\",\"status\":\"1\",\"tm_newsletter_description\":{\"1\":{\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"2\":{\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"3\":{\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"}}}'),
 (54, 'Google Map', 'tm_google_map', '{\"name\":\"Google Map\",\"tm_google_map_key\":\"\",\"status\":\"1\",\"tm_google_map_zoom\":\"14\",\"tm_google_map_type\":\"1\",\"tm_google_map_sensor\":\"true\",\"tm_google_map_width\":\"100%\",\"tm_google_map_height\":\"440px\",\"tm_google_map_styles\":\"                                                                                                                                                                                                                                                                                              [{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:65},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:51},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:30},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:40},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;labels&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:-25},{&quot;saturation&quot;:-100}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#ffff00&quot;},{&quot;lightness&quot;:-25},{&quot;saturation&quot;:-97}]}]                                                                                                                                                                                                                                                                                                                                                                                      \",\"tm_google_map_disable_ui\":\"false\",\"tm_google_map_scrollwheel\":\"false\",\"tm_google_map_draggable\":\"true\",\"tm_google_map_marker\":\"\",\"tm_google_map_marker_active\":\"\",\"tm_google_map_marker_width\":\"\",\"tm_google_map_marker_height\":\"\"}'),
 (67, 'Specials Aside', 'special', '{\"name\":\"Specials Aside\",\"limit\":\"1\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
-(69, 'Latest Aside', 'latest', '{\"name\":\"Latest Aside\",\"limit\":\"1\",\"width\":\"270\",\"height\":\"270\",\"status\":\"0\"}'),
 (90, 'Blog Categories', 'tm_blog_category', '{\"status\":\"1\",\"name\":\"Blog Categories\",\"category_search_article\":\"1\"}'),
 (91, 'Blog Popular Articles', 'tm_blog_articles', '{\"status\":\"1\",\"name\":\"Blog Popular Articles\",\"article_limit\":\"3\",\"show_readmore\":\"0\",\"show_date\":\"0\",\"show_author\":\"0\",\"show_comments\":\"0\",\"show_image\":\"0\",\"image_width\":\"0\",\"image_height\":\"0\",\"description_limit\":\"150\",\"category_id\":\"popular\"}'),
-(103, 'TM Megamenu', 'tm_megamenu', '{\"name\":\"TM Megamenu\",\"status\":\"1\",\"menu_item\":[{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"3\",\"image\":\"\",\"image_width\":\"230\",\"image_height\":\"230\",\"column\":[{\"width\":\"33%\",\"content\":\"3\",\"limit\":\"7\",\"prod_limit\":\"0\",\"module_id\":\"103\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"33%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"33%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"6\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"0\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"0\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"4\",\"limit\":\"0\",\"prod_limit\":\"10\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"4\",\"limit\":\"0\",\"prod_limit\":\"10\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]}]}'),
+(103, 'TM Megamenu', 'tm_megamenu', '{\"name\":\"TM Megamenu\",\"status\":\"1\",\"menu_item\":[{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"3\",\"image\":\"\",\"image_width\":\"230\",\"image_height\":\"230\",\"column\":[{\"width\":\"33%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"103\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"33%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"33%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"4\",\"limit\":\"0\",\"prod_limit\":\"10\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"4\",\"limit\":\"0\",\"prod_limit\":\"10\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]}]}'),
 (106, 'Tm Single Category Products 2', 'tm_single_category_product', '{\"name\":\"Tm Single Category Products 2\",\"path\":\"Men\\u00a0\\u00a0&gt;\\u00a0\\u00a0Clothing\\u00a0\\u00a0&gt;\\u00a0\\u00a0T-shirts\",\"category\":\"29\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"1\",\"bestseller\":\"0\",\"latest\":\"1\",\"featured\":\"1\",\"product\":[\"82\",\"70\",\"28\",\"87\",\"63\"],\"limit\":\"5\",\"width\":\"270\",\"height\":\"270\",\"status\":\"1\"}'),
 (107, 'Partners', 'html', '{\"name\":\"Partners\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"&lt;ul class=&quot;flex-list&quot;&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-1.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-2.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-3.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-4.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-5.png&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-6.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\"},\"2\":{\"title\":\"\",\"description\":\"&lt;ul class=&quot;flex-list&quot;&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-1.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-2.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-3.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-4.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-5.png&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-6.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\"},\"3\":{\"title\":\"\",\"description\":\"&lt;ul class=&quot;flex-list&quot;&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-1.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-2.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-3.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-4.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-5.png&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t&lt;a href=&quot;#&quot;&gt;\\r\\n\\t\\t\\t&lt;img src=&quot;.\\/image\\/catalog\\/partner-6.jpg&quot; alt=&quot;&quot;&gt;\\r\\n\\t\\t&lt;\\/a&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\"}},\"status\":\"1\"}'),
 (101, 'Blog Home Articles', 'tm_blog_articles', '{\"status\":\"1\",\"name\":\"Blog Home Articles\",\"article_limit\":\"3\",\"show_readmore\":\"1\",\"show_date\":\"1\",\"show_author\":\"1\",\"show_comments\":\"0\",\"show_image\":\"1\",\"image_width\":\"1170\",\"image_height\":\"780\",\"description_limit\":\"150\",\"category_id\":\"2\"}'),
@@ -2812,16 +2858,16 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (169, 'N120MM1920', 'N120-BLUE', '', '', '', '', '', '', 2500, 6, 'catalog/13-CN/N(CN)-121.jpg', 11, 1, '117.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 120, 1, 0, '2018-10-07 16:58:54', '2018-11-04 15:06:47'),
 (171, 'N123MM1920', 'N123-OR', '', '', '', '', '', '', 1500, 6, 'catalog/14-N/N-123.jpg', 11, 1, '95.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 123, 1, 1, '2018-10-07 17:07:32', '2018-11-04 15:08:11'),
 (172, 'N124MM1920', 'N124-YL', '', '', '', '', '', '', 1500, 6, 'catalog/14-N/N-124.jpg', 11, 1, '95.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 124, 1, 0, '2018-10-07 17:07:58', '2018-11-04 15:08:20'),
-(174, 'N127MM1920', 'N127-WH', '', '', '', '', '', '', 1500, 6, 'catalog/14-N/N-127.jpg', 11, 1, '95.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 127, 1, 0, '2018-10-07 17:37:15', '2018-11-04 15:08:31'),
+(174, 'N127MM1920', 'N127-WH', '', '', '', '', '', '', 1500, 6, 'catalog/14-N/N-127.jpg', 11, 1, '95.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 127, 1, 4, '2018-10-07 17:37:15', '2018-11-04 15:08:31'),
 (175, 'JSR128MM1920', 'JS(R)128-OR', '', '', '', '', '', '', 1500, 6, 'catalog/15-JS(R)/JS(R)-128.jpg', 11, 1, '84.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 128, 1, 0, '2018-10-07 17:51:55', '2018-11-04 15:06:56'),
 (176, 'JSR129MM1920', 'JS(R)129-BK', '', '', '', '', '', '', 1500, 6, 'catalog/15-JS(R)/JS(R)-129.jpg', 11, 1, '84.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 129, 1, 0, '2018-10-07 17:52:45', '2018-11-04 15:07:11'),
 (177, 'JSR130MM1920', 'JS(R)130-BL', '', '', '', '', '', '', 1500, 6, 'catalog/15-JS(R)/JS(R)-130.jpg', 11, 1, '84.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 130, 1, 0, '2018-10-07 17:53:35', '2018-11-04 15:07:22'),
 (178, 'JSR131MM1920', 'JS(R)131-WH', '', '', '', '', '', '', 1500, 6, 'catalog/15-JS(R)/JS(R)-131.jpg', 11, 1, '84.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 131, 1, 0, '2018-10-07 17:54:36', '2018-11-04 15:07:32'),
 (179, 'JSR132MM1920', 'JS(R)132-RED', '', '', '', '', '', '', 1500, 6, 'catalog/15-JS(R)/JS(R)-132.jpg', 11, 1, '84.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 132, 1, 0, '2018-10-07 17:55:39', '2018-11-04 15:07:51'),
 (180, 'JSR133MM1920', 'JS(R)133-YEL', '', '', '', '', '', '', 1500, 6, 'catalog/15-JS(R)/JS(R)-133.jpg', 11, 1, '84.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 133, 1, 0, '2018-10-07 17:56:23', '2018-11-04 15:08:00'),
-(181, 'M134MM1920', 'M134-NB', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-134.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 134, 1, 3, '2018-10-07 18:01:27', '2018-11-04 14:11:08'),
+(181, 'M134MM1920', 'M134-NB', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-134.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 134, 1, 6, '2018-10-07 18:01:27', '2018-11-04 14:11:08'),
 (182, 'M135MM1920', 'M135-PK', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-135.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 135, 1, 1, '2018-10-07 18:02:21', '2018-11-04 14:11:17'),
-(183, 'M136MM1920', 'M136-GRY', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-136.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 136, 1, 1, '2018-10-07 18:03:11', '2018-11-04 14:11:28'),
+(183, 'M136MM1920', 'M136-GRY', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-136.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 136, 1, 2, '2018-10-07 18:03:11', '2018-11-04 14:11:28'),
 (184, 'M137MM1920', 'M137-RED', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-137.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 137, 1, 0, '2018-10-07 18:04:01', '2018-11-04 14:11:39'),
 (185, 'M138MM1920', 'M138-LIBLUE', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-138.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 138, 1, 0, '2018-10-07 18:04:55', '2018-11-04 14:11:49'),
 (186, 'M139MM1920', 'M139-RB', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-139.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 139, 1, 0, '2018-10-07 18:05:38', '2018-11-04 14:12:25'),
@@ -5687,7 +5733,8 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (17027, 0, 'config', 'config_simple_blog_author_information', '1', 0),
 (17028, 0, 'config', 'config_simple_blog_related_articles', '1', 0),
 (17029, 0, 'config', 'config_simple_blog_share_social_site', '1', 0),
-(17031, 0, 'category', 'category_status', '0', 0);
+(17031, 0, 'category', 'category_status', '0', 0),
+(17032, 0, 'basic_captcha', 'basic_captcha_status', '1', 0);
 
 -- --------------------------------------------------------
 
@@ -6476,11 +6523,17 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (1544, 'product_id=28', 'Electro Tri Colour Jersey With Collar'),
 (1375, 'category_id=28', 'Round-Neck'),
 (1369, 'category_id=45', 'Women 1'),
-(1397, 'manufacturer_id=11', 'ELECTRO SPORTS TSHIRTS ELECTRO SPORTS WHOLE SALE JERSEY ELECTRO SPPORTS ONLINE SHOPPING '),
+(1552, 'manufacturer_id=11', 'ELECTRO SPORTS TSHIRTS ELECTRO SPORTS WHOLE SALE JERSEY ELECTRO SPPORTS ONLINE SHOPPING '),
 (1376, 'category_id=58', ''),
 (1371, 'category_id=55', ''),
 (1541, 'category_id=60', ''),
-(1540, 'category_id=59', '');
+(1540, 'category_id=59', ''),
+(1545, 'category_id=63', 'Boys Accessories'),
+(1546, 'category_id=64', 'Womens Footwear'),
+(1547, 'category_id=65', 'Womens Accessories'),
+(1548, 'category_id=66', 'Girls Footwear'),
+(1550, 'category_id=67', 'Girls Accessories'),
+(1551, 'category_id=68', 'Girls Clothing');
 
 -- --------------------------------------------------------
 
@@ -6529,7 +6582,7 @@ CREATE TABLE `oc_user_group` (
 --
 
 INSERT INTO `oc_user_group` (`user_group_id`, `name`, `permission`) VALUES
-(1, 'Administrator', '{\"access\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/sass\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_button\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/olark\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"module\\/tm_blog_articles\",\"module\\/tm_blog_category\",\"module\\/tm_category\",\"module\\/tm_category_menu\",\"module\\/tm_cookie_policy\",\"module\\/tm_countdown\",\"module\\/tm_fbbox\",\"module\\/tm_google_map\",\"module\\/tm_instagram\",\"module\\/tm_manufacturer\",\"module\\/tm_megamenu\",\"module\\/tm_module_tab\",\"module\\/tm_newsletter\",\"module\\/tm_newsletter_popup\",\"module\\/tm_parallax\",\"module\\/tm_pinterest\",\"module\\/tm_product_slideshow\",\"module\\/tm_progress_bars\",\"module\\/tm_single_category_product\",\"module\\/tm_slideshow\",\"module\\/tm_social_list\",\"module\\/tm_twitter\",\"module\\/tm_videobg\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"payment\\/amazon_checkout\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/custom_field\",\"sale\\/customer\",\"sale\\/customer_ban_ip\",\"sale\\/customer_group\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"simple_blog\\/article\",\"simple_blog\\/author\",\"simple_blog\\/category\",\"simple_blog\\/comment\",\"simple_blog\\/install\",\"simple_blog\\/report\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/export_import\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/tm_newsletter\",\"module\\/tm_single_category_product\",\"module\\/html\",\"module\\/tm_newsletter_popup\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"payment\\/amazon_checkout\",\"payment\\/amazon_login_pay\",\"module\\/category\",\"module\\/tm_category\",\"module\\/tm_category_menu\",\"module\\/tm_module_tab\",\"module\\/category\",\"module\\/category\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"module\\/carousel\",\"module\\/filter\"],\"modify\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/sass\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_button\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/olark\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"module\\/tm_blog_articles\",\"module\\/tm_blog_category\",\"module\\/tm_category\",\"module\\/tm_category_menu\",\"module\\/tm_cookie_policy\",\"module\\/tm_countdown\",\"module\\/tm_fbbox\",\"module\\/tm_google_map\",\"module\\/tm_instagram\",\"module\\/tm_manufacturer\",\"module\\/tm_megamenu\",\"module\\/tm_module_tab\",\"module\\/tm_newsletter\",\"module\\/tm_newsletter_popup\",\"module\\/tm_parallax\",\"module\\/tm_pinterest\",\"module\\/tm_product_slideshow\",\"module\\/tm_progress_bars\",\"module\\/tm_single_category_product\",\"module\\/tm_slideshow\",\"module\\/tm_social_list\",\"module\\/tm_twitter\",\"module\\/tm_videobg\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"payment\\/amazon_checkout\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/custom_field\",\"sale\\/customer\",\"sale\\/customer_ban_ip\",\"sale\\/customer_group\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"simple_blog\\/article\",\"simple_blog\\/author\",\"simple_blog\\/category\",\"simple_blog\\/comment\",\"simple_blog\\/install\",\"simple_blog\\/report\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/export_import\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/tm_newsletter\",\"module\\/tm_single_category_product\",\"module\\/html\",\"module\\/tm_newsletter_popup\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"payment\\/amazon_checkout\",\"payment\\/amazon_login_pay\",\"module\\/category\",\"module\\/tm_category\",\"module\\/tm_category_menu\",\"module\\/tm_module_tab\",\"module\\/category\",\"module\\/category\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"module\\/carousel\",\"module\\/filter\"]}'),
+(1, 'Administrator', '{\"access\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/sass\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_button\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/olark\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"module\\/tm_blog_articles\",\"module\\/tm_blog_category\",\"module\\/tm_category\",\"module\\/tm_category_menu\",\"module\\/tm_cookie_policy\",\"module\\/tm_countdown\",\"module\\/tm_fbbox\",\"module\\/tm_google_map\",\"module\\/tm_instagram\",\"module\\/tm_manufacturer\",\"module\\/tm_megamenu\",\"module\\/tm_module_tab\",\"module\\/tm_newsletter\",\"module\\/tm_newsletter_popup\",\"module\\/tm_parallax\",\"module\\/tm_pinterest\",\"module\\/tm_product_slideshow\",\"module\\/tm_progress_bars\",\"module\\/tm_single_category_product\",\"module\\/tm_slideshow\",\"module\\/tm_social_list\",\"module\\/tm_twitter\",\"module\\/tm_videobg\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"payment\\/amazon_checkout\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/custom_field\",\"sale\\/customer\",\"sale\\/customer_ban_ip\",\"sale\\/customer_group\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"simple_blog\\/article\",\"simple_blog\\/author\",\"simple_blog\\/category\",\"simple_blog\\/comment\",\"simple_blog\\/install\",\"simple_blog\\/report\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/export_import\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/tm_newsletter\",\"module\\/tm_single_category_product\",\"module\\/html\",\"module\\/tm_newsletter_popup\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"payment\\/amazon_checkout\",\"payment\\/amazon_login_pay\",\"module\\/category\",\"module\\/tm_category\",\"module\\/tm_category_menu\",\"module\\/tm_module_tab\",\"module\\/category\",\"module\\/category\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"module\\/carousel\",\"module\\/filter\",\"captcha\\/basic_captcha\"],\"modify\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/sass\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/layout\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_button\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/olark\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"module\\/tm_blog_articles\",\"module\\/tm_blog_category\",\"module\\/tm_category\",\"module\\/tm_category_menu\",\"module\\/tm_cookie_policy\",\"module\\/tm_countdown\",\"module\\/tm_fbbox\",\"module\\/tm_google_map\",\"module\\/tm_instagram\",\"module\\/tm_manufacturer\",\"module\\/tm_megamenu\",\"module\\/tm_module_tab\",\"module\\/tm_newsletter\",\"module\\/tm_newsletter_popup\",\"module\\/tm_parallax\",\"module\\/tm_pinterest\",\"module\\/tm_product_slideshow\",\"module\\/tm_progress_bars\",\"module\\/tm_single_category_product\",\"module\\/tm_slideshow\",\"module\\/tm_social_list\",\"module\\/tm_twitter\",\"module\\/tm_videobg\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"payment\\/amazon_checkout\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/custom_field\",\"sale\\/customer\",\"sale\\/customer_ban_ip\",\"sale\\/customer_group\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"simple_blog\\/article\",\"simple_blog\\/author\",\"simple_blog\\/category\",\"simple_blog\\/comment\",\"simple_blog\\/install\",\"simple_blog\\/report\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/export_import\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/tm_newsletter\",\"module\\/tm_single_category_product\",\"module\\/html\",\"module\\/tm_newsletter_popup\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"payment\\/amazon_checkout\",\"payment\\/amazon_login_pay\",\"module\\/category\",\"module\\/tm_category\",\"module\\/tm_category_menu\",\"module\\/tm_module_tab\",\"module\\/category\",\"module\\/category\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"module\\/carousel\",\"module\\/filter\",\"captcha\\/basic_captcha\"]}'),
 (10, 'Demonstration', '');
 
 -- --------------------------------------------------------
@@ -11898,668 +11951,557 @@ ALTER TABLE `oc_zone_to_geo_zone`
 -- AUTO_INCREMENT for table `oc_address`
 --
 ALTER TABLE `oc_address`
-  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
+  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `oc_affiliate`
 --
 ALTER TABLE `oc_affiliate`
   MODIFY `affiliate_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_affiliate_activity`
 --
 ALTER TABLE `oc_affiliate_activity`
   MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_affiliate_login`
 --
 ALTER TABLE `oc_affiliate_login`
   MODIFY `affiliate_login_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_affiliate_transaction`
 --
 ALTER TABLE `oc_affiliate_transaction`
   MODIFY `affiliate_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_amazon_login_pay_order`
 --
 ALTER TABLE `oc_amazon_login_pay_order`
   MODIFY `amazon_login_pay_order_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_amazon_login_pay_order_transaction`
 --
 ALTER TABLE `oc_amazon_login_pay_order_transaction`
   MODIFY `amazon_login_pay_order_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_api`
 --
 ALTER TABLE `oc_api`
   MODIFY `api_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_api_ip`
 --
 ALTER TABLE `oc_api_ip`
   MODIFY `api_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_api_session`
 --
 ALTER TABLE `oc_api_session`
   MODIFY `api_session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_attribute`
 --
 ALTER TABLE `oc_attribute`
   MODIFY `attribute_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
 --
 -- AUTO_INCREMENT for table `oc_attribute_group`
 --
 ALTER TABLE `oc_attribute_group`
   MODIFY `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT for table `oc_banner`
 --
 ALTER TABLE `oc_banner`
   MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
 --
 -- AUTO_INCREMENT for table `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
   MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=216;
-
 --
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `oc_category`
 --
 ALTER TABLE `oc_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
-
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT for table `oc_country`
 --
 ALTER TABLE `oc_country`
   MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=258;
-
 --
 -- AUTO_INCREMENT for table `oc_coupon`
 --
 ALTER TABLE `oc_coupon`
   MODIFY `coupon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `oc_coupon_history`
 --
 ALTER TABLE `oc_coupon_history`
   MODIFY `coupon_history_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_coupon_product`
 --
 ALTER TABLE `oc_coupon_product`
   MODIFY `coupon_product_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_currency`
 --
 ALTER TABLE `oc_currency`
   MODIFY `currency_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `oc_customer`
 --
 ALTER TABLE `oc_customer`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `oc_customer_activity`
 --
 ALTER TABLE `oc_customer_activity`
-  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
+  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `oc_customer_approval`
 --
 ALTER TABLE `oc_customer_approval`
   MODIFY `customer_approval_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_group`
 --
 ALTER TABLE `oc_customer_group`
   MODIFY `customer_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_history`
 --
 ALTER TABLE `oc_customer_history`
   MODIFY `customer_history_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_ip`
 --
 ALTER TABLE `oc_customer_ip`
-  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
+  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `oc_customer_login`
 --
 ALTER TABLE `oc_customer_login`
-  MODIFY `customer_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
+  MODIFY `customer_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `oc_customer_reward`
 --
 ALTER TABLE `oc_customer_reward`
   MODIFY `customer_reward_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_search`
 --
 ALTER TABLE `oc_customer_search`
   MODIFY `customer_search_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_customer_transaction`
 --
 ALTER TABLE `oc_customer_transaction`
   MODIFY `customer_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_custom_field`
 --
 ALTER TABLE `oc_custom_field`
   MODIFY `custom_field_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_custom_field_value`
 --
 ALTER TABLE `oc_custom_field_value`
   MODIFY `custom_field_value_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_download`
 --
 ALTER TABLE `oc_download`
   MODIFY `download_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_event`
 --
 ALTER TABLE `oc_event`
   MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_extension`
 --
 ALTER TABLE `oc_extension`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=501;
-
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=502;
 --
 -- AUTO_INCREMENT for table `oc_extension_install`
 --
 ALTER TABLE `oc_extension_install`
   MODIFY `extension_install_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_extension_path`
 --
 ALTER TABLE `oc_extension_path`
   MODIFY `extension_path_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_filter`
 --
 ALTER TABLE `oc_filter`
   MODIFY `filter_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_filter_group`
 --
 ALTER TABLE `oc_filter_group`
   MODIFY `filter_group_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_geo_zone`
 --
 ALTER TABLE `oc_geo_zone`
   MODIFY `geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `oc_information`
 --
 ALTER TABLE `oc_information`
   MODIFY `information_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `oc_language`
 --
 ALTER TABLE `oc_language`
   MODIFY `language_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_layout`
 --
 ALTER TABLE `oc_layout`
   MODIFY `layout_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
 --
 -- AUTO_INCREMENT for table `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
   MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1244;
-
 --
 -- AUTO_INCREMENT for table `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
   MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=329;
-
 --
 -- AUTO_INCREMENT for table `oc_length_class`
 --
 ALTER TABLE `oc_length_class`
   MODIFY `length_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_length_class_description`
 --
 ALTER TABLE `oc_length_class_description`
   MODIFY `length_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_location`
 --
 ALTER TABLE `oc_location`
   MODIFY `location_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_manufacturer`
 --
 ALTER TABLE `oc_manufacturer`
   MODIFY `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
 --
 -- AUTO_INCREMENT for table `oc_marketing`
 --
 ALTER TABLE `oc_marketing`
   MODIFY `marketing_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_modification`
 --
 ALTER TABLE `oc_modification`
-  MODIFY `modification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=335;
-
+  MODIFY `modification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=336;
 --
 -- AUTO_INCREMENT for table `oc_module`
 --
 ALTER TABLE `oc_module`
   MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
-
 --
 -- AUTO_INCREMENT for table `oc_option`
 --
 ALTER TABLE `oc_option`
   MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
 --
 -- AUTO_INCREMENT for table `oc_option_value`
 --
 ALTER TABLE `oc_option_value`
   MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
-
 --
 -- AUTO_INCREMENT for table `oc_order`
 --
 ALTER TABLE `oc_order`
   MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_order_custom_field`
 --
 ALTER TABLE `oc_order_custom_field`
   MODIFY `order_custom_field_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_order_history`
 --
 ALTER TABLE `oc_order_history`
   MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `oc_order_option`
 --
 ALTER TABLE `oc_order_option`
   MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `oc_order_product`
 --
 ALTER TABLE `oc_order_product`
   MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_order_recurring`
 --
 ALTER TABLE `oc_order_recurring`
   MODIFY `order_recurring_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_order_recurring_transaction`
 --
 ALTER TABLE `oc_order_recurring_transaction`
   MODIFY `order_recurring_transaction_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_order_shipment`
 --
 ALTER TABLE `oc_order_shipment`
   MODIFY `order_shipment_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_order_status`
 --
 ALTER TABLE `oc_order_status`
   MODIFY `order_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
 --
 -- AUTO_INCREMENT for table `oc_order_total`
 --
 ALTER TABLE `oc_order_total`
   MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
 --
 -- AUTO_INCREMENT for table `oc_order_voucher`
 --
 ALTER TABLE `oc_order_voucher`
   MODIFY `order_voucher_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_product`
 --
 ALTER TABLE `oc_product`
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=190;
-
 --
 -- AUTO_INCREMENT for table `oc_product_discount`
 --
 ALTER TABLE `oc_product_discount`
   MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
-
 --
 -- AUTO_INCREMENT for table `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
   MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=611;
-
 --
 -- AUTO_INCREMENT for table `oc_product_option`
 --
 ALTER TABLE `oc_product_option`
   MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
-
 --
 -- AUTO_INCREMENT for table `oc_product_option_value`
 --
 ALTER TABLE `oc_product_option_value`
   MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=636;
-
 --
 -- AUTO_INCREMENT for table `oc_product_reward`
 --
 ALTER TABLE `oc_product_reward`
   MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
-
 --
 -- AUTO_INCREMENT for table `oc_product_special`
 --
 ALTER TABLE `oc_product_special`
   MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
-
 --
 -- AUTO_INCREMENT for table `oc_recurring`
 --
 ALTER TABLE `oc_recurring`
   MODIFY `recurring_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_return`
 --
 ALTER TABLE `oc_return`
   MODIFY `return_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_return_action`
 --
 ALTER TABLE `oc_return_action`
   MODIFY `return_action_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_return_history`
 --
 ALTER TABLE `oc_return_history`
   MODIFY `return_history_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_return_reason`
 --
 ALTER TABLE `oc_return_reason`
   MODIFY `return_reason_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `oc_return_status`
 --
 ALTER TABLE `oc_return_status`
   MODIFY `return_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_review`
 --
 ALTER TABLE `oc_review`
   MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
-
 --
 -- AUTO_INCREMENT for table `oc_seo_url`
 --
 ALTER TABLE `oc_seo_url`
   MODIFY `seo_url_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=844;
-
 --
 -- AUTO_INCREMENT for table `oc_setting`
 --
 ALTER TABLE `oc_setting`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17032;
-
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17033;
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_article`
 --
 ALTER TABLE `oc_simple_blog_article`
   MODIFY `simple_blog_article_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_article_description`
 --
 ALTER TABLE `oc_simple_blog_article_description`
   MODIFY `simple_blog_article_description_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_author`
 --
 ALTER TABLE `oc_simple_blog_author`
   MODIFY `simple_blog_author_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_author_description`
 --
 ALTER TABLE `oc_simple_blog_author_description`
   MODIFY `simple_blog_author_description_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_category`
 --
 ALTER TABLE `oc_simple_blog_category`
   MODIFY `simple_blog_category_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_category_description`
 --
 ALTER TABLE `oc_simple_blog_category_description`
   MODIFY `simple_blog_category_description_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_comment`
 --
 ALTER TABLE `oc_simple_blog_comment`
   MODIFY `simple_blog_comment_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_related_article`
 --
 ALTER TABLE `oc_simple_blog_related_article`
   MODIFY `simple_blog_related_article_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
-
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_view`
 --
 ALTER TABLE `oc_simple_blog_view`
   MODIFY `simple_blog_view_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
 --
 -- AUTO_INCREMENT for table `oc_statistics`
 --
 ALTER TABLE `oc_statistics`
   MODIFY `statistics_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT for table `oc_stock_status`
 --
 ALTER TABLE `oc_stock_status`
   MODIFY `stock_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
 -- AUTO_INCREMENT for table `oc_store`
 --
 ALTER TABLE `oc_store`
   MODIFY `store_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_tax_class`
 --
 ALTER TABLE `oc_tax_class`
   MODIFY `tax_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `oc_tax_rate`
 --
 ALTER TABLE `oc_tax_rate`
   MODIFY `tax_rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
-
 --
 -- AUTO_INCREMENT for table `oc_tax_rule`
 --
 ALTER TABLE `oc_tax_rule`
   MODIFY `tax_rule_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
-
 --
 -- AUTO_INCREMENT for table `oc_theme`
 --
 ALTER TABLE `oc_theme`
   MODIFY `theme_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_tm_newsletter`
 --
 ALTER TABLE `oc_tm_newsletter`
   MODIFY `tm_newsletter_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_translation`
 --
 ALTER TABLE `oc_translation`
   MODIFY `translation_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_upload`
 --
 ALTER TABLE `oc_upload`
   MODIFY `upload_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1545;
-
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1553;
 --
 -- AUTO_INCREMENT for table `oc_user`
 --
 ALTER TABLE `oc_user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `oc_user_group`
 --
 ALTER TABLE `oc_user_group`
   MODIFY `user_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `oc_voucher`
 --
 ALTER TABLE `oc_voucher`
   MODIFY `voucher_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_voucher_history`
 --
 ALTER TABLE `oc_voucher_history`
   MODIFY `voucher_history_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `oc_voucher_theme`
 --
 ALTER TABLE `oc_voucher_theme`
   MODIFY `voucher_theme_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oc_weight_class`
 --
 ALTER TABLE `oc_weight_class`
   MODIFY `weight_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `oc_weight_class_description`
 --
 ALTER TABLE `oc_weight_class_description`
   MODIFY `weight_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `oc_zone`
 --
 ALTER TABLE `oc_zone`
   MODIFY `zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4232;
-
 --
 -- AUTO_INCREMENT for table `oc_zone_to_geo_zone`
 --
 ALTER TABLE `oc_zone_to_geo_zone`
-  MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
-COMMIT;
+  MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
