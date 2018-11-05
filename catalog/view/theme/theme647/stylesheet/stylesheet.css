@@ -1205,10 +1205,7 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   padding-bottom: 30px;
 }
 #content.home{
-  background: #f1efef;
-}
-.common-home #content > *:first-child {
-  margin-top: 75px;
+  background: #f8f8f8;
 }
 
 section.top {
@@ -2097,10 +2094,10 @@ html[lang="de"] .sale, html[lang="de"] .new_pr {
                          Box
 =========================================================*/
 .box {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .box .box-heading {
-  margin: 0 0 30px;
+  margin: 0 0 20px;
 }
 .box .box-heading h3 {
   margin: 0;
@@ -2131,10 +2128,10 @@ aside .row {
 .single-category {
   position: relative;
   background: #fff;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   padding-left: 15px;
   padding-right: 15px;
-  box-shadow: 2px 2px 14px #666;
+  box-shadow: 2px 2px 14px #ccc;
 }
 .single-category > hr {
   margin-top: 77px;
@@ -2185,9 +2182,9 @@ aside .row {
     text-shadow: 1px 1px black;
     color: #b4adad;
     font-size: 28px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
     background: transparent;
     text-align: center;
     box-shadow: 2px 2px 8px #ddd;
@@ -3618,9 +3615,37 @@ font-weight: 600;
 .box_html.Order.Specification{
   box-shadow: 2px 5px 10px #ccc;
   padding: 10px;
-}
-.box_html.Order.Specification a{
   font-weight: 600;
+}
+.box_html.Order.Specification .flex-list{
+  margin-bottom: 0;
+}
+.box_html.Women.Aside, .box_html.men.aside,.box_html.Boy.Aside,.box_html.Girl.Aside{
+  position: absolute;
+  z-index: 99;
+}
+.box_html.men.aside p{
+  background: linear-gradient(to bottom, #c8f8f5 0%, #f8f8f8 100%);
+}
+.box_html.Women.Aside p{
+  background: linear-gradient(to bottom, #f8c8c8 0%, #f8f8f8 100%);
+}
+.box_html.Boy.Aside p{
+  background: linear-gradient(to bottom, #c8e8f8 0%, #f8f8f8 100%);
+}
+.box_html.Girl.Aside p{
+  background: linear-gradient(to bottom, #f8c8e7 0%, #f8f8f8 100%);
+}
+
+.box_html p{
+  color: #333;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 0;
+  display: inline-block;
+  min-width: 200px;
+  box-shadow: 1px 1px 9px #ddd;
 }
   /*==================   Flex List   ======================*/
 .flex-list {

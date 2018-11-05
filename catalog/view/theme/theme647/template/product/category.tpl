@@ -419,7 +419,7 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </div>
 <?php } ?>
 <?php if (!$categories && !$products) { ?>
-<p><?php echo $text_empty; ?></p>
+<p><?php echo $text_category_empty; ?></p>
 <div class="buttons">
 	<div class="pull-right"><a href="<?php echo $continue; ?>" class="btn"><?php echo $button_continue; ?></a></div>
 </div>
