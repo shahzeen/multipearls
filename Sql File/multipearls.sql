@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2018 at 09:08 AM
+-- Generation Time: Nov 05, 2018 at 09:17 AM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -1101,7 +1101,7 @@ CREATE TABLE `oc_customer` (
 
 INSERT INTO `oc_customer` (`customer_id`, `customer_group_id`, `store_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `password`, `salt`, `cart`, `wishlist`, `newsletter`, `address_id`, `custom_field`, `ip`, `status`, `approved`, `safe`, `token`, `date_added`) VALUES
 (1, 1, 0, 'admin', 'admin', 'admin@admin.com', '123123123', '', '0ca17250c0ce136a312dcdb00798f30fe6dd5d2b', 'qeY6v7tbl', NULL, NULL, 1, 1, '', '::1', 1, 1, 0, '', '2015-12-04 13:51:43'),
-(4, 2, 0, 'Shahzeen', 'shaikh', 'shahzeensk@rediffmail.com', '08898751072', '', '2416e1f3ef2784956f3aa842ccc494184c9e57f1', 'JqcWgDvq2', NULL, NULL, 0, 4, '[]', '::1', 1, 1, 0, '', '2018-11-04 17:19:07');
+(4, 2, 0, 'Shahzeen', 'shaikh', 'shahzeensk@rediffmail.com', '08898751072', '', '2416e1f3ef2784956f3aa842ccc494184c9e57f1', 'JqcWgDvq2', NULL, NULL, 0, 4, '{\"1\":\"123456\"}', '::1', 1, 1, 0, '', '2018-11-04 17:19:07');
 
 -- --------------------------------------------------------
 
@@ -1297,7 +1297,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls/index.php?route=account/register', 'http://localhost/multipearls/index.php?route=account/register', '2018-11-05 09:08:31');
+('::1', 0, 'http://localhost/multipearls/index.php?route=account/register', 'http://localhost/multipearls/index.php?route=account/register', '2018-11-05 09:15:40');
 
 -- --------------------------------------------------------
 
