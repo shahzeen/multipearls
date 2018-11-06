@@ -374,22 +374,7 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 						</div>
 						<?php } ?>
 					</div>
-					<?php if ($product['rating']) { ?>
-					<div class="rating">
-						<?php for ($i = 1; $i <= 5; $i++) { ?>
-						<?php if ($product['rating'] < $i) { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-						</span>
-						<?php } else { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-							<i class="material-icons-star star fa-stack-1x"></i>
-						</span>
-						<?php } ?>
-						<?php } ?>
-					</div>
-					<?php } ?>
+					
 					<button class="product-btn-add" data-toggle="tooltip"
 					title="<?php echo $button_cart; ?>" type="button"
 					onclick="cart.add('<?php echo $product['product_id']; ?>');">
@@ -449,31 +434,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 		<?php } ?>
 	</div>
 	<?php } ?>
-	<div class="rating">
-		<?php if ($product['rating']) { ?>
-		<?php for ($i = 1; $i <= 5; $i++) { ?>
-		<?php if ($product['rating'] < $i) { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-		</span>
-		<?php } else { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-			<i class="material-icons-star star fa-stack-1x"></i>
-		</span>
-		<?php } ?>
-		<?php } ?>
-		<?php } ?>
-	</div>
-</div>
-<hr>
-<div class="cart-button">
-	<button class="product-btn-add" type="button" data-toggle="tooltip" title="<?php echo $button_cart; ?>" <?php if (count($product['options']) >= 4) { ?> onclick="cart.add('<?php echo $product['product_id']; ?>');" <?php } else { ?> onclick="ajaxAdd($(this),<?php echo $product['product_id'] ?>);" <?php } ?>>
-		<i class="material-icons-add_shopping_cart"></i>
-	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-favorite_border"></i>
-	</button>
 </div>
 </div>
 
@@ -791,22 +751,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 						</div>
 						<?php } ?>
 					</div>
-					<?php if ($product['rating']) { ?>
-					<div class="rating">
-						<?php for ($i = 1; $i <= 5; $i++) { ?>
-						<?php if ($product['rating'] < $i) { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-						</span>
-						<?php } else { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-							<i class="material-icons-star star fa-stack-1x"></i>
-						</span>
-						<?php } ?>
-						<?php } ?>
-					</div>
-					<?php } ?>
 
 					<button class="product-btn-add" data-toggle="tooltip"
 					title="<?php echo $button_cart; ?>" type="button"
@@ -852,22 +796,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </a>
 </div>
 <div class="caption">
-	<div class="rating">
-		<?php if ($product['rating']) { ?>
-		<?php for ($i = 1; $i <= 5; $i++) { ?>
-		<?php if ($product['rating'] < $i) { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-		</span>
-		<?php } else { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-			<i class="material-icons-star star fa-stack-1x"></i>
-		</span>
-		<?php } ?>
-		<?php } ?>
-		<?php } ?>
-	</div>
 	<?php if ($product['price']) { ?>
 	<div class="price">
 		<?php if (!$product['special']) { ?>
@@ -887,15 +815,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 	<div class="name">
 		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
 	</div>
-</div>
-<hr>
-<div class="cart-button">
-	<button class="product-btn-add" type="button" data-toggle="tooltip" title="<?php echo $button_cart; ?>" <?php if (count($product['options']) >= 4) { ?> onclick="cart.add('<?php echo $product['product_id']; ?>');" <?php } else { ?> onclick="ajaxAdd($(this),<?php echo $product['product_id'] ?>);" <?php } ?>>
-		<i class="material-icons-add_shopping_cart"></i>
-	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-favorite_border"></i>
-	</button>
 </div>
 </div>
 <?php } ?>
@@ -1212,22 +1131,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 						</div>
 						<?php } ?>
 					</div>
-					<?php if ($product['rating']) { ?>
-					<div class="rating">
-						<?php for ($i = 1; $i <= 5; $i++) { ?>
-						<?php if ($product['rating'] < $i) { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-						</span>
-						<?php } else { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-							<i class="material-icons-star star fa-stack-1x"></i>
-						</span>
-						<?php } ?>
-						<?php } ?>
-					</div>
-					<?php } ?>
 
 					<button class="product-btn-add" data-toggle="tooltip"
 					title="<?php echo $button_cart; ?>" type="button"
@@ -1273,22 +1176,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </a>
 </div>
 <div class="caption">
-	<div class="rating">
-		<?php if ($product['rating']) { ?>
-		<?php for ($i = 1; $i <= 5; $i++) { ?>
-		<?php if ($product['rating'] < $i) { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-		</span>
-		<?php } else { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-			<i class="material-icons-star star fa-stack-1x"></i>
-		</span>
-		<?php } ?>
-		<?php } ?>
-		<?php } ?>
-	</div>
 	<?php if ($product['price']) { ?>
 	<div class="price">
 		<?php if (!$product['special']) { ?>
@@ -1308,15 +1195,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 	<div class="name">
 		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
 	</div>
-</div>
-<hr>
-<div class="cart-button">
-	<button class="product-btn-add" type="button" data-toggle="tooltip" title="<?php echo $button_cart; ?>" <?php if (count($product['options']) >= 4) { ?> onclick="cart.add('<?php echo $product['product_id']; ?>');" <?php } else { ?> onclick="ajaxAdd($(this),<?php echo $product['product_id'] ?>);" <?php } ?>>
-		<i class="material-icons-add_shopping_cart"></i>
-	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-favorite_border"></i>
-	</button>
 </div>
 
 </div>
@@ -1633,22 +1511,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 						</div>
 						<?php } ?>
 					</div>
-					<?php if ($product['rating']) { ?>
-					<div class="rating">
-						<?php for ($i = 1; $i <= 5; $i++) { ?>
-						<?php if ($product['rating'] < $i) { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-						</span>
-						<?php } else { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-							<i class="material-icons-star star fa-stack-1x"></i>
-						</span>
-						<?php } ?>
-						<?php } ?>
-					</div>
-					<?php } ?>
 
 					<button class="product-btn-add" data-toggle="tooltip"
 					title="<?php echo $button_cart; ?>" type="button"
@@ -1694,22 +1556,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </a>
 </div>
 <div class="caption">
-	<div class="rating">
-		<?php if ($product['rating']) { ?>
-		<?php for ($i = 1; $i <= 5; $i++) { ?>
-		<?php if ($product['rating'] < $i) { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-		</span>
-		<?php } else { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-			<i class="material-icons-star star fa-stack-1x"></i>
-		</span>
-		<?php } ?>
-		<?php } ?>
-		<?php } ?>
-	</div>
 	<?php if ($product['price']) { ?>
 	<div class="price">
 		<?php if (!$product['special']) { ?>
@@ -1729,15 +1575,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 	<div class="name">
 		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
 	</div>
-</div>
-<hr>
-<div class="cart-button">
-	<button class="product-btn-add" type="button" data-toggle="tooltip" title="<?php echo $button_cart; ?>" <?php if (count($product['options']) >= 4) { ?> onclick="cart.add('<?php echo $product['product_id']; ?>');" <?php } else { ?> onclick="ajaxAdd($(this),<?php echo $product['product_id'] ?>);" <?php } ?>>
-		<i class="material-icons-add_shopping_cart"></i>
-	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-favorite_border"></i>
-	</button>
 </div>
 </div>
 <?php } ?>

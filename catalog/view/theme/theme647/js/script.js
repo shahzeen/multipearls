@@ -321,9 +321,9 @@ include('js/jquery.easing.1.3.js');
 				if ($(this).parents('aside').length == 0) {
 					o.owlCarousel({
                         // Most important owl features
-                        items: 6,
+                        items: 4,
                         itemsCustom: false,
-                        itemsDesktop: [1199, 6],
+                        itemsDesktop: [1199, 4],
                         itemsDesktopSmall: [980, 3],
                         itemsTablet: [768, 2],
                         itemsTabletSmall: false,
