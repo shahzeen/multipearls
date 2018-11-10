@@ -22,7 +22,8 @@
       <h1><?php echo $heading_title; ?></h1>
       <p><?php echo $text_account_already; ?></p>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
-        <fieldset id="account">
+        <div class="row">
+        <fieldset id="account" class="col-md-6">
           <legend><?php echo $text_your_details; ?></legend>
           <div class="form-group required" style="display: <?php echo (count($customer_groups) > 1 ? 'block' : 'none'); ?>;">
             <label class="col-sm-3 control-label"><?php echo $entry_customer_group; ?></label>
@@ -233,8 +234,26 @@
           <?php } ?>
           <?php } ?>
           <?php } ?>
+           <div class="form-group required">
+            <label class="col-sm-3 control-label" for="input-password"><?php echo $entry_password; ?></label>
+            <div class="col-sm-9">
+              <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
+              <?php if ($error_password) { ?>
+              <div class="text-danger"><?php echo $error_password; ?></div>
+              <?php } ?>
+            </div>
+          </div>
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="input-confirm"><?php echo $entry_confirm; ?></label>
+            <div class="col-sm-9">
+              <input type="password" name="confirm" value="<?php echo $confirm; ?>" placeholder="<?php echo $entry_confirm; ?>" id="input-confirm" class="form-control" />
+              <?php if ($error_confirm) { ?>
+              <div class="text-danger"><?php echo $error_confirm; ?></div>
+              <?php } ?>
+            </div>
+          </div>
         </fieldset>
-        <fieldset id="address">
+        <fieldset class="col-md-6" id="address">
           <legend><?php echo $text_your_address; ?></legend>
           <div class="form-group">
             <label class="col-sm-3 control-label" for="input-company"><?php echo $entry_company; ?></label>
@@ -457,66 +476,26 @@
           <?php } ?>
           <?php } ?>          
         </fieldset>
-        <fieldset>
-          <legend><?php echo $text_your_password; ?></legend>
-          <div class="form-group required">
-            <label class="col-sm-3 control-label" for="input-password"><?php echo $entry_password; ?></label>
-            <div class="col-sm-9">
-              <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
-              <?php if ($error_password) { ?>
-              <div class="text-danger"><?php echo $error_password; ?></div>
-              <?php } ?>
-            </div>
-          </div>
-          <div class="form-group required">
-            <label class="col-sm-3 control-label" for="input-confirm"><?php echo $entry_confirm; ?></label>
-            <div class="col-sm-9">
-              <input type="password" name="confirm" value="<?php echo $confirm; ?>" placeholder="<?php echo $entry_confirm; ?>" id="input-confirm" class="form-control" />
-              <?php if ($error_confirm) { ?>
-              <div class="text-danger"><?php echo $error_confirm; ?></div>
-              <?php } ?>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend><?php echo $text_newsletter; ?></legend>
-          <div class="form-group">
-            <label class="col-sm-3 control-label"><?php echo $entry_newsletter; ?></label>
-            <div class="col-sm-9">
-              <?php if ($newsletter) { ?>
-              <label class="radio-inline">
-                <input type="radio" name="newsletter" value="1" checked="checked" />
-                <?php echo $text_yes; ?></label>
-              <label class="radio-inline">
-                <input type="radio" name="newsletter" value="0" />
-                <?php echo $text_no; ?></label>
-              <?php } else { ?>
-              <label class="radio-inline">
-                <input type="radio" name="newsletter" value="1" />
-                <?php echo $text_yes; ?></label>
-              <label class="radio-inline">
-                <input type="radio" name="newsletter" value="0" checked="checked" />
-                <?php echo $text_no; ?></label>
-              <?php } ?>
-            </div>
-          </div>
-        </fieldset>
+        </div>
+       
           <?php echo $captcha; ?>
         <?php if ($text_agree) { ?>
         <div class="buttons">
-          <div class="pull-right"><?php echo $text_agree; ?>
-            <?php if ($agree) { ?>
+          <div class="text-center">
+          <?php if ($agree) { ?>
             <input type="checkbox" name="agree" value="1" checked="checked" />
             <?php } else { ?>
             <input type="checkbox" name="agree" value="1" />
             <?php } ?>
-            &nbsp;
+          <?php echo $text_agree; ?>
+          <br/>
+          <br/>
             <input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-primary" />
           </div>
         </div>
         <?php } else { ?>
         <div class="buttons">
-          <div class="pull-right">
+          <div class="text-center">
             <input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-primary" />
           </div>
         </div>
