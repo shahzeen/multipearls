@@ -2,8 +2,8 @@
 // Heading
 $_['heading_title'] = 'Tm Module Tabs';
 $_['heading_latest'] = 'NEW ARRIVALS';
-$_['heading_specials'] = 'OUR TOP PICKS FOR THE SEASON';
-$_['heading_featured'] = 'MOST POPULAR OF THE MOMENT';
+$_['heading_specials'] = 'MOST POPULAR OF THE MOMENT';
+$_['heading_featured'] = 'OUR TOP PICKS FOR THE SEASON';
 $_['heading_bestsellers'] = 'BEST SELLERS';
 
 // Text
