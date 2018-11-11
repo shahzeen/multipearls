@@ -4868,6 +4868,9 @@ aside #blog-search a:hover {
   min-width: 150px;
 }
 
+table .cart-remove-btn{
+  font-size: 26px;
+}
 .cart-wrapper {
   padding: 30px;
   border: 1px solid #e0e0e0;
