@@ -1172,6 +1172,9 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
     float: none;
     margin-top: 0;
   }
+  .box-cart .cart-remove-btn{
+    font-size: inherit;
+  }
   header .box-language,
   header .box-currency {
     width: 100%;
@@ -4870,13 +4873,13 @@ aside #blog-search a:hover {
   border: 1px solid #e0e0e0;
   border-top-width: 2px;
 }
-.cart-wrapper .cart-remove-btn, .cart-wrapper .cart-remove-btn{
+.cart-wrapper .cart-remove-btn, .cart-wrapper .cart-remove-btn, .account-address td a{
   font-size: 26px;
 }
 
 .cart-remove-btn, .cart-remove-btn:visited {
   display: inline-block;
-  font-size: 30px;
+  font-size: 12px;
   color: #111;
 }
 .cart-remove-btn:focus, .cart-remove-btn:visited:focus {
