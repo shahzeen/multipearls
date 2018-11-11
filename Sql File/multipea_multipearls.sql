@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2018 at 12:51 PM
+-- Generation Time: Nov 11, 2018 at 09:30 AM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `multipearls`
+-- Database: `multipea_multipearls`
 --
 
 -- --------------------------------------------------------
@@ -1247,7 +1247,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/', '2018-11-06 12:51:12');
+('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/', '2018-11-11 09:30:50');
 
 -- --------------------------------------------------------
 
