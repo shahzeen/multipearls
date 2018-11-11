@@ -1776,6 +1776,7 @@ html[lang="de"] .sale, html[lang="de"] .new_pr {
 /* ===================   Product Price    =================== */
 .product-thumb .price-new, .product-thumb .price {
   font-weight: 600;
+  height: 24px;
 }
 .product-thumb .price-old {
   font-size: 14px;
@@ -2767,7 +2768,7 @@ select {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  min-width: 120px;
+  min-width: 80px;
 }
 .sbHolder:focus {
   border-color: rgba(82, 168, 236, 0.8);
@@ -4761,6 +4762,9 @@ aside #blog-search a:hover {
 }
 .product-filter_elem {
   float: left;
+}
+.product-filter_elem.sort{
+  min-width: 155px;
 }
 .product-filter_elem .sbHolder, .product-filter_elem select {
   -webkit-border-radius: 0;
