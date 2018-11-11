@@ -4872,7 +4872,7 @@ aside #blog-search a:hover {
 
 .cart-remove-btn, .cart-remove-btn:visited {
   display: inline-block;
-  font-size: 12px;
+  font-size: 30px;
   color: #111;
 }
 .cart-remove-btn:focus, .cart-remove-btn:visited:focus {
