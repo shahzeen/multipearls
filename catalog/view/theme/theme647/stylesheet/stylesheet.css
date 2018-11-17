@@ -1688,6 +1688,9 @@ section.top {
 .product-list .product-thumb > .price, .product-list .product-thumb > .cart-button {
   display: none;
 }
+.camera_overlayer{
+  background: rgba(0,0,0,0.5)
+}
 .camera_prev:hover, .camera_next:hover{
   background: #9f9d9d;
   color: #333;
@@ -2175,7 +2178,7 @@ aside .row {
   margin: 10px 0;
 }
 .single-category .nav-tabs > li, .single-category .nav-tabs > li > a {
-  display: inline-block;
+ text-align: center;
 }
 .single-category .nav-tabs > li > a, .box_html h3 {
   -webkit-border-radius: 0;
@@ -3635,19 +3638,10 @@ font-weight: 600;
 .box_html.Order.Specification .flex-list{
   margin-bottom: 0;
 }
-.box_html table{
-  max-width: 768px;
-  margin: 0 auto;
+.box_html {
+  margin-bottom: 15rem;
 }
-.box_html .table>tbody>tr>td{
-  border: 0;
-  width: 384px;
-  padding: 0;
-}
-.box_html .table>tbody>tr>td img{
-  width: 100%;
-  height: 300px;
-}
+
   /*==================   Flex List   ======================*/
 .flex-list {
   display: table;
