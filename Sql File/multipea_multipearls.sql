@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2018 at 12:18 PM
+-- Generation Time: Nov 18, 2018 at 12:26 PM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -1019,7 +1019,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 (1, 'Pound Sterling', 'GBP', '£', '', '2', 0.67280000, 0, '2018-11-11 20:06:09'),
 (2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 0, '2018-11-11 20:06:15'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.91270000, 0, '2018-11-11 20:06:02'),
-(5, 'Indian Rupees', 'INR', '₹', '', '0', 1.00000000, 1, '2018-11-18 11:48:18');
+(5, 'Indian Rupees', 'INR', '₹', '', '0', 1.00000000, 1, '2018-11-18 12:23:56');
 
 -- --------------------------------------------------------
 
@@ -1277,7 +1277,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/index.php?route=common/home', '2018-11-18 12:18:32');
+('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/index.php?route=common/home', '2018-11-18 12:25:26');
 
 -- --------------------------------------------------------
 
@@ -1916,12 +1916,12 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1132, 2, 'olark.50', 'footer_top', 1),
 (1135, 13, 'olark.50', 'footer_top', 1),
 (1140, 9, 'olark.50', 'footer_top', 1),
-(1953, 1, 'tm_slideshow.46', 'top', 1),
 (1093, 6, 'tm_newsletter.104', 'footer_top', 2),
 (1097, 10, 'tm_megamenu.103', 'navigation', 1),
 (1098, 10, 'tm_newsletter.104', 'footer_top', 2),
 (1102, 14, 'tm_megamenu.103', 'navigation', 1),
 (1103, 14, 'tm_newsletter.104', 'footer_top', 2),
+(1963, 1, 'tm_single_category_product.134', 'top', 8),
 (1111, 7, 'tm_newsletter.104', 'footer_top', 2),
 (1114, 12, 'tm_newsletter.104', 'footer_top', 2),
 (1118, 8, 'tm_newsletter.104', 'footer_top', 2),
@@ -1933,16 +1933,16 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1138, 13, 'tm_megamenu.103', 'navigation', 1),
 (1139, 13, 'tm_newsletter.104', 'footer_top', 2),
 (1142, 9, 'tm_newsletter.104', 'footer_top', 2),
-(1951, 1, 'html.112', 'top', 2),
-(1952, 1, 'tm_single_category_product.133', 'top', 5),
-(1950, 1, 'tm_megamenu.103', 'navigation', 0),
-(1949, 1, 'html.124', 'top', 4),
-(1948, 1, 'tm_single_category_product.121', 'top', 53),
-(1947, 1, 'tm_newsletter.104', 'footer_top', 0),
-(1946, 1, 'html.127', 'top', 6),
-(1945, 1, 'tm_single_category_product.129', 'top', 7),
-(1944, 1, 'tm_single_category_product.134', 'top', 8),
-(1943, 1, 'olark.50', 'footer_top', 9);
+(1964, 1, 'olark.50', 'footer_top', 9),
+(1962, 1, 'tm_single_category_product.129', 'top', 7),
+(1961, 1, 'html.127', 'top', 6),
+(1960, 1, 'tm_newsletter.104', 'footer_top', 10),
+(1959, 1, 'tm_single_category_product.121', 'top', 3),
+(1958, 1, 'html.124', 'top', 4),
+(1957, 1, 'tm_megamenu.103', 'navigation', 0),
+(1955, 1, 'html.112', 'top', 2),
+(1956, 1, 'tm_single_category_product.133', 'top', 5),
+(1954, 1, 'tm_slideshow.46', 'top', 1);
 
 -- --------------------------------------------------------
 
@@ -1965,7 +1965,7 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (301, 6, 0, 'account/%'),
 (302, 10, 0, 'affiliate/%'),
 (328, 3, 0, 'product/category'),
-(398, 1, 0, 'common/home'),
+(399, 1, 0, 'common/home'),
 (314, 2, 0, 'product/product'),
 (312, 11, 0, 'information/information'),
 (308, 7, 0, 'checkout/%'),
@@ -12096,12 +12096,12 @@ ALTER TABLE `oc_layout`
 -- AUTO_INCREMENT for table `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
-  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1954;
+  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1965;
 --
 -- AUTO_INCREMENT for table `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
-  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=399;
+  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=400;
 --
 -- AUTO_INCREMENT for table `oc_length_class`
 --

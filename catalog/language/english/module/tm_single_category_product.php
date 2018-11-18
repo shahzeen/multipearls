@@ -2,7 +2,7 @@
 // Heading
 $_['heading_title'] = 'Tm Module Tabs';
 $_['heading_latest'] = 'NEW ARRIVALS';
-$_['heading_specials'] = 'DEAL OF THE DAY';
+$_['heading_specials'] = 'DEALS OF THE DAY';
 $_['heading_featured'] = 'OUR TOP PICKS FOR THE SEASON';
 $_['heading_bestsellers'] = 'MOST POPULAR OF THE MOMENT';
 
