@@ -3652,14 +3652,7 @@ font-weight: 600;
 /* * + .box_html {
   margin-top: 75px;
 } */
-.box_html.Order.Specification{
-  box-shadow: 2px 5px 10px #ccc;
-  padding: 10px;
-  font-weight: 600;
-}
-.box_html.Order.Specification .flex-list{
-  margin-bottom: 0;
-}
+
 .box_html {
   margin-bottom: 15rem;
 }
@@ -3671,11 +3664,16 @@ font-weight: 600;
   table-layout: fixed;
   width: 100%;
   padding: 0;
+  max-width: 768px;
+  margin: 0 auto;
+  border-spacing: 10px;
 }
 .flex-list li {
   display: table-cell;
-  text-align: center;
-  padding: 0 15px;
+    text-align: center;
+    height: 200px;
+    vertical-align: bottom;
+    font-size: 16px;
 }
 .flex-list li > a img {
   display: inline-block;

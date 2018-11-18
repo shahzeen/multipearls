@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2018 at 12:26 PM
+-- Generation Time: Nov 18, 2018 at 01:36 PM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -1277,7 +1277,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/index.php?route=common/home', '2018-11-18 12:25:26');
+('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/index.php?route=common/home', '2018-11-18 13:35:14');
 
 -- --------------------------------------------------------
 
@@ -1916,12 +1916,12 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1132, 2, 'olark.50', 'footer_top', 1),
 (1135, 13, 'olark.50', 'footer_top', 1),
 (1140, 9, 'olark.50', 'footer_top', 1),
+(2030, 1, 'olark.50', 'footer_top', 10),
 (1093, 6, 'tm_newsletter.104', 'footer_top', 2),
 (1097, 10, 'tm_megamenu.103', 'navigation', 1),
 (1098, 10, 'tm_newsletter.104', 'footer_top', 2),
 (1102, 14, 'tm_megamenu.103', 'navigation', 1),
 (1103, 14, 'tm_newsletter.104', 'footer_top', 2),
-(1963, 1, 'tm_single_category_product.134', 'top', 8),
 (1111, 7, 'tm_newsletter.104', 'footer_top', 2),
 (1114, 12, 'tm_newsletter.104', 'footer_top', 2),
 (1118, 8, 'tm_newsletter.104', 'footer_top', 2),
@@ -1933,16 +1933,16 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1138, 13, 'tm_megamenu.103', 'navigation', 1),
 (1139, 13, 'tm_newsletter.104', 'footer_top', 2),
 (1142, 9, 'tm_newsletter.104', 'footer_top', 2),
-(1964, 1, 'olark.50', 'footer_top', 9),
-(1962, 1, 'tm_single_category_product.129', 'top', 7),
-(1961, 1, 'html.127', 'top', 6),
-(1960, 1, 'tm_newsletter.104', 'footer_top', 10),
-(1959, 1, 'tm_single_category_product.121', 'top', 3),
-(1958, 1, 'html.124', 'top', 4),
-(1957, 1, 'tm_megamenu.103', 'navigation', 0),
-(1955, 1, 'html.112', 'top', 2),
-(1956, 1, 'tm_single_category_product.133', 'top', 5),
-(1954, 1, 'tm_slideshow.46', 'top', 1);
+(2027, 1, 'tm_single_category_product.129', 'top', 8),
+(2028, 1, 'html.127', 'top', 3),
+(2029, 1, 'tm_single_category_product.134', 'top', 2),
+(2026, 1, 'tm_newsletter.104', 'footer_top', 9),
+(2024, 1, 'tm_megamenu.103', 'navigation', 0),
+(2025, 1, 'tm_single_category_product.121', 'top', 6),
+(2023, 1, 'tm_single_category_product.133', 'top', 4),
+(2022, 1, 'html.124', 'top', 7),
+(2021, 1, 'tm_slideshow.46', 'top', 1),
+(2020, 1, 'html.112', 'top', 5);
 
 -- --------------------------------------------------------
 
@@ -1965,7 +1965,7 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (301, 6, 0, 'account/%'),
 (302, 10, 0, 'affiliate/%'),
 (328, 3, 0, 'product/category'),
-(399, 1, 0, 'common/home'),
+(405, 1, 0, 'common/home'),
 (314, 2, 0, 'product/product'),
 (312, 11, 0, 'information/information'),
 (308, 7, 0, 'checkout/%'),
@@ -2231,7 +2231,7 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (33, 'banners', 'banner', '{\"name\":\"banners\",\"banner_id\":\"14\",\"width\":\"370\",\"height\":\"370\",\"status\":\"1\"}'),
 (46, 'Tm Slideshow', 'tm_slideshow', '{\"name\":\"Tm Slideshow\",\"banner_id\":\"15\",\"width\":\"2048\",\"height\":\"680\",\"status\":\"1\"}'),
 (50, 'Olark Chat', 'olark', '{\"name\":\"Olark Chat\",\"olark_version\":\"2.0.0\",\"olark_site_id\":\"7830-582-10-3714\",\"status\":\"1\"}'),
-(112, 'Order Specification', 'html', '{\"name\":\"Order Specification\",\"module_description\":{\"1\":{\"title\":\"Order Specification\",\"description\":\"&lt;ul class=&quot;flex-list&quot;&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t\\r\\n\\t\\t\\tDispatch within 24 hours&lt;br&gt;On Printing &amp;amp; Embroidery\\r\\n\\t\\t\\r\\n\\t&lt;\\/li&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t\\r\\n\\t\\t\\tNo Minimum order&lt;br&gt;Order From 100 to 50000+\\r\\n\\t\\t\\r\\n\\t&lt;\\/li&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\t&lt;li&gt;\\r\\n\\t\\t\\r\\n\\t\\t\\tEvery Order Checked&lt;br&gt;By Our Expert Team\\r\\n\\t\\t\\r\\n\\t&lt;\\/li&gt;\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/ul&gt;\"}},\"status\":\"1\"}'),
+(112, 'Order Specification', 'html', '{\"name\":\"Order Specification\",\"module_description\":{\"1\":{\"title\":\"Order Specification\",\"description\":\"&lt;style&gt;\\r\\n.Order.Specification{\\r\\nbackground: #fafafa;\\r\\n    padding: 10px;\\r\\n    margin: 0 auto;\\r\\n}\\r\\n.Order.Specification .flex-list div{\\r\\nbackground: rgba(17, 17, 17, 0.58);\\r\\n    color: #eee;\\r\\n    padding: 5px;\\r\\n    font-size: 14px;\\r\\n}\\r\\n.Order.Specification .flex-list{\\r\\nbackground: #fff;\\r\\n margin-bottom: 0;\\r\\n}\\r\\n.Order.Specification .dispatch{\\r\\nbackground-image: url(image\\/catalog\\/dispatch.jpg);\\r\\nbackground-size: 100% 100%;\\r\\n    background-repeat: no-repeat;\\r\\n}\\r\\n.Order.Specification .checking{\\r\\nbackground-image: url(image\\/catalog\\/checking.jpg);\\r\\nbackground-size: 100% 100%;\\r\\n    background-repeat: no-repeat;\\r\\n}\\r\\n.Order.Specification .min-order{\\r\\nbackground-image: url(image\\/catalog\\/min-order.jpg);\\r\\nbackground-size: 100% 100%;\\r\\n    background-repeat: no-repeat;\\r\\n}\\r\\n&lt;\\/style&gt;\\r\\n&lt;ul class=&quot;flex-list&quot;&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\t&lt;li class=&quot;dispatch&quot;&gt;\\r\\n\\t\\t\\r\\n\\t\\t\\t&lt;div&gt;Dispatch within 24 hours&lt;br&gt;On Printing &amp;amp; Embroidery&lt;\\/div&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\t\\t\\r\\n\\t&lt;\\/li&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\t&lt;li class=&quot;min-order&quot;&gt;\\r\\n\\t\\t\\r\\n\\t\\t\\t&lt;div&gt;No Minimum order&lt;br&gt;Order From 100 to 50000+&lt;\\/div&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\t\\t\\r\\n\\t&lt;\\/li&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\t&lt;li class=&quot;checking&quot;&gt;\\r\\n\\t\\t\\r\\n\\t\\t\\t&lt;div&gt;Every Order Checked&lt;br&gt;By Our Expert Team&lt;\\/div&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\t\\t\\r\\n\\t&lt;\\/li&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/ul&gt;\"}},\"status\":\"1\"}'),
 (104, 'TM Newsletter', 'tm_newsletter', '{\"name\":\"TM Newsletter\",\"status\":\"1\",\"tm_newsletter_description\":{\"1\":{\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"2\":{\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"3\":{\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"}}}'),
 (54, 'Google Map', 'tm_google_map', '{\"name\":\"Google Map\",\"tm_google_map_key\":\"\",\"status\":\"1\",\"tm_google_map_zoom\":\"14\",\"tm_google_map_type\":\"1\",\"tm_google_map_sensor\":\"true\",\"tm_google_map_width\":\"100%\",\"tm_google_map_height\":\"440px\",\"tm_google_map_styles\":\"                                                                                                                                                                                                                                                                                              [{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:65},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:51},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:30},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:40},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;labels&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:-25},{&quot;saturation&quot;:-100}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#ffff00&quot;},{&quot;lightness&quot;:-25},{&quot;saturation&quot;:-97}]}]                                                                                                                                                                                                                                                                                                                                                                                      \",\"tm_google_map_disable_ui\":\"false\",\"tm_google_map_scrollwheel\":\"false\",\"tm_google_map_draggable\":\"true\",\"tm_google_map_marker\":\"\",\"tm_google_map_marker_active\":\"\",\"tm_google_map_marker_width\":\"\",\"tm_google_map_marker_height\":\"\"}'),
 (90, 'Blog Categories', 'tm_blog_category', '{\"status\":\"1\",\"name\":\"Blog Categories\",\"category_search_article\":\"1\"}'),
@@ -12096,12 +12096,12 @@ ALTER TABLE `oc_layout`
 -- AUTO_INCREMENT for table `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
-  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1965;
+  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2031;
 --
 -- AUTO_INCREMENT for table `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
-  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=400;
+  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=406;
 --
 -- AUTO_INCREMENT for table `oc_length_class`
 --
