@@ -38,8 +38,13 @@
 							$a='';
 						}
 						?>
-						<li class=" <?php echo $a. $last_line ;?>">
+						<li class=" <?php echo $a. $last_line ;?> col-md-2">
+							<div class="">
+								<?php if ($category['thumb']) { ?>
+								<div class="image"><a href="<?php echo $category['href']; ?>"><img src="<?php echo $category['thumb']; ?>" alt="<?php echo $category['name']; ?>" /></a></div>
+								<?php } ?>
 								<div class="name subcatname"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></div>
+							</div>
 						</li>
 						<?php } ?>
 					</ul>
