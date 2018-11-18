@@ -2,9 +2,9 @@
 // Heading
 $_['heading_title'] = 'Tm Module Tabs';
 $_['heading_latest'] = 'NEW ARRIVALS';
-$_['heading_specials'] = 'MOST POPULAR OF THE MOMENT';
+$_['heading_specials'] = 'DEAL OF THE DAY';
 $_['heading_featured'] = 'OUR TOP PICKS FOR THE SEASON';
-$_['heading_bestsellers'] = 'BEST SELLERS';
+$_['heading_bestsellers'] = 'MOST POPULAR OF THE MOMENT';
 
 // Text
 $_['text_tax'] = 'Ex Tax:';

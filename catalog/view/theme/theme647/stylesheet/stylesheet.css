@@ -2157,9 +2157,10 @@ aside .row {
 .single-category .box-heading h2 {
   margin-bottom: 0;
 }
-.single-category .nav-tabs {
+.single-category .nav-tabs, .box_html h3 {
+  text-align: center;
   border-bottom: none;
-  margin: 50px 0;
+  margin: 10rem 0;
 }
 .single-category .nav-tabs > li {
   float: none;
@@ -2190,11 +2191,32 @@ aside .row {
   margin-right: 0;
   color: #333;
   padding: 0;
-  font-size: 35px;
+  font-size: 26px;
+  position: relative;
+  text-shadow: 2px 2px #ccc;
 }
-.box_html h3 {
-  text-align: center;
-  margin: 50px 0;
+.single-category .nav-tabs > li > a:after, .box_html h3:after {
+  background-image: url(../../../../../image/catalog/double-arrow-bottom.png);
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 48%;
+  bottom: 0;
+  background-size: cover;
+  -webkit-animation: bounce 1s;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation: bounce 1s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes bounce {
+  from {bottom: -50px;}
+  to {bottom: -47px;}
+}
+
+@keyframes bounce {
+  from {bottom: -50px;}
+  to {bottom: -47px;}
 }
 .single-category .nav-tabs > li > a:hover, .single-category .nav-tabs > li > a:focus {
   color: #333;
@@ -3641,6 +3663,7 @@ font-weight: 600;
 .box_html {
   margin-bottom: 15rem;
 }
+
 
   /*==================   Flex List   ======================*/
 .flex-list {

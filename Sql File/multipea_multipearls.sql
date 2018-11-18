@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2018 at 05:18 PM
+-- Generation Time: Nov 18, 2018 at 12:18 PM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -362,9 +362,9 @@ INSERT INTO `oc_cart` (`cart_id`, `customer_id`, `session_id`, `product_id`, `re
 (28, 10, 'nmbvfm83biutlabejbgat2bdf4', 47, 0, '{\"33\":\"75\",\"34\":\"78\"}', 1, '2015-11-27 17:07:13'),
 (29, 10, 'nmbvfm83biutlabejbgat2bdf4', 28, 0, '{\"1\":\"2\",\"2\":\"6\"}', 1, '2015-11-27 17:07:36'),
 (40, 4, 'de27o4uri196e93nodvblr6fec', 82, 0, '[]', 200, '2018-11-05 12:43:33'),
-(42, 5, '1rmirc0aiiiqe0a1e8gm8n70mv', 82, 0, '[]', 1, '2018-11-11 17:33:24'),
-(43, 5, '1rmirc0aiiiqe0a1e8gm8n70mv', 171, 0, '{\"143\":\"541\"}', 1, '2018-11-11 17:33:41'),
-(45, 5, '1rmirc0aiiiqe0a1e8gm8n70mv', 158, 0, '{\"130\":\"476\"}', 1, '2018-11-11 17:38:49'),
+(42, 5, 'lq0mcqcdqlikn6b94hcgl7ubs5', 82, 0, '[]', 1, '2018-11-11 17:33:24'),
+(43, 5, 'lq0mcqcdqlikn6b94hcgl7ubs5', 171, 0, '{\"143\":\"541\"}', 1, '2018-11-11 17:33:41'),
+(45, 5, 'lq0mcqcdqlikn6b94hcgl7ubs5', 158, 0, '{\"130\":\"476\"}', 1, '2018-11-11 17:38:49'),
 (67, 6, 'ddtfmomahda53jljff27m49dc7', 82, 0, '{\"162\":\"636\",\"163\":\"639\"}', 1, '2018-11-11 22:46:13');
 
 -- --------------------------------------------------------
@@ -1019,7 +1019,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 (1, 'Pound Sterling', 'GBP', '£', '', '2', 0.67280000, 0, '2018-11-11 20:06:09'),
 (2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 0, '2018-11-11 20:06:15'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.91270000, 0, '2018-11-11 20:06:02'),
-(5, 'Indian Rupees', 'INR', '₹', '', '0', 1.00000000, 1, '2018-11-14 08:30:31');
+(5, 'Indian Rupees', 'INR', '₹', '', '0', 1.00000000, 1, '2018-11-18 11:48:18');
 
 -- --------------------------------------------------------
 
@@ -1116,7 +1116,8 @@ INSERT INTO `oc_customer_activity` (`activity_id`, `customer_id`, `key`, `data`,
 (35, 6, 'order_account', '{\"customer_id\":\"6\",\"name\":\"normal test\",\"order_id\":6}', '::1', '2018-11-11 21:28:19'),
 (36, 6, 'return_account', '{\"customer_id\":\"6\",\"name\":\"normal test\",\"return_id\":1}', '::1', '2018-11-11 21:42:32'),
 (37, 6, 'order_account', '{\"customer_id\":\"6\",\"name\":\"normal test\",\"order_id\":7}', '::1', '2018-11-11 22:03:05'),
-(38, 6, 'order_account', '{\"customer_id\":\"6\",\"name\":\"normal test\",\"order_id\":8}', '::1', '2018-11-11 22:25:23');
+(38, 6, 'order_account', '{\"customer_id\":\"6\",\"name\":\"normal test\",\"order_id\":8}', '::1', '2018-11-11 22:25:23'),
+(39, 5, 'login', '{\"customer_id\":\"5\",\"name\":\"wholesaler test\"}', '::1', '2018-11-18 14:49:39');
 
 -- --------------------------------------------------------
 
@@ -1276,7 +1277,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/index.php?route=common/home', '2018-11-17 17:17:43');
+('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/index.php?route=common/home', '2018-11-18 12:18:32');
 
 -- --------------------------------------------------------
 
@@ -1915,6 +1916,7 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1132, 2, 'olark.50', 'footer_top', 1),
 (1135, 13, 'olark.50', 'footer_top', 1),
 (1140, 9, 'olark.50', 'footer_top', 1),
+(1953, 1, 'tm_slideshow.46', 'top', 1),
 (1093, 6, 'tm_newsletter.104', 'footer_top', 2),
 (1097, 10, 'tm_megamenu.103', 'navigation', 1),
 (1098, 10, 'tm_newsletter.104', 'footer_top', 2),
@@ -1931,14 +1933,16 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (1138, 13, 'tm_megamenu.103', 'navigation', 1),
 (1139, 13, 'tm_newsletter.104', 'footer_top', 2),
 (1142, 9, 'tm_newsletter.104', 'footer_top', 2),
-(1815, 1, 'html.127', 'top', 5),
-(1814, 1, 'olark.50', 'footer_top', 7),
-(1813, 1, 'tm_single_category_product.121', 'top', 4),
-(1812, 1, 'html.124', 'top', 3),
-(1811, 1, 'html.112', 'top', 2),
-(1810, 1, 'tm_megamenu.103', 'navigation', 0),
-(1809, 1, 'tm_newsletter.104', 'footer_top', 6),
-(1808, 1, 'tm_slideshow.46', 'top', 1);
+(1951, 1, 'html.112', 'top', 2),
+(1952, 1, 'tm_single_category_product.133', 'top', 5),
+(1950, 1, 'tm_megamenu.103', 'navigation', 0),
+(1949, 1, 'html.124', 'top', 4),
+(1948, 1, 'tm_single_category_product.121', 'top', 53),
+(1947, 1, 'tm_newsletter.104', 'footer_top', 0),
+(1946, 1, 'html.127', 'top', 6),
+(1945, 1, 'tm_single_category_product.129', 'top', 7),
+(1944, 1, 'tm_single_category_product.134', 'top', 8),
+(1943, 1, 'olark.50', 'footer_top', 9);
 
 -- --------------------------------------------------------
 
@@ -1961,7 +1965,7 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (301, 6, 0, 'account/%'),
 (302, 10, 0, 'affiliate/%'),
 (328, 3, 0, 'product/category'),
-(385, 1, 0, 'common/home'),
+(398, 1, 0, 'common/home'),
 (314, 2, 0, 'product/product'),
 (312, 11, 0, 'information/information'),
 (308, 7, 0, 'checkout/%'),
@@ -2235,10 +2239,13 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (103, 'TM Megamenu', 'tm_megamenu', '{\"name\":\"TM Megamenu\",\"status\":\"1\",\"menu_item\":[{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"3\",\"image\":\"\",\"image_width\":\"230\",\"image_height\":\"230\",\"column\":[{\"width\":\"33%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"103\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"33%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"33%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]},{\"type\":\"0\",\"1\":{\"title\":\"\"},\"link\":\"\",\"submenu_show\":\"0\",\"submenu_type\":\"1\",\"columns\":\"3\",\"columns-per-row\":\"1\",\"image\":\"\",\"image_width\":\"\",\"image_height\":\"\",\"column\":[{\"width\":\"30%\",\"content\":\"4\",\"limit\":\"0\",\"prod_limit\":\"10\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"4\",\"limit\":\"0\",\"prod_limit\":\"10\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"},{\"width\":\"30%\",\"content\":\"3\",\"limit\":\"10\",\"prod_limit\":\"0\",\"module_id\":\"33\",\"category_id\":\"44\",\"category_show\":\"0\"}]}]}'),
 (120, 'featured', 'featured', '{\"name\":\"featured\",\"product\":[\"82\",\"63\",\"68\",\"183\",\"79\",\"89\",\"74\"],\"limit\":\"10\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
 (121, 'featured', 'tm_single_category_product', '{\"name\":\"featured\",\"path\":\"Men\",\"category\":\"44\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"0\",\"bestseller\":\"0\",\"latest\":\"0\",\"featured\":\"1\",\"product\":[\"82\",\"86\",\"79\",\"126\",\"128\",\"130\",\"131\"],\"limit\":\"20\",\"width\":\"337\",\"height\":\"337\",\"status\":\"1\"}'),
+(129, 'latest', 'tm_single_category_product', '{\"name\":\"latest\",\"path\":\"Men\",\"category\":\"44\",\"tabs\":\"1\",\"type\":\"2\",\"special\":\"0\",\"bestseller\":\"0\",\"latest\":\"1\",\"featured\":\"0\",\"product\":\"\",\"limit\":\"20\",\"width\":\"337\",\"height\":\"337\",\"status\":\"1\"}'),
+(134, 'best seller', 'tm_single_category_product', '{\"name\":\"best seller\",\"path\":\"Men\",\"category\":\"44\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"0\",\"bestseller\":\"1\",\"latest\":\"0\",\"featured\":\"0\",\"product\":\"\",\"limit\":\"20\",\"width\":\"337\",\"height\":\"337\",\"status\":\"1\"}'),
 (101, 'Blog Home Articles', 'tm_blog_articles', '{\"status\":\"1\",\"name\":\"Blog Home Articles\",\"article_limit\":\"3\",\"show_readmore\":\"1\",\"show_date\":\"1\",\"show_author\":\"1\",\"show_comments\":\"0\",\"show_image\":\"1\",\"image_width\":\"1170\",\"image_height\":\"780\",\"description_limit\":\"150\",\"category_id\":\"2\"}'),
 (108, 'TM Newsletter Popup', 'tm_newsletter_popup', '{\"name\":\"TM Newsletter Popup\",\"newsletter_popup_bg\":\"\",\"newsletter_popup_bg_width\":\"\",\"newsletter_popup_bg_height\":\"\",\"newsletter_popup_cookie\":\"60\",\"tm_newsletter_popup_description\":{\"1\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"2\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"3\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"}},\"status\":\"1\"}'),
 (124, 'homepage category grid', 'html', '{\"name\":\"homepage category grid\",\"module_description\":{\"1\":{\"title\":\"workout essentials\",\"description\":\"&lt;style&gt;\\r\\n.multipearls-grid-container table{\\r\\n  max-width: 768px !important;\\r\\n  margin: 0 auto;\\r\\n}\\r\\n.multipearls-grid-container td{\\r\\nposition: relative;\\r\\n    border: 0 !important;\\r\\n    width: 384px;\\r\\n    padding: 0!important;\\r\\n}\\r\\n.multipearls-grid-container .table&gt;tbody&gt;tr&gt;td img{\\r\\n  width: 100%;\\r\\n  height: 300px;\\r\\n}\\r\\n.multipearls-grid-container table span{\\r\\n    color: #fff;\\r\\n    font-size: 20px;\\r\\n    position: absolute;\\r\\n    top: 50%;\\r\\n    transform: translate(-100%,-54%);\\r\\n    white-space: nowrap;\\r\\n    background: rgba(18, 17, 17, 0.6);\\r\\n    padding: 0 10px;\\r\\n    letter-spacing: 1px;\\r\\n    display: block;\\r\\n    width: 0;\\r\\n    text-align: center;\\r\\n    transition: 0.5s;\\r\\n    opacity: 0;\\r\\n}\\r\\n.multipearls-grid-container span.even{\\r\\nleft: 100%;\\r\\n}\\r\\n.multipearls-grid-container span.odd{\\r\\nleft: 0;\\r\\n}\\r\\n.multipearls-grid-container td:hover span.odd{\\r\\nleft: 55%;\\r\\n}\\r\\n.multipearls-grid-container td:hover span{\\r\\n    width: 55%;\\r\\n    opacity: 1;\\r\\n    -webkit-animation: slide 0.5s forwards;\\r\\n    -webkit-animation-delay: 0.5s;\\r\\n    animation: slide 0.5s forwards;\\r\\n    animation-delay: 0.5s;\\r\\n}\\r\\n&lt;\\/style&gt;\\r\\n&lt;div class=&quot;multipearls-grid-container&quot;&gt;\\r\\n&lt;h3&gt;EXPLORE OUR TOP CATEGORIES&lt;\\/h3&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;table class=&quot;table&quot;&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;tbody&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;tr&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;td&gt;&lt;img src=&quot;http:\\/\\/localhost\\/multipearls\\/image\\/catalog\\/shoes.jpg&quot;&gt;&lt;span class=&quot;odd&quot;&gt;Men\'s Shoes&lt;\\/span&gt;&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;td&gt;&lt;img src=&quot;http:\\/\\/localhost\\/multipearls\\/image\\/catalog\\/bags.jpeg&quot;&gt;&lt;span class=&quot;even&quot;&gt;Bags&lt;\\/span&gt;&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/tr&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;tr&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;td&gt;&lt;img src=&quot;http:\\/\\/localhost\\/multipearls\\/image\\/catalog\\/jackets.jpeg&quot;&gt;&lt;span class=&quot;odd&quot;&gt;Leather Jackets&lt;\\/span&gt;&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;td&gt;&lt;img src=&quot;http:\\/\\/localhost\\/multipearls\\/image\\/catalog\\/dims.jpeg&quot;&gt;&lt;span class=&quot;even&quot;&gt;Workout Necessities&lt;\\/span&gt;&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/tr&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/tbody&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/table&gt;\\r\\n&lt;\\/div&gt;\"}},\"status\":\"1\"}'),
-(127, 'All Categories Column Layout', 'html', '{\"name\":\"All Categories Column Layout\",\"module_description\":{\"1\":{\"title\":\"categories-in-columns\",\"description\":\"&lt;style&gt;.categories-in-columns .table{    border-collapse: separate;    border-spacing: 30px;    table-layout: fixed;}.categories-in-columns td {   text-transform: uppercase; height: 400px;    border: 2px solid rgba(174, 174, 174, 0.1); padding: 0 !important;}.categories-in-columns .men{    background-image: url(image\\/catalog\\/mens.jpg);    background-size: cover;    background-position: center;}.categories-in-columns .women{    background-image: url(image\\/catalog\\/womens.jpeg);    background-size: cover;    background-position: center;}.categories-in-columns .baby{    background-image: url(image\\/catalog\\/baby.jpg);    background-size: cover;    background-position: center;}.categories-in-columns .kids{    background-image: url(image\\/catalog\\/kids.jpeg);    background-size: cover;    background-position: center;} .categories-in-columns td span{background: #fff; padding: 5px 20px;}&lt;\\/style&gt;&lt;table class=&quot;table&quot;&gt;\\r\\n\\r\\n\\r\\n&lt;tbody&gt;\\r\\n\\r\\n\\r\\n&lt;tr&gt;\\r\\n\\r\\n\\r\\n&lt;td style=&quot;text-align: center;&quot; class=&quot;women&quot;&gt;&lt;h2&gt;&lt;span style=&quot;color: rgb(255, 0, 0); text-decoration-line: underline;&quot;&gt;Women&lt;\\/span&gt;&lt;\\/h2&gt;\\r\\n\\r\\n\\r\\n&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n&lt;td style=&quot;text-align: center;&quot; class=&quot;men&quot;&gt;&lt;h2&gt;&lt;span style=&quot;color: rgb(0, 255, 0); text-decoration-line: underline;&quot;&gt;Men&lt;\\/span&gt;&lt;\\/h2&gt;\\r\\n\\r\\n\\r\\n&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n&lt;td style=&quot;text-align: center;&quot; class=&quot;kids&quot;&gt;&lt;h2&gt;&lt;span style=&quot;color: rgb(156, 0, 255); text-decoration-line: underline;&quot;&gt;Kids&lt;\\/span&gt;&lt;\\/h2&gt;\\r\\n\\r\\n\\r\\n&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n&lt;td style=&quot;text-align: center;&quot; class=&quot;baby&quot;&gt;&lt;h2&gt;&lt;span style=&quot;color: rgb(0, 255, 255); text-decoration-line: underline;&quot;&gt;baby&lt;\\/span&gt;&lt;\\/h2&gt;\\r\\n\\r\\n\\r\\n&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n&lt;\\/tr&gt;\\r\\n\\r\\n\\r\\n&lt;\\/tbody&gt;\\r\\n\\r\\n\\r\\n&lt;\\/table&gt;\"}},\"status\":\"1\"}');
+(127, 'All Categories Column Layout', 'html', '{\"name\":\"All Categories Column Layout\",\"module_description\":{\"1\":{\"title\":\"categories-in-columns\",\"description\":\"&lt;style&gt;.categories-in-columns .table{    border-collapse: separate;    border-spacing: 10px;    table-layout: fixed;}.categories-in-columns td {   position:relative; text-transform: uppercase; height: 400px;    border: 2px solid rgba(174, 174, 174, 0.1); padding: 0 !important;} .categories-in-columns td h2{font-size: 18px; position: absolute;bottom: -20px; margin: 0;transform: translate(-50%,-50%); left: 50%;}.categories-in-columns .men{    background-image: url(image\\/catalog\\/mens.jpg);    background-size: cover;    background-position: center;}.categories-in-columns .women{    background-image: url(image\\/catalog\\/womens.jpeg);    background-size: cover;    background-position: center;}.categories-in-columns .baby{    background-image: url(image\\/catalog\\/baby.jpg);    background-size: cover;    background-position: center;}.categories-in-columns .kids{    background-image: url(image\\/catalog\\/kids.jpeg);    background-size: cover;    background-position: center;} .categories-in-columns td span{background: #fff; padding: 5px 20px;}&lt;\\/style&gt;&lt;table class=&quot;table&quot;&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;tbody&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;tr&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;td style=&quot;text-align: center;&quot; class=&quot;women&quot;&gt;&lt;h2&gt;&lt;span style=&quot;border: 3px solid rgb(255, 0, 0); text-decoration-line: underline;&quot;&gt;Women&lt;\\/span&gt;&lt;\\/h2&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;td style=&quot;text-align: center;&quot; class=&quot;men&quot;&gt;&lt;h2&gt;&lt;span style=&quot;border: 3px solid rgb(0, 255, 0); text-decoration-line: underline;&quot;&gt;Men&lt;\\/span&gt;&lt;\\/h2&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;td style=&quot;text-align: center;&quot; class=&quot;kids&quot;&gt;&lt;h2&gt;&lt;span style=&quot;border: 3px solid rgb(156, 0, 255); text-decoration-line: underline;&quot;&gt;Kids&lt;\\/span&gt;&lt;\\/h2&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;td style=&quot;text-align: center;&quot; class=&quot;baby&quot;&gt;&lt;h2&gt;&lt;span style=&quot;border: 3px solid rgb(0, 255, 255); text-decoration-line: underline;&quot;&gt;baby&lt;\\/span&gt;&lt;\\/h2&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/tr&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/tbody&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/table&gt;\"}},\"status\":\"1\"}'),
+(133, 'special', 'tm_single_category_product', '{\"name\":\"special\",\"path\":\"Men\",\"category\":\"44\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"1\",\"bestseller\":\"0\",\"latest\":\"0\",\"featured\":\"0\",\"product\":\"\",\"limit\":\"20\",\"width\":\"337\",\"height\":\"337\",\"status\":\"1\"}');
 
 -- --------------------------------------------------------
 
@@ -2789,7 +2796,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (71, 'JS18MM1920', 'JS18-WH', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-18.jpg', 11, 1, '142.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 18, 1, 1, '2018-09-23 21:31:57', '2018-11-04 15:48:36'),
 (72, 'JS19MM1920', 'JS19-SKYB', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-19.jpg', 11, 1, '142.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 19, 1, 0, '2018-09-23 21:35:02', '2018-11-04 15:37:09'),
 (73, 'JS20MM1920', 'JS20-BKSB', '', '', '', '', '', '', 2000, 6, 'catalog/01-JS/JS-20.jpg', 11, 1, '152.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 50, 20, 1, 3, '2018-09-23 21:38:11', '2018-11-04 11:54:55'),
-(74, 'NN21MM1920', 'NN21-WH', '', '', '', '', '', '', 2000, 6, 'catalog/02-NN/NN-21.jpg', 11, 1, '154.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 50, 21, 1, 3, '2018-09-23 21:59:58', '2018-11-06 16:43:54'),
+(74, 'NN21MM1920', 'NN21-WH', '', '', '', '', '', '', 2000, 6, 'catalog/02-NN/NN-21.jpg', 11, 1, '154.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 50, 21, 1, 3, '2018-09-23 21:59:58', '2018-11-18 15:11:28'),
 (75, 'NN22MM1920', 'NN22-WH', '', '', '', '', '', '', 2000, 6, 'catalog/02-NN/NN-22.jpg', 11, 1, '175.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 22, 1, 2, '2018-09-23 22:03:32', '2018-11-04 15:48:53'),
 (76, 'NN23MM1920', 'NN23-NB', '', '', '', '', '', '', 2000, 6, 'catalog/02-NN/NN-23.jpg', 11, 1, '175.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 23, 1, 1, '2018-09-23 22:10:12', '2018-11-04 14:44:26'),
 (62, 'JS09MM1920', 'JS09-WH', '', '', '', '', '', '', 1000, 6, 'catalog/01-JS/JS-09.jpg', 11, 1, '142.0000', 0, 0, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 9, 1, 1, '2018-09-22 09:06:01', '2018-11-04 15:48:27'),
@@ -2813,11 +2820,11 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (79, 'NN26MM1920', 'NN26-BK', '', '', '', '', '', '', 2500, 6, 'catalog/02-NN/NN-26.jpg', 11, 1, '175.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 50, 26, 1, 5, '2018-09-23 22:26:24', '2018-11-04 11:55:15'),
 (80, 'DF27MM1920', 'DF27-WH', '', '', '', '', '', '', 2500, 6, 'catalog/03-DF/DF-27.jpg', 11, 1, '165.0000', 0, 9, '2018-09-24', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 27, 1, 1, '2018-09-24 11:30:09', '2018-11-04 12:14:30'),
 (81, 'DF28MM1920', 'DF28-NB', '', '', '', '', '', '', 2500, 6, 'catalog/03-DF/DF-28.jpg', 11, 1, '170.0000', 0, 9, '2018-09-24', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 28, 1, 2, '2018-09-24 11:34:36', '2018-11-04 12:14:22'),
-(82, 'JF29MM1920', 'JF29-BK', '', '', '', '', '', 'India', 20, 5, 'catalog/04-JF/JF-29.jpg', 11, 1, '400.0000', 0, 9, '2018-09-27', '0.25000000', 2, '200.00000000', '0.25000000', '300.00000000', 1, 1, 1, 29, 1, 56, '2018-09-27 23:24:01', '2018-11-17 18:33:47'),
+(82, 'JF29MM1920', 'JF29-BK', '', '', '', '', '', 'India', 200, 5, 'catalog/04-JF/JF-29.jpg', 11, 1, '400.0000', 0, 9, '2018-09-27', '0.25000000', 2, '200.00000000', '0.25000000', '300.00000000', 1, 1, 1, 29, 1, 57, '2018-09-27 23:24:01', '2018-11-18 15:28:55'),
 (83, 'JF30MM1920', 'JF30-YEL', '', '', '', '', '', '', 2000, 6, 'catalog/04-JF/JF-30.jpg', 0, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 30, 1, 0, '2018-09-27 23:25:54', '2018-11-04 15:49:12'),
 (84, 'JF31MM1920', 'JF31-NB', '', '', '', '', '', '', 2000, 6, 'catalog/04-JF/JF-31.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 31, 1, 0, '2018-09-27 23:27:21', '2018-11-04 14:24:59'),
 (85, 'JF33MM1920', 'JF33-OR', '', '', '', '', '', '', 2500, 6, 'catalog/04-JF/JF-33.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 33, 1, 1, '2018-09-27 23:30:33', '2018-11-04 14:44:53'),
-(86, 'JF34MM1920', 'JF34-BK', '', '', '', '', '', '', 2000, 6, 'catalog/04-JF/JF-34.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 50, 34, 1, 3, '2018-09-27 23:36:59', '2018-11-04 11:53:50'),
+(86, 'JF34MM1920', 'JF34-BK', '', '', '', '', '', '', 2000, 6, 'catalog/04-JF/JF-34.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 50, 34, 1, 3, '2018-09-27 23:36:59', '2018-11-18 15:14:49'),
 (87, 'NF35MM1920', 'NF35-YEL', '', '', '', '', '', '', 1500, 6, 'catalog/05-NF/NF-35.jpg', 11, 1, '184.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 35, 1, 1, '2018-09-27 23:45:40', '2018-11-04 15:49:24'),
 (88, 'NF36MM1920', 'NF36-BLSB', '', '', '', '', '', '', 1500, 6, 'catalog/05-NF/NF-36.jpg', 11, 1, '207.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 36, 1, 1, '2018-09-27 23:48:16', '2018-11-04 14:10:59'),
 (89, 'NF37MM1920', 'NF37-GRY', '', '', '', '', '', '', 1500, 6, 'catalog/05-NF/NF-37.jpg', 11, 1, '194.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 37, 1, 1, '2018-09-27 23:51:16', '2018-11-04 14:08:44'),
@@ -3119,7 +3126,9 @@ INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `custome
 (40, 58, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
 (41, 59, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
 (38, 60, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
-(83, 82, 2, 200, 1, '160.0000', '0000-00-00', '0000-00-00');
+(95, 82, 1, 300, 1, '160.0000', '2018-11-18', '2018-11-19'),
+(88, 74, 1, 200, 1, '160.0000', '2018-11-18', '2018-11-19'),
+(87, 74, 2, 1, 2, '300.0000', '2018-11-18', '2018-11-19');
 
 -- --------------------------------------------------------
 
@@ -3155,7 +3164,7 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (540, 77, 'catalog/02-NN/NN-24-CUT-1.jpg', 2),
 (571, 78, 'catalog/02-NN/NN-25-CUT-1.jpg', 2),
 (570, 78, 'catalog/02-NN/NN-25-CUT.jpg', 1),
-(655, 82, 'catalog/04-JF/JF-29-cut.jpg', 1),
+(673, 82, 'catalog/04-JF/JF-29-cut.jpg', 1),
 (468, 79, 'catalog/02-NN/NN-26-CUT-2.jpg', 3),
 (485, 81, 'catalog/03-DF/DF-28-cut.jpg', 1),
 (467, 79, 'catalog/02-NN/NN-26-CUT-1.jpg', 2),
@@ -3172,8 +3181,8 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (473, 69, 'catalog/01-JS/JS-16-cut.jpg', 1),
 (465, 73, 'catalog/01-JS/JS-20-cut.jpg', 1),
 (471, 70, 'catalog/01-JS/JS-17-cut.jpg', 1),
-(621, 74, 'catalog/02-NN/NN-21-CUT-1.jpg', 2),
-(620, 74, 'catalog/02-NN/NN-21-CUT.jpg', 1),
+(660, 74, 'catalog/02-NN/NN-21-CUT-1.jpg', 2),
+(659, 74, 'catalog/02-NN/NN-21-CUT.jpg', 1),
 (602, 75, 'catalog/02-NN/NN-22-CUT-1.jpg', 2),
 (601, 75, 'catalog/02-NN/NN-22-CUT.jpg', 1),
 (528, 76, 'catalog/02-NN/NN-23-CUT-1.jpg', 2),
@@ -3192,9 +3201,9 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (572, 58, 'catalog/01-JS/white and royal blue matching.jpg', 1),
 (578, 59, 'catalog/01-JS/tri color sublimation print.jpg', 1),
 (523, 60, 'catalog/01-JS/Ultra Coling System Matching Fabric red.jpg', 1),
-(461, 86, 'catalog/04-JF/JF-34-cut-2.jpg', 3),
-(460, 86, 'catalog/04-JF/JF-34-cut-1.jpg', 2),
-(459, 86, 'catalog/04-JF/JF-34-cut.jpg', 1),
+(671, 86, 'catalog/04-JF/JF-34-cut-2.jpg', 3),
+(670, 86, 'catalog/04-JF/JF-34-cut-1.jpg', 2),
+(669, 86, 'catalog/04-JF/JF-34-cut.jpg', 1),
 (608, 87, 'catalog/05-NF/NF-35-cut-1.jpg', 4),
 (607, 87, 'catalog/05-NF/NF-35-cut-2.jpg', 3),
 (606, 87, 'catalog/05-NF/NF-35-cut-3.jpg', 2),
@@ -4598,8 +4607,9 @@ CREATE TABLE `oc_product_special` (
 --
 
 INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(65, 74, 1, 1, '150.0000', '2018-11-06', '2018-11-13'),
-(69, 82, 2, 1, '120.0000', '0000-00-00', '0000-00-00');
+(72, 74, 1, 1, '150.0000', '2018-11-18', '2018-11-19'),
+(81, 82, 1, 1, '300.0000', '2018-11-18', '2018-11-29'),
+(79, 86, 2, 1, '100.0000', '2018-11-18', '2018-11-22');
 
 -- --------------------------------------------------------
 
@@ -11976,7 +11986,7 @@ ALTER TABLE `oc_customer`
 -- AUTO_INCREMENT for table `oc_customer_activity`
 --
 ALTER TABLE `oc_customer_activity`
-  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 --
 -- AUTO_INCREMENT for table `oc_customer_approval`
 --
@@ -12086,12 +12096,12 @@ ALTER TABLE `oc_layout`
 -- AUTO_INCREMENT for table `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
-  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1816;
+  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1954;
 --
 -- AUTO_INCREMENT for table `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
-  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=386;
+  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=399;
 --
 -- AUTO_INCREMENT for table `oc_length_class`
 --
@@ -12126,7 +12136,7 @@ ALTER TABLE `oc_modification`
 -- AUTO_INCREMENT for table `oc_module`
 --
 ALTER TABLE `oc_module`
-  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 --
 -- AUTO_INCREMENT for table `oc_option`
 --
@@ -12201,12 +12211,12 @@ ALTER TABLE `oc_product`
 -- AUTO_INCREMENT for table `oc_product_discount`
 --
 ALTER TABLE `oc_product_discount`
-  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 --
 -- AUTO_INCREMENT for table `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=656;
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=674;
 --
 -- AUTO_INCREMENT for table `oc_product_option`
 --
@@ -12226,7 +12236,7 @@ ALTER TABLE `oc_product_reward`
 -- AUTO_INCREMENT for table `oc_product_special`
 --
 ALTER TABLE `oc_product_special`
-  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 --
 -- AUTO_INCREMENT for table `oc_recurring`
 --
