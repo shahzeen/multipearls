@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2018 at 01:36 PM
+-- Generation Time: Nov 18, 2018 at 01:47 PM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -362,9 +362,6 @@ INSERT INTO `oc_cart` (`cart_id`, `customer_id`, `session_id`, `product_id`, `re
 (28, 10, 'nmbvfm83biutlabejbgat2bdf4', 47, 0, '{\"33\":\"75\",\"34\":\"78\"}', 1, '2015-11-27 17:07:13'),
 (29, 10, 'nmbvfm83biutlabejbgat2bdf4', 28, 0, '{\"1\":\"2\",\"2\":\"6\"}', 1, '2015-11-27 17:07:36'),
 (40, 4, 'de27o4uri196e93nodvblr6fec', 82, 0, '[]', 200, '2018-11-05 12:43:33'),
-(42, 5, 'lq0mcqcdqlikn6b94hcgl7ubs5', 82, 0, '[]', 1, '2018-11-11 17:33:24'),
-(43, 5, 'lq0mcqcdqlikn6b94hcgl7ubs5', 171, 0, '{\"143\":\"541\"}', 1, '2018-11-11 17:33:41'),
-(45, 5, 'lq0mcqcdqlikn6b94hcgl7ubs5', 158, 0, '{\"130\":\"476\"}', 1, '2018-11-11 17:38:49'),
 (67, 6, 'ddtfmomahda53jljff27m49dc7', 82, 0, '{\"162\":\"636\",\"163\":\"639\"}', 1, '2018-11-11 22:46:13');
 
 -- --------------------------------------------------------
@@ -396,7 +393,7 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (28, 'catalog/blog/post-10.jpg', 18, 1, 2, 2, 1, '2009-02-02 13:11:12', '2018-09-18 09:55:12'),
 (29, 'catalog/product-40.png', 18, 1, 0, 1, 1, '2009-02-02 13:11:37', '2018-09-18 09:54:35'),
 (30, 'catalog/product-11.png', 18, 0, 1, 3, 1, '2009-02-02 13:11:59', '2018-08-26 18:03:54'),
-(31, 'catalog/product-10.png', 18, 0, 1, 4, 1, '2009-02-03 14:17:24', '2018-08-30 19:16:46'),
+(31, 'catalog/product-10.png', 18, 0, 1, 4, 1, '2009-02-03 14:17:24', '2018-11-18 18:16:13'),
 (32, 'catalog/product-1.png', 18, 1, 1, 5, 1, '2009-02-03 14:17:34', '2018-08-30 18:38:22'),
 (33, 'catalog/product-36.png', 18, 0, 1, 6, 1, '2009-02-03 14:17:55', '2018-08-26 18:11:58'),
 (54, '', 37, 0, 1, 2, 1, '2018-09-18 09:38:07', '2018-11-04 17:26:00'),
@@ -580,7 +577,7 @@ INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VAL
 (28, 0, 0),
 (32, 0, 0),
 (30, 0, 0),
-(31, 0, 4),
+(31, 0, 0),
 (33, 0, 0),
 (38, 0, 0),
 (37, 0, 0),
@@ -1117,7 +1114,8 @@ INSERT INTO `oc_customer_activity` (`activity_id`, `customer_id`, `key`, `data`,
 (36, 6, 'return_account', '{\"customer_id\":\"6\",\"name\":\"normal test\",\"return_id\":1}', '::1', '2018-11-11 21:42:32'),
 (37, 6, 'order_account', '{\"customer_id\":\"6\",\"name\":\"normal test\",\"order_id\":7}', '::1', '2018-11-11 22:03:05'),
 (38, 6, 'order_account', '{\"customer_id\":\"6\",\"name\":\"normal test\",\"order_id\":8}', '::1', '2018-11-11 22:25:23'),
-(39, 5, 'login', '{\"customer_id\":\"5\",\"name\":\"wholesaler test\"}', '::1', '2018-11-18 14:49:39');
+(39, 5, 'login', '{\"customer_id\":\"5\",\"name\":\"wholesaler test\"}', '::1', '2018-11-18 14:49:39'),
+(40, 5, 'login', '{\"customer_id\":\"5\",\"name\":\"wholesaler test\"}', '::1', '2018-11-18 18:09:10');
 
 -- --------------------------------------------------------
 
@@ -1277,7 +1275,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/index.php?route=common/home', '2018-11-18 13:35:14');
+('::1', 5, 'http://localhost/multipearls/', 'http://localhost/multipearls/index.php?route=product/category&amp;path=31', '2018-11-18 13:46:20');
 
 -- --------------------------------------------------------
 
@@ -2921,7 +2919,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (183, 'M136MM1920', 'M136-GRY', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-136.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 136, 1, 2, '2018-10-07 18:03:11', '2018-11-04 14:11:28'),
 (184, 'M137MM1920', 'M137-RED', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-137.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 137, 1, 0, '2018-10-07 18:04:01', '2018-11-04 14:11:39'),
 (185, 'M138MM1920', 'M138-LIBLUE', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-138.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 138, 1, 0, '2018-10-07 18:04:55', '2018-11-04 14:11:49'),
-(186, 'M139MM1920', 'M139-RB', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-139.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 139, 1, 0, '2018-10-07 18:05:38', '2018-11-04 14:12:25'),
+(186, 'M139MM1920', 'M139-RB', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-139.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 139, 1, 1, '2018-10-07 18:05:38', '2018-11-04 14:12:25'),
 (187, 'M140MM1920', 'M140-BK', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-140.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 140, 1, 2, '2018-10-07 18:07:21', '2018-11-04 14:12:34'),
 (188, 'M142MM1920', 'M142-LIYEL', '', '', '', '', '', '', 1500, 6, 'catalog/16-M/M-134.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 142, 1, 0, '2018-10-07 18:08:17', '2018-11-04 14:12:45');
 
@@ -6602,7 +6600,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (1326, 'category_id=38', ''),
 (1374, 'category_id=29', 'T-shirts'),
 (1299, 'category_id=30', 'Van'),
-(1337, 'category_id=31', 'Motorhome'),
+(1555, 'category_id=31', 'Motorhome'),
 (1331, 'category_id=32', 'Motorsports'),
 (1301, 'category_id=33', 'Classic cars'),
 (1544, 'product_id=28', 'Electro Tri Colour Jersey With Collar'),
@@ -11946,7 +11944,7 @@ ALTER TABLE `oc_banner_image`
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 --
 -- AUTO_INCREMENT for table `oc_category`
 --
@@ -11986,7 +11984,7 @@ ALTER TABLE `oc_customer`
 -- AUTO_INCREMENT for table `oc_customer_activity`
 --
 ALTER TABLE `oc_customer_activity`
-  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT for table `oc_customer_approval`
 --
@@ -12381,7 +12379,7 @@ ALTER TABLE `oc_upload`
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1553;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1556;
 --
 -- AUTO_INCREMENT for table `oc_user`
 --
