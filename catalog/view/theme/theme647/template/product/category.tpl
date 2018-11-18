@@ -39,7 +39,7 @@
 						}
 						?>
 						<li class=" <?php echo $a. $last_line ;?> col-md-2">
-							<div class="">
+							<div style="position: relative;">
 								<?php if ($category['thumb']) { ?>
 								<div class="image"><a href="<?php echo $category['href']; ?>"><img src="<?php echo $category['thumb']; ?>" alt="<?php echo $category['name']; ?>" /></a></div>
 								<?php } ?>

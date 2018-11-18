@@ -4672,6 +4672,12 @@ aside #blog-search a:hover {
 .box-subcat li .name {
   border: 1px solid #e0e0e0;
   padding: 5px 10px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: rgba(17, 17, 17, 0.51);
+  color: #fffcfc;
 }
 .box-subcat li .name a {
   text-transform: uppercase;
