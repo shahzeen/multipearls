@@ -443,7 +443,9 @@
 																			<a class="counter counter-plus material-design-add186" href='#'></a>
 																			<button type="button" id="button-cart"
 																			data-loading-text="<?php echo $text_loading; ?>"
-																			class="product-btn-add"><?php echo $button_cart; ?></button>
+																			class="product-btn"><?php echo $button_cart; ?></button>
+																			<button class="product-btn" onclick="wishlist.add('<?php echo $product_id; ?>');">
+																			<span><?php echo $button_wishlist; ?></span></button>
 																		</div>
 																	</div>
 																	<?php if ($minimum > 1) { ?>
@@ -454,14 +456,7 @@
 
 																</div>
 
-																<ul class="product-buttons">
-																	<li>
-																		<button class="product-btn" onclick="wishlist.add('<?php echo $product_id; ?>');">
-																			<span><?php echo $button_wishlist; ?></span></button>
-																		</li>
-																	</ul>
-
-																	<?php if ($tags) { ?>
+																<?php if ($tags) { ?>
 																	<!-- Product tags -->
 																	<div class="product-tags">
 																		<?php echo $text_tags; ?>
