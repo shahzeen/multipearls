@@ -14,9 +14,8 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
-      <label class="control-label" for="input-search"><?php echo $entry_search; ?></label>
-      <div class="row">
+      <label class="control-label" for="input-search"><b><?php echo $entry_search; ?></b></label>
+      <div class="row" style="margin-bottom: 30px;">
         <div class="col-sm-4">
           <input type="text" name="search" value="<?php echo $search; ?>" placeholder="<?php echo $text_keyword; ?>" id="input-search" class="form-control" />
         </div>
@@ -57,6 +56,7 @@
         </div>
       </div>
       <p>
+        <input type="button" value="<?php echo $button_search; ?>" id="button-search" class="btn btn-primary" />
         <label class="checkbox-inline">
           <?php if ($description) { ?>
           <input type="checkbox" name="description" value="1" id="description" checked="checked" />
@@ -65,7 +65,6 @@
           <?php } ?>
           <?php echo $entry_description; ?></label>
       </p>
-      <input type="button" value="<?php echo $button_search; ?>" id="button-search" class="btn btn-primary" />
       <h2><?php echo $text_search; ?></h2>
       <?php if ($products) { ?>
       <p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p>

@@ -14,14 +14,13 @@
 	<?php $class = 'col-sm-12'; ?>
 	<?php } ?>
 	<div id="content" class="<?php echo $class; ?> tb-space"><?php echo $content_top; ?>
-	  <h1><?php echo $heading_title; ?></h1>
-	  <label class="control-label" for="input-search"><?php echo $entry_search; ?></label>
-	  <div class="row">
-		<div class="col-sm-4">
+	  <label class="control-label" for="input-search"><b><?php echo $entry_search; ?></b></label>
+	  <div class="row" style="margin-bottom: 30px;">
+		<div class="col-sm-6  col-md-3">
 		  <input type="text" name="search" value="<?php echo $search; ?>" placeholder="<?php echo $text_keyword; ?>" id="input-search" class="form-control" />
 			<br />
 		</div>
-		<div class="col-sm-8 col-md-5">
+		<div class="col-sm-6 col-md-3">
 		  <select name="category_id" class="form-control">
 			<option value="0"><?php echo $text_category; ?></option>
 			<?php foreach ($categories as $category_1) { ?>
@@ -46,29 +45,28 @@
 			<?php } ?>
 			<?php } ?>
 		  </select>
-			<br />
 		</div>
-		<div class="col-sm-12 col-lg-3">
-		  <label class="checkbox-inline">
-			<?php if ($sub_category) { ?>
-			<input type="checkbox" name="sub_category" value="1" checked="checked" />
-			<?php } else { ?>
-			<input type="checkbox" name="sub_category" value="1" />
-			<?php } ?>
-			<?php echo $text_sub_category; ?></label>
-		</div>
+		<div class="col-sm-6 col-md-6">
+        <label class="checkbox-inline">
+                <?php if ($sub_category) { ?>
+                <input type="checkbox" name="sub_category" value="1" checked="checked" />
+                <?php } else { ?>
+                <input type="checkbox" name="sub_category" value="1" />
+                <?php } ?>
+                <?php echo $text_sub_category; ?>
+        </label>
+        <label class="checkbox-inline">
+            <?php if ($description) { ?>
+            <input type="checkbox" name="description" value="1" id="description" checked="checked" />
+            <?php } else { ?>
+            <input type="checkbox" name="description" value="1" id="description" />
+            <?php } ?>
+            <?php echo $entry_description; ?>
+        </label>
+        <input type="button" value="<?php echo $button_search; ?>" id="button-search" class="btn btn-primary" />
+	    </div>
 	  </div>
-	  <p>
-		<label class="checkbox-inline">
-		  <?php if ($description) { ?>
-		  <input type="checkbox" name="description" value="1" id="description" checked="checked" />
-		  <?php } else { ?>
-		  <input type="checkbox" name="description" value="1" id="description" />
-		  <?php } ?>
-		  <?php echo $entry_description; ?></label>
-	  </p>
-	  <input type="button" value="<?php echo $button_search; ?>" id="button-search" class="btn btn-primary" />
-	  <h2><?php echo $text_search; ?></h2>
+	  <h3><?php echo $text_search; ?></h3>
 	  <?php if ($products) { ?>
           <div class="product-filter clearfix">
               <div class="product-filter_elem">
