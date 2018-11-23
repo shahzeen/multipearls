@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2018 at 09:52 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.1.4
+-- Generation Time: Nov 23, 2018 at 09:53 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -395,7 +395,8 @@ INSERT INTO `oc_cart` (`cart_id`, `customer_id`, `session_id`, `product_id`, `re
 (29, 10, 'nmbvfm83biutlabejbgat2bdf4', 28, 0, '{\"1\":\"2\",\"2\":\"6\"}', 1, '2015-11-27 17:07:36'),
 (40, 4, 'de27o4uri196e93nodvblr6fec', 82, 0, '[]', 200, '2018-11-05 12:43:33'),
 (67, 6, 'ddtfmomahda53jljff27m49dc7', 82, 0, '{\"162\":\"636\",\"163\":\"639\"}', 1, '2018-11-11 22:46:13'),
-(80, 5, 'mdjrln6bjkep65edd3kpmil7b7', 55, 0, '{\"56\":\"109\"}', 50, '2018-11-20 22:02:17');
+(80, 5, 'mdjrln6bjkep65edd3kpmil7b7', 55, 0, '{\"56\":\"109\"}', 50, '2018-11-20 22:02:17'),
+(83, 0, 'epofc87hn5mvt25qbfghl45ss1', 93, 0, '{\"65\":\"153\"}', 1, '2018-11-23 14:14:19');
 
 -- --------------------------------------------------------
 
@@ -448,7 +449,7 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (66, '', 59, 0, 1, 2, 1, '2018-11-04 17:28:40', '2018-11-04 17:28:40'),
 (67, '', 59, 0, 1, 3, 1, '2018-11-04 17:29:09', '2018-11-04 17:29:33'),
 (68, '', 59, 0, 1, 1, 1, '2018-11-04 17:30:50', '2018-11-04 17:30:50'),
-(69, '', 0, 0, 1, 6, 1, '2018-11-20 09:56:05', '2018-11-20 09:57:19');
+(69, '', 0, 0, 1, 6, 0, '2018-11-20 09:56:05', '2018-11-23 14:21:56');
 
 -- --------------------------------------------------------
 
@@ -499,7 +500,7 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (66, 1, 'Footwear', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Girls Footwear', 'Girls Footwear', 'Girls Footwear'),
 (67, 1, 'Accessories', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Girls Accessories', 'Girls Accessories', 'Girls Accessories'),
 (68, 1, 'Clothing', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Girls Clothing', 'Girls Clothing', 'Girls Clothing'),
-(69, 1, 'Special ', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Special ', '', '');
+(69, 1, 'All Categories', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'All Categories', '', '');
 
 -- --------------------------------------------------------
 
@@ -1054,7 +1055,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 (1, 'Pound Sterling', 'GBP', '£', '', '2', 0.67280000, 0, '2018-11-11 20:06:09'),
 (2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 0, '2018-11-11 20:06:15'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.91270000, 0, '2018-11-11 20:06:02'),
-(5, 'Indian Rupees', 'INR', '₹', '', '0', 1.00000000, 1, '2018-11-22 09:18:31');
+(5, 'Indian Rupees', 'INR', '₹', '', '0', 1.00000000, 1, '2018-11-23 06:37:01');
 
 -- --------------------------------------------------------
 
@@ -1314,7 +1315,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/', '2018-11-22 09:18:20');
+('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/index.php?route=common/home', '2018-11-23 09:52:04');
 
 -- --------------------------------------------------------
 
@@ -2944,12 +2945,12 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (108, 'TM Newsletter Popup', 'tm_newsletter_popup', '{\"name\":\"TM Newsletter Popup\",\"newsletter_popup_bg\":\"\",\"newsletter_popup_bg_width\":\"\",\"newsletter_popup_bg_height\":\"\",\"newsletter_popup_cookie\":\"60\",\"tm_newsletter_popup_description\":{\"1\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"2\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"},\"3\":{\"title\":\"Newsletter\",\"description\":\"Subscribe to the Tires list to receive updates on new arrivals,  special offers \\r\\nand other discount information.\"}},\"status\":\"1\"}'),
 (112, 'Order Specification', 'html', '{\"name\":\"Order Specification\",\"module_description\":{\"1\":{\"title\":\"Order Specification\",\"description\":\"&lt;style&gt;.Order.Specification{background: #fafafa;    padding: 10px;    margin: 0 auto;}.Order.Specification .flex-list div{background: rgba(17, 17, 17, 0.58);    color: #eee;    padding: 5px;    font-size: 14px;}.Order.Specification .flex-list{background: #fff; margin-bottom: 0;}.Order.Specification .dispatch{background-image: url(image\\/catalog\\/OrderSpecification\\/delivery.jpg);background-size: 100% 100%;    background-repeat: no-repeat;}.Order.Specification .checking{background-image: url(image\\/catalog\\/checking.jpg);background-size: 100% 100%;    background-repeat: no-repeat;}.Order.Specification .min-order{background-image: url(image\\/catalog\\/min-order.jpg);background-size: 100% 100%;    background-repeat: no-repeat;}&lt;\\/style&gt;&lt;ul class=&quot;flex-list&quot;&gt;\\t&lt;li class=&quot;dispatch&quot;&gt;\\t\\t\\t\\t\\t&lt;div&gt;Dispatch within 24 hours&lt;br&gt;On Printing &amp;amp; Embroidery&lt;\\/div&gt;\\t\\t\\t&lt;\\/li&gt;\\t&lt;li class=&quot;min-order&quot;&gt;\\t\\t\\t\\t\\t&lt;div&gt;No Minimum order&lt;br&gt;Order From 100 to 50000+&lt;\\/div&gt;\\t\\t\\t&lt;\\/li&gt;\\t&lt;li class=&quot;checking&quot;&gt;\\t\\t\\t\\t\\t&lt;div&gt;Every Order Checked&lt;br&gt;By Our Expert Team&lt;\\/div&gt;\\t\\t\\t&lt;\\/li&gt;&lt;\\/ul&gt;\"}},\"status\":\"1\"}'),
 (120, 'featured', 'featured', '{\"name\":\"featured\",\"product\":[\"82\",\"63\",\"68\",\"183\",\"79\",\"89\",\"74\"],\"limit\":\"10\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
-(121, 'featured', 'tm_single_category_product', '{\"name\":\"featured\",\"path\":\"Men\",\"category\":\"44\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"0\",\"bestseller\":\"0\",\"latest\":\"0\",\"featured\":\"1\",\"product\":[\"82\",\"86\",\"79\",\"126\",\"128\",\"130\",\"131\"],\"limit\":\"20\",\"width\":\"337\",\"height\":\"337\",\"status\":\"1\"}'),
+(121, 'featured', 'tm_single_category_product', '{\"name\":\"featured\",\"path\":\"Special \",\"category\":\"69\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"0\",\"bestseller\":\"0\",\"latest\":\"0\",\"featured\":\"1\",\"product\":[\"82\",\"86\",\"79\",\"126\",\"128\",\"130\",\"131\",\"60\"],\"limit\":\"20\",\"width\":\"337\",\"height\":\"337\",\"status\":\"1\"}'),
 (124, 'homepage category grid', 'html', '{\"name\":\"homepage category grid\",\"module_description\":{\"1\":{\"title\":\"workout essentials\",\"description\":\"&lt;style&gt;\\r\\n.multipearls-grid-container table{\\r\\n  max-width: 768px !important;\\r\\n  margin: 0 auto;\\r\\n}\\r\\n.multipearls-grid-container td{\\r\\nposition: relative;\\r\\n    border: 0 !important;\\r\\n    width: 384px;\\r\\n    padding: 0!important;\\r\\n}\\r\\n.multipearls-grid-container .table&gt;tbody&gt;tr&gt;td img{\\r\\n  width: 100%;\\r\\n  height: 300px;\\r\\n}\\r\\n.multipearls-grid-container table span{\\r\\n    color: #fff;\\r\\n    font-size: 20px;\\r\\n    position: absolute;\\r\\n    top: 50%;\\r\\n    transform: translate(-100%,-54%);\\r\\n    white-space: nowrap;\\r\\n    background: rgba(18, 17, 17, 0.6);\\r\\n    padding: 0 10px;\\r\\n    letter-spacing: 1px;\\r\\n    display: block;\\r\\n    width: 0;\\r\\n    text-align: center;\\r\\n    transition: 0.5s;\\r\\n    opacity: 0;\\r\\n}\\r\\n.multipearls-grid-container span.even{\\r\\nleft: 100%;\\r\\n}\\r\\n.multipearls-grid-container span.odd{\\r\\nleft: 0;\\r\\n}\\r\\n.multipearls-grid-container td:hover span.odd{\\r\\nleft: 55%;\\r\\n}\\r\\n.multipearls-grid-container td:hover span{\\r\\n    width: 55%;\\r\\n    opacity: 1;\\r\\n    -webkit-animation: slide 0.5s forwards;\\r\\n    -webkit-animation-delay: 0.5s;\\r\\n    animation: slide 0.5s forwards;\\r\\n    animation-delay: 0.5s;\\r\\n}\\r\\n&lt;\\/style&gt;\\r\\n&lt;div class=&quot;multipearls-grid-container&quot;&gt;\\r\\n&lt;h3&gt;EXPLORE OUR TOP CATEGORIES&lt;\\/h3&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;table class=&quot;table&quot;&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;tbody&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;tr&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;td&gt;&lt;img src=&quot;http:\\/\\/localhost\\/multipearls\\/image\\/catalog\\/shoes.jpg&quot;&gt;&lt;span class=&quot;odd&quot;&gt;Men\'s Shoes&lt;\\/span&gt;&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;td&gt;&lt;img src=&quot;http:\\/\\/localhost\\/multipearls\\/image\\/catalog\\/bags.jpeg&quot;&gt;&lt;span class=&quot;even&quot;&gt;Bags&lt;\\/span&gt;&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/tr&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;tr&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;td&gt;&lt;img src=&quot;http:\\/\\/localhost\\/multipearls\\/image\\/catalog\\/jackets.jpeg&quot;&gt;&lt;span class=&quot;odd&quot;&gt;Leather Jackets&lt;\\/span&gt;&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;td&gt;&lt;img src=&quot;http:\\/\\/localhost\\/multipearls\\/image\\/catalog\\/dims.jpeg&quot;&gt;&lt;span class=&quot;even&quot;&gt;Workout Necessities&lt;\\/span&gt;&lt;\\/td&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/tr&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/tbody&gt;\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n&lt;\\/table&gt;\\r\\n&lt;\\/div&gt;\"}},\"status\":\"1\"}'),
 (127, 'All Categories Column Layout', 'html', '{\"name\":\"All Categories Column Layout\",\"module_description\":{\"1\":{\"title\":\"categories-in-columns\",\"description\":\"&lt;style&gt;.categories-in-columns .table{    border-collapse: separate;    border-spacing: 10px;    table-layout: fixed;}.categories-in-columns td {   position:relative; text-transform: uppercase; height: 400px;    border: 2px solid rgba(174, 174, 174, 0.1); padding: 0 !important;} .categories-in-columns td h2{font-size: 18px; position: absolute;bottom: -20px; margin: 0;transform: translate(-50%,-50%); left: 50%;}.categories-in-columns .men{    background-image: url(image\\/catalog\\/categories-in-columns\\/men_clothing.jpg);    background-size: cover;    background-position: center;}.categories-in-columns .women{    background-image: url(image\\/catalog\\/categories-in-columns\\/4139.jpg);    background-size: cover;    background-position: center;}.categories-in-columns .baby{    background-image: url(image\\/catalog\\/categories-in-columns\\/Baby_clothing.jpg);    background-size: cover;    background-position: center;}.categories-in-columns .kids{    background-image: url(image\\/catalog\\/categories-in-columns\\/kids_clothing.jpg);    background-size: cover;    background-position: center;} .categories-in-columns td span{background: #fff; padding: 5px 20px;}&lt;\\/style&gt;&lt;table class=&quot;table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot; class=&quot;women&quot;&gt;&lt;h2&gt;&lt;span style=&quot;border: 3px solid rgb(255, 0, 0); text-decoration-line: underline;&quot;&gt;Women&lt;\\/span&gt;&lt;\\/h2&gt;&lt;\\/td&gt;&lt;td style=&quot;text-align: center;&quot; class=&quot;men&quot;&gt;&lt;h2&gt;&lt;span style=&quot;border: 3px solid rgb(0, 255, 0); text-decoration-line: underline;&quot;&gt;Men&lt;\\/span&gt;&lt;\\/h2&gt;&lt;\\/td&gt;&lt;td style=&quot;text-align: center;&quot; class=&quot;kids&quot;&gt;&lt;h2&gt;&lt;span style=&quot;border: 3px solid rgb(156, 0, 255); text-decoration-line: underline;&quot;&gt;Kids&lt;\\/span&gt;&lt;\\/h2&gt;&lt;\\/td&gt;&lt;td style=&quot;text-align: center;&quot; class=&quot;baby&quot;&gt;&lt;h2&gt;&lt;span style=&quot;border: 3px solid rgb(0, 255, 255); text-decoration-line: underline;&quot;&gt;baby&lt;\\/span&gt;&lt;\\/h2&gt;&lt;\\/td&gt;&lt;\\/tr&gt;&lt;\\/tbody&gt;&lt;\\/table&gt;\"}},\"status\":\"1\"}'),
-(129, 'latest', 'tm_single_category_product', '{\"name\":\"latest\",\"path\":\"Men\",\"category\":\"44\",\"tabs\":\"1\",\"type\":\"2\",\"special\":\"0\",\"bestseller\":\"0\",\"latest\":\"1\",\"featured\":\"0\",\"product\":\"\",\"limit\":\"20\",\"width\":\"337\",\"height\":\"337\",\"status\":\"1\"}'),
-(133, 'special', 'tm_single_category_product', '{\"name\":\"special\",\"path\":\"Men\",\"category\":\"44\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"1\",\"bestseller\":\"0\",\"latest\":\"0\",\"featured\":\"0\",\"product\":\"\",\"limit\":\"20\",\"width\":\"337\",\"height\":\"337\",\"status\":\"1\"}'),
-(134, 'best seller', 'tm_single_category_product', '{\"name\":\"best seller\",\"path\":\"Men\",\"category\":\"44\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"0\",\"bestseller\":\"1\",\"latest\":\"0\",\"featured\":\"0\",\"product\":\"\",\"limit\":\"20\",\"width\":\"337\",\"height\":\"337\",\"status\":\"1\"}'),
+(129, 'latest', 'tm_single_category_product', '{\"name\":\"latest\",\"path\":\"Special \",\"category\":\"69\",\"tabs\":\"1\",\"type\":\"2\",\"special\":\"0\",\"bestseller\":\"0\",\"latest\":\"1\",\"featured\":\"0\",\"product\":\"\",\"limit\":\"20\",\"width\":\"337\",\"height\":\"337\",\"status\":\"1\"}'),
+(133, 'special', 'tm_single_category_product', '{\"name\":\"special\",\"path\":\"Special \",\"category\":\"69\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"1\",\"bestseller\":\"0\",\"latest\":\"0\",\"featured\":\"0\",\"product\":\"\",\"limit\":\"20\",\"width\":\"337\",\"height\":\"337\",\"status\":\"1\"}'),
+(134, 'best seller', 'tm_single_category_product', '{\"name\":\"best seller\",\"path\":\"Special \",\"category\":\"69\",\"tabs\":\"1\",\"type\":\"3\",\"special\":\"0\",\"bestseller\":\"1\",\"latest\":\"0\",\"featured\":\"0\",\"product\":\"\",\"limit\":\"20\",\"width\":\"337\",\"height\":\"337\",\"status\":\"1\"}'),
 (135, 'ALL OFFER', 'tm_module_tab', '{\"name\":\"ALL OFFER\",\"special\":\"1\",\"bestseller\":\"1\",\"latest\":\"1\",\"featured\":\"1\",\"product\":[\"82\",\"86\",\"91\",\"61\",\"74\"],\"limit\":\"25\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}');
 
 -- --------------------------------------------------------
@@ -3044,9 +3045,9 @@ INSERT INTO `oc_option_value` (`option_value_id`, `option_id`, `image`, `sort_or
 (46, 11, '', 1),
 (47, 11, '', 2),
 (48, 11, '', 3),
-(49, 13, 'catalog/01-JS/JS-13.jpg', 2),
-(52, 13, 'catalog/01-JS/Black and Red Matching.jpg', 0),
-(53, 13, 'catalog/01-JS/JS-14-cut.jpg', 1),
+(49, 13, 'catalog/red.png', 2),
+(52, 13, 'catalog/calendar-icon-solid-black.png', 0),
+(53, 13, 'catalog/white.png', 1),
 (54, 11, '', 4),
 (55, 11, '', 5),
 (56, 11, '', 6),
@@ -3504,14 +3505,14 @@ CREATE TABLE `oc_product` (
 --
 
 INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`) VALUES
-(28, 'JS01MM1920', 'JS01-WH', '', '', '', '', '', 'India', 3000, 7, 'catalog/JS-01.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 1, 1, 90, '2009-02-03 16:06:50', '2018-11-20 22:51:08'),
+(28, 'JS01MM1920', 'JS01-WH', '', '', '', '', '', 'India', 3000, 7, 'catalog/JS-01.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 1, 1, 99, '2009-02-03 16:06:50', '2018-11-20 22:51:08'),
 (55, 'JS02MM1920', 'JS02-BK', '', '', '', '', '', 'India', 3000, 7, 'catalog/JS-02.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 50, 2, 1, 10, '2018-09-20 11:49:52', '2018-11-04 11:58:24'),
-(56, 'JS03MM1920', 'JS03-PK', '', '', '', '', '', 'India', 3000, 7, 'catalog/01-JS/JS-03.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 3, 1, 9, '2018-09-20 12:04:07', '2018-11-04 14:45:20'),
+(56, 'JS03MM1920', 'JS03-PK', '', '', '', '', '', 'India', 3000, 7, 'catalog/01-JS/JS-03.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 3, 1, 10, '2018-09-20 12:04:07', '2018-11-04 14:45:20'),
 (57, 'JS04MM1920', 'JS04-YEL', '', '', '', '', '', 'India', 3000, 7, 'catalog/01-JS/JS-04.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 4, 1, 5, '2018-09-20 12:06:55', '2018-11-04 15:49:40'),
 (58, 'JS05MM1920', 'JS05-RB', '', '', '', '', '', 'India', 3000, 7, 'catalog/01-JS/JS-05.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 5, 1, 1, '2018-09-20 12:16:46', '2018-11-04 15:10:24'),
 (59, 'JS06MM1920', 'JS06-WHSB', '', '', '', '', '', 'India', 3000, 7, 'catalog/01-JS/JS-06.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 6, 1, 2, '2018-09-20 12:20:03', '2018-11-04 15:37:33'),
 (60, 'JS07MM1920', 'JS07-NB', '', '', '', '', '', 'India', 3000, 7, 'catalog/01-JS/JS-07.jpg', 11, 1, '142.0000', 0, 9, '2018-01-01', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 0, 7, 1, 5, '2018-09-20 13:46:08', '2018-11-04 14:24:39'),
-(61, 'JS08MM1920', 'JS08-BK', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-08.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 50, 8, 1, 3, '2018-09-22 09:01:33', '2018-11-04 11:54:33'),
+(61, 'JS08MM1920', 'JS08-BK', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-08.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 50, 8, 1, 6, '2018-09-22 09:01:33', '2018-11-04 11:54:33'),
 (62, 'JS09MM1920', 'JS09-WH', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-09.jpg', 11, 1, '142.0000', 0, 0, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 9, 1, 1, '2018-09-22 09:06:01', '2018-11-04 15:48:27'),
 (63, 'JS10MM1920', 'JS10-YEL', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-10.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 10, 1, 3, '2018-09-22 09:09:42', '2018-11-04 15:49:32'),
 (64, 'JS11MM1920', 'JS11-NB', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-11.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 11, 1, 1, '2018-09-22 09:13:46', '2018-11-04 14:44:17'),
@@ -3532,7 +3533,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (79, 'NN26MM1920', 'NN26-BK', '', '', '', '', '', 'India', 3000, 6, 'catalog/02-NN/NN-26.jpg', 11, 1, '175.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 50, 26, 1, 6, '2018-09-23 22:26:24', '2018-11-04 11:55:15'),
 (80, 'DF27MM1920', 'DF27-WH', '', '', '', '', '', 'India', 3000, 6, 'catalog/03-DF/DF-27.jpg', 11, 1, '165.0000', 0, 9, '2018-09-24', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 27, 1, 1, '2018-09-24 11:30:09', '2018-11-04 12:14:30'),
 (81, 'DF28MM1920', 'DF28-NB', '', '', '', '', '', 'India', 3000, 6, 'catalog/03-DF/DF-28.jpg', 11, 1, '170.0000', 0, 9, '2018-09-24', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 28, 1, 2, '2018-09-24 11:34:36', '2018-11-04 12:14:22'),
-(82, 'JF29MM1920', 'JF29-BK', '', '', '', '', '', 'India', 3000, 5, 'catalog/04-JF/JF-29.jpg', 11, 1, '400.0000', 0, 9, '2018-09-27', '0.25000000', 2, '200.00000000', '0.25000000', '300.00000000', 1, 1, 1, 29, 1, 59, '2018-09-27 23:24:01', '2018-11-18 15:28:55'),
+(82, 'JF29MM1920', 'JF29-BK', '', '', '', '', '', 'India', 3000, 5, 'catalog/04-JF/JF-29.jpg', 11, 1, '400.0000', 0, 9, '2018-09-27', '0.25000000', 2, '200.00000000', '0.25000000', '300.00000000', 1, 1, 1, 29, 1, 113, '2018-09-27 23:24:01', '2018-11-23 12:22:11'),
 (83, 'JF30MM1920', 'JF30-YEL', '', '', '', '', '', 'India', 3000, 6, 'catalog/04-JF/JF-30.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 30, 1, 0, '2018-09-27 23:25:54', '2018-11-04 15:49:12'),
 (84, 'JF31MM1920', 'JF31-NB', '', '', '', '', '', 'India', 3000, 6, 'catalog/04-JF/JF-31.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 31, 1, 0, '2018-09-27 23:27:21', '2018-11-04 14:24:59'),
 (85, 'JF33MM1920', 'JF33-OR', '', '', '', '', '', 'India', 3000, 6, 'catalog/04-JF/JF-33.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 33, 1, 1, '2018-09-27 23:30:33', '2018-11-04 14:44:53'),
@@ -3565,7 +3566,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (113, 'SB60MM1920', 'SB60-POP', '', '', '', '', '', 'India', 3000, 6, 'catalog/08-SBHLF/SB-60.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 60, 1, 1, '2018-10-04 13:04:29', '2018-11-20 19:18:25'),
 (114, 'SB61MM1920', 'SB61-BK', '', '', '', '', '', 'India', 3000, 6, 'catalog/08-SBHLF/SB-61.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 61, 1, 1, '2018-10-04 13:09:42', '2018-11-20 19:18:32'),
 (115, 'SB62MM1920', 'SB62-WH', '', '', '', '', '', 'India', 3000, 6, 'catalog/08-SBHLF/SB-62.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 62, 1, 0, '2018-10-04 13:13:54', '2018-11-20 19:21:04'),
-(116, 'SB63MM1920', 'SB63-OR', '', '', '', '', '', 'India', 3000, 6, 'catalog/08-SBHLF/SB-63.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 1, '2018-10-04 13:18:04', '2018-11-04 12:06:53'),
+(116, 'SB63MM1920', 'SB63-OR', '', '', '', '', '', 'India', 3000, 6, 'catalog/08-SBHLF/SB-63.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 10, '2018-10-04 13:18:04', '2018-11-04 12:06:53'),
 (117, 'SB64MM1920', 'SB64-PK', '', '', '', '', '', 'India', 3000, 6, 'catalog/08-SBHLF/SB-64.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 64, 1, 0, '2018-10-04 13:21:34', '2018-11-04 12:07:14'),
 (118, 'SB64MM1920', 'SB65-WH', '', '', '', '', '', 'India', 3000, 6, 'catalog/08-SBHLF/SB-65.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 65, 1, 0, '2018-10-04 13:30:35', '2018-11-04 12:07:45'),
 (119, 'SB66MM1920', 'SB66-LIYEL', '', '', '', '', '', 'India', 3000, 6, 'catalog/08-SBHLF/SB-66.jpg', 11, 1, '162.0000', 0, 9, '2018-10-04', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 66, 1, 0, '2018-10-04 13:37:56', '2018-11-04 12:08:18'),
@@ -3633,9 +3634,9 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (183, 'M136MM1920', 'M136-GRY', '', '', '', '', '', 'India', 3000, 6, 'catalog/16-M/M-136.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 136, 1, 3, '2018-10-07 18:03:11', '2018-11-04 14:11:28'),
 (184, 'M137MM1920', 'M137-RED', '', '', '', '', '', 'India', 3000, 6, 'catalog/16-M/M-137.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 137, 1, 1, '2018-10-07 18:04:01', '2018-11-04 14:11:39'),
 (185, 'M138MM1920', 'M138-LIBLUE', '', '', '', '', '', 'India', 3000, 6, 'catalog/16-M/M-138.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 138, 1, 2, '2018-10-07 18:04:55', '2018-11-04 14:11:49'),
-(186, 'M139MM1920', 'M139-RB', '', '', '', '', '', 'India', 3000, 6, 'catalog/16-M/M-139.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 139, 1, 5, '2018-10-07 18:05:38', '2018-11-04 14:12:25'),
+(186, 'M139MM1920', 'M139-RB', '', '', '', '', '', 'India', 3000, 6, 'catalog/16-M/M-139.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 139, 1, 6, '2018-10-07 18:05:38', '2018-11-04 14:12:25'),
 (187, 'M140MM1920', 'M140-BK', '', '', '', '', '', 'India', 3000, 6, 'catalog/16-M/M-140.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 140, 1, 4, '2018-10-07 18:07:21', '2018-11-04 14:12:34'),
-(188, 'M142MM1920', 'M142-LIYEL', '', '', '', '', '', 'India', 3000, 6, 'catalog/16-M/M-134.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 142, 1, 1, '2018-10-07 18:08:17', '2018-11-04 14:12:45');
+(188, 'M142MM1920', 'M142-LIYEL', '', '', '', '', '', 'India', 3000, 6, 'catalog/16-M/M-134.jpg', 11, 1, '155.0000', 0, 9, '2018-10-07', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 142, 1, 2, '2018-10-07 18:08:17', '2018-11-04 14:12:45');
 
 -- --------------------------------------------------------
 
@@ -3709,7 +3710,7 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (80, 1, 'Electro Sports Dry-Fit white Jersey with Navy Blue &amp; Orange Matching ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\n  &lt;td height=&quot;20&quot; class=&quot;xl63&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\n  Impressive Jersey from Electro Sports.Electro Sports&amp;nbsp;\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Dry-Fit Fabric&lt;/span&gt;. This\n  Fabric Transports Moisture Away From The Body, Keeping You Cool And Dry.\n  Quick Dry Out and moisture management of the fabric offers coolness &amp;amp;\n  dryness even in during highest level of sweat.This T shirt is ideal for all\n  kinds of indoor and outdoor sports activities like Cricket, Running, Walking,\n  Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports, Swimming,\n  Football, Surfing, Volleyball etc&lt;br&gt;\n    &lt;br&gt;\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Dry - Fit&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\n  Sleeve&lt;br&gt;\n    &lt;br&gt;\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Crew Neck&lt;br&gt;\n    &lt;br&gt;\n    &lt;br&gt;\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports Dry-Fit white Jersey with Navy Blue &amp; Orange Matching ', 'Electro Sports Dry-Fit white Jersey with Navy Blue &amp; Orange Matching \n', 'Electro Sports Dry-Fit white Jersey with Navy Blue &amp; Orange Matching \n');
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
 (81, 1, 'Electro Sports Dry-fit Navy Blue Jersey with Matching Patterns', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\n  Impressive Jersey from Electro Sports.Electro Sports&amp;nbsp;\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Dry-Fit Fabric&lt;/span&gt;. This\n  Fabric Transports Moisture Away From The Body, Keeping You Cool And Dry.\n  Quick Dry Out and moisture management of the fabric offers coolness &amp;amp;\n  dryness even in during highest level of sweat.This T shirt is ideal for all\n  kinds of indoor and outdoor sports activities like Cricket, Running, Walking,\n  Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports, Swimming,\n  Football, Surfing, Volleyball etc&lt;br&gt;\n    &lt;br&gt;\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Dry - Fit&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Sleeve&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Short Hand\n  Sleeve&lt;br&gt;\n    &lt;br&gt;\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Crew Neck&lt;br&gt;\n    &lt;br&gt;\n    &lt;br&gt;\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports Dry-fit Navy Blue Jersey with Matching Patterns', 'Electro Sports Dry-fit Navy Blue Jersey with Matching Patterns\n', 'Electro Sports Dry-fit Navy Blue Jersey with Matching Patterns\n'),
-(82, 1, 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\n  &lt;td height=&quot;20&quot; class=&quot;xl63&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\n  Impressive Jersey from Electro Sports.Electro Sports&amp;nbsp;\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\n    &lt;br&gt;\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    &lt;br&gt;\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) ', 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) ', 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) '),
+(82, 1, 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl63&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro Sports.Electro Sports&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\r\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) ', 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) ', 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) '),
 (83, 1, 'Electro Sports yellow full sleeves  Jersey with Matching Pattern', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\n  Impressive Jersey from Electro Sports.Electro Sports&amp;nbsp;\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\n    &lt;br&gt;\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    &lt;br&gt;\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports yellow full sleeves  Jersey with Matching Pattern', 'Electro Sports yellow full sleeves  Jersey with Matching Pattern\n', 'Electro Sports yellow full sleeves  Jersey with Matching Pattern\n'),
 (84, 1, 'Electro Sports Navy Blue Full Sleeves Jersey with ( Neon Matching ) Pattern', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\n  Impressive Jersey from Electro Sports.Electro Sports&amp;nbsp;\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\n    &lt;br&gt;\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    &lt;br&gt;\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports Navy Blue Full Sleeves Jersey with ( Neon Matching ) Pattern', 'Electro Sports Navy Blue Full Sleeves Jersey with ( Neon Matching ) Pattern\n', 'Electro Sports Navy Blue Full Sleeves Jersey with ( Neon Matching ) Pattern\n'),
 (85, 1, 'Electro Sports Orange Full Sleeves Jersey with Navy Blue Matching ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\n  Impressive Jersey from Electro Sports. Electro Sports&amp;nbsp;\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\n    &lt;br&gt;\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    &lt;br&gt;\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports Orange Full Sleeves Jersey with Navy Blue Matching ', 'Electro Sports Orange Full Sleeves Jersey with Navy Blue Matching \n', 'Electro Sports Orange Full Sleeves Jersey with Navy Blue Matching \n'),
@@ -3847,8 +3848,8 @@ INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `custome
 (43, 57, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
 (87, 74, 2, 1, 2, '300.0000', '2018-11-18', '2018-11-19'),
 (88, 74, 1, 200, 1, '160.0000', '2018-11-18', '2018-11-19'),
-(95, 82, 1, 300, 1, '160.0000', '2018-11-18', '2018-11-19'),
-(96, 28, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00');
+(96, 28, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
+(101, 82, 1, 300, 1, '160.0000', '2018-11-18', '2018-11-19');
 
 -- --------------------------------------------------------
 
@@ -4028,11 +4029,11 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (669, 86, 'catalog/04-JF/JF-34-cut.jpg', 1),
 (670, 86, 'catalog/04-JF/JF-34-cut-1.jpg', 2),
 (671, 86, 'catalog/04-JF/JF-34-cut-2.jpg', 3),
-(673, 82, 'catalog/04-JF/JF-29-cut.jpg', 1),
 (674, 186, 'catalog/16-M/M-139-cut.jpg', 1),
 (675, 186, 'catalog/16-M/M-139-cut-1.jpg', 2),
 (676, 108, 'catalog/08-SBHLF/SB-56SB.jpg', 1),
-(677, 28, 'catalog/Tri Colour Matching.jpg', 1);
+(677, 28, 'catalog/Tri Colour Matching.jpg', 1),
+(682, 82, 'catalog/04-JF/JF-29-cut.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -4155,7 +4156,9 @@ INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`,
 (157, 185, 11, '', 1),
 (158, 186, 11, '', 1),
 (159, 187, 11, '', 1),
-(160, 188, 11, '', 1);
+(160, 188, 11, '', 1),
+(161, 82, 13, '', 1),
+(162, 82, 11, '', 1);
 
 -- --------------------------------------------------------
 
@@ -4693,7 +4696,10 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (649, 92, 120, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (650, 93, 121, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (651, 99, 127, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(652, 1, 28, 11, 56, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
+(652, 1, 28, 11, 56, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(653, 161, 82, 13, 52, 2000, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(654, 162, 82, 11, 48, 200, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(655, 161, 82, 13, 53, 200, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
 
 -- --------------------------------------------------------
 
@@ -5546,7 +5552,7 @@ CREATE TABLE `oc_product_special` (
 INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
 (72, 74, 1, 1, '150.0000', '2018-11-18', '2018-11-19'),
 (79, 86, 2, 1, '100.0000', '2018-11-18', '2018-11-22'),
-(81, 82, 1, 1, '300.0000', '2018-11-18', '2018-11-29');
+(86, 82, 1, 1, '300.0000', '2018-11-18', '2018-11-29');
 
 -- --------------------------------------------------------
 
@@ -6129,6 +6135,7 @@ CREATE TABLE `oc_product_to_layout` (
 
 INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUES
 (28, 0, 0),
+(82, 0, 0),
 (108, 0, 0),
 (109, 0, 0),
 (110, 0, 0),
@@ -12942,7 +12949,7 @@ ALTER TABLE `oc_banner_image`
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `oc_category`
@@ -13182,7 +13189,7 @@ ALTER TABLE `oc_module`
 -- AUTO_INCREMENT for table `oc_option`
 --
 ALTER TABLE `oc_option`
-  MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `oc_option_value`
@@ -13266,25 +13273,25 @@ ALTER TABLE `oc_product`
 -- AUTO_INCREMENT for table `oc_product_discount`
 --
 ALTER TABLE `oc_product_discount`
-  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 --
 -- AUTO_INCREMENT for table `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=678;
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=683;
 
 --
 -- AUTO_INCREMENT for table `oc_product_option`
 --
 ALTER TABLE `oc_product_option`
-  MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
+  MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=164;
 
 --
 -- AUTO_INCREMENT for table `oc_product_option_value`
 --
 ALTER TABLE `oc_product_option_value`
-  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=653;
+  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=656;
 
 --
 -- AUTO_INCREMENT for table `oc_product_reward`
@@ -13296,7 +13303,7 @@ ALTER TABLE `oc_product_reward`
 -- AUTO_INCREMENT for table `oc_product_special`
 --
 ALTER TABLE `oc_product_special`
-  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- AUTO_INCREMENT for table `oc_recurring`
