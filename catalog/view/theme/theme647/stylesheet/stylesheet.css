@@ -2786,7 +2786,7 @@ select {
 .sbHolder {
   /* background-color: #f5f5f5; */
   border-bottom: 1px solid #e0e0e0;
-  height: 40px;
+  height: 30px;
   position: relative;
   width: 100%;
   max-width: 250px;
@@ -2814,7 +2814,7 @@ select {
 .sbSelector {
   display: block;
   height: 100%;
-  line-height: 24px;
+  line-height: 18px;
   position: absolute;
   left: 0;
   top: 0;
@@ -2847,30 +2847,35 @@ select {
   font-size: 28px;
 }
 .sbToggle:before {
-  content: '';
+  content: '\251B';
   position: absolute;
-  right: 7px;
-  top: 40%;
+  right: 0;
+  top: 0;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 7px solid #000;
+  font-size: 14px;
   clear: both;
   -moz-transition: 0.5s all ease;
   -o-transition: 0.5s all ease;
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
+  -moz-transform: rotate(46deg);
+  -ms-transform: rotate(46deg);
+  -o-transform: rotate(46deg);
+  -webkit-transform: rotate(46deg);
+  transform: rotate(46deg);
 }
 .sbToggle:hover {
   color: inherit;
 }
 .sbToggleOpen:before {
-  -moz-transform: rotateX(180deg);
-  -ms-transform: rotateX(180deg);
-  -o-transform: rotateX(180deg);
-  -webkit-transform: rotateX(180deg);
-  transform: rotateX(180deg);
+  right: 20px;
+  top: 37px;
+  -moz-transform: rotate(226deg);
+  -ms-transform: rotate(226deg);
+  -o-transform: rotate(226deg);
+  -webkit-transform: rotate(226deg);
+  transform: rotate(226deg);
 }
 
 .sbHolderDisabled {

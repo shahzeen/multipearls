@@ -10,7 +10,7 @@
           <label class="col-sm-3 control-label" for="input-country"><?php echo $entry_country; ?></label>
           <div class="col-sm-9">
             <select name="country_id" id="input-country" class="form-control">
-              <option value=""><?php echo $text_select; ?></option>
+              
               <?php foreach ($countries as $country) { ?>
               <?php if ($country['country_id'] == $country_id) { ?>
               <option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
@@ -179,7 +179,7 @@ $('select[name=\'country_id\']').on('change', function() {
 				$('input[name=\'postcode\']').parent().parent().removeClass('required');
 			}
 
-			html = '<option value=""><?php echo $text_select; ?></option>';
+			html = '';
 
 			if (json['zone'] != '') {
 				for (i = 0; i < json['zone'].length; i++) {

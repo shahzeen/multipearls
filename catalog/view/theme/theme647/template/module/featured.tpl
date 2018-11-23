@@ -27,7 +27,7 @@
 									</label>
 									<div class="col-sm-12">
 										<select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id'] . $module . $f; ?>" class="form-control">
-											<option value=""><?php echo $text_select; ?></option>
+											
 											<?php foreach ($option['product_option_value'] as $option_value) { ?>
 											<option value="<?php echo $option_value['product_option_value_id']; ?>">
 												<?php echo $option_value['name']; ?>

@@ -293,7 +293,7 @@ $('select[name=\'country_id\']').on('change', function() {
 				$('input[name=\'postcode\']').parent().parent().removeClass('required');
 			}
 
-			html = '<option value=""><?php echo $text_select; ?></option>';
+			html = '';
 
 			if (json['zone'] != '') {
 				for (i = 0; i < json['zone'].length; i++) {

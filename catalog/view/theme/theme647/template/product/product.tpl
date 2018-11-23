@@ -213,7 +213,7 @@
 																<select name="option[<?php echo $option['product_option_id']; ?>]"
 																	id="input-option<?php echo $option['product_option_id']; ?>"
 																	class="form-control">
-																	<option value=""><?php echo $text_select; ?></option>
+																	
 																	<?php foreach ($option['product_option_value'] as $option_value) { ?>
 																	<option
 																	value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -418,7 +418,7 @@
 																	<h3><?php echo $text_payment_recurring ?></h3>
 																	<div class="form-group required">
 																		<select name="recurring_id" class="form-control">
-																			<option value=""><?php echo $text_select; ?></option>
+																			
 																			<?php foreach ($recurrings as $recurring) { ?>
 																			<option
 																			value="<?php echo $recurring['recurring_id'] ?>"><?php echo $recurring['name'] ?></option>
@@ -657,7 +657,7 @@
 																						name="option[<?php echo $option['product_option_id']; ?>]"
 																						id="input-option<?php echo $option['product_option_id'] . $pr; ?>"
 																						class="form-control">
-																						<option value=""><?php echo $text_select; ?></option>
+																						
 																						<?php foreach ($option['product_option_value'] as $option_value) { ?>
 																						<option
 																						value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
