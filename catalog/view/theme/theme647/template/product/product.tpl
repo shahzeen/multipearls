@@ -287,9 +287,10 @@
 																		<input type="radio"
 																		name="option[<?php echo $option['product_option_id']; ?>]"
 																		value="<?php echo $option_value['product_option_value_id']; ?>"/>
+																		<span><?php echo $option_value['name']; ?></span>
 																		<img src="<?php echo $option_value['image']; ?>"
 																		alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>"
-																		class="img-thumbnail"/> <?php echo $option_value['name']; ?>
+																		class="img-thumbnail"/>
 																		<?php if ($option_value['price']) { ?>
 																		(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 																		<?php } ?>
@@ -742,9 +743,10 @@
 																<input type="radio"
 																name="option[<?php echo $option['product_option_id']; ?>]"
 																value="<?php echo $option_value['product_option_value_id']; ?>"/>
+																<span><?php echo $option_value['name']; ?></span>
 																<img src="<?php echo $option_value['image']; ?>"
 																alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>"
-																class="img-thumbnail"/> <?php echo $option_value['name']; ?>
+																class="img-thumbnail"/>
 																<?php if ($option_value['price']) { ?>
 																(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 																<?php } ?>

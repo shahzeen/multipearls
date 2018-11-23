@@ -402,6 +402,7 @@ blockquote {
 
 .alert-info {
   background-color: #03A9F4;
+  padding-left: 55px;
 }
 .alert-info i {
   background: #0288D1;
@@ -1626,6 +1627,7 @@ section.top {
   color: #333;
   text-transform: capitalize;
   height: 35px;
+  overflow: hidden;
 }
 .product-thumb .description {
   display: none;
@@ -2488,7 +2490,7 @@ aside .row {
 }
 
 .product-thumb .product-btn, .product-thumb .product-btn-add {
-  width: 49%;
+  width: 48%;
   font-size: 20px;
   line-height: 20px;
   height: 35px;
@@ -2708,9 +2710,16 @@ input[type="color"]:focus {
   display: inline-block;
   margin-right: 15px;
 }
-.product-options .checkbox input[type="checkbox"] + label,
+/* .product-options .checkbox input[type="checkbox"] + label,
 .product-options .radio input[type="radio"] + label {
   border: 1px solid #e0e0e0;
+} */
+.product-options .checkbox input[type="checkbox"] + label span,
+.product-options .radio input[type="radio"] + label span{
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  text-transform: capitalize;
 }
 
 select:hover {
@@ -2914,27 +2923,13 @@ input[type="radio"] + label:before, input[type="radio"] + label:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-input[type="radio"] + label:before {
-  top: 4px;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #e0e0e0;
-  background: #f5f5f5;
-}
-input[type="radio"] + label:after {
-  top: 6px;
-  left: 2px;
-  width: 12px;
-  height: 12px;
-  -moz-transition: 0.3s all ease;
-  -o-transition: 0.3s all ease;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
-}
 
-input[type="radio"]:checked + label:after {
-  background: #333;
+input[type="radio"]:checked + label:after{
+  content: '\2713';
+  font-size: 22px;
+  color: #aaa;
+  top: 3px;
+  left: 7px;
 }
 
 .radio-inline {
@@ -4263,24 +4258,22 @@ aside #blog-search a:hover {
   text-transform: uppercase;
   font-size: 16px;
 }
+.product-options .sbHolder{
+  max-width: 100px
+}
 .product-options .radio {
   padding-top: 0;
+  padding-bottom: 12px;
 }
 .product-options .radio input[type="radio"] + label {
-  padding: 5px 5px 5px 45px;
+  /* padding: 5px 5px 5px 45px; */
   display: block;
   background: #f5f5f5;
   text-transform: capitalize;
   text-align: left;
+  padding: 0;
 }
-.product-options .radio input[type="radio"] + label:before {
-  top: 9px;
-  left: 13px;
-}
-.product-options .radio input[type="radio"] + label:after {
-  top: 11px;
-  left: 15px;
-}
+
 .product-options .radio + .radio {
   margin-top: 15px;
 }
@@ -5128,6 +5121,11 @@ html[lang="de"] .rating .review {
   .thumbnail a {
     display: inline-block;
   }
+}
+label .img-thumbnail{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #111;
 }
 
 .img-thumbnail {
