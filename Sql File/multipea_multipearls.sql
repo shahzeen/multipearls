@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2018 at 07:19 AM
+-- Generation Time: Nov 27, 2018 at 07:22 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.4
 
@@ -1053,7 +1053,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 (1, 'Pound Sterling', 'GBP', '£', '', '2', 0.67280000, 0, '2018-11-11 20:06:09'),
 (2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 0, '2018-11-11 20:06:15'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.91270000, 0, '2018-11-11 20:06:02'),
-(5, 'Indian Rupees', 'INR', '₹', '', '0', 1.00000000, 1, '2018-11-26 06:47:44');
+(5, 'Indian Rupees', 'INR', '₹', '', '0', 1.00000000, 1, '2018-11-27 06:53:26');
 
 -- --------------------------------------------------------
 
@@ -1319,7 +1319,7 @@ CREATE TABLE `oc_customer_online` (
 --
 
 INSERT INTO `oc_customer_online` (`ip`, `customer_id`, `url`, `referer`, `date_added`) VALUES
-('::1', 0, 'http://localhost/multipearls/index.php?route=information/information&amp;information_id=11', 'http://localhost/multipearls/index.php?route=information/information&amp;information_id=5', '2018-11-26 07:01:42');
+('::1', 0, 'http://localhost/multipearls/', 'http://localhost/multipearls/', '2018-11-27 07:21:37');
 
 -- --------------------------------------------------------
 
@@ -1574,7 +1574,6 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 (488, 'fraud', 'maxmind'),
 (494, 'module', 'tm_module_tab'),
 (499, 'module', 'carousel'),
-(500, 'module', 'filter'),
 (501, 'captcha', 'basic_captcha'),
 (503, 'module', 'featured'),
 (506, 'payment', 'cod'),
@@ -1624,13 +1623,6 @@ CREATE TABLE `oc_filter` (
   `sort_order` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `oc_filter`
---
-
-INSERT INTO `oc_filter` (`filter_id`, `filter_group_id`, `sort_order`) VALUES
-(1, 1, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -1644,13 +1636,6 @@ CREATE TABLE `oc_filter_description` (
   `name` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `oc_filter_description`
---
-
-INSERT INTO `oc_filter_description` (`filter_id`, `language_id`, `filter_group_id`, `name`) VALUES
-(1, 1, 1, 'Categories');
-
 -- --------------------------------------------------------
 
 --
@@ -1661,13 +1646,6 @@ CREATE TABLE `oc_filter_group` (
   `filter_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_filter_group`
---
-
-INSERT INTO `oc_filter_group` (`filter_group_id`, `sort_order`) VALUES
-(1, 1);
 
 -- --------------------------------------------------------
 
@@ -1680,13 +1658,6 @@ CREATE TABLE `oc_filter_group_description` (
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_filter_group_description`
---
-
-INSERT INTO `oc_filter_group_description` (`filter_group_id`, `language_id`, `name`) VALUES
-(1, 1, 'Filter Products');
 
 -- --------------------------------------------------------
 
@@ -1827,7 +1798,7 @@ CREATE TABLE `oc_information_description` (
 --
 
 INSERT INTO `oc_information_description` (`information_id`, `language_id`, `title`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(3, 1, 'Privacy Policy', '&lt;div class=&quot;privacy_page&quot;&gt;\r\n    &lt;ol&gt;\r\n        &lt;li&gt;\r\n            &lt;h4&gt;General information&lt;/h4&gt;\r\n\r\n\r\n\r\n            &lt;p&gt;Welcome to our Privacy Policy page! When you use our store services, you trust us with your information. This Privacy Policy is meant to help you understand what data we collect, why we collect it, and what we do with it. When you share information with us, we can make our services even better for you. For instance, we can show you more relevant search results and ads, help you connect with people or to make sharing with others quicker and easier. As you use our services, we want you to be clear how we’re using information and the ways in which you can protect your privacy. This is important; we hope you will take time to read it carefully. Remember, you can find controls to manage your information and protect your privacy and security. We’ve tried to keep it as simple as possible. &lt;/p&gt;\r\n\r\n\r\n        &lt;/li&gt;\r\n\r\n\r\n        &lt;li&gt;\r\n            &lt;h4&gt;Right to access, correct and delete data and to object to data processing&lt;/h4&gt;\r\n\r\n\r\n\r\n            &lt;p&gt;Our customers have the right to access, correct and delete personal data relating to them, and to object to the processing of such data, by addressing a written request, at any time. The Company makes every effort to put in place suitable precautions to safeguard the security and privacy of personal data, and to prevent it from being altered, corrupted, destroyed or accessed by unauthorized third parties. However, the Company does not control each and every risk related to the use of the Internet, and therefore warns the Site users of the potential risks involved in the functioning and use of the Internet. The Site may include links to other web sites or other internet sources. As the Company cannot control these web sites and external sources, the Company cannot be held responsible for the provision or display of these web sites and external sources, and may not be held liable for the content, advertising, products, services or any other material available on or from these web sites or external sources.  &lt;/p&gt;\r\n\r\n        &lt;/li&gt;\r\n\r\n\r\n        &lt;li&gt;\r\n            &lt;h4&gt;Management of personal data&lt;/h4&gt;\r\n\r\n\r\n\r\n            &lt;p&gt;You can view or edit your personal data online for many of our services. You can also make choices about our collection and use of your data. How you can access or control your personal data will depend on which services you use. You can choose whether you wish to receive promotional communications from our store by email, SMS, physical mail, and telephone. If you receive promotional email or SMS messages from us and would like to opt out, you can do so by following the directions in that message. You can also make choices about the receipt of promotional email, telephone calls, and postal mail by visiting and signing into Company Promotional Communications Manager, which allows you to update contact information, manage contact preferences, opt out of email subscriptions, and choose whether to share your contact information with our partners. These choices do not apply to mandatory service communications that are part of certain store services.&lt;/p&gt;\r\n\r\n        &lt;/li&gt;\r\n\r\n\r\n        &lt;li&gt;\r\n            &lt;h4&gt;Information We Collect&lt;/h4&gt;\r\n\r\n\r\n\r\n            &lt;p&gt;Our store collects data to operate effectively and provide you the best experiences with our services. You provide some of this data directly, such as when you create a personal account. We get some of it by recording how you interact with our services by, for example, using technologies like cookies, and receiving error reports or usage data from software running on your device. We also obtain data from third parties (including other companies). For example, we supplement the data we collect by purchasing demographic data from other companies. We also use services from other companies to help us determine a location based on your IP address in order to customize certain services to your location. The data we collect depends on the services and features you use. \r\n&lt;/p&gt;\r\n\r\n\r\n        &lt;/li&gt;\r\n\r\n\r\n        &lt;li&gt;\r\n            &lt;h4&gt;How We Use Your Information&lt;/h4&gt;\r\n\r\n\r\n\r\n            &lt;p&gt;Our store uses the data we collect for three basic purposes: to operate our business and provide (including improving and personalizing) the services we offer, to send communications, including promotional communications, and to display advertising. In carrying out these purposes, we combine data we collect through the various store services you use to give you a more seamless, consistent and personalized experience. However, to enhance privacy, we have built in technological and procedural safeguards designed to prevent certain data combinations. For example, we store data we collect from you when you are unauthenticated (not signed in) separately from any account information that directly identifies you, such as your name, email address or phone number.\r\n&lt;/p&gt;\r\n\r\n        &lt;/li&gt;\r\n\r\n\r\n        &lt;li&gt;\r\n            &lt;h4&gt;Sharing Your Information&lt;/h4&gt;\r\n\r\n\r\n\r\n            &lt;p&gt;We share your personal data with your consent or as necessary to complete any transaction or provide any service you have requested or authorized. For example, we share your content with third parties when you tell us to do so. When you provide payment data to make a purchase, we will share payment data with banks and other entities that process payment transactions or provide other financial services, and for fraud prevention and credit risk reduction. In addition, we share personal data among our controlled affiliates and subsidiaries. We also share personal data with vendors or agents working on our behalf for the purposes described in this statement. For example, companies we\'ve hired to provide customer service support or assist in protecting and securing our systems and services may need access to personal data in order to provide those functions. In such cases, these companies must abide by our data privacy and security requirements and are not allowed to use personal data they receive from us for any other purpose. We may also disclose personal data as part of a corporate transaction such as a merger or sale of assets.&lt;/p&gt;\r\n\r\n        &lt;/li&gt;\r\n\r\n\r\n    &lt;/ol&gt;\r\n&lt;/div&gt;', 'Privacy Policy', '', ''),
+(3, 1, 'Privacy Policy', '&lt;div class=&quot;privacy_page&quot;&gt;    &lt;ol&gt;        &lt;li&gt;            &lt;h4&gt;What information do we collect?&lt;/h4&gt;            &lt;p&gt;Personal information is information that can be used to directly or indirectly identify you. Personal information also includes anonymous information that is linked to information that can be used to directly or indirectly identify you. Personal information does not include information that has been irreversibly anonymized or aggregated so that it can no longer enable us, whether in combination with other information or otherwise, to identify you. We will only collect and use personal information which is necessary to comply with our legal obligations and to assist us to administer our business and provide you with the services you request. We collect information from you when you register on our site, place an order, subscribe to our newsletter or respond to a survey. When ordering or registering on our site, as appropriate, you may be asked to enter the following information: your name, e-mail address, mailing, company name, GST number, address and phone number. You may, however, also visit our site anonymously.&lt;/p&gt;        &lt;/li&gt;        &lt;li&gt;            &lt;h4&gt;What do we use your information for?&lt;/h4&gt;            &lt;p&gt;We use the information you provide to us for the specific purposes for which you provide the information, as stated at the time of collection, and as otherwise permitted by law. The information we collect from you may be used in the following ways: . To personalize your experience (your information helps us to better respond to your individual needs) . To improve our website and your shopping experience (we continually strive to improve our website offerings based on the information and feedback we receive from you) . To improve customer service (your information helps us to more effectively respond to your customer service requests and support needs) . To process transactions including executing your payments and delivering the purchased products or services requested. To administer a contest, special promotion, survey, activity or other site feature . To send periodic emails. The email address you provide for order processing, may be used to send you important information and updates pertaining to your order, in addition to receiving occasional company news, updates, related product or service information, etc.&lt;/p&gt;        &lt;/li&gt;        &lt;li&gt;            &lt;h4&gt;How do we protect your information?&lt;/h4&gt;            &lt;p&gt;You are responsible for your own username and password safety and security on Multipearls Traders. We recommend choosing a strong password and changing it frequently. Please do not use the same login details (email and password) across multiple websites. That said, we do implement a variety of security measures including offering the use of a secure server. All supplied sensitive/credit information is transmitted via Secure Socket Layer (SSL) technology and then encrypted into our Payment gateway providers database only to be accessible by those authorized with special access rights to such systems, and are required to keep the information confidential. After a transaction, your private information (credit cards, social security numbers, financials, etc.) will not be stored on our servers. Our servers and website are security scanned and fully verified externally by McAfee Secure from Symantec on a daily basis to protect you online&lt;/p&gt;        &lt;/li&gt;        &lt;li&gt;            &lt;h4&gt;Do we use cookies?&lt;/h4&gt;            &lt;p&gt;Yes. Cookies are small files that a site or its service provider transfers to your computers hard drive through your Web browser (if you have allowed it via your settings). This enables the sites or service providers systems to recognize your browser and capture and remember certain information. We use cookies to help us remember and process the items in your shopping cart, understand and save your preferences for future visits and compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools for you in the future.&lt;/p&gt;        &lt;/li&gt;        &lt;li&gt;            &lt;h4&gt;Do we disclose any information to outside parties?&lt;/h4&gt;            &lt;p&gt;We do not sell, trade, or otherwise transfer to outside parties your personal information. This does not include trusted third parties who assist us in operating our website, conducting our business, executing payments, delivering purchased products or services, sending you information or updates or otherwise servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others rights, property, or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.&lt;/p&gt;        &lt;/li&gt;        &lt;li&gt;            &lt;h4&gt;How long do we retain your information?&lt;/h4&gt;            &lt;p&gt;We will retain your personal information for as long as it is necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by tax, accounting or other applicable laws.&lt;/p&gt;        &lt;/li&gt;        &lt;li&gt;            &lt;h4&gt;Changes to our Privacy Policy&lt;/h4&gt;            &lt;p&gt;If we decide to change our privacy policy, we will post those changes on this page, and/or update the Privacy Policy modification date below.&lt;/p&gt;        &lt;/li&gt;    &lt;/ol&gt;&lt;/div&gt;', 'Privacy Policy', '', ''),
 (4, 1, 'About', '&lt;div class=&quot;text-center&quot;&gt;    &lt;h3 style=&quot;text-align: center; font-family: SourceSansPro-Regular; color: rgb(86, 86, 86); margin-top: 20px; margin-bottom: 10px; font-size: 22px;&quot;&gt;Multipearls Traders is a well structure&amp;nbsp; market place for wholesale buying and selling goods across India&lt;/h3&gt;    &lt;p&gt;Our store is more than just another average online wholesale store . We sell not only top quality products, but give our customers a positive online shopping experience. Forget about struggling to do everything at once: taking care of the family, running your business, walking your dog, cleaning the house, doing the shopping, etc. Purchase the goods you need every day or just like in a few clicks or taps, depending on the device you use to access the Internet. We work to make your life more enjoyable. &lt;/p&gt;    &lt;div class=&quot;row&quot;&gt;        &lt;div class=&quot;col-sm-4&quot;&gt;            &lt;div class=&quot;count-box&quot;&gt; &lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;strong&gt;200 +&lt;/strong&gt;&lt;/span&gt;                &lt;h5&gt;Products available&lt;/h5&gt;            &lt;/div&gt;        &lt;/div&gt;        &lt;div class=&quot;col-sm-4&quot;&gt;            &lt;div class=&quot;count-box&quot;&gt; &lt;strong&gt;81%&lt;/strong&gt;                &lt;h5&gt;Clients come back&lt;/h5&gt;            &lt;/div&gt;        &lt;/div&gt;        &lt;div class=&quot;col-sm-4&quot;&gt;            &lt;div class=&quot;count-box&quot;&gt; &lt;strong&gt;10K&lt;/strong&gt;                &lt;h5&gt;Site members&lt;/h5&gt;            &lt;/div&gt;        &lt;/div&gt;    &lt;/div&gt;    &lt;h3&gt;WHY CHOOSE US&lt;/h3&gt;    &lt;div class=&quot;row&quot;&gt;        &lt;div class=&quot;col-sm-3&quot;&gt;            &lt;div class=&quot;icon-box&quot;&gt; &lt;i class=&quot;material-design-search100&quot;&gt;&lt;/i&gt;                &lt;h5&gt;Wholesale pricing&lt;/h5&gt;                &lt;p&gt;Fully leveraging our integrated supply network of key manufacturers and agencies, developed over many years of business, Multipearls Traders&amp;nbsp; is able to consistently achieve wholesale cost savings that other platforms are simply unable to. We ensure our global customer base benefits directly by having any and all cost savings passed on for the highest possible discounts. This maximizes value to deliver the largest possible profit scope for every one of our customers.&lt;/p&gt;            &lt;/div&gt;        &lt;/div&gt;        &lt;div class=&quot;col-sm-3&quot;&gt;            &lt;div class=&quot;icon-box&quot;&gt; &lt;i class=&quot;material-design-front16&quot;&gt;&lt;/i&gt;                &lt;h5&gt;High Quality Description&lt;/h5&gt;                &lt;p&gt;To facilitate our clients in their marketing operations, Multipearls Traders&amp;nbsp;&amp;nbsp;provides professionally written text descriptions and clear, high-definition product photography to provide the most accurate information overview and representation possible of the final product.&amp;nbsp;&lt;/p&gt;            &lt;/div&gt;        &lt;/div&gt;        &lt;div class=&quot;col-sm-3&quot;&gt;            &lt;div class=&quot;icon-box&quot;&gt; &lt;i class=&quot;material-design-thumb54&quot;&gt;&lt;/i&gt;                &lt;h5&gt;Business Made Easy&lt;/h5&gt;                &lt;p&gt;Many aspiring entrepreneurs would love to have and manage their own successful business. However they are limited by budget constraints or unreliable suppliers. Multipearls Traders&amp;nbsp;&amp;nbsp;removes these limits by offering you an opportunity to fulfill your dream of starting your own business with minimal capital and no front-loaded risks.&lt;/p&gt;            &lt;/div&gt;        &lt;/div&gt;        &lt;div class=&quot;col-sm-3&quot;&gt;            &lt;div class=&quot;icon-box&quot;&gt; &lt;i class=&quot;material-design-thumb54&quot;&gt;&lt;/i&gt;                &lt;h5&gt;Credit Facilities&lt;/h5&gt;                &lt;p&gt;Many aspiring entrepreneurs would love to have and manage their own successful business. However they are limited by budget constraints or unreliable suppliers. Multipearls Traders&amp;nbsp;&amp;nbsp;removes these limits by offering you an opportunity to fulfill your dream of starting your own business with minimal capital and no front-loaded risks.&lt;/p&gt;            &lt;/div&gt;        &lt;/div&gt;    &lt;/div&gt;    &lt;h3&gt;HOW IT WORKS&lt;/h3&gt;    &lt;div class=&quot;row&quot;&gt;        &lt;div class=&quot;col-sm-3&quot;&gt;            &lt;div class=&quot;icon-box&quot;&gt; &lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt;                &lt;h5&gt;DIRECT FROM MANUFACTURER&lt;/h5&gt;                &lt;p&gt;Fully leveraging our integrated supply network of key manufacturers and agencies, developed over many years of business, Multipearls Traders&amp;nbsp; is able to consistently achieve wholesale cost savings that other platforms are simply unable to. We ensure our global customer base benefits directly by having any and all cost savings passed on for the highest possible discounts. This maximizes value to deliver the largest possible profit scope for every one of our customers.&lt;/p&gt;            &lt;/div&gt;        &lt;/div&gt;        &lt;div class=&quot;col-sm-3&quot;&gt;            &lt;div class=&quot;icon-box&quot;&gt; &lt;i class=&quot;material-design-front16&quot;&gt;&lt;/i&gt;                &lt;h5&gt;EASY RETURNS&lt;/h5&gt;                &lt;p&gt;To facilitate our clients in their marketing operations, Multipearls Traders&amp;nbsp;&amp;nbsp;provides professionally written text descriptions and clear, high-definition product photography to provide the most accurate information overview and representation possible of the final product.&amp;nbsp;&lt;/p&gt;            &lt;/div&gt;        &lt;/div&gt;        &lt;div class=&quot;col-sm-3&quot;&gt;            &lt;div class=&quot;icon-box&quot;&gt; &lt;i class=&quot;material-design-thumb54&quot;&gt;&lt;/i&gt;                &lt;h5&gt;DOOR DELIVERY&lt;/h5&gt;                &lt;p&gt;Many aspiring entrepreneurs would love to have and manage their own successful business. However they are limited by budget constraints or unreliable suppliers. Multipearls Traders&amp;nbsp;&amp;nbsp;removes these limits by offering you an opportunity to fulfill your dream of starting your own business with minimal capital and no front-loaded risks.&lt;/p&gt;            &lt;/div&gt;        &lt;/div&gt;        &lt;div class=&quot;col-sm-3&quot;&gt;            &lt;div class=&quot;icon-box&quot;&gt; &lt;i class=&quot;material-design-thumb54&quot;&gt;&lt;/i&gt;                &lt;h5&gt;SECURE PAYMENT&lt;/h5&gt;                &lt;p&gt;Many aspiring entrepreneurs would love to have and manage their own successful business. However they are limited by budget constraints or unreliable suppliers. Multipearls Traders&amp;nbsp;&amp;nbsp;removes these limits by offering you an opportunity to fulfill your dream of starting your own business with minimal capital and no front-loaded risks.&lt;/p&gt;            &lt;/div&gt;        &lt;/div&gt;    &lt;/div&gt;    &lt;h3&gt;OUR TEAM&lt;/h3&gt;    &lt;div class=&quot;row&quot;&gt;        &lt;div class=&quot;col-sm-3&quot;&gt;            &lt;figure class=&quot;thumbnail featured-thumbnail&quot;&gt;                &lt;a title=&quot;Robert Johnson&quot; href=&quot;index.php?route=information/information&amp;amp;information_id=7&quot;&gt;&lt;img alt=&quot;Robert Johnson&quot; src=&quot;image/catalog/article/article-1.jpg&quot;&gt;&lt;/a&gt;            &lt;/figure&gt;            &lt;h5&gt;&lt;a title=&quot;Robert Johnson&quot; href=&quot;index.php?route=information/information&amp;amp;information_id=7&quot;&gt;Robert Johnson&lt;/a&gt;&lt;/h5&gt;            &lt;p&gt;Senior salesman with 15 years of experience. He knows everything about the products he offers.&lt;/p&gt;        &lt;/div&gt;        &lt;div class=&quot;col-sm-3&quot;&gt;            &lt;figure class=&quot;thumbnail featured-thumbnail&quot;&gt;                &lt;a title=&quot;Jessica Priston&quot; href=&quot;index.php?route=information/information&amp;amp;information_id=8&quot;&gt;&lt;img alt=&quot;Jessica Priston&quot; src=&quot;image/catalog/article/article-2.jpg&quot;&gt;&lt;/a&gt;            &lt;/figure&gt;            &lt;h5&gt;&lt;a title=&quot;Jessica Priston&quot; href=&quot;index.php?route=information/information&amp;amp;information_id=8&quot;&gt;Jessica Priston&lt;/a&gt;&lt;/h5&gt;            &lt;p&gt;Mega positive shop assistant always ready to help you make the right choice and charm you with a smile.&lt;/p&gt;        &lt;/div&gt;        &lt;div class=&quot;col-sm-3&quot;&gt;            &lt;figure class=&quot;thumbnail featured-thumbnail&quot;&gt;                &lt;a title=&quot;Sam Kromstain&quot; href=&quot;index.php?route=information/information&amp;amp;information_id=9&quot;&gt;&lt;img alt=&quot;Sam Kromstain&quot; src=&quot;image/catalog/article/article-3.jpg&quot;&gt;&lt;/a&gt;            &lt;/figure&gt;            &lt;h5&gt;&lt;a title=&quot;Sam Kromstain&quot; href=&quot;index.php?route=information/information&amp;amp;information_id=9&quot;&gt;Sam Kromstain&lt;/a&gt;&lt;/h5&gt;            &lt;p&gt;Wholesale manager. Contact him if you want to buy a batch of the products offered at our store. &lt;/p&gt;        &lt;/div&gt;        &lt;div class=&quot;col-sm-3&quot;&gt;            &lt;figure class=&quot;thumbnail featured-thumbnail&quot;&gt;                &lt;a title=&quot;Edna Barton&quot; href=&quot;index.php?route=information/information&amp;amp;information_id=10&quot;&gt;&lt;img alt=&quot;Edna Barton&quot; src=&quot;image/catalog/article/article-4.jpg&quot;&gt;&lt;/a&gt;            &lt;/figure&gt;            &lt;h5&gt;&lt;a title=&quot;Edna Barton&quot; href=&quot;index.php?route=information/information&amp;amp;information_id=10&quot;&gt;Edna Barton&lt;/a&gt;&lt;/h5&gt;            &lt;p&gt;Quality control manager. Her mission is to check the products we ship and settle quality issues if any.&lt;/p&gt;        &lt;/div&gt;    &lt;/div&gt;    &lt;h3&gt;Testimonials&lt;/h3&gt;    &lt;div class=&quot;row&quot;&gt;        &lt;div class=&quot;col-sm-10 col-sm-offset-1&quot;&gt;            &lt;div class=&quot;testimonials&quot;&gt;                &lt;div class=&quot;item&quot;&gt;                    &lt;blockquote&gt;                        &lt;h5&gt;Mary Taba&lt;/h5&gt;                        &lt;p&gt;“Guys, you rock! Made a purchase at your store recently. The order has been shipped and delivered on time. The quality is superb! The price is quite reasonable. Told all my friends about your excellent service and the variety of choice. I think I’ll be your loyal customer in future as well. I wish your store many more years of prosperity.” &lt;/p&gt;                    &lt;/blockquote&gt;                &lt;/div&gt;                &lt;div class=&quot;item&quot;&gt;                    &lt;blockquote&gt;                        &lt;h5&gt;Virginia Ubert&lt;/h5&gt;                        &lt;p&gt;“Having the distressing experience with some online shops before decided to say ‘’THANK YOU” to all personnel of this store. You are not only friendly, but deliver really good products in the shortest possible terms. In a word, I am absolutely happy with my purchase and the service. Everything was perfect!”&lt;/p&gt;                    &lt;/blockquote&gt;                &lt;/div&gt;            &lt;/div&gt;        &lt;/div&gt;    &lt;/div&gt;&lt;/div&gt;', 'About', '', ''),
 (5, 1, 'Terms &amp; Conditions', '&lt;div class=&quot;row terms_conditions_page&quot;&gt;    &lt;br&gt;    &lt;div class=&quot;col-sm-6&quot;&gt;        &lt;h4&gt;Conditions of Use&lt;/h4&gt;        &lt;p&gt;Welcome to our online store! and its associates provide their products and services to you subject to the following conditions. If you visit or shop within this website, you should accept these terms and conditions. Please read them carefully.&lt;/p&gt;        &lt;h4&gt;General&lt;/h4&gt;        &lt;p&gt;By (i) using this Website or any facility or Service provided by this Website in any way; or (ii) merely browsing the Website, You agree that You have read, understood and agreed to be bound by these Terms and Conditions, Return and Cancellation policy, delivery information and the Website\'s Privacy Policy available at the homepage,www..com  shall not be required to notify You, whether as a registered user or not, of any changes made to the Terms and Conditions. The revised Terms and Conditions shall be made available on the Website. Your use of the Website and the Services is subject to the most current version of the Terms of and Conditions made available on the Website at the time of such use. You are requested to regularly visit the home page www..com in to view the most current Terms of Use. You can determine when Multipearls last modified the Terms of Use by referring to the &quot;Last Updated&quot; legend above. It shall be Your responsibility to check these Terms and Conditions periodically for changes. Multipearls box may require you to provide .Your consent to the updated Terms and Conditions in a specified manner before prior to any further use of the Website and the Services is provided on the Website. If no such separate consent is sought, Your continued use of the Website, following changes to the Terms and Conditions, will constitute Your acceptance of those changes.&lt;/p&gt;     &lt;h4&gt;License and site access&lt;/h4&gt;        &lt;p&gt;The method and route of shipment are at Seller’s discretion unless Buyer timely supplies explicit instructions otherwise. Title to the Product passes to Buyer when Product is delivered to the selected carrier, even if Seller made a nonconforming tender. Buyer attempts to revoke acceptance of the Product, or Buyer repudiates this document after the Products have been identified hereto.&lt;/p&gt;   &lt;h4&gt;taxes&lt;/h4&gt;        &lt;p&gt;Buyer is responsible for any tax or governmental charge imposed upon the sale or transfer of any product. Any such tax or governmental charge will be added to the total invoice amount.  Applicable freight costs will be added to the invoice. If any&lt;/p&gt;        &lt;h4&gt;License and site access&lt;/h4&gt;        &lt;p&gt;Multipearls Traders grants you a limited license to access and make personal use of this site and not to download (other than page caching) or modify it, or any portion of it, except with express written consent of Multipearls Traders. This license does not include any resale or commercial use of this site or its contents, any collection and use of any product listings, descriptions, or prices, any derivative use of this site or its contents, any downloading or copying of account information for the benefit of another merchant, or any use of data mining, robots, or similar data gathering and extraction tools. This site or any portion of this site may not be reproduced, duplicated, copied, sold, resold, visited, or otherwise exploited for any commercial purpose without express written consent of Multipearls Traders. You may not frame, crop or utilize framing techniques to enclose any trademark, logo, or other proprietary information (including images, text, page layout, or form) of Multipearls Traders and our associates without express written consent. You may not use any meta tags or any other &quot;hidden text&quot; utilizing the Multipearls Traders name or trademarks without the express written consent of Multipearls Traders. Any unauthorized use terminates the permission or license granted by Multipearls Traders. You are granted a limited, revocable, and nonexclusive right to create a hyperlink to the home page of Multipearls Traders so long as the link does not portray Multipearls Traders, its associates, or their products or services in a false, misleading, derogatory, or otherwise offensive matter. You may not use any Multipearls Traders logo or other proprietary graphic or trademark as part of the link without express written permission.&lt;/p&gt;        &lt;h4&gt;Your membership account&lt;/h4&gt;        &lt;p&gt;If you use this site, you are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer, and you agree to accept responsibility for all activities that occur under your account or password. If you are under 18, you may use our website only with involvement of a parent or legal guardian. Multipearls Traders and its associates reserve the right to refuse service, terminate accounts, remove or edit content, or cancel orders at their sole discretion. Your registration as a Member on this website is based on your actual shipping needs. The balance of your account can only be used to purchase items of this website. Please, protect your account information.&lt;/p&gt;    &lt;/div&gt;    &lt;div class=&quot;col-sm-6&quot;&gt;        &lt;h4&gt;Reviews, comments, emails and other content&lt;/h4&gt;        &lt;p&gt;Visitors may post reviews, comments, and other content, and submit suggestions, ideas, comments, questions, or other information, so long as the content is not illegal, obscene, threatening, defamatory, invasive of privacy, infringing of intellectual property rights, or otherwise injurious to third parties or objectionable and does not consist of or contain software viruses, political campaigning, commercial solicitation, chain letters, mass mailings, or any form of &quot;spam&quot;. You may not use a false e-mail address, impersonate any person or entity, or otherwise mislead as to the origin of a card or other content. Multipearls Traders reserves the right (but not the obligation) to remove or edit such content, but does not regularly review posted content. If you do post content or submit material, and unless we indicate otherwise, you grant Multipearls Traders and its associates a nonexclusive, royalty-free, perpetual, irrevocable, and fully sub-licensable right to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such content throughout the world in any media. You grant Multipearls Traders and its associates and sub-licensees the right to use the name that you submit in connection with such content, if they choose. You represent and warrant that you own or otherwise control all of the rights to the content that you post, that the content is accurate, that use of the content you supply does not violate this policy and will not cause injury to any person or entity, and that you will indemnify Multipearls Traders or its associates for all claims resulting from content you supply. Multipearls Traders has the right but not the obligation to monitor and edit or remove any activity or content. Multipearls Traders takes no responsibility and assumes no liability for any content posted by you or any third party.&lt;/p&gt;        &lt;h4&gt;Risk of loss&lt;/h4&gt;        &lt;p&gt;All items purchased from Multipearls Traders are made pursuant to a shipping contract. This means that the risk of loss and title for such items passes to you upon our delivery to the carrier.&lt;/p&gt;        &lt;h4&gt;Product descriptions&lt;/h4&gt;        &lt;p&gt;Multipearls Traders and its associates attempt to be as accurate as possible with the product descriptions. However, Multipearls Traders does not warrant that product descriptions or other content of this site is accurate, complete, reliable, current, or error-free. If a product offered by Multipearls Traders itself is not as described, your sole remedy is to contact us to discuss the situation and determine the best outcome.&lt;/p&gt;        &lt;h4&gt;Pricing Information&lt;/h4&gt;        &lt;p&gt;You agree to provide correct and accurate credit/ debit card details to the approved payment gateway for availing Services on the Website. You shall not use the credit/ debit card which is not lawfully owned by You,i.e. in any transaction, You must use Your own credit/ debit card. The information provided by You will not be utilized or shared with any third party unless required in relation to fraud verification or by law, regulation or court order. You will be solely responsible for the security and confidentiality of Your credit/ debit card details. Wholesale Box expressly disclaims all liabilities that may arise as a consequence of any unauthorized use of Your credit/ debit card.&lt;/p&gt;        &lt;h4&gt;Site policies, modification and severability&lt;/h4&gt;        &lt;p&gt;Please carefully review our other policies, such as our Shipping and Returns policy, posted on this site. These policies also govern your visit to Multipearls Traders. We reserve the right to make changes to our site, policies, and these Conditions of Use at any time. If any of these conditions shall be deemed invalid, void, or for any reason unenforceable, that condition shall be deemed severable and shall not affect the validity and enforceability of any remaining condition.&lt;/p&gt;    &lt;/div&gt;&lt;/div&gt;', 'Terms &amp; Conditions', '', ''),
 (6, 1, 'Delivery Information', '&lt;div class=&quot;delivery_page&quot;&gt;\r\n&lt;h4&gt;Hello and welcome to the Shipping and Delivery Information page! Here you can get acquainted with useful information on terms and conditions of our goods delivery.&lt;/h4&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n&lt;p&gt;You can purchase your items online and pick them up at our street store, or ship them directly to your doorstep. Shipping is free on some orders. We use the best carriers in the business to make sure your order gets to you on time. From the Secure Checkout page you\'ll see your item description, price and delivery timing. Where available, you can also choose a faster delivery method for each item on your order, for an additional fee. Delivery times vary according to your selected delivery address, availability of your items and the time of day you place your order.&lt;/p&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n&lt;h3 class=&quot;clear&quot;&gt;Cost&lt;/h3&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n&lt;div class=&quot;table-responsive&quot;&gt;\r\n&lt;table class=&quot;table table-bordered&quot;&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;thead&gt;\r\n\r\n\r\n\r\n\r\n&lt;tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Service&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Locations&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Delivery Schedule&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Cost per Shipment&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;/tr&gt;\r\n\r\n\r\n\r\n\r\n&lt;/thead&gt;\r\n\r\n\r\n\r\n\r\n&lt;tbody&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Royal mail 1st Class Service (Order value $20 or less)&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;All of UK &amp;amp; some European Countries &lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;1-3 days &lt;br&gt; Monday - Saturday&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;$3.95&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;/tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Royal mail Tracker (Order value $50 or less)&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;All of UK&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;1-3 days &lt;br&gt; Monday - Saturday&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;$4.95&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;/tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Standard Courier Delivery&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;UK mainland only&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;1-3 days &lt;br&gt; Delivery 7.30am - 5.30am &lt;br&gt; Monday - Friday&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;$5.95&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;/tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Standard Courier Delivery&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Northern Ireland, Eire, Scilly Isles&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;1-3 days &lt;br&gt; Delivery 7.30am - 5.30am &lt;br&gt; Monday - Friday&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;$9.95&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;/tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Royal mail 1st Class Service (Order value $20 or less)&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;All of UK &amp;amp; some European Countries &lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;1-3 days &lt;br&gt; Monday - Saturday&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;$3.95&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;/tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Priority courier pre 12pm Next Working Day&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;UK mainland only&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Pre 12pm &lt;br&gt; Delivery 7.30am - 12pm &lt;br&gt; Monday - Friday&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;$8.95&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;/tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;Royal mail 1st Class Service (Order value $20 or less)&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;All of UK &amp;amp; some European Countries &lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;1-3 days &lt;br&gt; Monday - Saturday&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n		&lt;td&gt;$3.95&lt;/td&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n	&lt;/tr&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n&lt;/tbody&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n&lt;/table&gt;\r\n\r\n\r\n&lt;/div&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n&lt;h3&gt;Free Delivery&lt;/h3&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n&lt;p&gt;Free two-day shipping is available on in-stock items. You can see in your bag if your item is in stock. Free two-day shipping is not available on customized, engraved products, and for certain order types, including orders paid for with financing or by bank transfer. To get free two-day shipping, you will need to place your order by 5pm, Monday to Friday. For instance, if you order your goods before 5:00 pm, Monday to Friday we will deliver them in two business days.&lt;/p&gt;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n&lt;/div&gt;', 'Delivery Information', '', ''),
@@ -2014,13 +1985,13 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (2083, 8, 'olark.50', 'footer_top', 1),
 (2084, 8, 'tm_megamenu.103', 'navigation', 3),
 (2085, 8, 'tm_newsletter.104', 'footer_top', 2),
-(2128, 13, 'olark.50', 'footer_top', 1),
-(2129, 13, 'tm_megamenu.103', 'navigation', 1),
-(2130, 13, 'tm_newsletter.104', 'footer_top', 2),
-(2131, 13, 'html.112', 'content_bottom', 4),
-(2132, 13, 'tm_single_category_product.129', 'content_bottom', 3),
-(2136, 3, 'olark.50', 'footer_top', 1),
-(2137, 3, 'tm_megamenu.103', 'navigation', 1);
+(2150, 3, 'olark.50', 'footer_top', 1),
+(2151, 3, 'tm_megamenu.103', 'navigation', 1),
+(2152, 13, 'olark.50', 'footer_top', 1),
+(2153, 13, 'tm_megamenu.103', 'navigation', 1),
+(2154, 13, 'tm_newsletter.104', 'footer_top', 2),
+(2155, 13, 'html.112', 'content_bottom', 4),
+(2156, 13, 'tm_single_category_product.129', 'content_bottom', 3);
 
 -- --------------------------------------------------------
 
@@ -2055,8 +2026,8 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (316, 9, 0, 'information/sitemap'),
 (409, 1, 0, 'common/home'),
 (411, 8, 0, 'information/contact'),
-(422, 13, 0, 'product/search'),
-(424, 3, 0, 'product/category');
+(429, 3, 0, 'product/category'),
+(430, 13, 0, 'product/search');
 
 -- --------------------------------------------------------
 
@@ -3579,7 +3550,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (64, 'JS11MM1920', 'JS11-NB', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-11.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 11, 1, 1, '2018-09-22 09:13:46', '2018-11-04 14:44:17'),
 (65, 'JS12MM1920', 'JS12-WH', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-12.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 12, 1, 0, '2018-09-22 09:26:14', '2018-11-04 15:48:44'),
 (66, 'JS13MM1920', 'JS13-OR', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-13.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 13, 1, 2, '2018-09-22 09:28:52', '2018-11-04 14:44:42'),
-(67, 'JS14MM1920', 'JS14-RB', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-14.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 14, 1, 3, '2018-09-22 09:32:24', '2018-11-04 15:36:59'),
+(67, 'JS14MM1920', 'JS14-RB', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-14.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 14, 1, 4, '2018-09-22 09:32:24', '2018-11-04 15:36:59'),
 (68, 'JS15MM1920', 'JS15-RD', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-15.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 15, 1, 3, '2018-09-22 09:35:18', '2018-11-04 15:09:57'),
 (69, 'JS16MM1920', 'JS16-SKYB', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-16.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 16, 1, 1, '2018-09-22 09:39:16', '2018-11-04 12:03:09'),
 (70, 'JS17MM1920', 'JS17-BK', '', '', '', '', '', 'India', 3000, 6, 'catalog/01-JS/JS-17.jpg', 11, 1, '142.0000', 0, 9, '2018-09-22', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 17, 1, 3, '2018-09-22 09:48:57', '2018-11-04 12:02:55'),
@@ -3594,7 +3565,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (79, 'NN26MM1920', 'NN26-BK', '', '', '', '', '', 'India', 3000, 6, 'catalog/02-NN/NN-26.jpg', 11, 1, '175.0000', 0, 9, '2018-09-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 50, 26, 1, 6, '2018-09-23 22:26:24', '2018-11-04 11:55:15'),
 (80, 'DF27MM1920', 'DF27-WH', '', '', '', '', '', 'India', 3000, 6, 'catalog/03-DF/DF-27.jpg', 11, 1, '165.0000', 0, 9, '2018-09-24', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 27, 1, 1, '2018-09-24 11:30:09', '2018-11-04 12:14:30'),
 (81, 'DF28MM1920', 'DF28-NB', '', '', '', '', '', 'India', 3000, 6, 'catalog/03-DF/DF-28.jpg', 11, 1, '170.0000', 0, 9, '2018-09-24', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 28, 1, 2, '2018-09-24 11:34:36', '2018-11-04 12:14:22'),
-(82, 'JF29MM1920', 'JF29-BK', '', '', '', '', '', 'India', 2992, 5, 'catalog/04-JF/JF-29.jpg', 11, 1, '400.0000', 0, 9, '2018-09-27', '0.25000000', 2, '200.00000000', '0.25000000', '300.00000000', 1, 1, 1, 29, 1, 116, '2018-09-27 23:24:01', '2018-11-18 15:28:55'),
+(82, 'JF29MM1920', 'JF29-BK', '', '', '', '', '', 'India', 2992, 5, 'catalog/04-JF/JF-29.jpg', 11, 1, '400.0000', 0, 9, '2018-09-27', '0.25000000', 2, '200.00000000', '0.25000000', '300.00000000', 1, 1, 1, 29, 1, 116, '2018-09-27 23:24:01', '2018-11-27 11:29:28'),
 (83, 'JF30MM1920', 'JF30-YEL', '', '', '', '', '', 'India', 3000, 6, 'catalog/04-JF/JF-30.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 30, 1, 0, '2018-09-27 23:25:54', '2018-11-04 15:49:12'),
 (84, 'JF31MM1920', 'JF31-NB', '', '', '', '', '', 'India', 3000, 6, 'catalog/04-JF/JF-31.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 31, 1, 0, '2018-09-27 23:27:21', '2018-11-04 14:24:59'),
 (85, 'JF33MM1920', 'JF33-OR', '', '', '', '', '', 'India', 3000, 6, 'catalog/04-JF/JF-33.jpg', 11, 1, '165.0000', 0, 9, '2018-09-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 33, 1, 1, '2018-09-27 23:30:33', '2018-11-04 14:44:53'),
@@ -3771,7 +3742,7 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (80, 1, 'Electro Sports Dry-Fit white Jersey with Navy Blue &amp; Orange Matching ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\n  &lt;td height=&quot;20&quot; class=&quot;xl63&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\n  Impressive Jersey from Electro Sports.Electro Sports&amp;nbsp;\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Dry-Fit Fabric&lt;/span&gt;. This\n  Fabric Transports Moisture Away From The Body, Keeping You Cool And Dry.\n  Quick Dry Out and moisture management of the fabric offers coolness &amp;amp;\n  dryness even in during highest level of sweat.This T shirt is ideal for all\n  kinds of indoor and outdoor sports activities like Cricket, Running, Walking,\n  Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports, Swimming,\n  Football, Surfing, Volleyball etc&lt;br&gt;\n    &lt;br&gt;\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Dry - Fit&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: Short Hand\n  Sleeve&lt;br&gt;\n    &lt;br&gt;\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Crew Neck&lt;br&gt;\n    &lt;br&gt;\n    &lt;br&gt;\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports Dry-Fit white Jersey with Navy Blue &amp; Orange Matching ', 'Electro Sports Dry-Fit white Jersey with Navy Blue &amp; Orange Matching \n', 'Electro Sports Dry-Fit white Jersey with Navy Blue &amp; Orange Matching \n');
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
 (81, 1, 'Electro Sports Dry-fit Navy Blue Jersey with Matching Patterns', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\n  Impressive Jersey from Electro Sports.Electro Sports&amp;nbsp;\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Dry-Fit Fabric&lt;/span&gt;. This\n  Fabric Transports Moisture Away From The Body, Keeping You Cool And Dry.\n  Quick Dry Out and moisture management of the fabric offers coolness &amp;amp;\n  dryness even in during highest level of sweat.This T shirt is ideal for all\n  kinds of indoor and outdoor sports activities like Cricket, Running, Walking,\n  Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports, Swimming,\n  Football, Surfing, Volleyball etc&lt;br&gt;\n    &lt;br&gt;\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Dry - Fit&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Sleeve&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Short Hand\n  Sleeve&lt;br&gt;\n    &lt;br&gt;\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : Crew Neck&lt;br&gt;\n    &lt;br&gt;\n    &lt;br&gt;\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports Dry-fit Navy Blue Jersey with Matching Patterns', 'Electro Sports Dry-fit Navy Blue Jersey with Matching Patterns\n', 'Electro Sports Dry-fit Navy Blue Jersey with Matching Patterns\n'),
-(82, 1, 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\n  &lt;td height=&quot;20&quot; class=&quot;xl63&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\n  Impressive Jersey from Electro Sports.Electro Sports&amp;nbsp;\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\n    &lt;br&gt;\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    &lt;br&gt;\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) ', 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) ', 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) '),
+(82, 1, 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\r\n  &lt;td height=&quot;20&quot; class=&quot;xl63&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\r\n  Impressive Jersey from Electro Sports.Electro Sports&amp;nbsp;\r\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\r\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\r\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\r\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\r\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\r\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\r\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\r\n    &lt;br&gt;\r\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\r\n    &lt;br&gt;\r\n    &lt;br&gt;\r\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) ', 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) ', 'Electro Sports  Black full Sleeves Jersey with ( Neon Matching ) '),
 (83, 1, 'Electro Sports yellow full sleeves  Jersey with Matching Pattern', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\n  Impressive Jersey from Electro Sports.Electro Sports&amp;nbsp;\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\n    &lt;br&gt;\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    &lt;br&gt;\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports yellow full sleeves  Jersey with Matching Pattern', 'Electro Sports yellow full sleeves  Jersey with Matching Pattern\n', 'Electro Sports yellow full sleeves  Jersey with Matching Pattern\n'),
 (84, 1, 'Electro Sports Navy Blue Full Sleeves Jersey with ( Neon Matching ) Pattern', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\n  Impressive Jersey from Electro Sports.Electro Sports&amp;nbsp;\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\n    &lt;br&gt;\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    &lt;br&gt;\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports Navy Blue Full Sleeves Jersey with ( Neon Matching ) Pattern', 'Electro Sports Navy Blue Full Sleeves Jersey with ( Neon Matching ) Pattern\n', 'Electro Sports Navy Blue Full Sleeves Jersey with ( Neon Matching ) Pattern\n'),
 (85, 1, 'Electro Sports Orange Full Sleeves Jersey with Navy Blue Matching ', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;861&quot; style=&quot;width: 646pt;&quot;&gt;&lt;tbody&gt;&lt;tr height=&quot;20&quot; style=&quot;height:15.0pt&quot;&gt;\n  &lt;td height=&quot;20&quot; class=&quot;xl65&quot; width=&quot;861&quot; style=&quot;height:15.0pt;width:646pt&quot;&gt;Get this\n  Impressive Jersey from Electro Sports. Electro Sports&amp;nbsp;\n  Proudly Presents This T-shirt Made Out Of The &lt;span style=&quot;font-weight: bold;&quot;&gt;Super Light Polyester\n  Fabric&lt;/span&gt;. This Fabric Transports Moisture Away From The Body, Keeping You Cool\n  And Dry. Quick Dry Out and moisture management of the fabric offers coolness\n  &amp;amp; dryness even in during highest level of sweat.This T shirt is ideal for\n  all kinds of indoor and outdoor sports activities like Cricket, Running,\n  Walking, Jogging, Yoga, Golf, Aerobics, Hockey, Fitness, Gym, Water sports,\n  Swimming, Football, Surfing, Volleyball etc&lt;br&gt;\n    &lt;br&gt;\n    Fabric&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Polyester&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Sleeve&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: &lt;span style=&quot;font-weight: bold;&quot;&gt;Full Sleeves&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    Neck&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; : &lt;span style=&quot;font-weight: bold;&quot;&gt;Round V-neck&lt;/span&gt;&lt;br&gt;\n    &lt;br&gt;\n    &lt;br&gt;\n    Note : Now You Can Customize This T-shirt As Per Your Requirement&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;', 'T-Shirts', 'Electro Sports Orange Full Sleeves Jersey with Navy Blue Matching ', 'Electro Sports Orange Full Sleeves Jersey with Navy Blue Matching \n', 'Electro Sports Orange Full Sleeves Jersey with Navy Blue Matching \n'),
@@ -3908,11 +3879,11 @@ INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `custome
 (41, 59, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
 (43, 57, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
 (96, 28, 1, 200, 0, '132.0000', '0000-00-00', '0000-00-00'),
-(102, 82, 1, 300, 1, '160.0000', '2018-11-18', '2018-11-19'),
 (109, 74, 2, 1, 2, '300.0000', '2018-11-24', '2018-11-30'),
 (110, 74, 1, 200, 1, '160.0000', '2018-11-24', '2018-11-30'),
 (112, 86, 2, 100, 1, '100.0000', '2018-11-24', '2019-12-31'),
-(114, 91, 2, 100, 1, '100.0000', '2018-11-24', '2018-11-30');
+(114, 91, 2, 100, 1, '100.0000', '2018-11-24', '2018-11-30'),
+(115, 82, 1, 300, 1, '160.0000', '2018-11-18', '2018-11-19');
 
 -- --------------------------------------------------------
 
@@ -3930,7 +3901,11 @@ CREATE TABLE `oc_product_filter` (
 --
 
 INSERT INTO `oc_product_filter` (`product_id`, `filter_id`) VALUES
-(82, 1);
+(82, 1),
+(82, 2),
+(82, 3),
+(82, 4),
+(82, 5);
 
 -- --------------------------------------------------------
 
@@ -4094,7 +4069,6 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (675, 186, 'catalog/16-M/M-139-cut-1.jpg', 2),
 (676, 108, 'catalog/08-SBHLF/SB-56SB.jpg', 1),
 (677, 28, 'catalog/Tri Colour Matching.jpg', 1),
-(683, 82, 'catalog/04-JF/JF-29-cut.jpg', 1),
 (693, 61, 'catalog/01-JS/neon matching.jpg', 1),
 (694, 73, 'catalog/01-JS/JS-20-cut.jpg', 1),
 (697, 74, 'catalog/02-NN/NN-21-CUT.jpg', 1),
@@ -4103,7 +4077,8 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (703, 86, 'catalog/04-JF/JF-34-cut-1.jpg', 2),
 (704, 86, 'catalog/04-JF/JF-34-cut-2.jpg', 3),
 (707, 91, 'catalog/05-NF/NF-39-cut.jpg', 1),
-(708, 91, 'catalog/05-NF/NF-39-cut-1.jpg', 2);
+(708, 91, 'catalog/05-NF/NF-39-cut-1.jpg', 2),
+(709, 82, 'catalog/04-JF/JF-29-cut.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -4760,9 +4735,6 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (650, 93, 121, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (651, 99, 127, 11, 54, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (652, 1, 28, 11, 56, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(653, 161, 82, 13, 52, 2000, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(654, 162, 82, 11, 48, 200, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(655, 161, 82, 13, 53, 200, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (656, 60, 59, 11, 46, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (657, 60, 59, 11, 47, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (658, 60, 59, 11, 48, 150, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
@@ -5612,10 +5584,10 @@ CREATE TABLE `oc_product_special` (
 --
 
 INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(87, 82, 1, 1, '300.0000', '2018-11-18', '2018-11-29'),
 (95, 74, 1, 1, '150.0000', '2018-11-24', '2018-11-30'),
 (97, 86, 2, 1, '100.0000', '2018-11-24', '2018-11-30'),
-(98, 91, 2, 1, '100.0000', '2018-11-24', '2018-11-30');
+(98, 91, 2, 1, '100.0000', '2018-11-24', '2018-11-30'),
+(99, 82, 1, 1, '300.0000', '2018-11-18', '2018-11-29');
 
 -- --------------------------------------------------------
 
@@ -6191,6 +6163,7 @@ CREATE TABLE `oc_product_to_layout` (
 
 INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUES
 (74, 0, 0),
+(82, 0, 0),
 (86, 0, 0),
 (91, 0, 0);
 
@@ -6717,130 +6690,130 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (18640, 0, 'cheque', 'cheque_geo_zone_id', '7', 0),
 (18641, 0, 'cheque', 'cheque_status', '1', 0),
 (18642, 0, 'cheque', 'cheque_sort_order', '1', 0),
-(19615, 0, 'config', 'config_meta_title', 'Multipearls Traders', 0),
-(19616, 0, 'config', 'config_meta_description', 'Multipearls Traders ', 0),
-(19617, 0, 'config', 'config_meta_keyword', '', 0),
-(19618, 0, 'config', 'config_template', 'theme647', 0),
-(19619, 0, 'config', 'config_layout_id', '4', 0),
-(19620, 0, 'config', 'config_name', 'Multipearls Traders ', 0),
-(19621, 0, 'config', 'config_owner', 'Multipearls Traders ', 0),
-(19622, 0, 'config', 'config_address', '103/A Wing 1st Floor Nagree Apartment Co-operative Housing Society', 0),
-(19623, 0, 'config', 'config_geocode', '40.6700, -73.9400', 0),
-(19624, 0, 'config', 'config_email', 'sharfraz.2008@rediffmail.com', 0),
-(19625, 0, 'config', 'config_telephone', '+917666009599', 0),
-(19626, 0, 'config', 'config_fax', '80023456789', 0),
-(19627, 0, 'config', 'config_image', 'catalog/logo.png', 0),
-(19628, 0, 'config', 'config_open', '7 Days a week from 9:00 am to 7:00 pm', 0),
-(19629, 0, 'config', 'config_comment', 'We are glad to see you here!', 0),
-(19630, 0, 'config', 'config_country_id', '99', 0),
-(19631, 0, 'config', 'config_zone_id', '1493', 0),
-(19632, 0, 'config', 'config_language', 'en', 0),
-(19633, 0, 'config', 'config_admin_language', 'en', 0),
-(19634, 0, 'config', 'config_currency', 'INR', 0),
-(19635, 0, 'config', 'config_currency_auto', '1', 0),
-(19636, 0, 'config', 'config_length_class_id', '1', 0),
-(19637, 0, 'config', 'config_weight_class_id', '2', 0),
-(19638, 0, 'config', 'config_product_count', '1', 0),
-(19639, 0, 'config', 'config_product_limit', '120', 0),
-(19640, 0, 'config', 'config_product_description_length', '120', 0),
-(19641, 0, 'config', 'config_limit_admin', '20', 0),
-(19642, 0, 'config', 'config_review_status', '1', 0),
-(19643, 0, 'config', 'config_review_guest', '0', 0),
-(19644, 0, 'config', 'config_review_mail', '0', 0),
-(19645, 0, 'config', 'config_voucher_min', '1', 0),
-(19646, 0, 'config', 'config_voucher_max', '1000', 0),
-(19647, 0, 'config', 'config_tax', '0', 0),
-(19648, 0, 'config', 'config_tax_default', 'shipping', 0),
-(19649, 0, 'config', 'config_tax_customer', 'shipping', 0),
-(19650, 0, 'config', 'config_customer_online', '1', 0),
-(19651, 0, 'config', 'config_customer_group_id', '1', 0),
-(19652, 0, 'config', 'config_customer_group_display', '[\"2\",\"1\"]', 1),
-(19653, 0, 'config', 'config_customer_price', '0', 0),
-(19654, 0, 'config', 'config_login_attempts', '5', 0),
-(19655, 0, 'config', 'config_account_id', '3', 0),
-(19656, 0, 'config', 'config_account_mail', '1', 0),
-(19657, 0, 'config', 'config_invoice_prefix', 'INV-2018-20', 0),
-(19658, 0, 'config', 'config_cart_weight', '1', 0),
-(19659, 0, 'config', 'config_checkout_guest', '1', 0),
-(19660, 0, 'config', 'config_checkout_id', '5', 0),
-(19661, 0, 'config', 'config_order_status_id', '1', 0),
-(19662, 0, 'config', 'config_processing_status', '[\"1\",\"2\"]', 1),
-(19663, 0, 'config', 'config_complete_status', '[\"5\"]', 1),
-(19664, 0, 'config', 'config_fraud_status_id', '7', 0),
-(19665, 0, 'config', 'config_order_mail', '1', 0),
-(19666, 0, 'config', 'config_api_id', '3', 0),
-(19667, 0, 'config', 'config_stock_display', '0', 0),
-(19668, 0, 'config', 'config_stock_warning', '1', 0),
-(19669, 0, 'config', 'config_stock_checkout', '1', 0),
-(19670, 0, 'config', 'config_affiliate_approval', '1', 0),
-(19671, 0, 'config', 'config_affiliate_auto', '1', 0),
-(19672, 0, 'config', 'config_affiliate_commission', '10', 0),
-(19673, 0, 'config', 'config_affiliate_id', '4', 0),
-(19674, 0, 'config', 'config_affiliate_mail', '1', 0),
-(19675, 0, 'config', 'config_return_id', '6', 0),
-(19676, 0, 'config', 'config_return_status_id', '2', 0),
-(19677, 0, 'config', 'config_captcha', 'basic_captcha', 0),
-(19678, 0, 'config', 'config_captcha_page', '[\"review\",\"return\",\"contact\"]', 1),
-(19679, 0, 'config', 'config_logo', 'catalog/mplogo.jpg', 0),
-(19680, 0, 'config', 'config_icon', 'catalog/favicon.png', 0),
-(19681, 0, 'config', 'config_image_category_width', '800', 0),
-(19682, 0, 'config', 'config_image_category_height', '800', 0),
-(19683, 0, 'config', 'config_image_thumb_width', '800', 0),
-(19684, 0, 'config', 'config_image_thumb_height', '800', 0),
-(19685, 0, 'config', 'config_image_popup_width', '800', 0),
-(19686, 0, 'config', 'config_image_popup_height', '800', 0),
-(19687, 0, 'config', 'config_image_product_width', '220', 0),
-(19688, 0, 'config', 'config_image_product_height', '220', 0),
-(19689, 0, 'config', 'config_image_additional_width', '88', 0),
-(19690, 0, 'config', 'config_image_additional_height', '88', 0),
-(19691, 0, 'config', 'config_image_related_width', '270', 0),
-(19692, 0, 'config', 'config_image_related_height', '270', 0),
-(19693, 0, 'config', 'config_image_compare_width', '180', 0),
-(19694, 0, 'config', 'config_image_compare_height', '180', 0),
-(19695, 0, 'config', 'config_image_wishlist_width', '47', 0),
-(19696, 0, 'config', 'config_image_wishlist_height', '47', 0),
-(19697, 0, 'config', 'config_image_cart_width', '100', 0),
-(19698, 0, 'config', 'config_image_cart_height', '100', 0),
-(19699, 0, 'config', 'config_image_location_width', '234', 0),
-(19700, 0, 'config', 'config_image_location_height', '64', 0),
-(19701, 0, 'config', 'config_ftp_hostname', 'cpanel.freehosting.com', 0),
-(19702, 0, 'config', 'config_ftp_port', '21', 0),
-(19703, 0, 'config', 'config_ftp_username', 'multipea', 0),
-(19704, 0, 'config', 'config_ftp_password', 'b83t3yP9Jb', 0),
-(19705, 0, 'config', 'config_ftp_root', 'public_html', 0),
-(19706, 0, 'config', 'config_ftp_status', '1', 0),
-(19707, 0, 'config', 'config_mail_protocol', 'mail', 0),
-(19708, 0, 'config', 'config_mail_parameter', 'multipearls@gmail.com', 0),
-(19709, 0, 'config', 'config_mail_smtp_hostname', 'smtp.gmail.com', 0),
-(19710, 0, 'config', 'config_mail_smtp_username', 'multipearls@gmail.com', 0),
-(19711, 0, 'config', 'config_mail_smtp_password', 'Shahzeen@786', 0),
-(19712, 0, 'config', 'config_mail_smtp_port', '587', 0),
-(19713, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
-(19714, 0, 'config', 'config_mail_alert', '', 0),
-(19715, 0, 'config', 'config_maintenance', '0', 0),
-(19716, 0, 'config', 'config_seo_url', '0', 0),
-(19717, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
-(19718, 0, 'config', 'config_compression', '0', 0),
-(19719, 0, 'config', 'config_secure', '0', 0),
-(19720, 0, 'config', 'config_password', '1', 0),
-(19721, 0, 'config', 'config_shared', '0', 0),
-(19722, 0, 'config', 'config_encryption', 'OZt8CNy70T7coHVq0hef3oy4WYqxCjE4uqyBht2BHtXnax1kFQCumEoUuzHM9id0L4qN2ChICOhz5JjlKPlS1AzfVfzJXRBJsnOfOUqE8X6i0QB4P1y9EodvEz17XIhUfwPkH6rtdFm2WGNjDz26ubjdwksHJFwbNKvnrKKwWLua1yjrzSVNjT0apnADENubrfIKGHvrP5d5iVZ0VCBGygNCH09Gp34llwtNSKR1JSLFZhbgi11Lznp1wCkDFbQODrGY9NvRwiPO9I1cCcHJvL1G3R40Lzc8qyS2kITqQRUMSiPYzvjbtVHIH7GZfmP1NiQER5Rx8vWvSSWE55nAEUH8Av6hCdA5VyUI0R7tsmAIiGuOkx48pbXvQ8T8i6HWnUkfTI6LyQb9ek4NyzuS1NzZ0WLufmz8092A7FHIGyI1Iscd8t4OHy76zYLwxIQNvUmfOIWaUSo3Dy1WPYPv4liqUKY6NKZsxuiKBS9iacA806iXx5WgeSenYtpoVlZrtSbExQCGGQNQpyA22yOq9osh47vWGlmUbMaytaFM5zBGSY9L2SCRhKTCot4T1m3Qefm3EBDoFqD548H21x4G5aLWkROPqloOzguptGsouTUUd8GurPmgPYSxD2G60RXapBV8Cy5YtlmU2qVFaF1EIEMRziQOx6Sw3mxTxnRwDTRQ1BeipFxvCF3pP4uMYk2UirhaE9R7QaPBpxwHScwt8Q7v4VkSJuIoyUKAWpAEWNCWBEfJaUycNdgYk7kQavwHN5jnz2aEtmeNwSJWxG8QiyTdOtzG8mXNmKYt2rhpkXAiD9BMhM7Bu9fZ3H2jCx4wfLxbubwDBVvJ1MFHV7V2YBXdaB4Kd1p7v2eWv5A6O2cEi5Gi8ypnfARaz00qhmAgJgnv2kn8pmSNt1SFUsTUzkb8AmZhVzyGarEXfETXsUOGPIoe2nSHmqtXT0ZTylpdvI080y2A8oxJFfULu0lcMqBZcQ9ErmX6p84kELBl13ieV0ndlOJhIqNhoNVtjqph', 0),
-(19723, 0, 'config', 'config_file_max_size', '400000', 0),
-(19724, 0, 'config', 'config_file_ext_allowed', 'txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods', 0),
-(19725, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet', 0),
-(19726, 0, 'config', 'config_error_display', '1', 0),
-(19727, 0, 'config', 'config_error_log', '1', 0),
-(19728, 0, 'config', 'config_error_filename', 'error.log', 0),
-(19729, 0, 'config', 'config_simple_blog_status', '1', 0),
-(19730, 0, 'config', 'config_simple_blog_limit', '6', 0),
-(19731, 0, 'config', 'config_simple_blog_description_limit', '250', 0),
-(19732, 0, 'config', 'config_simple_blog_comment_auto_approval', '1', 0),
-(19733, 0, 'config', 'config_simple_blog_author_information', '1', 0),
-(19734, 0, 'config', 'config_simple_blog_related_articles', '1', 0),
-(19735, 0, 'config', 'config_simple_blog_share_social_site', '1', 0),
 (19742, 0, 'customer_invoice', 'customer_invoice_status', '1', 0),
 (19743, 0, 'customer_invoice', 'customer_invoice_store_logo', '0', 0),
-(19744, 0, 'customer_invoice', 'customer_invoice_guest', '1', 0);
+(19744, 0, 'customer_invoice', 'customer_invoice_guest', '1', 0),
+(19745, 0, 'config', 'config_meta_title', 'Multipearls Traders', 0),
+(19746, 0, 'config', 'config_meta_description', 'Multipearls Traders ', 0),
+(19747, 0, 'config', 'config_meta_keyword', '', 0),
+(19748, 0, 'config', 'config_template', 'theme647', 0),
+(19749, 0, 'config', 'config_layout_id', '4', 0),
+(19750, 0, 'config', 'config_name', 'Multipearls Traders ', 0),
+(19751, 0, 'config', 'config_owner', 'Multipearls Traders ', 0),
+(19752, 0, 'config', 'config_address', '103/A Wing 1st Floor Nagree Apartment Co-operative Housing Society', 0),
+(19753, 0, 'config', 'config_geocode', '40.6700, -73.9400', 0),
+(19754, 0, 'config', 'config_email', 'sharfraz.2008@rediffmail.com', 0),
+(19755, 0, 'config', 'config_telephone', '+917666009599', 0),
+(19756, 0, 'config', 'config_fax', '80023456789', 0),
+(19757, 0, 'config', 'config_image', 'catalog/LogoMakr_1XnDRc.png', 0),
+(19758, 0, 'config', 'config_open', '7 Days a week from 9:00 am to 7:00 pm', 0),
+(19759, 0, 'config', 'config_comment', 'We are glad to see you here!', 0),
+(19760, 0, 'config', 'config_country_id', '99', 0),
+(19761, 0, 'config', 'config_zone_id', '1493', 0),
+(19762, 0, 'config', 'config_language', 'en', 0),
+(19763, 0, 'config', 'config_admin_language', 'en', 0),
+(19764, 0, 'config', 'config_currency', 'INR', 0),
+(19765, 0, 'config', 'config_currency_auto', '1', 0),
+(19766, 0, 'config', 'config_length_class_id', '1', 0),
+(19767, 0, 'config', 'config_weight_class_id', '2', 0),
+(19768, 0, 'config', 'config_product_count', '1', 0),
+(19769, 0, 'config', 'config_product_limit', '120', 0),
+(19770, 0, 'config', 'config_product_description_length', '120', 0),
+(19771, 0, 'config', 'config_limit_admin', '20', 0),
+(19772, 0, 'config', 'config_review_status', '1', 0),
+(19773, 0, 'config', 'config_review_guest', '0', 0),
+(19774, 0, 'config', 'config_review_mail', '0', 0),
+(19775, 0, 'config', 'config_voucher_min', '1', 0),
+(19776, 0, 'config', 'config_voucher_max', '1000', 0),
+(19777, 0, 'config', 'config_tax', '0', 0),
+(19778, 0, 'config', 'config_tax_default', 'shipping', 0),
+(19779, 0, 'config', 'config_tax_customer', 'shipping', 0),
+(19780, 0, 'config', 'config_customer_online', '1', 0),
+(19781, 0, 'config', 'config_customer_group_id', '1', 0),
+(19782, 0, 'config', 'config_customer_group_display', '[\"2\",\"1\"]', 1),
+(19783, 0, 'config', 'config_customer_price', '0', 0),
+(19784, 0, 'config', 'config_login_attempts', '5', 0),
+(19785, 0, 'config', 'config_account_id', '3', 0),
+(19786, 0, 'config', 'config_account_mail', '1', 0),
+(19787, 0, 'config', 'config_invoice_prefix', 'INV-2018-20', 0),
+(19788, 0, 'config', 'config_cart_weight', '1', 0),
+(19789, 0, 'config', 'config_checkout_guest', '1', 0),
+(19790, 0, 'config', 'config_checkout_id', '5', 0),
+(19791, 0, 'config', 'config_order_status_id', '1', 0),
+(19792, 0, 'config', 'config_processing_status', '[\"1\",\"2\"]', 1),
+(19793, 0, 'config', 'config_complete_status', '[\"5\"]', 1),
+(19794, 0, 'config', 'config_fraud_status_id', '7', 0),
+(19795, 0, 'config', 'config_order_mail', '1', 0),
+(19796, 0, 'config', 'config_api_id', '3', 0),
+(19797, 0, 'config', 'config_stock_display', '0', 0),
+(19798, 0, 'config', 'config_stock_warning', '1', 0),
+(19799, 0, 'config', 'config_stock_checkout', '1', 0),
+(19800, 0, 'config', 'config_affiliate_approval', '1', 0),
+(19801, 0, 'config', 'config_affiliate_auto', '1', 0),
+(19802, 0, 'config', 'config_affiliate_commission', '10', 0),
+(19803, 0, 'config', 'config_affiliate_id', '4', 0),
+(19804, 0, 'config', 'config_affiliate_mail', '1', 0),
+(19805, 0, 'config', 'config_return_id', '6', 0),
+(19806, 0, 'config', 'config_return_status_id', '2', 0),
+(19807, 0, 'config', 'config_captcha', 'basic_captcha', 0),
+(19808, 0, 'config', 'config_captcha_page', '[\"review\",\"return\",\"contact\"]', 1),
+(19809, 0, 'config', 'config_logo', 'catalog/LogoMakr_1XnDRc.png', 0),
+(19810, 0, 'config', 'config_icon', 'catalog/LogoMakr_1XnDRc.png', 0),
+(19811, 0, 'config', 'config_image_category_width', '800', 0),
+(19812, 0, 'config', 'config_image_category_height', '800', 0),
+(19813, 0, 'config', 'config_image_thumb_width', '800', 0),
+(19814, 0, 'config', 'config_image_thumb_height', '800', 0),
+(19815, 0, 'config', 'config_image_popup_width', '800', 0),
+(19816, 0, 'config', 'config_image_popup_height', '800', 0),
+(19817, 0, 'config', 'config_image_product_width', '220', 0),
+(19818, 0, 'config', 'config_image_product_height', '220', 0),
+(19819, 0, 'config', 'config_image_additional_width', '88', 0),
+(19820, 0, 'config', 'config_image_additional_height', '88', 0),
+(19821, 0, 'config', 'config_image_related_width', '270', 0),
+(19822, 0, 'config', 'config_image_related_height', '270', 0),
+(19823, 0, 'config', 'config_image_compare_width', '180', 0),
+(19824, 0, 'config', 'config_image_compare_height', '180', 0),
+(19825, 0, 'config', 'config_image_wishlist_width', '47', 0),
+(19826, 0, 'config', 'config_image_wishlist_height', '47', 0),
+(19827, 0, 'config', 'config_image_cart_width', '100', 0),
+(19828, 0, 'config', 'config_image_cart_height', '100', 0),
+(19829, 0, 'config', 'config_image_location_width', '234', 0),
+(19830, 0, 'config', 'config_image_location_height', '64', 0),
+(19831, 0, 'config', 'config_ftp_hostname', 'cpanel.freehosting.com', 0),
+(19832, 0, 'config', 'config_ftp_port', '21', 0),
+(19833, 0, 'config', 'config_ftp_username', 'multipea', 0),
+(19834, 0, 'config', 'config_ftp_password', 'b83t3yP9Jb', 0),
+(19835, 0, 'config', 'config_ftp_root', 'public_html', 0),
+(19836, 0, 'config', 'config_ftp_status', '1', 0),
+(19837, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(19838, 0, 'config', 'config_mail_parameter', 'multipearls@gmail.com', 0),
+(19839, 0, 'config', 'config_mail_smtp_hostname', 'smtp.gmail.com', 0),
+(19840, 0, 'config', 'config_mail_smtp_username', 'multipearls@gmail.com', 0),
+(19841, 0, 'config', 'config_mail_smtp_password', 'Shahzeen@786', 0),
+(19842, 0, 'config', 'config_mail_smtp_port', '587', 0),
+(19843, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
+(19844, 0, 'config', 'config_mail_alert', '', 0),
+(19845, 0, 'config', 'config_maintenance', '0', 0),
+(19846, 0, 'config', 'config_seo_url', '0', 0),
+(19847, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
+(19848, 0, 'config', 'config_compression', '0', 0),
+(19849, 0, 'config', 'config_secure', '0', 0),
+(19850, 0, 'config', 'config_password', '1', 0),
+(19851, 0, 'config', 'config_shared', '0', 0),
+(19852, 0, 'config', 'config_encryption', 'OZt8CNy70T7coHVq0hef3oy4WYqxCjE4uqyBht2BHtXnax1kFQCumEoUuzHM9id0L4qN2ChICOhz5JjlKPlS1AzfVfzJXRBJsnOfOUqE8X6i0QB4P1y9EodvEz17XIhUfwPkH6rtdFm2WGNjDz26ubjdwksHJFwbNKvnrKKwWLua1yjrzSVNjT0apnADENubrfIKGHvrP5d5iVZ0VCBGygNCH09Gp34llwtNSKR1JSLFZhbgi11Lznp1wCkDFbQODrGY9NvRwiPO9I1cCcHJvL1G3R40Lzc8qyS2kITqQRUMSiPYzvjbtVHIH7GZfmP1NiQER5Rx8vWvSSWE55nAEUH8Av6hCdA5VyUI0R7tsmAIiGuOkx48pbXvQ8T8i6HWnUkfTI6LyQb9ek4NyzuS1NzZ0WLufmz8092A7FHIGyI1Iscd8t4OHy76zYLwxIQNvUmfOIWaUSo3Dy1WPYPv4liqUKY6NKZsxuiKBS9iacA806iXx5WgeSenYtpoVlZrtSbExQCGGQNQpyA22yOq9osh47vWGlmUbMaytaFM5zBGSY9L2SCRhKTCot4T1m3Qefm3EBDoFqD548H21x4G5aLWkROPqloOzguptGsouTUUd8GurPmgPYSxD2G60RXapBV8Cy5YtlmU2qVFaF1EIEMRziQOx6Sw3mxTxnRwDTRQ1BeipFxvCF3pP4uMYk2UirhaE9R7QaPBpxwHScwt8Q7v4VkSJuIoyUKAWpAEWNCWBEfJaUycNdgYk7kQavwHN5jnz2aEtmeNwSJWxG8QiyTdOtzG8mXNmKYt2rhpkXAiD9BMhM7Bu9fZ3H2jCx4wfLxbubwDBVvJ1MFHV7V2YBXdaB4Kd1p7v2eWv5A6O2cEi5Gi8ypnfARaz00qhmAgJgnv2kn8pmSNt1SFUsTUzkb8AmZhVzyGarEXfETXsUOGPIoe2nSHmqtXT0ZTylpdvI080y2A8oxJFfULu0lcMqBZcQ9ErmX6p84kELBl13ieV0ndlOJhIqNhoNVtjqph', 0),
+(19853, 0, 'config', 'config_file_max_size', '400000', 0),
+(19854, 0, 'config', 'config_file_ext_allowed', 'txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods', 0),
+(19855, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet', 0),
+(19856, 0, 'config', 'config_error_display', '1', 0),
+(19857, 0, 'config', 'config_error_log', '1', 0),
+(19858, 0, 'config', 'config_error_filename', 'error.log', 0),
+(19859, 0, 'config', 'config_simple_blog_status', '1', 0),
+(19860, 0, 'config', 'config_simple_blog_limit', '6', 0),
+(19861, 0, 'config', 'config_simple_blog_description_limit', '250', 0),
+(19862, 0, 'config', 'config_simple_blog_comment_auto_approval', '1', 0),
+(19863, 0, 'config', 'config_simple_blog_author_information', '1', 0),
+(19864, 0, 'config', 'config_simple_blog_related_articles', '1', 0),
+(19865, 0, 'config', 'config_simple_blog_share_social_site', '1', 0);
 
 -- --------------------------------------------------------
 
@@ -7635,8 +7608,8 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (1555, 'category_id=31', 'Motorhome'),
 (1562, 'product_id=28', 'Electro Sports Tri Colour Jersey With Collar'),
 (1574, 'information_id=4', 'about_us'),
-(1579, 'information_id=3', 'privacy'),
-(1584, 'information_id=5', 'terms');
+(1584, 'information_id=5', 'terms'),
+(1586, 'information_id=3', 'privacy');
 
 -- --------------------------------------------------------
 
@@ -13001,7 +12974,7 @@ ALTER TABLE `oc_banner_image`
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `oc_category`
@@ -13145,7 +13118,7 @@ ALTER TABLE `oc_extension_path`
 -- AUTO_INCREMENT for table `oc_filter`
 --
 ALTER TABLE `oc_filter`
-  MODIFY `filter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `filter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `oc_filter_group`
@@ -13181,13 +13154,13 @@ ALTER TABLE `oc_layout`
 -- AUTO_INCREMENT for table `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
-  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2138;
+  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2158;
 
 --
 -- AUTO_INCREMENT for table `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
-  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=425;
+  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=431;
 
 --
 -- AUTO_INCREMENT for table `oc_length_class`
@@ -13325,13 +13298,13 @@ ALTER TABLE `oc_product`
 -- AUTO_INCREMENT for table `oc_product_discount`
 --
 ALTER TABLE `oc_product_discount`
-  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 
 --
 -- AUTO_INCREMENT for table `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=709;
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=710;
 
 --
 -- AUTO_INCREMENT for table `oc_product_option`
@@ -13355,7 +13328,7 @@ ALTER TABLE `oc_product_reward`
 -- AUTO_INCREMENT for table `oc_product_special`
 --
 ALTER TABLE `oc_product_special`
-  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
 -- AUTO_INCREMENT for table `oc_recurring`
@@ -13409,7 +13382,7 @@ ALTER TABLE `oc_seo_url`
 -- AUTO_INCREMENT for table `oc_setting`
 --
 ALTER TABLE `oc_setting`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19745;
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19868;
 
 --
 -- AUTO_INCREMENT for table `oc_simple_blog_article`
@@ -13529,7 +13502,7 @@ ALTER TABLE `oc_upload`
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1585;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1587;
 
 --
 -- AUTO_INCREMENT for table `oc_user`
