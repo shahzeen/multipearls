@@ -2134,7 +2134,7 @@ aside [class*="col-"], aside .container {
 aside .row {
   margin: 0;
 }
-.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+.logo img{
   height: 42px;
 }
 .single-category {
