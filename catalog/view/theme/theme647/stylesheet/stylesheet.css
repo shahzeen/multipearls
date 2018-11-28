@@ -2177,10 +2177,10 @@ aside .row {
   font-size: 25px;
   margin: 10px 0;
 }
-.single-category .nav-tabs > li, .single-category .nav-tabs > li > a {
+.single-category .nav-tabs > li, .single-category .nav-tabs > li > a, .multipearls-grid-container {
  text-align: center;
 }
-.single-category .nav-tabs > li > a, .box_html h3 {
+.single-category .nav-tabs > li > a, .box_html h3, .single-category .nav-tabs > li > a:hover, .box_html h3:hover {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -2193,20 +2193,25 @@ aside .row {
   font-size: 26px;
   position: relative;
   text-shadow: 2px 2px #ccc;
+  background: #eee;
+    padding: 10px;
+    display: inline-block;
 }
+
 .single-category .nav-tabs > li > a:after, .box_html h3:after {
   background-image: url(../../../../../image/catalog/double-arrow-bottom.png);
   content: '';
   position: absolute;
   width: 50px;
   height: 50px;
-  left: 48%;
+  left: 50%;
   bottom: 0;
   background-size: cover;
   -webkit-animation: bounce 1s;  /* Safari 4.0 - 8.0 */
     -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
     animation: bounce 1s;
     animation-iteration-count: infinite;
+    transform: translateX(-50%);
 }
 @-webkit-keyframes bounce {
   from {bottom: -50px;}
