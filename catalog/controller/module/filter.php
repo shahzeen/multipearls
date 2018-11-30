@@ -12,7 +12,7 @@ class ControllerModuleFilter extends Controller {
 		$this->load->model('catalog/category');
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
-
+		
 		if ($category_info) {
 			$this->load->language('module/filter');
 
@@ -60,6 +60,7 @@ class ControllerModuleFilter extends Controller {
 
 						$childen_data[] = array(
 							'filter_id' => $filter['filter_id'],
+							'count' => $this->model_catalog_product->getTotalProducts($filter_data),
 							'name'      => $filter['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : '')
 						);
 					}

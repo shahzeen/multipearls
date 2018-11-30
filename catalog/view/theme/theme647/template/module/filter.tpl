@@ -1,22 +1,31 @@
+<div class="panel-group" id="accordion">
 <div class="panel panel-default">
-  <div class="panel-heading"><?php echo $heading_title; ?></div>
-  <div class="list-group">
-	<?php foreach ($filter_groups as $filter_group) { ?>
-	<a class="list-group-item"><?php echo $filter_group['name']; ?></a>
-	<div class="list-group-item">
-	  <div id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
-		<?php foreach ($filter_group['filter'] as $filter) { ?>
-		<?php if (in_array($filter['filter_id'], $filter_category)) { ?>
-		<label class="checkbox">
-		  <input name="filter[]" type="checkbox" value="<?php echo $filter['filter_id']; ?>" checked="checked" />
-		  <?php echo $filter['name']; ?></label>
-		<?php } else { ?>
-		<label class="checkbox">
-		  <input name="filter[]" type="checkbox" value="<?php echo $filter['filter_id']; ?>" />
-		  <?php echo $filter['name']; ?></label>
-		<?php } ?>
-		<?php } ?>
-	  </div>
+	<?php foreach ($filter_groups as $index=>$filter_group) { ?>
+	<div class="panel-heading">
+	<a href="#<?php echo $index; ?>" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"><?php echo $filter_group['name']; ?></a>
+	</div>
+	<div id="<?php echo $index; ?>" class="panel-collapse collapse">
+    <div class="panel-body">
+			<div class="box-filter">
+				<div>
+							<?php foreach ($filter_group['filter'] as $filter) { ?>
+							<?php if ($filter['count']>0) { ?>
+							<?php if (in_array($filter['filter_id'], $filter_category)) { ?>
+							<div>
+								<input type="checkbox" value="<?php echo $filter['filter_id']; ?>" id="filter<?php echo $filter['filter_id']; ?>" checked="checked" />
+								<label for="filter<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
+							</div>
+							<?php } else { ?>
+							<div>
+								<input type="checkbox" value="<?php echo $filter['filter_id']; ?>" id="filter<?php echo $filter['filter_id']; ?>" />
+								<label for="filter<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
+							</div>
+							<?php } ?>
+							<?php } ?>
+							<?php } ?>
+						</div>
+			</div>
+		</div>
 	</div>
 	<?php } ?>
   </div>
@@ -28,7 +37,7 @@
 $('#button-filter').on('click', function() {
 	filter = [];
 	
-	$('input[name^=\'filter\']:checked').each(function(element) {
+$('.box-filter input[type=\'checkbox\']:checked').each(function(element) {
 		filter.push(this.value);
 	});
 	

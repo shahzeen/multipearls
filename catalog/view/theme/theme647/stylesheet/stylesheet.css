@@ -520,7 +520,9 @@ blockquote {
 .table > tbody + tbody {
   border-top: none;
 }
-
+.panel-group .panel-footer{
+  background: transparent;
+}
 .panel-default > .panel-heading {
   padding: 5px 10px;
   background: #555;
@@ -536,7 +538,6 @@ blockquote {
   font-size: 14px;
 }
 .panel-default{
-  border-color: #555;
   border-radius: 4px !important;
 }
 
@@ -765,7 +766,6 @@ div.required .control-label:after {
 .fa {
   line-height: inherit;
 }
-
 /*========================================================
                       Header styles
 =========================================================*/
