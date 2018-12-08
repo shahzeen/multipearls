@@ -14,7 +14,6 @@
 			<?php }?>
 
 		</script>
-		<?php if ($latest_products || $featured_products || $special_products || $bestseller_products) { ?>
 		<div class="box single-category">
 			<div class="box-content">
 				<div role="tabpanel" class="module_tab" id="single-category<?php echo $module; ?>">
@@ -1587,4 +1586,4 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </div>
 </div>
 </div>
-<?php } ?>
+
