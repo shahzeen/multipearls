@@ -13,7 +13,7 @@
 	<?php } else { ?>
 	<?php $class = 'col-sm-12'; ?>
 	<?php } ?>
-	<div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+	<div id="content" class="<?php echo $class; ?> tb-space"><?php echo $content_top; ?>
 	  <h2><?php echo $heading_title; ?></h2>
 	  <?php if ($products) { ?>
           <div class="product-filter clearfix">
@@ -47,14 +47,6 @@
                       <?php } ?>
                   </select>
               </div>
-              <div class="product-filter_elem">
-                  <div class="button-view">
-                      <a href="<?php echo $compare; ?>" id="compare-total" class="compare-total material-icons-equalizer" data-toggle="tooltip" title="<?php echo $text_compare; ?>"><span><?php echo $text_compare; ?></span>
-                      </a>
-                  </div>
-              </div>
-
-
           </div>
 
 	  <div class="row">  
@@ -90,7 +82,7 @@
                                                         name="option[<?php echo $option['product_option_id']; ?>]"
                                                         id="input-option<?php echo $option['product_option_id'] . $pr; ?>"
                                                         class="form-control">
-                                                        <option value=""><?php echo $text_select; ?></option>
+                                                        
                                                         <?php foreach ($option['product_option_value'] as $option_value) { ?>
                                                             <option
                                                                 value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -371,9 +363,6 @@
                 	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
                 		<i class="material-icons-favorite_border"></i>
                 	</button>
-                	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-                		<i class="material-icons-equalizer"></i>
-                	</button>
                 </div>
                 <div class="aside">
                 	<div class="cart-button">
@@ -382,9 +371,6 @@
                 		</button>
                 		<button class="product-btn" type="button" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
                 			<span><?php echo $button_wishlist; ?></span>
-                		</button>
-                		<button class="product-btn" type="button" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-                			<span><?php echo $button_compare; ?></span>
                 		</button>
                 	</div>
                 </div>

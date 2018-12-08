@@ -102,7 +102,7 @@
                                                                             name="option[<?php echo $option['product_option_id']; ?>]"
                                                                             id="input-option<?php echo $option['product_option_id'] .  $module . $tf; ?>"
                                                                             class="form-control">
-                                                                            <option value=""><?php echo $text_select; ?></option>
+                                                                            
                                                                             <?php foreach ($option['product_option_value'] as $option_value) { ?>
                                                                                 <option
                                                                                     value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -538,7 +538,7 @@
                                                                             name="option[<?php echo $option['product_option_id']; ?>]"
                                                                             id="input-option<?php echo $option['product_option_id'] .  $module . $tl; ?>"
                                                                             class="form-control">
-                                                                            <option value=""><?php echo $text_select; ?></option>
+                                                                            
                                                                             <?php foreach ($option['product_option_value'] as $option_value) { ?>
                                                                                 <option
                                                                                     value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -973,7 +973,7 @@
                                                                             name="option[<?php echo $option['product_option_id']; ?>]"
                                                                             id="input-option<?php echo $option['product_option_id'] .  $module . $tc; ?>"
                                                                             class="form-control">
-                                                                            <option value=""><?php echo $text_select; ?></option>
+                                                                            
                                                                             <?php foreach ($option['product_option_value'] as $option_value) { ?>
                                                                                 <option
                                                                                     value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -1409,7 +1409,7 @@
                                                                             name="option[<?php echo $option['product_option_id']; ?>]"
                                                                             id="input-option<?php echo $option['product_option_id'] .  $module . $tb; ?>"
                                                                             class="form-control">
-                                                                            <option value=""><?php echo $text_select; ?></option>
+                                                                            
                                                                             <?php foreach ($option['product_option_value'] as $option_value) { ?>
                                                                                 <option
                                                                                     value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>

@@ -66,7 +66,7 @@
 									</label>
 									<div class="col-sm-12">
 										<select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id'] .  $module . $tf; ?>" class="form-control">
-											<option value=""><?php echo $text_select; ?></option>
+											
 											<?php foreach ($option['product_option_value'] as $option_value) { ?>
 											<option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
 												<?php if ($option_value['price']) { ?>
@@ -127,7 +127,8 @@
 											<div class="radio">
 												<label>
 													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>"/>
-													<img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail"/> <?php echo $option_value['name']; ?>
+													<span><?php echo $option_value['name']; ?></span>
+													<img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail"/>
 													<?php if ($option_value['price']) { ?>
 													(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 													<?php } ?>
@@ -276,11 +277,6 @@
 												<span><?php echo $button_wishlist; ?></span>
 											</button>
 										</li>
-										<li>
-											<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i>
-												<span><?php echo $button_compare; ?></span>
-											</button>
-										</li>
 									</ul>
 									<div class="clear"></div>
 								</div>
@@ -343,9 +339,6 @@
 						<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
 							<i class="fa fa-heart"></i>
 						</button>
-						<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-							<i class="fa fa-exchange"></i>
-						</button>
 					</div>
 				</div>
 				<?php } ?>
@@ -379,7 +372,7 @@
 									</label>
 									<div class="col-sm-12">
 										<select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id'] .  $module . $tl; ?>" class="form-control">
-											<option value=""><?php echo $text_select; ?></option>
+											
 											<?php foreach ($option['product_option_value'] as $option_value) { ?>
 											<option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
 												<?php if ($option_value['price']) { ?>
@@ -440,7 +433,8 @@
 											<div class="radio">
 												<label>
 													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>"/>
-													<img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail"/> <?php echo $option_value['name']; ?>
+													<span><?php echo $option_value['name']; ?></span>
+													<img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail"/>
 													<?php if ($option_value['price']) { ?>
 													(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 													<?php } ?>
@@ -589,11 +583,6 @@
 												<span><?php echo $button_wishlist; ?></span>
 											</button>
 										</li>
-										<li>
-											<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i>
-												<span><?php echo $button_compare; ?></span>
-											</button>
-										</li>
 									</ul>
 									<div class="clear"></div>
 								</div>
@@ -656,9 +645,6 @@
 						<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
 							<i class="fa fa-heart"></i>
 						</button>
-						<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-							<i class="fa fa-exchange"></i>
-						</button>
 					</div>
 				</div>
 				<?php } ?>
@@ -691,7 +677,7 @@
 									</label>
 									<div class="col-sm-12">
 										<select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id'] .  $module . $ts; ?>" class="form-control">
-											<option value=""><?php echo $text_select; ?></option>
+											
 											<?php foreach ($option['product_option_value'] as $option_value) { ?>
 											<option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
 												<?php if ($option_value['price']) { ?>
@@ -752,7 +738,8 @@
 											<div class="radio">
 												<label>
 													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>"/>
-													<img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail"/> <?php echo $option_value['name']; ?>
+													<span><?php echo $option_value['name']; ?></span>
+													<img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail"/>
 													<?php if ($option_value['price']) { ?>
 													(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 													<?php } ?>
@@ -901,11 +888,6 @@
 												<span><?php echo $button_wishlist; ?></span>
 											</button>
 										</li>
-										<li>
-											<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i>
-												<span><?php echo $button_compare; ?></span>
-											</button>
-										</li>
 									</ul>
 									<div class="clear"></div>
 								</div>
@@ -968,9 +950,6 @@
 						<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
 							<i class="fa fa-heart"></i>
 						</button>
-						<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-							<i class="fa fa-exchange"></i>
-						</button>
 					</div>
 				</div>
 				<?php } ?>
@@ -1003,7 +982,7 @@
 									</label>
 									<div class="col-sm-12">
 										<select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id'] .  $module . $tb; ?>" class="form-control">
-											<option value=""><?php echo $text_select; ?></option>
+											
 											<?php foreach ($option['product_option_value'] as $option_value) { ?>
 											<option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
 												<?php if ($option_value['price']) { ?>
@@ -1064,7 +1043,8 @@
 											<div class="radio">
 												<label>
 													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>"/>
-													<img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail"/> <?php echo $option_value['name']; ?>
+													<span><?php echo $option_value['name']; ?></span>
+													<img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail"/>
 													<?php if ($option_value['price']) { ?>
 													(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 													<?php } ?>
@@ -1213,11 +1193,6 @@
 												<span><?php echo $button_wishlist; ?></span>
 											</button>
 										</li>
-										<li>
-											<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i>
-												<span><?php echo $button_compare; ?></span>
-											</button>
-										</li>
 									</ul>
 									<div class="clear"></div>
 								</div>
@@ -1279,9 +1254,6 @@
 						</button>
 						<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
 							<i class="fa fa-heart"></i>
-						</button>
-						<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-							<i class="fa fa-exchange"></i>
 						</button>
 					</div>
 				</div>

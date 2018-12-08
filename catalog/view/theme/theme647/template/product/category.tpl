@@ -5,7 +5,7 @@
 		<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
 		<?php } ?>
 	</ul>
-	<div class="row"><?php echo $column_left; ?>
+	<div class="row tb-space "><?php echo $column_left; ?>
 		<?php if ($column_left && $column_right) { ?>
 		<?php $class = 'col-sm-6'; ?>
 		<?php } elseif ($column_left || $column_right) { ?>
@@ -15,26 +15,14 @@
 		<?php } ?>
 		<div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
 			<h2><?php echo $heading_title; ?></h2>
-			<?php if ($thumb || $description) { ?>
-			<div class="row">
-				<?php if ($thumb) { ?>
-				<div class="col-sm-3"><div class="image"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" title="<?php echo $heading_title; ?>" class="img-thumbnail" /></div></div>
-				<?php } ?>
-				<?php if ($description) { ?>
-				<div class="col-sm-9"><?php echo $description; ?></div>
-				<?php } ?>
-			</div>
-			<hr>
-			<?php } ?>
+			
 			<?php if ($categories) { ?>
-			<h3><?php echo $text_refine; ?></h3>
-
 			<div class="row">
-				<div >
+				<div class="col-sm-12">
 					<ul class="box-subcat">
 						<?php $i=0; foreach ($categories as $category) { $i++; ?>
 						<?php 
-						$perLine = 4;
+						$perLine = 10;
 						$last_line = "";
 						$total = count($products);
 						$totModule = $total%$perLine;
@@ -50,8 +38,8 @@
 							$a='';
 						}
 						?>
-						<li class="col-sm-3  <?php echo $a. $last_line ;?>">
-							<div class="thumb">
+						<li class=" <?php echo $a. $last_line ;?> col-md-2">
+							<div style="position: relative;">
 								<?php if ($category['thumb']) { ?>
 								<div class="image"><a href="<?php echo $category['href']; ?>"><img src="<?php echo $category['thumb']; ?>" alt="<?php echo $category['name']; ?>" /></a></div>
 								<?php } ?>
@@ -96,12 +84,6 @@
 						<?php } ?>
 					</select>
 				</div>
-				<div class="product-filter_elem">
-					<div class="button-view">
-						<a href="<?php echo $compare; ?>" id="compare-total" class="compare-total material-icons-equalizer" data-toggle="tooltip" title="<?php echo $text_compare; ?>"><span><?php echo $text_compare; ?></span>
-						</a>
-					</div>
-				</div>
 
 
 			</div>
@@ -138,7 +120,7 @@
 										name="option[<?php echo $option['product_option_id']; ?>]"
 										id="input-option<?php echo $option['product_option_id'] . $pr; ?>"
 										class="form-control">
-										<option value=""><?php echo $text_select; ?></option>
+										
 										<?php foreach ($option['product_option_value'] as $option_value) { ?>
 										<option
 										value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -377,6 +359,21 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 	</a>
 </div>
 <div class="caption">
+	<?php if ($product['price']) { ?>
+	<div class="name">
+		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+	</div>
+	<div class="price">
+		<?php if (!$product['special']) { ?>
+		<?php echo $product['price']; ?>
+		<?php } else { ?>
+		<span class="price-new"><?php echo $product['special']; ?></span> 
+		<span class="price-old"><?php echo $product['price']; ?></span>
+		<?php } ?>
+		<?php if ($product['tax']) { ?>
+		<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+		<?php } ?>
+	</div>
 	<div class="rating">
 		<?php if ($product['rating']) { ?>
 		<?php for ($i = 1; $i <= 5; $i++) { ?>
@@ -393,22 +390,7 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 		<?php } ?>
 		<?php } ?>
 	</div>
-	<?php if ($product['price']) { ?>
-	<div class="price">
-		<?php if (!$product['special']) { ?>
-		<?php echo $product['price']; ?>
-		<?php } else { ?>
-		<span class="price-new"><?php echo $product['special']; ?></span> 
-		<span class="price-old"><?php echo $product['price']; ?></span>
-		<?php } ?>
-		<?php if ($product['tax']) { ?>
-		<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-		<?php } ?>
-	</div>
 	<?php } ?>
-	<div class="name">
-		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
-	</div>
 	<div class="description"><?php echo $product['description']; ?></div>
 	<hr>
 </div>
@@ -419,9 +401,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
 		<i class="material-icons-favorite_border"></i>
 	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-equalizer"></i>
-	</button>
 </div>
 <div class="aside">
 	<div class="cart-button">
@@ -430,9 +409,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 		</button>
 		<button class="product-btn" type="button" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
 			<span><?php echo $button_wishlist; ?></span>
-		</button>
-		<button class="product-btn" type="button" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-			<span><?php echo $button_compare; ?></span>
 		</button>
 	</div>
 </div>
@@ -448,7 +424,7 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </div>
 <?php } ?>
 <?php if (!$categories && !$products) { ?>
-<p><?php echo $text_empty; ?></p>
+<p>There are no products to list in this category.</p>
 <div class="buttons">
 	<div class="pull-right"><a href="<?php echo $continue; ?>" class="btn"><?php echo $button_continue; ?></a></div>
 </div>

@@ -233,23 +233,23 @@ class ControllerProductManufacturer extends Controller {
 
 			$data['sorts'] = array();
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_default'),
-				'value' => 'p.sort_order-ASC',
-				'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&sort=p.sort_order&order=ASC' . $url)
-			);
+			// $data['sorts'][] = array(
+			// 	'text'  => $this->language->get('text_default'),
+			// 	'value' => 'p.sort_order-ASC',
+			// 	'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&sort=p.sort_order&order=ASC' . $url)
+			// );
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_name_asc'),
-				'value' => 'pd.name-ASC',
-				'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&sort=pd.name&order=ASC' . $url)
-			);
+			// $data['sorts'][] = array(
+			// 	'text'  => $this->language->get('text_name_asc'),
+			// 	'value' => 'pd.name-ASC',
+			// 	'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&sort=pd.name&order=ASC' . $url)
+			// );
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_name_desc'),
-				'value' => 'pd.name-DESC',
-				'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&sort=pd.name&order=DESC' . $url)
-			);
+			// $data['sorts'][] = array(
+			// 	'text'  => $this->language->get('text_name_desc'),
+			// 	'value' => 'pd.name-DESC',
+			// 	'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&sort=pd.name&order=DESC' . $url)
+			// );
 
 			$data['sorts'][] = array(
 				'text'  => $this->language->get('text_price_asc'),
@@ -277,17 +277,17 @@ class ControllerProductManufacturer extends Controller {
 				);
 			}
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_model_asc'),
-				'value' => 'p.model-ASC',
-				'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&sort=p.model&order=ASC' . $url)
-			);
+			// $data['sorts'][] = array(
+			// 	'text'  => $this->language->get('text_model_asc'),
+			// 	'value' => 'p.model-ASC',
+			// 	'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&sort=p.model&order=ASC' . $url)
+			// );
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_model_desc'),
-				'value' => 'p.model-DESC',
-				'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&sort=p.model&order=DESC' . $url)
-			);
+			// $data['sorts'][] = array(
+			// 	'text'  => $this->language->get('text_model_desc'),
+			// 	'value' => 'p.model-DESC',
+			// 	'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&sort=p.model&order=DESC' . $url)
+			// );
 
 			$url = '';
 
@@ -301,7 +301,7 @@ class ControllerProductManufacturer extends Controller {
 
 			$data['limits'] = array();
 
-			$limits = array_unique(array($this->config->get('config_product_limit'), 25, 50, 75, 100));
+			$limits = array_unique(array($this->config->get('config_product_limit'), 50, 75, 100));
 
 			sort($limits);
 

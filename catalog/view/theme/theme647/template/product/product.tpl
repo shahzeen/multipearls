@@ -22,8 +22,8 @@
 			$content_right = 'col-sm-7';
 		} else {
 			$content_width = 'col-sm-12';
-			$content_left = 'col-sm-5 col-lg-7';
-			$content_right = 'col-sm-7 col-lg-5';
+			$content_left = 'col-sm-5 col-lg-5';
+			$content_right = 'col-sm-7 col-lg-7';
 		} ?>
 
 		<div id="content" class="<?php echo $content_width; ?> product_page"><?php echo $content_top; ?>
@@ -202,18 +202,17 @@
 													<!-- Product options -->
 													<?php if ($options) { ?>
 													<div class="product-options form-horizontal">
-														<h3><?php echo $text_option; ?></h3>
 														<?php foreach ($options as $option) { ?>
 														<?php if ($option['type'] == 'select') { ?>
-														<div class="form-group<?php echo($option['required'] ? ' required' : ''); ?>">
-															<label class="control-label col-sm-12"
+														<div class="col-sm-12 form-group<?php echo($option['required'] ? ' required' : ''); ?>">
+															<label class="control-label"
 															for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
 
-															<div class="col-sm-12">
+														
 																<select name="option[<?php echo $option['product_option_id']; ?>]"
 																	id="input-option<?php echo $option['product_option_id']; ?>"
 																	class="form-control">
-																	<option value=""><?php echo $text_select; ?></option>
+																	
 																	<?php foreach ($option['product_option_value'] as $option_value) { ?>
 																	<option
 																	value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -223,15 +222,15 @@
 																</option>
 																<?php } ?>
 															</select>
-														</div>
+														
 													</div>
 													<?php } ?>
 													<?php if ($option['type'] == 'radio') { ?>
-													<div class="form-group<?php echo($option['required'] ? ' required' : ''); ?>">
+													<div class="col-sm-12 form-group<?php echo($option['required'] ? ' required' : ''); ?>">
 														<label
-														class="control-label col-sm-12"><?php echo $option['name']; ?></label>
+														class="control-label"><?php echo $option['name']; ?></label>
 
-														<div class="col-sm-12">
+														
 															<div id="input-option<?php echo $option['product_option_id']; ?>">
 																<?php foreach ($option['product_option_value'] as $option_value) { ?>
 																<div class="radio">
@@ -247,15 +246,14 @@
 																</div>
 																<?php } ?>
 															</div>
-														</div>
+														
 													</div>
 													<?php } ?>
 													<?php if ($option['type'] == 'checkbox') { ?>
-													<div class="form-group<?php echo($option['required'] ? ' required' : ''); ?>">
+													<div class="col-sm-12 form-group<?php echo($option['required'] ? ' required' : ''); ?>">
 														<label
-														class="control-label col-sm-12"><?php echo $option['name']; ?></label>
+														class="control-label"><?php echo $option['name']; ?></label>
 
-														<div class="col-sm-12">
 															<div id="input-option<?php echo $option['product_option_id']; ?>">
 																<?php foreach ($option['product_option_value'] as $option_value) { ?>
 																<div class="checkbox">
@@ -271,15 +269,13 @@
 																</div>
 																<?php } ?>
 															</div>
-														</div>
 													</div>
 													<?php } ?>
 													<?php if ($option['type'] == 'image') { ?>
-													<div class="form-group<?php echo($option['required'] ? ' required' : ''); ?>">
+													<div class="col-sm-12 form-group<?php echo($option['required'] ? ' required' : ''); ?>">
 														<label
-														class="control-label col-sm-12"><?php echo $option['name']; ?></label>
+														class="control-label"><?php echo $option['name']; ?></label>
 
-														<div class="col-sm-12">
 															<div id="input-option<?php echo $option['product_option_id']; ?>">
 																<?php foreach ($option['product_option_value'] as $option_value) { ?>
 																<div class="radio">
@@ -287,9 +283,10 @@
 																		<input type="radio"
 																		name="option[<?php echo $option['product_option_id']; ?>]"
 																		value="<?php echo $option_value['product_option_value_id']; ?>"/>
+																		<span><?php echo $option_value['name']; ?></span>
 																		<img src="<?php echo $option_value['image']; ?>"
 																		alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>"
-																		class="img-thumbnail"/> <?php echo $option_value['name']; ?>
+																		class="img-thumbnail"/>
 																		<?php if ($option_value['price']) { ?>
 																		(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 																		<?php } ?>
@@ -297,22 +294,19 @@
 																</div>
 																<?php } ?>
 															</div>
-														</div>
 													</div>
 													<?php } ?>
 													<?php if ($option['type'] == 'text') { ?>
-													<div class="form-group<?php echo($option['required'] ? ' required' : ''); ?>">
-														<label class="control-label col-sm-12"
+													<div class="col-sm-12 form-group<?php echo($option['required'] ? ' required' : ''); ?>">
+														<label class="control-label"
 														for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
 
-														<div class="col-sm-12">
 															<input type="text"
 															name="option[<?php echo $option['product_option_id']; ?>]"
 															value="<?php echo $option['value']; ?>"
 															placeholder="<?php echo $option['name']; ?>"
 															id="input-option<?php echo $option['product_option_id']; ?>"
 															class="form-control"/>
-														</div>
 													</div>
 													<?php } ?>
 													<?php if ($option['type'] == 'textarea') { ?>
@@ -347,11 +341,10 @@
 														</div>
 														<?php } ?>
 														<?php if ($option['type'] == 'date') { ?>
-														<div class="form-group<?php echo($option['required'] ? ' required' : ''); ?>">
-															<label class="control-label col-sm-12"
+														<div class="col-sm-12 form-group<?php echo($option['required'] ? ' required' : ''); ?>">
+															<label class="control-label"
 															for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
 
-															<div class="col-sm-12">
 																<div class="input-group date">
 																	<input type="text"
 																	name="option[<?php echo $option['product_option_id']; ?>]"
@@ -365,7 +358,6 @@
 																		</span>
 																	</div>
 																</div>
-															</div>
 															<?php } ?>
 															<?php if ($option['type'] == 'datetime') { ?>
 															<div class="form-group<?php echo($option['required'] ? ' required' : ''); ?>">
@@ -417,7 +409,7 @@
 																	<h3><?php echo $text_payment_recurring ?></h3>
 																	<div class="form-group required">
 																		<select name="recurring_id" class="form-control">
-																			<option value=""><?php echo $text_select; ?></option>
+																			
 																			<?php foreach ($recurrings as $recurring) { ?>
 																			<option
 																			value="<?php echo $recurring['recurring_id'] ?>"><?php echo $recurring['name'] ?></option>
@@ -440,28 +432,24 @@
 																			id="input-quantity" class="form-control"/>
 																			<input type="hidden" name="product_id" value="<?php echo $product_id; ?>"/>
 																			<a class="counter counter-plus material-design-add186" href='#'></a>
+																		</div>
+																		<div class="col-sm-12">
 																			<button type="button" id="button-cart"
 																			data-loading-text="<?php echo $text_loading; ?>"
-																			class="product-btn-add"><?php echo $button_cart; ?></button>
+																			class="product-btn"><?php echo $button_cart; ?></button>
+																			<button class="product-btn" onclick="wishlist.add('<?php echo $product_id; ?>');">
+																			<span><?php echo $button_wishlist; ?></span></button>
 																		</div>
 																	</div>
-
+																	<?php if ($minimum > 1) { ?>
+																	<div class="alert alert-info"><i
+																		class="material-design-round52"></i> <?php echo $text_minimum; ?>
+																	</div>
+																	<?php } ?>
 
 																</div>
 
-																<ul class="product-buttons">
-																	<li>
-																		<button class="product-btn" onclick="wishlist.add('<?php echo $product_id; ?>');">
-																			<span><?php echo $button_wishlist; ?></span></button>
-																		</li>
-																		<li>
-																			<button type="button" class="product-btn"
-																			onclick="compare.add('<?php echo $product_id; ?>');">
-																			<span><?php echo $button_compare; ?></span></button>
-																		</li>
-																	</ul>
-
-																	<?php if ($tags) { ?>
+																<?php if ($tags) { ?>
 																	<!-- Product tags -->
 																	<div class="product-tags">
 																		<?php echo $text_tags; ?>
@@ -485,14 +473,7 @@
 
 																		<!-- AddThis Button END -->
 																	</div>
-
-																	<?php if ($minimum > 1) { ?>
-																	<div class="alert alert-info"><i
-																		class="material-design-round52"></i> <?php echo $text_minimum; ?>
-																	</div>
-																	<?php } ?>
 																</div>
-
 															</div>
 														</div>
 
@@ -563,7 +544,7 @@
 
 																		<!-- Review form -->
 																		<div class="review-form-title">
-																			<h3 class="product-section_title"
+																			<h3 class="btn product-section_title"
 																			id="reviews_form_title"><?php echo $text_write; ?></h3>
 																		</div>
 																		<div class="product-review-form" id="reviews_form">
@@ -641,7 +622,6 @@
 																			<div class="product-options form-horizontal">
 																				<div class="options">
 																					<a class="ajax-overlay_close" href='#'></a>
-																					<h3><?php echo $text_option; ?></h3>
 
 																					<div class="form-group hidden">
 																						<div class="col-sm-8">
@@ -664,7 +644,7 @@
 																						name="option[<?php echo $option['product_option_id']; ?>]"
 																						id="input-option<?php echo $option['product_option_id'] . $pr; ?>"
 																						class="form-control">
-																						<option value=""><?php echo $text_select; ?></option>
+																						
 																						<?php foreach ($option['product_option_value'] as $option_value) { ?>
 																						<option
 																						value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -750,9 +730,10 @@
 																<input type="radio"
 																name="option[<?php echo $option['product_option_id']; ?>]"
 																value="<?php echo $option_value['product_option_value_id']; ?>"/>
+																<span><?php echo $option_value['name']; ?></span>
 																<img src="<?php echo $option_value['image']; ?>"
 																alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>"
-																class="img-thumbnail"/> <?php echo $option_value['name']; ?>
+																class="img-thumbnail"/>
 																<?php if ($option_value['price']) { ?>
 																(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 																<?php } ?>
@@ -950,9 +931,6 @@
 				</button>
 				<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
 					<i class="material-icons-favorite_border"></i>
-				</button>
-				<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-					<i class="material-icons-equalizer"></i>
 				</button>
 			</div>
 			<div class="clear"></div>

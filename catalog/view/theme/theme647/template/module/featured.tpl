@@ -5,7 +5,7 @@
 	<div class="box-content">
 		<div class="row">
 			<?php $f = 2000; foreach ($products as $product) { $f++; ?>
-			<div class="product-layout col-lg-3 col-md-3 col-sm-3 col-xs-12">
+			<div class="product-layout col-lg-2 col-md-2 col-sm-2 col-xs-12">
 				<div class="product-thumb transition <?php if ($product['options']) echo 'options';?>">
 					<?php if ($product['options']) { ?>
 					<!-- Product options -->
@@ -27,7 +27,7 @@
 									</label>
 									<div class="col-sm-12">
 										<select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id'] . $module . $f; ?>" class="form-control">
-											<option value=""><?php echo $text_select; ?></option>
+											
 											<?php foreach ($option['product_option_value'] as $option_value) { ?>
 											<option value="<?php echo $option_value['product_option_value_id']; ?>">
 												<?php echo $option_value['name']; ?>
@@ -89,7 +89,8 @@
 											<div class="radio">
 												<label>
 													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>"/>
-													<img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail"/> <?php echo $option_value['name']; ?>
+													<span><?php echo $option_value['name']; ?></span>
+													<img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail"/>
 													<?php if ($option_value['price']) { ?>(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)<?php } ?>
 												</label>
 											</div>
@@ -252,11 +253,6 @@
 											<span><?php echo $button_wishlist; ?></span>
 										</button>
 									</li>
-									<li>
-										<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-											<span><?php echo $button_compare; ?></span>
-										</button>
-									</li>
 								</ul>
 								<div class="clear"></div>
 							</div>
@@ -282,6 +278,22 @@
 						</a>
 					</div>
 					<div class="caption">
+						<div class="name">
+							<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+						</div>
+						<?php if ($product['price']) { ?>
+						<div class="price">
+							<?php if (!$product['special']) { ?>
+							<?php echo $product['price']; ?>
+							<?php } else { ?>
+							<span class="price-new"><?php echo $product['special']; ?></span> 
+							<span class="price-old"><?php echo $product['price']; ?></span>
+							<?php } ?>
+							<?php if ($product['tax']) { ?>
+							<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+							<?php } ?>
+						</div>
+						<?php } ?>
 						<div class="rating">
 							<?php if ($product['rating']) { ?>
 							<?php for ($i = 1; $i <= 5; $i++) { ?>
@@ -298,22 +310,6 @@
 							<?php } ?>
 							<?php } ?>
 						</div>
-						<?php if ($product['price']) { ?>
-						<div class="price">
-							<?php if (!$product['special']) { ?>
-							<?php echo $product['price']; ?>
-							<?php } else { ?>
-							<span class="price-new"><?php echo $product['special']; ?></span> 
-							<span class="price-old"><?php echo $product['price']; ?></span>
-							<?php } ?>
-							<?php if ($product['tax']) { ?>
-							<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-							<?php } ?>
-						</div>
-						<?php } ?>
-						<div class="name">
-							<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
-						</div>
 						<div class="description"><?php echo $product['description']; ?></div>
 					</div>
 					<hr>
@@ -323,9 +319,6 @@
 						</button>
 						<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
 							<i class="material-icons-favorite_border"></i>
-						</button>
-						<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-							<i class="material-icons-equalizer"></i>
 						</button>
 					</div>
 				</div>

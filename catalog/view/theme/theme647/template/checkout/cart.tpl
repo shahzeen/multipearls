@@ -35,7 +35,7 @@
 		<?php } else { ?>
 		<?php $class = 'col-sm-12'; ?>
 		<?php } ?>
-		<div id="content" class="<?php echo $class; ?>">
+		<div id="content" class="<?php echo $class; ?> tb-space">
 			<?php echo $content_top; ?>
 			<h1><i class="material-design-shopping232"></i><?php echo $heading_title; ?>
 				<?php if ($weight) { ?>
@@ -105,9 +105,7 @@
 											<a class="counter counter-minus material-design-horizontal39" href='#'></a>
 											<input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" class="form-control cart-q" id="cart-q"/>
 											<a class="counter counter-plus material-design-add186" href='#'></a>
-											<p>
-												<button type="submit" class="link"><?php echo $button_update; ?></button>
-											</p>
+											<button type="submit" class="link"><?php echo $button_update; ?></button>
 										</div>
 									</td>
 									<td class="text-right">

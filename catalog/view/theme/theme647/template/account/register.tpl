@@ -18,11 +18,12 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+    <div id="content" class="<?php echo $class; ?> tb-space"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?></h1>
       <p><?php echo $text_account_already; ?></p>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
-        <fieldset id="account">
+        <div class="row">
+        <fieldset id="account" class="col-md-6">
           <legend><?php echo $text_your_details; ?></legend>
           <div class="form-group required" style="display: <?php echo (count($customer_groups) > 1 ? 'block' : 'none'); ?>;">
             <label class="col-sm-3 control-label"><?php echo $entry_customer_group; ?></label>
@@ -80,12 +81,6 @@
               <?php } ?>
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label" for="input-fax"><?php echo $entry_fax; ?></label>
-            <div class="col-sm-9">
-              <input type="text" name="fax" value="<?php echo $fax; ?>" placeholder="<?php echo $entry_fax; ?>" id="input-fax" class="form-control" />
-            </div>
-          </div>
           <?php foreach ($custom_fields as $custom_field) { ?>
           <?php if ($custom_field['location'] == 'account') { ?>
           <?php if ($custom_field['type'] == 'select') { ?>
@@ -93,7 +88,7 @@
             <label class="col-sm-3 control-label" for="input-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
             <div class="col-sm-9">
               <select name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]" id="input-custom-field<?php echo $custom_field['custom_field_id']; ?>" class="form-control">
-                <option value=""><?php echo $text_select; ?></option>
+                
                 <?php foreach ($custom_field['custom_field_value'] as $custom_field_value) { ?>
                 <?php if (isset($register_custom_field[$custom_field['custom_field_id']]) && $custom_field_value['custom_field_value_id'] == $register_custom_field[$custom_field['custom_field_id']]) { ?>
                 <option value="<?php echo $custom_field_value['custom_field_value_id']; ?>" selected="selected"><?php echo $custom_field_value['name']; ?></option>
@@ -239,15 +234,27 @@
           <?php } ?>
           <?php } ?>
           <?php } ?>
-        </fieldset>
-        <fieldset id="address">
-          <legend><?php echo $text_your_address; ?></legend>
-          <div class="form-group">
-            <label class="col-sm-3 control-label" for="input-company"><?php echo $entry_company; ?></label>
+           <div class="form-group required">
+            <label class="col-sm-3 control-label" for="input-password"><?php echo $entry_password; ?></label>
             <div class="col-sm-9">
-              <input type="text" name="company" value="<?php echo $company; ?>" placeholder="<?php echo $entry_company; ?>" id="input-company" class="form-control" />
+              <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
+              <?php if ($error_password) { ?>
+              <div class="text-danger"><?php echo $error_password; ?></div>
+              <?php } ?>
             </div>
           </div>
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="input-confirm"><?php echo $entry_confirm; ?></label>
+            <div class="col-sm-9">
+              <input type="password" name="confirm" value="<?php echo $confirm; ?>" placeholder="<?php echo $entry_confirm; ?>" id="input-confirm" class="form-control" />
+              <?php if ($error_confirm) { ?>
+              <div class="text-danger"><?php echo $error_confirm; ?></div>
+              <?php } ?>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="col-md-6" id="address">
+          <legend><?php echo $text_your_address; ?></legend>
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="input-address-1"><?php echo $entry_address_1; ?></label>
             <div class="col-sm-9">
@@ -285,7 +292,7 @@
             <label class="col-sm-3 control-label" for="input-country"><?php echo $entry_country; ?></label>
             <div class="col-sm-9">
               <select name="country_id" id="input-country" class="form-control">
-                <option value=""><?php echo $text_select; ?></option>
+                
                 <?php foreach ($countries as $country) { ?>
                 <?php if ($country['country_id'] == $country_id) { ?>
                 <option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
@@ -316,7 +323,7 @@
             <label class="col-sm-3 control-label" for="input-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
             <div class="col-sm-9">
               <select name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]" id="input-custom-field<?php echo $custom_field['custom_field_id']; ?>" class="form-control">
-                <option value=""><?php echo $text_select; ?></option>
+                
                 <?php foreach ($custom_field['custom_field_value'] as $custom_field_value) { ?>
                 <?php if (isset($register_custom_field[$custom_field['custom_field_id']]) && $custom_field_value['custom_field_value_id'] == $register_custom_field[$custom_field['custom_field_id']]) { ?>
                 <option value="<?php echo $custom_field_value['custom_field_value_id']; ?>" selected="selected"><?php echo $custom_field_value['name']; ?></option>
@@ -463,66 +470,26 @@
           <?php } ?>
           <?php } ?>          
         </fieldset>
-        <fieldset>
-          <legend><?php echo $text_your_password; ?></legend>
-          <div class="form-group required">
-            <label class="col-sm-3 control-label" for="input-password"><?php echo $entry_password; ?></label>
-            <div class="col-sm-9">
-              <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
-              <?php if ($error_password) { ?>
-              <div class="text-danger"><?php echo $error_password; ?></div>
-              <?php } ?>
-            </div>
-          </div>
-          <div class="form-group required">
-            <label class="col-sm-3 control-label" for="input-confirm"><?php echo $entry_confirm; ?></label>
-            <div class="col-sm-9">
-              <input type="password" name="confirm" value="<?php echo $confirm; ?>" placeholder="<?php echo $entry_confirm; ?>" id="input-confirm" class="form-control" />
-              <?php if ($error_confirm) { ?>
-              <div class="text-danger"><?php echo $error_confirm; ?></div>
-              <?php } ?>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend><?php echo $text_newsletter; ?></legend>
-          <div class="form-group">
-            <label class="col-sm-3 control-label"><?php echo $entry_newsletter; ?></label>
-            <div class="col-sm-9">
-              <?php if ($newsletter) { ?>
-              <label class="radio-inline">
-                <input type="radio" name="newsletter" value="1" checked="checked" />
-                <?php echo $text_yes; ?></label>
-              <label class="radio-inline">
-                <input type="radio" name="newsletter" value="0" />
-                <?php echo $text_no; ?></label>
-              <?php } else { ?>
-              <label class="radio-inline">
-                <input type="radio" name="newsletter" value="1" />
-                <?php echo $text_yes; ?></label>
-              <label class="radio-inline">
-                <input type="radio" name="newsletter" value="0" checked="checked" />
-                <?php echo $text_no; ?></label>
-              <?php } ?>
-            </div>
-          </div>
-        </fieldset>
+        </div>
+       
           <?php echo $captcha; ?>
         <?php if ($text_agree) { ?>
         <div class="buttons">
-          <div class="pull-right"><?php echo $text_agree; ?>
-            <?php if ($agree) { ?>
+          <div class="text-center">
+          <?php if ($agree) { ?>
             <input type="checkbox" name="agree" value="1" checked="checked" />
             <?php } else { ?>
             <input type="checkbox" name="agree" value="1" />
             <?php } ?>
-            &nbsp;
+          <?php echo $text_agree; ?>
+          <br/>
+          <br/>
             <input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-primary" />
           </div>
         </div>
         <?php } else { ?>
         <div class="buttons">
-          <div class="pull-right">
+          <div class="text-center">
             <input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-primary" />
           </div>
         </div>
@@ -670,7 +637,7 @@ $('select[name=\'country_id\']').on('change', function() {
 				$('input[name=\'postcode\']').parent().parent().removeClass('required');
 			}
 			
-			html = '<option value=""><?php echo $text_select; ?></option>';
+			html = '';
 			
 			if (json['zone'] != '') {
 				for (i = 0; i < json['zone'].length; i++) {

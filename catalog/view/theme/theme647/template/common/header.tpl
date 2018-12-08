@@ -92,7 +92,6 @@
 								</li>
 								<li>
 									<a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>">
-										<i class="material-design-user157 hidden-xs"></i>
 										<span><?php echo $text_account; ?></span>
 									</a>
 								</li>
@@ -111,17 +110,15 @@
 								</li>
 								<li>
 									<a href="<?php echo $logout; ?>">
-										<i class="material-icons-reply_all"></i>
 										<?php echo $text_logout; ?>
 									</a>
 								</li>
 								<?php } else { ?>
-								<li class="hidden-sm hidden-md hidden-lg">
+								<li class="hidden-sm">
 									<a href="<?php echo $register; ?>"><?php echo $text_register; ?></a>
 								</li>
 								<li>
 									<a href="<?php echo $login; ?>">
-										<i class="material-icons-vpn_key hidden-xs"></i>
 										<?php echo $text_login; ?>
 									</a>
 								</li>
@@ -130,12 +127,6 @@
 									<a href="<?php echo $shopping_cart; ?>" title="<?php echo $text_shopping_cart; ?>">
 										<!-- <i class="material-design-shopping232"></i> -->
 										<span><?php echo $text_shopping_cart; ?></span>
-									</a>
-								</li>
-								<li>
-									<a href="<?php echo $checkout; ?>" title="<?php echo $text_checkout; ?>">
-										<!-- <i class="material-design-forward18"></i> -->
-										<span><?php echo $text_checkout; ?></span>
 									</a>
 								</li>
 							</ul>
@@ -163,12 +154,6 @@
 								<i class="material-icons-favorite_border"></i>
 							</a>
 							<span id="wishlist-total"><?php echo $text_wishlist; ?></span>
-						</div>
-						<div class="box-compare">
-							<a href="<?php echo $compare; ?>">
-								<i class="material-icons-equalizer"></i>
-							</a>
-							<span id="compare-total2"><?php echo $text_compare; ?></span>
 						</div>
 						<?php echo $search; ?>
 					</div>

@@ -14,9 +14,8 @@
 			<?php }?>
 
 		</script>
+		<?php if ($latest_products || $featured_products || $special_products || $bestseller_products) { ?>
 		<div class="box single-category">
-			<hr>
-			<div class="box-heading"><h2><?php echo $category_name ?></h2></div>
 			<div class="box-content">
 				<div role="tabpanel" class="module_tab" id="single-category<?php echo $module; ?>">
 					<?php if ($tabs == '1') { ?>
@@ -105,7 +104,7 @@
 														name="option[<?php echo $option['product_option_id']; ?>]"
 														id="input-option<?php echo $option['product_option_id'] .  $module . $tf; ?>"
 														class="form-control">
-														<option value=""><?php echo $text_select; ?></option>
+														
 														<?php foreach ($option['product_option_value'] as $option_value) { ?>
 														<option
 														value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -376,22 +375,7 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 						</div>
 						<?php } ?>
 					</div>
-					<?php if ($product['rating']) { ?>
-					<div class="rating">
-						<?php for ($i = 1; $i <= 5; $i++) { ?>
-						<?php if ($product['rating'] < $i) { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-						</span>
-						<?php } else { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-							<i class="material-icons-star star fa-stack-1x"></i>
-						</span>
-						<?php } ?>
-						<?php } ?>
-					</div>
-					<?php } ?>
+					
 					<button class="product-btn-add" data-toggle="tooltip"
 					title="<?php echo $button_cart; ?>" type="button"
 					onclick="cart.add('<?php echo $product['product_id']; ?>');">
@@ -406,14 +390,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 						<span><?php echo $button_wishlist; ?></span>
 					</button>
 				</li>
-				<li>
-					<button class="product-btn" type="button"
-					data-toggle="tooltip"
-					title="<?php echo $button_compare; ?>"
-					onclick="compare.add('<?php echo $product['product_id']; ?>');">
-					<span><?php echo $button_compare; ?></span>
-				</button>
-			</li>
 		</ul>
 		<div class="clear"></div>
 	</div>
@@ -440,21 +416,8 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 	</a>
 </div>
 <div class="caption">
-	<div class="rating">
-		<?php if ($product['rating']) { ?>
-		<?php for ($i = 1; $i <= 5; $i++) { ?>
-		<?php if ($product['rating'] < $i) { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-		</span>
-		<?php } else { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-			<i class="material-icons-star star fa-stack-1x"></i>
-		</span>
-		<?php } ?>
-		<?php } ?>
-		<?php } ?>
+	<div class="name">
+		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
 	</div>
 	<?php if ($product['price']) { ?>
 	<div class="price">
@@ -472,21 +435,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 		<?php } ?>
 	</div>
 	<?php } ?>
-	<div class="name">
-		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
-	</div>
-</div>
-<hr>
-<div class="cart-button">
-	<button class="product-btn-add" type="button" data-toggle="tooltip" title="<?php echo $button_cart; ?>" <?php if (count($product['options']) >= 4) { ?> onclick="cart.add('<?php echo $product['product_id']; ?>');" <?php } else { ?> onclick="ajaxAdd($(this),<?php echo $product['product_id'] ?>);" <?php } ?>>
-		<i class="material-icons-add_shopping_cart"></i>
-	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-favorite_border"></i>
-	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-equalizer"></i>
-	</button>
 </div>
 </div>
 
@@ -533,7 +481,7 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 								name="option[<?php echo $option['product_option_id']; ?>]"
 								id="input-option<?php echo $option['product_option_id'] .  $module . $tl; ?>"
 								class="form-control">
-								<option value=""><?php echo $text_select; ?></option>
+								
 								<?php foreach ($option['product_option_value'] as $option_value) { ?>
 								<option
 								value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -804,22 +752,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 						</div>
 						<?php } ?>
 					</div>
-					<?php if ($product['rating']) { ?>
-					<div class="rating">
-						<?php for ($i = 1; $i <= 5; $i++) { ?>
-						<?php if ($product['rating'] < $i) { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-						</span>
-						<?php } else { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-							<i class="material-icons-star star fa-stack-1x"></i>
-						</span>
-						<?php } ?>
-						<?php } ?>
-					</div>
-					<?php } ?>
 
 					<button class="product-btn-add" data-toggle="tooltip"
 					title="<?php echo $button_cart; ?>" type="button"
@@ -835,14 +767,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 						<span><?php echo $button_wishlist; ?></span>
 					</button>
 				</li>
-				<li>
-					<button class="product-btn" type="button"
-					data-toggle="tooltip"
-					title="<?php echo $button_compare; ?>"
-					onclick="compare.add('<?php echo $product['product_id']; ?>');">
-					<span><?php echo $button_compare; ?></span>
-				</button>
-			</li>
 		</ul>
 		<div class="clear"></div>
 	</div>
@@ -873,22 +797,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </a>
 </div>
 <div class="caption">
-	<div class="rating">
-		<?php if ($product['rating']) { ?>
-		<?php for ($i = 1; $i <= 5; $i++) { ?>
-		<?php if ($product['rating'] < $i) { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-		</span>
-		<?php } else { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-			<i class="material-icons-star star fa-stack-1x"></i>
-		</span>
-		<?php } ?>
-		<?php } ?>
-		<?php } ?>
-	</div>
 	<?php if ($product['price']) { ?>
 	<div class="price">
 		<?php if (!$product['special']) { ?>
@@ -908,18 +816,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 	<div class="name">
 		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
 	</div>
-</div>
-<hr>
-<div class="cart-button">
-	<button class="product-btn-add" type="button" data-toggle="tooltip" title="<?php echo $button_cart; ?>" <?php if (count($product['options']) >= 4) { ?> onclick="cart.add('<?php echo $product['product_id']; ?>');" <?php } else { ?> onclick="ajaxAdd($(this),<?php echo $product['product_id'] ?>);" <?php } ?>>
-		<i class="material-icons-add_shopping_cart"></i>
-	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-favorite_border"></i>
-	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-equalizer"></i>
-	</button>
 </div>
 </div>
 <?php } ?>
@@ -965,7 +861,7 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 								name="option[<?php echo $option['product_option_id']; ?>]"
 								id="input-option<?php echo $option['product_option_id'] .  $module . $tc; ?>"
 								class="form-control">
-								<option value=""><?php echo $text_select; ?></option>
+								
 								<?php foreach ($option['product_option_value'] as $option_value) { ?>
 								<option
 								value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -1236,22 +1132,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 						</div>
 						<?php } ?>
 					</div>
-					<?php if ($product['rating']) { ?>
-					<div class="rating">
-						<?php for ($i = 1; $i <= 5; $i++) { ?>
-						<?php if ($product['rating'] < $i) { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-						</span>
-						<?php } else { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-							<i class="material-icons-star star fa-stack-1x"></i>
-						</span>
-						<?php } ?>
-						<?php } ?>
-					</div>
-					<?php } ?>
 
 					<button class="product-btn-add" data-toggle="tooltip"
 					title="<?php echo $button_cart; ?>" type="button"
@@ -1267,15 +1147,7 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 						<span><?php echo $button_wishlist; ?></span>
 					</button>
 				</li>
-				<li>
-					<button class="product-btn" type="button"
-					data-toggle="tooltip"
-					title="<?php echo $button_compare; ?>"
-					onclick="compare.add('<?php echo $product['product_id']; ?>');">
-					<span><?php echo $button_compare; ?></span>
-				</button>
-			</li>
-		</ul>
+			</ul>
 		<div class="clear"></div>
 	</div>
 	<div class="col-sm-12">
@@ -1305,22 +1177,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </a>
 </div>
 <div class="caption">
-	<div class="rating">
-		<?php if ($product['rating']) { ?>
-		<?php for ($i = 1; $i <= 5; $i++) { ?>
-		<?php if ($product['rating'] < $i) { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-		</span>
-		<?php } else { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-			<i class="material-icons-star star fa-stack-1x"></i>
-		</span>
-		<?php } ?>
-		<?php } ?>
-		<?php } ?>
-	</div>
 	<?php if ($product['price']) { ?>
 	<div class="price">
 		<?php if (!$product['special']) { ?>
@@ -1340,18 +1196,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 	<div class="name">
 		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
 	</div>
-</div>
-<hr>
-<div class="cart-button">
-	<button class="product-btn-add" type="button" data-toggle="tooltip" title="<?php echo $button_cart; ?>" <?php if (count($product['options']) >= 4) { ?> onclick="cart.add('<?php echo $product['product_id']; ?>');" <?php } else { ?> onclick="ajaxAdd($(this),<?php echo $product['product_id'] ?>);" <?php } ?>>
-		<i class="material-icons-add_shopping_cart"></i>
-	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-favorite_border"></i>
-	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-equalizer"></i>
-	</button>
 </div>
 
 </div>
@@ -1398,7 +1242,7 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 								name="option[<?php echo $option['product_option_id']; ?>]"
 								id="input-option<?php echo $option['product_option_id'] .  $module . $tb; ?>"
 								class="form-control">
-								<option value=""><?php echo $text_select; ?></option>
+								
 								<?php foreach ($option['product_option_value'] as $option_value) { ?>
 								<option
 								value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -1668,22 +1512,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 						</div>
 						<?php } ?>
 					</div>
-					<?php if ($product['rating']) { ?>
-					<div class="rating">
-						<?php for ($i = 1; $i <= 5; $i++) { ?>
-						<?php if ($product['rating'] < $i) { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-						</span>
-						<?php } else { ?>
-						<span class="fa-stack"><i
-							class="material-icons-star fa-stack-1x"></i>
-							<i class="material-icons-star star fa-stack-1x"></i>
-						</span>
-						<?php } ?>
-						<?php } ?>
-					</div>
-					<?php } ?>
 
 					<button class="product-btn-add" data-toggle="tooltip"
 					title="<?php echo $button_cart; ?>" type="button"
@@ -1699,14 +1527,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 						<span><?php echo $button_wishlist; ?></span>
 					</button>
 				</li>
-				<li>
-					<button class="product-btn" type="button"
-					data-toggle="tooltip"
-					title="<?php echo $button_compare; ?>"
-					onclick="compare.add('<?php echo $product['product_id']; ?>');">
-					<span><?php echo $button_compare; ?></span>
-				</button>
-			</li>
 		</ul>
 		<div class="clear"></div>
 	</div>
@@ -1737,22 +1557,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </a>
 </div>
 <div class="caption">
-	<div class="rating">
-		<?php if ($product['rating']) { ?>
-		<?php for ($i = 1; $i <= 5; $i++) { ?>
-		<?php if ($product['rating'] < $i) { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-		</span>
-		<?php } else { ?>
-		<span class="fa-stack"><i
-			class="material-icons-star fa-stack-1x"></i>
-			<i class="material-icons-star star fa-stack-1x"></i>
-		</span>
-		<?php } ?>
-		<?php } ?>
-		<?php } ?>
-	</div>
 	<?php if ($product['price']) { ?>
 	<div class="price">
 		<?php if (!$product['special']) { ?>
@@ -1773,18 +1577,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
 	</div>
 </div>
-<hr>
-<div class="cart-button">
-	<button class="product-btn-add" type="button" data-toggle="tooltip" title="<?php echo $button_cart; ?>" <?php if (count($product['options']) >= 4) { ?> onclick="cart.add('<?php echo $product['product_id']; ?>');" <?php } else { ?> onclick="ajaxAdd($(this),<?php echo $product['product_id'] ?>);" <?php } ?>>
-		<i class="material-icons-add_shopping_cart"></i>
-	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-favorite_border"></i>
-	</button>
-	<button class="product-btn" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-		<i class="material-icons-equalizer"></i>
-	</button>
-</div>
 </div>
 <?php } ?>
 </div>
@@ -1795,4 +1587,4 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </div>
 </div>
 </div>
-
+<?php } ?>
