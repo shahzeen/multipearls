@@ -37,6 +37,7 @@ system/engine/front.php
 system/engine/event.php
 system/engine/controller.php
 system/engine/action.php
+system/config/index.html
 system/PHPExcel/Classes/PHPExcel/locale/tr/functions
 system/PHPExcel/Classes/PHPExcel/locale/tr/config
 system/PHPExcel/Classes/PHPExcel/locale/sv/functions
@@ -1736,6 +1737,22 @@ system/storage/modification/catalog/controller/information/sitemap.php
 system/storage/modification/catalog/controller/common/seo_url.php
 system/storage/modification/catalog/controller/common/home.php
 system/storage/modification/catalog/controller/common/header.php
+system/library/mail.php
+system/library/log.php
+system/library/length.php
+system/library/language.php
+system/library/image.php
+system/library/etsy.php
+system/library/encryption.php
+system/library/ebay.php
+system/library/document.php
+system/library/db/postgre.php
+system/library/db/mysqli.php
+system/library/db/mysql.php
+system/library/db/mssql.php
+system/library/db/mpdo.php
+system/library/db/mmsql.php
+system/library/db.php
 system/PHPExcel/Classes/PHPExcel/Writer/HTML.php
 system/PHPExcel/Classes/PHPExcel/Writer/Exception.php
 system/PHPExcel/Classes/PHPExcel/Writer/Excel5/Xf.php
@@ -2589,5 +2606,6 @@ admin/controller/analytics/google_analytics.php
 admin/config.php
 .htaccess.txt
 image/cache/
+system/
 ~$electro sports catlog details 2019-2020.xlsx
 system/
