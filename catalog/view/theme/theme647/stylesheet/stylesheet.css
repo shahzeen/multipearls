@@ -819,7 +819,7 @@ header .box-telephone {
     margin-top: 15px;
   }
   header hr + .container {
-    margin-top: 15px;
+    margin-top: 0;
   }
 }
 
@@ -1047,7 +1047,7 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   }
   header .nav .toggle_cont li > a:hover {
     background: #333;
-    color: #333;
+    color: #fff;
   }
 }
 
@@ -1157,10 +1157,12 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   header {
     padding: 15px 0;
   }
+  header > hr{
+    display: none;
+  }
   header .logo {
     float: none;
     text-align: center;
-    margin-top: 15px;
   }
   header .logo img {
     display: inline-block;
@@ -1176,11 +1178,23 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   .box-cart .cart-remove-btn{
     font-size: inherit;
   }
+  header .box-telephone{
+    display: none;
+  }
+  header .box-wishlist{
+    position: fixed;
+    margin: 0;
+    z-index: 10000;
+    margin-right: 5px;
+    z-index: 9999999;
+    left: 74%;
+    top: 2%;
+  }
   header .box-language,
   header .box-currency {
     width: 100%;
     float: none;
-    display: inline-block;
+    /* display: inline-block; */
     text-align: center;
   }
   header .box-language ul > li,
@@ -2194,8 +2208,8 @@ aside .row {
   position: relative;
   text-shadow: 2px 2px #ccc;
   background: #eee;
-    padding: 10px;
-    display: inline-block;
+  padding: 10px;
+  display: inline-block;
 }
 
 .single-category .nav-tabs > li > a:after, .box_html h3:after {

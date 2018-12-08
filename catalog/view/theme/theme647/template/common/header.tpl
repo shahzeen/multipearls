@@ -114,12 +114,12 @@
 									</a>
 								</li>
 								<?php } else { ?>
-								<li class="hidden-sm hidden-md hidden-lg">
+								<li class="hidden-sm">
 									<a href="<?php echo $register; ?>"><?php echo $text_register; ?></a>
 								</li>
 								<li>
 									<a href="<?php echo $login; ?>">
-										<?php echo $text_login; ?> / <?php echo $text_register; ?>
+										<?php echo $text_login; ?>
 									</a>
 								</li>
 								<?php } ?>
