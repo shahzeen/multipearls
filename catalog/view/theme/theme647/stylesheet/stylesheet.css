@@ -1226,9 +1226,6 @@ section.top {
   position: relative;
 }
 
-#column-left {
-  padding-right: 30px;
-}
 #column-left + #content {
   border-left: 2px solid #e0e0e0;
   padding-left: 30px;
@@ -1733,9 +1730,6 @@ text-shadow: 1px 1px black;
   border-top: 1px solid #e0e0e0;
   padding-top: 30px;
 }
-.product-grid{
-  width: 16.666%;
-}
 .product-thumb{
   border: 1px solid #ffffff;
   box-shadow: 0px 0px 14px 1px #fcfafa;
@@ -2184,12 +2178,14 @@ aside .row {
   padding: 0;
 }
 .single-category .product-thumb .name{
-  font-size: 16px;
+  font-size: 15px;
 }
 .single-category .product-thumb .price{
+  margin: 10px 0;
+}
+.single-category .product-thumb .price, .single-category .product-thumb .price-new {
   font-weight: 800;
   font-size: 25px;
-  margin: 10px 0;
 }
 .single-category .nav-tabs > li, .single-category .nav-tabs > li > a, .multipearls-grid-container {
  text-align: center;
@@ -3169,11 +3165,11 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
   }
 }
 .submenu_title{
-margin-bottom: 20px;
 text-transform: uppercase;
 font-size: 16px;
 letter-spacing: 1px;
 font-weight: 600;
+margin-bottom: 20px;
 }
 .sf-menu .sf-mega .container, .sf-menu .sf-mega [class*="col-"], .sf-menu .sf-mega .row {
   width: 100%;
@@ -3318,15 +3314,15 @@ font-weight: 600;
 }
 .rd-mobilemenu_ul a {
   display: block;
-  padding: 14px 45px 16px 25px;
+  padding: 8px;
 }
 .rd-mobilemenu_ul a.active {
   background: #333;
-  color: #eac322;
+  color: #fff;
 }
 .rd-mobilemenu_ul a:hover {
   background: #333;
-  color: #eac322;
+  color: #fff;
 }
 .rd-mobilemenu_ul a .rd-submenu-toggle {
   position: absolute;
@@ -3368,12 +3364,6 @@ font-weight: 600;
 .rd-mobilemenu_ul ul {
   list-style-type: none;
   padding-left: 0;
-}
-.rd-mobilemenu_ul ul a {
-  padding-left: 40px;
-}
-.rd-mobilemenu_ul ul ul a {
-  padding-left: 60px;
 }
 .rd-mobilemenu_ul:after {
   content: '';
@@ -3531,6 +3521,18 @@ font-weight: 600;
   .cart > button:hover, .nav > .toggle:hover {
     color: #333;
   }
+
+  .single-category{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .single-category .nav-tabs, .box_html h3{
+    margin: 0;
+  }
+  
 }
 @media (max-width: 400px) {
   .rd-mobilepanel_title {
@@ -3540,6 +3542,7 @@ font-weight: 600;
   .cart > button, header .nav > .toggle {
     font-size: 22px;
   }
+
 }
 .social-list {
   font-size: 19px;
