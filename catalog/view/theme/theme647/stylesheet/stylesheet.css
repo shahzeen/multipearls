@@ -520,6 +520,16 @@ blockquote {
 .table > tbody + tbody {
   border-top: none;
 }
+.panel{
+  border: 0;
+}
+.panel-body{
+  padding: 0 15px 15px;
+  border: 0;
+}
+.panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body{
+  border: 0;
+}
 .panel-group .panel-footer{
   background: transparent;
 }
@@ -528,6 +538,7 @@ blockquote {
   background: #555;
   color: #fff;
   border-radius: 4px;
+  margin: 0 0 10px;
 }
 .panel-default > .panel-heading > * > a {
   display: block;
