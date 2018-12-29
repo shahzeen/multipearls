@@ -2156,7 +2156,7 @@ aside .row {
 .logo img{
   height: 42px;
 }
-.single-category {
+.single-category, .box_html {
   position: relative;
   background: #fff;
   padding-bottom: 40px;
