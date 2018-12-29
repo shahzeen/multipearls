@@ -2159,7 +2159,6 @@ aside .row {
 .single-category, .box_html {
   position: relative;
   background: #fff;
-  padding-bottom: 40px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: 30px;
@@ -2217,6 +2216,7 @@ aside .row {
   background: #eee;
   padding: 10px;
   display: inline-block;
+  border-radius: 17px;
 }
 
 .single-category .nav-tabs > li > a:after, .box_html h3:after {
@@ -3666,9 +3666,9 @@ margin-bottom: 20px;
   margin-top: 75px;
 } */
 
-.box_html {
+/* .box_html {
   margin-bottom: 15rem;
-}
+} */
 
 
   /*==================   Flex List   ======================*/
