@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']  = 'Contact Us';
+$_['heading_title']  = 'Let Us Walk To Geather';
 
 // Text
 $_['text_location']  = 'Our Location';

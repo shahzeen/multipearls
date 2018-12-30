@@ -1,9 +1,9 @@
 <?php if ($articles) { ?>
 <div class="box blog_articles">
 <hr>
-<!-- 	<div class="box-heading">
-		<h3><?php //echo $heading_title; ?></h3>
-	</div> -->
+<div class="box-heading">
+		<h3><?php echo $heading_title; ?></h3>
+	</div>
 	<div class="box-content">
 		<?php foreach ($articles as $article) { ?>
 		<div class="row">

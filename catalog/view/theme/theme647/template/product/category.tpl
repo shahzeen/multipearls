@@ -72,7 +72,7 @@
 						<?php } ?>
 					</select>
 				</div>
-				<div class="product-filter_elem show pull-right">
+				<!-- <div class="product-filter_elem show pull-right">
 					<label class="control-label" for="input-limit"><?php echo $text_limit; ?></label>
 					<select id="input-limit" onchange="location = this.value;">
 						<?php foreach ($limits as $limits) { ?>
@@ -83,7 +83,7 @@
 						<?php } ?>
 						<?php } ?>
 					</select>
-				</div>
+				</div> -->
 
 
 			</div>

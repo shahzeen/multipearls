@@ -16,8 +16,7 @@
 		<?php $class = 'col-sm-12'; ?>
 		<?php } ?>
 		<div id="content" class="<?php echo $class; ?> contact_page">
-			<!-- <h1 class="no-line"><?php echo $heading_title; ?></h1>-->
-			<h1 class="no-line">Let Us Walk To Geather</h1>
+			<h1 class="no-line"><?php echo $heading_title; ?></h1>
 			<?php echo $content_top; ?>
 			<div class="panel panel-default">
 				<div class="panel-body">
