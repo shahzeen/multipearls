@@ -136,11 +136,11 @@
 												<?php for ($i = 1; $i <= 5; $i++) { ?>
 												<?php if ($rating < $i) { ?>
 												<span class="fa-stack"><i
-													class="material-design-bookmark45 fa-stack-1x"></i></span>
+													class="material-design-rate fa-stack-1x"></i></span>
 													<?php } else { ?>
 													<span class="fa-stack"><i
-														class="material-design-bookmark45   fa-stack-1x"></i>
-														<i class="material-design-bookmark45 star  fa-stack-1x"></i></span>
+														class="material-design-rate   fa-stack-1x"></i>
+														<i class="material-design-rate star  fa-stack-1x"></i></span>
 														<?php } ?>
 														<?php } ?>
 
@@ -449,8 +449,7 @@
 
 																</div>
 
-																<?php if ($tags) { ?>
-																	<!-- Product tags -->
+																<!-- <?php if ($tags) { ?>
 																	<div class="product-tags">
 																		<?php echo $text_tags; ?>
 																		<?php for ($i = 0; $i < count($tags); $i++) { ?>
@@ -461,7 +460,7 @@
 																		<?php } ?>
 																		<?php } ?>
 																	</div>
-																	<?php } ?>
+																	<?php } ?> -->
 																	<div class="product-share">
 																		<!-- AddThis Button BEGIN -->
 

@@ -15,21 +15,22 @@
 		<?php } else { ?>
 		<?php $class = 'col-sm-12'; ?>
 		<?php } ?>
-		<div id="content" class="<?php echo $class; ?> contact_page">
+		<div id="content" class="<?php echo $class; ?> contact_page tb-space">
 			<h1 class="no-line"><?php echo $heading_title; ?></h1>
 			<?php echo $content_top; ?>
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="row">
-						<?php if ($image) { ?>
-						<div class="col-sm-4">
+						<div class="col-sm-6">
+						<!--<?php if ($image) { ?>
+						<div class="col-sm-12">
 
 							<a href="./"><img src="<?php echo $image; ?>" alt="<?php echo $store; ?>" title="<?php echo $store; ?>" class="img-thumbnail"/></a>
 						</div>
-						<?php } ?>
+						<?php } ?>-->
 
 
-						<div class="col-sm-4">
+						<div class="col-sm-12">
 							<div class="icon material-design-phone370">
 								<strong><?php echo $text_telephone; ?></strong><br>
 								<a href="callto:<?php echo $telephone; ?>"><?php echo $telephone; ?></a>
@@ -37,16 +38,16 @@
 						</div>
 
 						<?php if ($open) { ?>
-						<div class="col-sm-4">
+						<div class="col-sm-12">
 							<div class="icon fa-key">
 								<strong><?php echo $text_open; ?></strong><br/>
 								<?php echo $open; ?>
 							</div>
 						</div>
 						<?php } ?>
-						<div class="col-sm-4">
+						<div class="col-sm-12">
 							<div class="icon material-design-home149">
-								<strong><?php echo $store; ?></strong><br/>
+								<strong><?php echo $store; ?></strong>
 								<address>
 									<?php if ($geocode) { ?>
 									<a href="//maps.google.com/maps?ll=<?php echo $geocode; ?>" target="_blank">
@@ -59,7 +60,7 @@
 						</div>
 
 						<?php if ($fax) { ?>
-						<div class="col-sm-4">
+						<div class="col-sm-12">
 							<div class="icon fa-fax">
 								<strong><?php echo $text_fax; ?></strong><br>
 								<a href="tel:<?php echo $fax; ?>"><?php echo $fax; ?></a> 
@@ -67,16 +68,15 @@
 						</div>
 						<?php } ?>
 						<?php if ($comment) { ?>
-						<div class="col-sm-4">
+						<div class="col-sm-12">
 							<div class="icon fa-comments-o">
 								<strong><?php echo $text_comment; ?></strong><br/>
 								<?php echo $comment; ?>
 							</div>
 						</div>
 						<?php } ?>
-					</div>
-				</div>
-			</div>
+						</div>
+							<div class="col-sm-6">
 			<?php if ($locations) { ?>
 			<h3><?php echo $text_store; ?></h3>
 			<div class="panel-group" id="accordion">
@@ -140,7 +140,7 @@
 						<h3><?php echo $text_contact; ?></h3>
 						<fieldset class="row">
 
-							<div class="col-sm-6">
+							<div class="col-sm-12">
 								<div class="form-group required">
 
 									<label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
@@ -153,7 +153,7 @@
 									<?php } ?>
 								</div>
 							</div>
-							<div class="col-sm-6">
+							<div class="col-sm-12">
 								<div class="form-group required">
 
 									<label class="control-label" for="input-email"><?php echo $entry_email; ?></label>
@@ -182,7 +182,7 @@
 							<?php echo $captcha; ?>
 						</fieldset>
 						<div class="buttons">
-							<div class="pull-right">
+							<div>
 								<input class="btn btn-primary" type="submit" value="<?php echo $button_submit; ?>"/>
 							</div>
 						</div>
@@ -190,4 +190,8 @@
 					<?php echo $content_bottom; ?></div>
 					<?php echo $column_right; ?></div>
 				</div>
+				</div>
+					</div>
+				</div>
+			</div>
 				<?php echo $footer; ?>

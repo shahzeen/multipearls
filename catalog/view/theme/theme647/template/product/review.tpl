@@ -6,10 +6,10 @@
 					<div class="review-score">
 						<?php for ($i = 1; $i <= 5; $i++) { ?>
 							<?php if ($review['rating'] < $i) { ?>
-                                <span class="fa-stack"><i class="material-design-bookmark45 fa-stack-1x"></i></span>
+                                <span class="fa-stack"><i class="material-design-rate fa-stack-1x"></i></span>
 							<?php } else { ?>
-                                <span class="fa-stack"><i class="material-design-bookmark45   fa-stack-1x"></i>
-                                                <i class="material-design-bookmark45 star  fa-stack-1x"></i></span>
+                                <span class="fa-stack"><i class="material-design-rate   fa-stack-1x"></i>
+                                                <i class="material-design-rate star  fa-stack-1x"></i></span>
 							<?php } ?>
 						<?php } ?>
 					</div>

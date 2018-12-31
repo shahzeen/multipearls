@@ -813,11 +813,11 @@
                                                             <?php for ($i = 1; $i <= 5; $i++) { ?>
                                                                 <?php if ($product['rating'] < $i) { ?>
                                                                     <span class="fa-stack"><i
-                                                                            class="material-design-bookmark45 fa-stack-1x"></i></span>
+                                                                            class="material-design-rate fa-stack-1x"></i></span>
                                                                 <?php } else { ?>
                                                                     <span class="fa-stack"><i
-                                                                            class="material-design-bookmark45   fa-stack-1x"></i>
-                                                <i class="material-design-bookmark45 star  fa-stack-1x"></i></span>
+                                                                            class="material-design-rate   fa-stack-1x"></i>
+                                                <i class="material-design-rate star  fa-stack-1x"></i></span>
                                                                 <?php } ?>
                                                             <?php } ?>
                                                         </div>
@@ -1248,11 +1248,11 @@
                                                             <?php for ($i = 1; $i <= 5; $i++) { ?>
                                                                 <?php if ($product['rating'] < $i) { ?>
                                                                     <span class="fa-stack"><i
-                                                                            class="material-design-bookmark45 fa-stack-1x"></i></span>
+                                                                            class="material-design-rate fa-stack-1x"></i></span>
                                                                 <?php } else { ?>
                                                                     <span class="fa-stack"><i
-                                                                            class="material-design-bookmark45   fa-stack-1x"></i>
-                                                <i class="material-design-bookmark45 star  fa-stack-1x"></i></span>
+                                                                            class="material-design-rate   fa-stack-1x"></i>
+                                                <i class="material-design-rate star  fa-stack-1x"></i></span>
                                                                 <?php } ?>
                                                             <?php } ?>
                                                         </div>
@@ -1683,11 +1683,11 @@
                                                             <?php for ($i = 1; $i <= 5; $i++) { ?>
                                                                 <?php if ($product['rating'] < $i) { ?>
                                                                     <span class="fa-stack"><i
-                                                                            class="material-design-bookmark45 fa-stack-1x"></i></span>
+                                                                            class="material-design-rate fa-stack-1x"></i></span>
                                                                 <?php } else { ?>
                                                                     <span class="fa-stack"><i
-                                                                            class="material-design-bookmark45   fa-stack-1x"></i>
-                                                <i class="material-design-bookmark45 star  fa-stack-1x"></i></span>
+                                                                            class="material-design-rate   fa-stack-1x"></i>
+                                                <i class="material-design-rate star  fa-stack-1x"></i></span>
                                                                 <?php } ?>
                                                             <?php } ?>
                                                         </div>
