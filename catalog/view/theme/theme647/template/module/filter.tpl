@@ -9,17 +9,22 @@
 			<div class="box-filter">
 				<div>
 							<?php foreach ($filter_group['filter'] as $filter) { ?>
-							<?php if ($filter['count']>0) { ?>
 							<?php if (in_array($filter['filter_id'], $filter_category)) { ?>
 							<div>
 								<input type="checkbox" value="<?php echo $filter['filter_id']; ?>" id="filter<?php echo $filter['filter_id']; ?>" checked="checked" />
 								<label for="filter<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
 							</div>
 							<?php } else { ?>
+							<?php if ($filter['count']==0) { ?>
 							<div>
-								<input type="checkbox" value="<?php echo $filter['filter_id']; ?>" id="filter<?php echo $filter['filter_id']; ?>" />
+								<input type="checkbox" disabled value="<?php echo $filter['filter_id']; ?>" id="filter<?php echo $filter['filter_id']; ?>" />
 								<label for="filter<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
 							</div>
+							<?php } else { ?>
+							<div>
+							<input type="checkbox" value="<?php echo $filter['filter_id']; ?>" id="filter<?php echo $filter['filter_id']; ?>" />
+								<label for="filter<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
+								</div>
 							<?php } ?>
 							<?php } ?>
 							<?php } ?>
