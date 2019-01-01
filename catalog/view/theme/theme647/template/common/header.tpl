@@ -82,7 +82,7 @@
 						<?php echo $language; ?>
 						<?php echo $currency; ?>
 						<nav id="top-links" class="nav toggle-wrap">
-							<a class="toggle material-design-settings49" href='#'></a>
+							<a class="toggle material-design-show8" href='#'></a>
 							<ul class="toggle_cont">
 								<li class="hidden-sm hidden-md hidden-lg">
 									<a href="<?php echo $home; ?>" title="<?php echo $text_home; ?>" >

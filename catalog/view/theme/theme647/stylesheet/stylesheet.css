@@ -838,9 +838,12 @@ header .box-telephone {
   header * + .search {
     margin-right: 0;
     margin-top: 15px;
-    width: 80% !important;
   }
-  header * + .box-wishlist {
+  header * + .search input{
+    padding: 10px 42px 10px 8px;
+    height: 30px;
+  }
+    header * + .box-wishlist {
     margin-right: 0;
   }
   header * + .box-wishlist,
@@ -930,25 +933,29 @@ header .search {
   display: none;
   background: #F4F4F4;
   padding: 10px 0;
-  list-style-type: none;
   position: absolute;
   right: 0;
   top: 100%;
   width: 200px;
   z-index: 20;
+  list-style-type: none;
 }
-.toggle_cont > li > a, .toggle_cont > li > button {
+
+  .toggle_cont>ul {
+  list-style-type: none;
+}
+.toggle_cont>ul > li > a, .toggle_cont > li > button {
   text-align: left;
   width: 100%;
   display: block;
   padding: 5px 5px 5px 10px;
   text-transform: capitalize;
 }
-.toggle_cont ul {
+.toggle_cont>ul ul {
   text-align: right;
   font-size: 16px;
 }
-.toggle_cont ul li + li {
+.toggle_cont>ul ul li + li {
   margin-top: 8px;
 }
 .toggle_cont__right {
@@ -1190,8 +1197,12 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
     display: none;
   }
   header .logo {
-    width: 20%;
-    float: left;
+    float: none;
+    position: fixed;
+    top: 6px;
+    z-index: 99999;
+    left: 50%;
+    transform: translate(-50%);
   }
   header .logo img {
     display: inline-block;
@@ -1609,7 +1620,7 @@ section.top {
     display: none;
   }
   .cart .cart-total2 {
-    margin-left: -32px;
+    margin-left: -34px;
     margin-top: -32px;
     border: 0;
   }
@@ -2656,12 +2667,6 @@ aside .row {
     float: none !important;
     margin-left: 0;
   }
-
-  #button-cart {
-    display: block;
-    margin: 15px 0 0;
-    width: 100%;
-  }
 }
 @media (max-width: 410px) {
   .account-address .table td a {
@@ -3324,9 +3329,6 @@ margin-bottom: 20px;
   font-size: 14px;
   line-height: 20px;
   overflow: auto;
-  -webkit-box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.1);
   -moz-transform: translateX(-240px);
   -ms-transform: translateX(-240px);
   -o-transform: translateX(-240px);
@@ -3416,9 +3418,6 @@ margin-bottom: 20px;
   height: 56px;
   background: #fff;
   color: #111;
-  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   z-index: 10000;
 }
 
@@ -3479,7 +3478,7 @@ margin-bottom: 20px;
 }
 .rd-mobilepanel_toggle span:after, .rd-mobilepanel_toggle span:before, .rd-mobilepanel_toggle span {
   width: 24px;
-  height: 4px;
+  height: 1px;
   background-color: #111;
   backface-visibility: hidden;
   -webkit-border-radius: 2px;
@@ -4402,6 +4401,24 @@ aside #blog-search a:before {
   }
 }
 @media (max-width: 767px) {
+  .product_tabs .nav-tabs{
+    box-shadow: none;
+    border: 0;
+    border-bottom: 1px solid #eee;
+  }
+  .product_tabs .nav-tabs > li{
+    float: left;
+    border: 1px solid #eee;
+    border-bottom: 0;
+  }
+  .product_tabs .nav-tabs > li.active:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: #fff;
+    bottom: -2px;
+    width: 100%;
+}
   .product_tabs .nav-tabs > li > a:before {
     display: none;
   }
@@ -4466,6 +4483,7 @@ aside #blog-search a:before {
 
 @media (max-width: 767px) {
   .product_tabs .nav-tabs, .product_tabs .tab-content {
+    border-bottom: 1px solid #eee;
     width: 100%;
     float: none;
   }
@@ -4681,6 +4699,15 @@ aside #blog-search a:before {
 @media (max-width: 767px) {
   #full_gallery {
     margin-bottom: 30px;
+    border: 1px solid #eee;
+  }
+  h2, .product-title{
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  .price-section .price-new, .price-section .price-section .price-old{
+    font-size: 20px;
   }
 }
 /* ===================   Sub Category on Category Page   =================== */
@@ -5847,8 +5874,12 @@ footer ul li + li {
   }
 }
 @media (max-width: 767px) {
-  select {
+  select{
     display: block !important;
+  }
+  .product-options select {
+    display: inline-block !important;
+    width: 100px;
   }
   .product-filter{
     margin: 0;
@@ -5875,7 +5906,15 @@ footer ul li + li {
   .sbHolder {
     display: none !important;
   }
-
+  h3{
+    font-size: 18px;
+  }
+  .product_page, .tb-space{
+    padding-top: 0;
+  }
+  .product_tabs{
+    margin: 20px 0;
+  }
   .table-responsive {
     border: none;
   }
