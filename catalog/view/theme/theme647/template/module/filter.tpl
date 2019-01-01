@@ -1,6 +1,7 @@
 <div class="panel-group" id="accordion">
-<div class="panel panel-default">
+<div class="row panel panel-default">
 	<?php foreach ($filter_groups as $index=>$filter_group) { ?>
+	<div class="custom-panel-block">
 	<div class="panel-heading">
 	<a href="#<?php echo $index; ?>" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"><?php echo $filter_group['name']; ?></a>
 	</div>
@@ -31,6 +32,7 @@
 						</div>
 			</div>
 		</div>
+	</div>
 	</div>
 	<?php } ?>
   </div>

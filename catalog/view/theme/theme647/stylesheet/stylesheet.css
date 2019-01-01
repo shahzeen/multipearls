@@ -532,10 +532,16 @@ blockquote {
 .panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body{
   border: 0;
 }
+.custom-panel-block {
+  float: left;
+  vertical-align: text-bottom;
+  margin-right: 10px;
+  display: inline-block;
+}
 .panel-group .panel-footer{
   background: transparent;
 }
-.panel-default > .panel-heading {
+.panel-default > .custom-panel-block > .panel-heading {
   padding: 2px 10px;
     background: #fafafa;
     color: #111;
@@ -543,7 +549,7 @@ blockquote {
     margin: 0 0 10px;
     border: 1px solid #eee;
 }
-.panel-default > .panel-heading > * > a {
+.panel-default > .custom-panel-block > .panel-heading > * > a {
   display: block;
   margin: -20px;
   padding: 20px;
@@ -827,6 +833,7 @@ header .box-telephone {
   header * + .search {
     margin-right: 0;
     margin-top: 15px;
+    width: 80% !important;
   }
   header * + .box-wishlist {
     margin-right: 0;
@@ -1171,15 +1178,15 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   }
 }
 @media (max-width: 767px) {
-  header {
-    padding: 15px 0;
+  header{
+    margin-top: 5px;
   }
   header > hr{
     display: none;
   }
   header .logo {
-    float: none;
-    text-align: center;
+    width: 20%;
+    float: left;
   }
   header .logo img {
     display: inline-block;
@@ -1191,6 +1198,11 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   header .box-cart {
     float: none;
     margin-top: 0;
+  }
+  .search button, .search button:focus, .search button:active{
+    padding: 0 10px !important;
+    font-size: inherit !important;
+    width: auto !important;
   }
   .box-cart .cart-remove-btn{
     font-size: inherit;
@@ -2064,10 +2076,6 @@ html[lang="de"] .sale, html[lang="de"] .new_pr {
   }
 }
 @media (max-width: 767px) {
-  #content .product-layout {
-    width: 50%;
-    float: left;
-  }
   #content .product-layout + .product-layout {
     margin-top: 0;
   }
@@ -2120,11 +2128,6 @@ html[lang="de"] .sale, html[lang="de"] .new_pr {
   }
 }
 @media (max-width: 540px) {
-  #content .product-layout {
-    width: 100%;
-    float: none;
-  }
-
   .product-thumb .product-options {
     max-width: 95%;
   }
@@ -4405,7 +4408,7 @@ aside #blog-search a:before {
     margin-left: 0px;
     margin-right: 0px;
   }
-  .panel-default > .panel-heading > * > a{
+  .panel-default > .custom-panel-block > .panel-heading > * > a{
     margin:0;
   }
   .box{
@@ -4651,8 +4654,6 @@ aside #blog-search a:before {
   }
 
   .bx-wrapper .bx-controls-direction a {
-    background: rgba(248, 235, 13, 0.5);
-    color: #FFf;
     line-height: 50px;
     text-align: center;
     display: inline-block;
@@ -5840,14 +5841,28 @@ footer ul li + li {
   select {
     display: block !important;
   }
-
+  .product-filter{
+    margin: 0;
+  }
   .product-filter select {
     display: inline-block !important;
   }
   .product-filter .show select {
     width: auto;
   }
-
+  .single-category .owl-controls .owl-buttons div{
+    font-size: 30px;
+    line-height: 1.4;
+  }
+  .single-category .product-thumb .name {
+    font-size: 12px;
+}
+  .single-category .product-thumb .price, .single-category .product-thumb .price-new{
+    font-size: 20px;
+  }
+  .single-category .product-thumb .price{
+    margin: 5px 0;
+  }
   .sbHolder {
     display: none !important;
   }
@@ -5881,9 +5896,9 @@ footer ul li + li {
 @media (max-width: 600px) {
   .product-filter {
     background: none;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+  }
+  .product-filter_elem .sbHolder, .product-filter_elem select{
+    padding: 5px 10px;
   }
   .product-filter .sort {
     width: 100%;
@@ -5894,7 +5909,6 @@ footer ul li + li {
     float: none !important;
   }
   .product-filter .product-filter_elem {
-    margin-bottom: 15px;
     text-align: center;
   }
   .product-filter .product-filter_elem:before, .product-filter .product-filter_elem:after {
@@ -5956,10 +5970,6 @@ footer ul li + li {
 @media (max-width: 479px) {
   #habla_beta_container_do_not_rely_on_div_classes_or_names {
     display: none !important;
-  }
-
-  .product-filter {
-    width: 100%;
   }
 }
 @media (max-width: 410px) {

@@ -327,7 +327,7 @@ include('js/jquery.easing.1.3.js');
                         itemsDesktopSmall: [980, 3],
                         itemsTablet: [768, 2],
                         itemsTabletSmall: false,
-                        itemsMobile: [479, 1],
+                        itemsMobile: [479, 2],
 
                         // Navigation
                         pagination: false,

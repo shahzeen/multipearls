@@ -97,7 +97,7 @@ $('#list-view').click(function () {
 	$('#content .product-layout > .clearfix').remove();
 	$(this).addClass('active');
 	$('#grid-view').removeClass('active');
-	$('#content .product-layout').attr('class', 'product-layout product-list col-xs-12');
+	$('#content .product-layout').attr('class', 'product-layout product-list col-xs-6');
 
 	localStorage.setItem('display', 'list');
 });
@@ -112,11 +112,11 @@ $('#grid-view').click(function () {
 cols = $('#column-right, #column-left').length;
 
 if (cols == 2) {
-	$('#content .product-layout').attr('class', 'product-layout product-grid col-lg-6 col-md-6 col-sm-12 col-xs-12');
+	$('#content .product-layout').attr('class', 'product-layout product-grid col-lg-6 col-md-6 col-sm-12 col-xs-6');
 } else if (cols == 1) {
-	$('#content .product-layout').attr('class', 'product-layout product-grid col-lg-2 col-md-2 col-sm-6 col-xs-12');
+	$('#content .product-layout').attr('class', 'product-layout product-grid col-lg-2 col-md-2 col-sm-6 col-xs-6');
 } else {
-	$('#content .product-layout').attr('class', 'product-layout product-grid col-lg-2 col-md-2 col-sm-6 col-xs-12');
+	$('#content .product-layout').attr('class', 'product-layout product-grid col-lg-2 col-md-2 col-sm-6 col-xs-6');
 }
 
 localStorage.setItem('display', 'grid');
