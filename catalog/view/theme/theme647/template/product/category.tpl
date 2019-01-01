@@ -15,7 +15,7 @@
 		<?php } ?>
 		<div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
 		<div class="row">
-		<div class="col-xs-12">
+		<div class="col-xs-12" style="margin-top: 10px;">
 			<div class="pull-right product-filter_elem sort">
 					<select id="input-sort" onchange="location = this.value;">
 						<?php foreach ($sorts as $sorts) { ?>
@@ -27,7 +27,7 @@
 						<?php } ?>
 					</select>
 				</div>
-			<h2 class="text-center"><?php echo $heading_title; ?></h2>
+			<h2><?php echo $heading_title; ?></h2>
 				</div>
 				</div>
 

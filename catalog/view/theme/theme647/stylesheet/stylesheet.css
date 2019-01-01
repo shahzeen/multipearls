@@ -3433,6 +3433,7 @@ margin-bottom: 20px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  display: none;
 }
 
 .rd-mobilepanel_toggle {
@@ -5912,9 +5913,6 @@ footer ul li + li {
     width: 100%;
     padding-left: 0;
     margin-bottom: 15px;
-  }
-  .product-filter_elem, .product-filter_elem.pull-right {
-    float: none !important;
   }
   .product-filter .product-filter_elem {
     text-align: center;
