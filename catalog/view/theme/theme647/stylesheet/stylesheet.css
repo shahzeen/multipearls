@@ -538,6 +538,11 @@ blockquote {
   margin-right: 10px;
   display: inline-block;
 }
+.custom-panel-block .panel-collapse{
+  max-height: 200px;
+  overflow: auto;
+  margin-bottom: 10px;
+}
 .panel-group .panel-footer{
   background: transparent;
 }
@@ -4419,6 +4424,7 @@ aside #blog-search a:before {
   }
   .panel-group{
     margin-bottom: 0;
+    overflow: hidden
   }
   .product-spec .table {
     border: none;
@@ -4807,6 +4813,7 @@ aside #blog-search a:before {
 }
 .product-filter_elem.sort{
   min-width: 155px;
+  white-space: nowrap;
 }
 .product-filter_elem .sbHolder, .product-filter_elem select {
   -webkit-border-radius: 0;
@@ -4815,6 +4822,7 @@ aside #blog-search a:before {
   padding: 13px 10px;
   /* border-top: none; */
   /* border-bottom: none; */
+  display: inline-block;
 }
 .product-filter_elem.show .sbHolder {
   width: auto;

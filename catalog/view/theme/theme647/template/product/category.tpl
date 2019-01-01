@@ -14,8 +14,23 @@
 		<?php $class = 'col-sm-12'; ?>
 		<?php } ?>
 		<div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-			<h2><?php echo $heading_title; ?></h2>
-			
+		<div class="row">
+		<div class="col-xs-12">
+			<div class="pull-right product-filter_elem sort">
+					<select id="input-sort" onchange="location = this.value;">
+						<?php foreach ($sorts as $sorts) { ?>
+						<?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+						<option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+						<?php } else { ?>
+						<option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+						<?php } ?>
+						<?php } ?>
+					</select>
+				</div>
+			<h2 class="text-center"><?php echo $heading_title; ?></h2>
+				</div>
+				</div>
+
 			<?php if ($categories) { ?>
 			<div class="row">
 				<div class="col-sm-12">
@@ -59,18 +74,6 @@
 						<button type="button" id="list-view" data-toggle="tooltip" title="<?php echo $button_list; ?>"><i class="material-design-view12"></i></button>
 						<button type="button" id="grid-view" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="material-design-two375"></i></button>
 					</div>
-				</div>
-				<div class="product-filter_elem sort">
-					<label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
-					<select id="input-sort" onchange="location = this.value;">
-						<?php foreach ($sorts as $sorts) { ?>
-						<?php if ($sorts['value'] == $sort . '-' . $order) { ?>
-						<option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
-						<?php } else { ?>
-						<option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
-						<?php } ?>
-						<?php } ?>
-					</select>
 				</div>
 				<!-- <div class="product-filter_elem show pull-right">
 					<label class="control-label" for="input-limit"><?php echo $text_limit; ?></label>

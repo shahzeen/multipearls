@@ -5,7 +5,7 @@
 	<div class="panel-heading">
 	<a href="#<?php echo $index; ?>" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"><?php echo $filter_group['name']; ?></a>
 	</div>
-	<div id="<?php echo $index; ?>" class="panel-collapse collapse">
+	<div id="<?php echo $index; ?>" class="panel-collapse collapse in">
     <div class="panel-body">
 			<div class="box-filter">
 				<div>
