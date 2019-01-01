@@ -1,5 +1,5 @@
 <div class="panel-group" id="accordion">
-<div class="row panel panel-default">
+<div class="col-xs-12 panel panel-default">
 	<?php foreach ($filter_groups as $index=>$filter_group) { ?>
 	<div class="custom-panel-block">
 	<div class="panel-heading">
@@ -35,10 +35,11 @@
 	</div>
 	</div>
 	<?php } ?>
-  </div>
-  <div class="panel-footer text-right">
+	 <div class="panel-footer" style="padding:0; float:left;">
 	<button type="button" id="button-filter" class="btn btn-primary"><?php echo $button_filter; ?></button>
   </div>
+  </div>
+  
 </div>
 <script type="text/javascript"><!--
 $('#button-filter').on('click', function() {
