@@ -1623,6 +1623,8 @@ section.top {
     margin-left: -34px;
     margin-top: -32px;
     border: 0;
+    font-size: 14px;
+    color: #111;
   }
   .cart .toggle_cont {
     max-height: 300px;
@@ -3549,7 +3551,7 @@ margin-bottom: 20px;
   header .nav > .toggle {
     line-height: 56px;
   }
-
+  
   .cart > button, .nav > .toggle {
     color: #111;
     font-size: 28px;
@@ -3568,7 +3570,18 @@ margin-bottom: 20px;
   .single-category .nav-tabs, .box_html h3{
     margin: 0;
   }
-  
+
+  .single-category .panel-title{
+    text-align: center;
+  }
+
+  .single-category .panel-collapse{
+  padding-top: 10px;
+}  
+  .sale, .new_pr{
+    width: 40px;
+    height: 40px;
+  }
 }
 @media (max-width: 400px) {
   .rd-mobilepanel_title {

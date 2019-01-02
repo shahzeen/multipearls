@@ -21,5 +21,5 @@ $_['text_special']		= 'Angebote';
 $_['text_account']		= 'Konto';
 $_['text_order']		= 'Auftragsverlauf';
 $_['text_wishlist']		= 'Wunschliste';
-$_['text_newsletter']	= 'Newsletter';
-$_['text_powered']		= 'Powered By <a href="http://www.opencart.com" target="_blank" title="OpenCart">OpenCart</a>  %s &copy; %s</span>';
+$_['text_newsletter']	= 'Newsletter'; 
+$_['text_powered']		= '%s &copy; %s</span> Since 2018, multipearls.com, Inc. or its affiliates';
