@@ -3792,10 +3792,10 @@ margin-bottom: 20px;
   opacity: 1;
 }
 .owl-carousel:hover .owl-buttons .owl-prev {
-  left: -10px;
+  left: 0;
 }
 .owl-carousel:hover .owl-buttons .owl-next {
-  right: 10px;
+  right: 0px;
 }
 @media (max-width: 767px) {
   .owl-carousel .owl-buttons div {
