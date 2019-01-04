@@ -433,11 +433,11 @@
 																			<input type="hidden" name="product_id" value="<?php echo $product_id; ?>"/>
 																			<a class="counter counter-plus material-design-add186" href='#'></a>
 																		</div>
-																		<div class="col-sm-12">
+																		<div class="col-sm-12 mobile-cart-btns">
 																			<button type="button" id="button-cart"
 																			data-loading-text="<?php echo $text_loading; ?>"
 																			class="product-btn"><?php echo $button_cart; ?></button>
-																			<button class="product-btn" onclick="wishlist.add('<?php echo $product_id; ?>');">
+																			<button class="product-btn wishlist" onclick="wishlist.add('<?php echo $product_id; ?>');">
 																			<span><?php echo $button_wishlist; ?></span></button>
 																		</div>
 																	</div>

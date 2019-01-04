@@ -25,13 +25,13 @@
 		<?php } ?>
 		<div id="content" class="<?php echo $class; ?> tb-space"><?php echo $content_top; ?>
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-sm-6 hidden-in-mobile">
 			<div class="well">
 				<div class="heading">
 					<i class="material-design-add184"></i>
 					<div class="extra-wrap">
 						<h2><?php echo $text_new_customer; ?></h2>
-						<strong><?php echo $text_register; ?></strong>
+						<strong class="show-in-mobile"><?php echo $text_register; ?></strong>
 					</div>
 				</div>
 				<p><?php echo $text_register_account; ?></p>
@@ -58,6 +58,7 @@
 				<?php if ($redirect) { ?>
 				<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
 				<?php } ?>
+					<a class="show-in-mobile" href="<?php echo $register; ?>"><?php echo $text_register; ?></a>
 				</form>
 			</div>
 			</div>
