@@ -90,11 +90,6 @@
 										<span><?php echo $text_home; ?></span>
 									</a>
 								</li>
-								<li>
-									<a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>">
-										<span><?php echo $text_account; ?></span>
-									</a>
-								</li>
 								<?php if ($logged) { ?>
 								<li class="hidden-sm hidden-md hidden-lg">
 									<a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>
@@ -114,12 +109,9 @@
 									</a>
 								</li>
 								<?php } else { ?>
-								<li class="hidden-sm">
-									<a href="<?php echo $register; ?>"><?php echo $text_register; ?></a>
-								</li>
 								<li>
 									<a href="<?php echo $login; ?>">
-										<?php echo $text_login; ?>
+										<?php echo $text_login; ?> / <?php echo $text_register; ?>
 									</a>
 								</li>
 								<?php } ?>

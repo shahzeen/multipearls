@@ -53,12 +53,13 @@
 					<label class="control-label" for="input-password"><?php echo $entry_password; ?></label>
 					<input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
 					<br />
-					<a class="link" href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a></div>
+					<a class="link" href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a>
+					<a class="link show-in-mobile" href="<?php echo $register; ?>"><?php echo $text_register; ?></a>
+					</div>
 				<input type="submit" value="<?php echo $button_login; ?>" class="btn btn-primary" />
 				<?php if ($redirect) { ?>
 				<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
 				<?php } ?>
-					<a class="show-in-mobile" href="<?php echo $register; ?>"><?php echo $text_register; ?></a>
 				</form>
 			</div>
 			</div>

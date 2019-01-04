@@ -2555,13 +2555,15 @@ aside .row {
 }
 
 .product-thumb .product-btn, .product-thumb .product-btn-add {
-  width: 47%;
+  width: 48%;
   font-size: 20px;
   line-height: 20px;
   height: 35px;
   background: #111;
   color: #fff;
   padding: 0;
+  float: left;
+  margin-right: 2%;
 }
 .product-thumb .product-btn:hover, .product-thumb .product-btn-add:hover{
   background: #555;
@@ -6050,7 +6052,7 @@ footer ul li + li {
 .show-in-mobile{
   display: none !important;
 }
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .show-in-mobile{
     display: inherit !important;
   }

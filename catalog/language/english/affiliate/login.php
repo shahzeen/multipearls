@@ -10,7 +10,7 @@ $_['text_new_affiliate']            = 'New Affiliate';
 $_['text_register_account']         = '<p>I am not currently an affiliate.</p><p>Click Continue below to create a new affiliate account. Please note that this is not connected in any way to your customer account.</p>';
 $_['text_returning_affiliate']      = 'Affiliate Login';
 $_['text_i_am_returning_affiliate'] = 'I am a returning affiliate.';
-$_['text_forgotten']                = 'Forgotten Password';
+$_['text_forgotten']                = 'Forgot Password';
 
 // Entry
 $_['entry_email']                   = 'Affiliate E-Mail';

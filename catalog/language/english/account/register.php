@@ -1,10 +1,10 @@
 <?php
 // Heading
-$_['heading_title']        = 'Register Account';
+$_['heading_title']        = 'Sign Up';
 
 // Text
 $_['text_account']         = 'Account';
-$_['text_register']        = 'Register';
+$_['text_register']        = 'Sign Up';
 $_['text_account_already'] = 'If you already have an account with us, please login at the <a href="%s">login page</a>.';
 $_['text_your_details']    = 'Personal Details';
 $_['text_your_address']    = 'Address';
