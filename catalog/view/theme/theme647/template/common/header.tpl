@@ -81,6 +81,24 @@
 					<div class="container">
 						<?php echo $language; ?>
 						<?php echo $currency; ?>
+					</div>
+					<div class="container header-box">
+						<div id="logo" class="logo">
+							<?php if ($logo) { ?>
+							<a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive"/></a>
+							<?php } else { ?>
+							<h1>
+								<a href="<?php echo $home; ?>"><?php echo $name; ?></a>
+							</h1>
+							<?php } ?>
+						</div>
+						<?php echo $cart; ?>
+						<div class="box-wishlist">
+							<a href="<?php echo $wishlist; ?>">
+								<i class="material-icons-favorite_border"></i>
+							</a>
+							<span id="wishlist-total"><?php echo $text_wishlist; ?></span>
+						</div>
 						<nav id="top-links" class="nav toggle-wrap">
 							<a class="toggle material-design-show8" href='#'></a>
 							<ul class="toggle_cont">
@@ -115,38 +133,19 @@
 									</a>
 								</li>
 								<?php } ?>
-								<li class="hidden-sm hidden-md hidden-lg">
+								<!--<li class="hidden-sm hidden-md hidden-lg">
 									<a href="<?php echo $shopping_cart; ?>" title="<?php echo $text_shopping_cart; ?>">
-										<!-- <i class="material-design-shopping232"></i> -->
+										<i class="material-design-shopping232"></i>
 										<span><?php echo $text_shopping_cart; ?></span>
 									</a>
-								</li>
+								</li>-->
 							</ul>
 						</nav>
-						<address class="material-design-phone370 box-telephone">
+						<!--<address class="material-design-phone370 box-telephone">
 							<a href="callto:<?php echo $telephone ?>">
 								<?php echo $telephone; ?>
 							</a>
-						</address>
-					</div>
-					<hr>
-					<div class="container">
-						<div id="logo" class="logo">
-							<?php if ($logo) { ?>
-							<a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive"/></a>
-							<?php } else { ?>
-							<h1>
-								<a href="<?php echo $home; ?>"><?php echo $name; ?></a>
-							</h1>
-							<?php } ?>
-						</div>
-						<?php echo $cart; ?>
-						<div class="box-wishlist">
-							<a href="<?php echo $wishlist; ?>">
-								<i class="material-icons-favorite_border"></i>
-							</a>
-							<span id="wishlist-total"><?php echo $text_wishlist; ?></span>
-						</div>
+						</address>-->
 						<?php echo $search; ?>
 					</div>
 					<!-- <div id="stuck" class="stuck-menu"> -->
