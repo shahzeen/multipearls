@@ -99,7 +99,7 @@ $(document).ready(function() {
 		if (cols == 2) {
 			$('#content .product-list').attr('class', 'product-layout product-grid col-lg-6 col-md-6 col-sm-12 col-xs-6');
 		} else if (cols == 1) {
-			$('#content .product-list').attr('class', 'product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-6');
+			$('#content .product-list').attr('class', 'product-layout product-grid col-lg-2 col-md-3 col-sm-3 col-xs-6');
 		} else {
 			$('#content .product-list').attr('class', 'product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-6');
 		}

@@ -1418,8 +1418,8 @@ section.top {
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
   position: absolute;
-  top: 0px;
   right: 0px;
+  height: 40px;
   bottom: 0px;
   width: 102px;
   color: #fff;
