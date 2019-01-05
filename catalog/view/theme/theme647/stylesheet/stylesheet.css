@@ -484,7 +484,7 @@ blockquote {
   font-weight: bold;
   color: #fff;
   font-size: 13px;
-  background-color: #555;
+  background-color: #fafafa;
   padding: 5px 10px!important;
 }
 
@@ -1243,7 +1243,7 @@ header .search{
     margin: 0;
     z-index: 10000;
     margin-right: 5px;
-    right: 0;
+    right: 10px;
 }
   }
   .search button, .search button:focus, .search button:active{
@@ -1255,16 +1255,6 @@ header .search{
     font-size: inherit;
   }
   header .box-telephone{
-    display: none;
-  }
-  header .box-wishlist{
-    position: fixed;
-    margin: 0;
-    z-index: 10000;
-    margin-right: 5px;
-    z-index: 9999999;
-    left: 74%;
-    top: 2%;
     display: none;
   }
   header .box-language,
@@ -1649,6 +1639,7 @@ section.top {
   }
   .cart .cart-total2 {
     font-size: 14px;
+    right: 0;
     top: 0;
     width: 100%;
   }
@@ -2321,6 +2312,7 @@ aside .row {
     line-height: 35px;
     background: transparent;
     text-align: center;
+    transform: translateY(-50%);
     /* box-shadow: 2px 2px 8px #ddd; */
 }
 .single-category .owl-carousel:hover .owl-buttons div {
@@ -2998,6 +2990,19 @@ input[type="radio"] + label:before, input[type="radio"] + label:after {
   box-sizing: border-box;
 }
 
+input[type="radio"] + label:before{
+    width: 15px;
+    height: 15px;
+    left: 0;
+    border: 1px solid #e3e1e1;
+    border-radius: 0;
+    top: 5px;
+}
+
+input[type="radio"]:checked + label:before{
+  border: 0;
+}
+
 input[type="radio"]:checked + label:after{
   content: '\2713';
   font-size: 22px;
@@ -3449,6 +3454,7 @@ margin-bottom: 20px;
   background: #fff;
   color: #111;
   z-index: 1000;
+  border-bottom: 1px solid #eee;
 }
 
 .rd-mobilepanel_title {
@@ -5951,9 +5957,9 @@ footer ul li + li {
   h3{
     font-size: 18px;
   }
-  .product_page, .tb-space{
+  /* .product_page, .tb-space{
     padding-top: 0;
-  }
+  } */
   .product_tabs{
     margin: 20px 0;
   }
@@ -6076,7 +6082,7 @@ footer ul li + li {
 .show-in-mobile{
   display: none !important;
 }
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .show-in-mobile{
     display: inherit !important;
   }
@@ -6106,7 +6112,7 @@ footer ul li + li {
 .show-in-mobile{
   display: none !important;
 }
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .show-in-mobile{
     display: inherit !important;
   }
@@ -6122,7 +6128,7 @@ footer ul li + li {
     width: 48%;
     margin-right: 0 !important;
     border-radius: 0;
-    padding: 10px 0;
+    padding: 5px 0;
   }
   .mobile-cart-btns .product-btn.wishlist{
     background: #fff;
@@ -6130,5 +6136,49 @@ footer ul li + li {
   }
   .mobile-cart-btns .product-btn.wishlist:hover{
     background: #8d8d8d;
+  }
+  .owl-carousel .owl-buttons div:hover{
+    color: #fff;
+  }
+  header .box-wishlist{
+    position: fixed;
+    margin: 0;
+    z-index: 10000;
+    margin-right: 5px;
+    z-index: 9999999;
+    left: 74%;
+    top: 2%;
+    display: none;
+  }
+  .custom-center-align{
+    width: 100%;
+  }
+  footer h5{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    font-size: 12px;
+  }
+  footer ul{
+    font-size: 12px;
+  }
+  footer ul li + li{
+    margin-top: 5px;
+  }
+  footer [class*="col-xs"]{
+    margin-bottom: 0;
+  }
+  #content{
+    padding-bottom: 0;
+  }
+  .product_tabs .nav-tabs > li > a{
+    padding: 10px 7px;
+  }
+  .owl-carousel .owl-buttons div{
+    background: #000000;
+    color: #fff;
+    width: 28px;
+    height: 35px;
+    line-height: 35px;
   }
 }

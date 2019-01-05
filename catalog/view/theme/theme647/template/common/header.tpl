@@ -102,14 +102,14 @@
 						<nav id="top-links" class="nav toggle-wrap">
 							<a class="toggle material-design-show8" href='#'></a>
 							<ul class="toggle_cont">
-								<li class="hidden-sm hidden-md hidden-lg">
+								<!--<li class="hidden-sm hidden-md hidden-lg">
 									<a href="<?php echo $home; ?>" title="<?php echo $text_home; ?>" >
 										<i class="material-design-home149 hidden-xs"></i>
 										<span><?php echo $text_home; ?></span>
 									</a>
-								</li>
+								</li>-->
 								<?php if ($logged) { ?>
-								<li class="hidden-sm hidden-md hidden-lg">
+								<li class="hidden-sm hidden-md">
 									<a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>
 								</li>
 								<li class="hidden-sm hidden-md hidden-lg">

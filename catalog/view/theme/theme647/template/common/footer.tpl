@@ -1,5 +1,3 @@
-
-<hr>
 <footer>
 	<div class="container">
 	<div class="custom-center-align">
