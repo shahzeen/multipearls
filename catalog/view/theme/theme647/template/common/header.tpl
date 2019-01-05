@@ -82,6 +82,9 @@
 						<?php echo $language; ?>
 						<?php echo $currency; ?>
 					</div>
+					<?php if ($header_top) { ?>
+					<div class="header_modules"><?php echo $header_top; ?></div>
+					<?php } ?>
 					<div class="container header-box">
 						<div id="logo" class="logo">
 							<?php if ($logo) { ?>
@@ -152,9 +155,7 @@
 					<div class="container">
 					</div>
 					<!-- </div> -->
-					<?php if ($header_top) { ?>
-					<div class="header_modules"><?php echo $header_top; ?></div>
-					<?php } ?>
+					
 
 					<?php if ($navigation){?>
 					<div class="navigation">

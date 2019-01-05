@@ -3820,9 +3820,6 @@ margin-bottom: 20px;
 .owl-carousel .owl-buttons .owl-prev {
   left: -50px;
 }
-.owl-carousel .owl-buttons .owl-next {
-  right: -50px;
-}
 .owl-carousel:hover .owl-buttons div {
   opacity: 1;
 }
