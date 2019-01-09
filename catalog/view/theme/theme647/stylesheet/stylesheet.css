@@ -6179,4 +6179,8 @@ footer ul li + li {
     height: 35px;
     line-height: 35px;
   }
+  .product-rating-status .review-link{
+    font-size: 12px;
+    padding-left: 0;
+  }
 }
