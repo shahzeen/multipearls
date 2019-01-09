@@ -1362,6 +1362,7 @@ section.top {
   height: 0;
   overflow: hidden;
   background: transparent url(../image/lazy-loader.gif) no-repeat center center;
+  background-size: 40px;
 }
 .lazy img {
   position: absolute;
