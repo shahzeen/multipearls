@@ -482,7 +482,7 @@ blockquote {
 .table thead td, .table th {
   text-transform: uppercase;
   font-weight: bold;
-  color: #fff;
+  color: #111;
   font-size: 13px;
   background-color: #fafafa;
   padding: 5px 10px!important;
@@ -6126,14 +6126,14 @@ footer ul li + li {
     width: 48%;
     margin-right: 0 !important;
     border-radius: 0;
-    padding: 5px 0;
+    padding: 10px 0;
   }
   .mobile-cart-btns .product-btn.wishlist{
     background: #fff;
     color: #111;
   }
   .mobile-cart-btns .product-btn.wishlist:hover{
-    background: #8d8d8d;
+    background: #ddd;
   }
   .owl-carousel .owl-buttons div:hover{
     color: #fff;
