@@ -823,8 +823,9 @@ header .box-telephone {
   margin-top: 12px;
 }
 .header-box {
-  background: #eee;
+  background: #fafafa;
   width: auto;
+  border-top: 1px solid #eee;
 }
 @media (max-width: 1199px) {
   header * + .search {
@@ -1007,7 +1008,7 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
     width: auto;
   }
   header .box-wishlist{
-    border-right: 1px solid #fafafa;
+    border-right: 1px solid #eee;
     height: 50px;
     padding-left: 17px;
     padding-right: 10px;
@@ -1026,8 +1027,8 @@ header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav 
   header .nav > .toggle_cont > li {
     display: inline-block;
     float: left;
-    border-left: 1px solid #fafafa;
-    border-right: 1px solid #fafafa;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
   }
   header .nav > .toggle_cont > li > a {
     display: table-cell;
@@ -1778,15 +1779,10 @@ section.top {
   .product-list .product-thumb > .price, .product-list .product-thumb > .cart-button {
   display: none;
 }
-.camera_prev:hover, .camera_next:hover{
-  background: #9f9d9d;
-  color: #111;
-}
 .camera_prev, .camera_next{
-background: rgba(165, 165, 165, 0.4);
-color: #f3eeee;
+background: transparent;
+color: #111;
 transition: 0.5s all ease;
-text-shadow: 1px 1px black;
 }
 @media (min-width: 768px) {
   .product-list .product-thumb .caption {
@@ -6113,6 +6109,45 @@ footer ul li + li {
 
 .show-in-mobile{
   display: none !important;
+}
+
+.cameraContent .camera_caption, .cameraContent .camera_caption h1, .cameraContent .camera_caption h2, .cameraContent .camera_caption h3, .cameraContent .camera_caption h4, .cameraContent .camera_caption h5, .cameraContent .camera_caption h6{
+  color: #111;
+}
+
+.camera_container{
+  padding-bottom: 0;
+}
+
+.camera_wrap{
+  position: static;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cameraSlide, .cameraContent, .camera_target, .camera_overlayer, .camera_target_content, .camera_target_content .camera_link, .camera_wrap{
+  max-height: 50px !important;
+}
+
+.camera_prev{
+  left: 0;
+}
+
+.camera_next{
+  right: 0;
+}
+
+.camera_prev, .camera_next{
+  bottom: 7px;
+}
+
+.camera_nav > .container, .camera_caption .container{
+  width: 100%;
+}
+
+.camera_prev:hover, .camera_next:hover{
+  background: transparent;
 }
 @media (max-width: 768px) {
   .show-in-mobile{
