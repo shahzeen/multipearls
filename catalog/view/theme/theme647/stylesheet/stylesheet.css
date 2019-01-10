@@ -479,6 +479,10 @@ blockquote {
   text-decoration: none;
 }
 
+.bx-wrapper .bx-loading{
+  background-size: 32px;
+}
+
 .table thead td, .table th {
   text-transform: uppercase;
   font-weight: bold;
@@ -1362,7 +1366,7 @@ section.top {
   height: 0;
   overflow: hidden;
   background: transparent url(../image/lazy-loader.gif) no-repeat center center;
-  background-size: 40px;
+  background-size: 32px;
 }
 .lazy img {
   position: absolute;
