@@ -1784,6 +1784,7 @@ section.top {
 background: transparent;
 color: #111;
 transition: 0.5s all ease;
+bottom: 10px;
 }
 @media (min-width: 768px) {
   .product-list .product-thumb .caption {
@@ -4570,11 +4571,10 @@ aside #blog-search a:before {
   right: 0;
   height: 20px;
   line-height: 20px;
-  background: rgba(248, 235, 13, 0.5);
   font-size: 28px;
   text-align: center;
   margin: 0;
-  color: #fff;
+  color: #111;
 }
 .product-gallery .image-thumb .bx-wrapper .bx-prev {
   top: 0;
@@ -6137,10 +6137,6 @@ footer ul li + li {
 
 .camera_next{
   right: 0;
-}
-
-.camera_prev, .camera_next{
-  bottom: 7px;
 }
 
 .camera_nav > .container, .camera_caption .container{
