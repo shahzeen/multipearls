@@ -2005,6 +2005,7 @@ html[lang="de"] .sale, html[lang="de"] .new_pr {
 }
 .cart-button{
   overflow: hidden;
+  display: none;
 }
 .quickview-style .rating {
   margin-top: 5px;
@@ -2144,8 +2145,7 @@ html[lang="de"] .sale, html[lang="de"] .new_pr {
     border-right: none;
   }
   .product-list .product-thumb > .price, .product-list .product-thumb .cart-button,
-  .product-grid .product-thumb > .price,
-  .product-grid .product-thumb .cart-button {
+  .product-grid .product-thumb > .price {
     display: block;
   }
   .product-list + .product-list .product-thumb,
