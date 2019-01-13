@@ -1,3 +1,4 @@
+<div id="filter-content">
 <div class="panel-group" id="accordion">
 <div class="panel panel-default">
 	<?php foreach ($filter_groups as $index=>$filter_group) { ?>
@@ -39,7 +40,7 @@
 	<button type="button" id="button-filter" class="btn btn-filter"><?php echo $button_filter; ?></button>
   </div>
   </div>
-  
+</div>
 </div>
 <script type="text/javascript"><!--
 $('#button-filter').on('click', function() {

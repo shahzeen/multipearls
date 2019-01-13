@@ -770,6 +770,11 @@ $(window).resize(function () {
 	this.id = setTimeout(respResize, 500);
 });
 
+$('#fixed-filter').on('click', function() {
+	$('html, body').animate({
+		'scrollTop':   $("#filter-content").offset().top
+	  }, 2000);
+})
 
 function replaceForm() {
 	var o = $('.radio');

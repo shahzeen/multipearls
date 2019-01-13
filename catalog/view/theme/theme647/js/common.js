@@ -114,7 +114,7 @@ cols = $('#column-right, #column-left').length;
 if (cols == 2) {
 	$('#content .product-layout').attr('class', 'product-layout product-grid col-lg-6 col-md-6 col-sm-12 col-xs-6');
 } else if (cols == 1) {
-	$('#content .product-layout').attr('class', 'product-layout product-grid col-lg-2 col-md-3 col-sm-3 col-xs-6');
+	$('#content .product-layout').attr('class', 'product-layout product-grid col-lg-2 col-md-4 col-sm-4 col-xs-6');
 } else {
 	$('#content .product-layout').attr('class', 'product-layout product-grid col-lg-2 col-md-3 col-sm-3 col-xs-6');
 }

@@ -5927,12 +5927,6 @@ footer ul li + li {
 .toTop:visited, .toTop:focus, .toTop:active {
   color: #fff;
 }
-
-@media only screen and (max-width: 1399px) {
-  .toTop {
-    display: none !important;
-  }
-}
 /*========================================================
                   Responsive Styles
 =========================================================*/
@@ -6019,7 +6013,7 @@ footer ul li + li {
     background: none;
   }
   .product-filter_elem .sbHolder, .product-filter_elem select{
-    padding: 5px 10px;
+    padding: 5px;
   }
   .product-filter .sort {
     width: 100%;
@@ -6172,6 +6166,10 @@ footer ul li + li {
 .camera_prev:hover, .camera_next:hover{
   background: transparent;
 }
+#fixed-filter{
+display: none;
+}
+
 @media (max-width: 768px) {
   .show-in-mobile{
     display: inherit !important;
@@ -6196,9 +6194,6 @@ footer ul li + li {
   }
   .mobile-cart-btns .product-btn.wishlist:hover{
     background: #ddd;
-  }
-  .owl-carousel .owl-buttons div:hover{
-    color: #fff;
   }
   header .box-wishlist{
     position: fixed;
@@ -6251,4 +6246,14 @@ footer ul li + li {
     padding: 10px 0;
     text-align: center;
 }
+#fixed-filter{
+  background: #111;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 30%;
+  display: block;
+  }
 }
