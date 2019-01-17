@@ -1846,6 +1846,9 @@ bottom: 10px;
 .product-grid .product-thumb .image {
   float: none;
 }
+.product-grid .list-unstyled li {
+  margin-top: 0 !important;
+}
 
 /* ==================   SALE, NEW Message   =================== */
 .sale, .new_pr {

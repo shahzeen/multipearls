@@ -93,7 +93,7 @@
 			</div>
 			<div class="row">
 				<?php $pr = 10000;  foreach ($products as $product) { $pr++?>
-				<div class="product-layout product-list col-xs-12">
+				<div class="product-layout product-grid col-xs-12">
 					<div class="product-thumb transition <?php if ($product['options']) echo 'options';  ?>">
 						<?php if ($product['options']) { ?>
 						<!-- Product options -->
