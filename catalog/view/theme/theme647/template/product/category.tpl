@@ -88,6 +88,7 @@
 					</select>
 				</div> -->
 
+			<span id="fixed-filter" class="glyphicon glyphicon-filter"></span>
 
 			</div>
 			<div class="row">

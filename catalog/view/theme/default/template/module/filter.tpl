@@ -23,7 +23,7 @@
     <?php } ?>
   </div>
   <div class="panel-footer text-right">
-    <button type="button" id="button-filter" class="btn btn-primary"><?php echo $button_filter; ?></button>
+    <button type="button" id="button-filter" class="btn btn-filter"><?php echo $button_filter; ?></button>
   </div>
 </div>
 <script type="text/javascript"><!--

@@ -191,9 +191,6 @@
 														<li><strong><?php echo $text_reward; ?> </strong><span><?php echo $reward; ?></span>
 														</li>
 														<?php } ?>
-														<li><strong><?php echo $text_stock; ?> </strong><span
-															class="<?php echo($stock_status <= 0 ? 'out-stock' : 'stock'); ?>"><?php echo $stock; ?></span>
-														</li>
 													</ul>
 												</div>
 
@@ -434,9 +431,15 @@
 																			<a class="counter counter-plus material-design-add186" href='#'></a>
 																		</div>
 																		<div class="col-sm-12 mobile-cart-btns">
+																		<?php if ($stock_status > 0) { ?>
 																			<button type="button" id="button-cart"
 																			data-loading-text="<?php echo $text_loading; ?>"
 																			class="product-btn"><?php echo $button_cart; ?></button>
+																		<?php } else { ?>
+																			<span
+																			class="<?php echo($stock_status <= 0 ? 'out-stock' : 'stock'); ?>  disable-cart"><?php echo $stock; ?>
+																			</span>
+																			<?php } ?>
 																			<button class="product-btn wishlist" onclick="wishlist.add('<?php echo $product_id; ?>');">
 																			<span><?php echo $button_wishlist; ?></span></button>
 																		</div>

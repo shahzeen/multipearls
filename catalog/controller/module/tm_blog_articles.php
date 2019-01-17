@@ -61,7 +61,8 @@ class ControllerModuleTMBlogArticles extends Controller
 		$data['text_on'] = $this->language->get('text_on');
 		$data['text_button_more'] = $this->language->get('text_button_more');
 
-		foreach ($results as $result) {
+		if($results){
+			foreach ($results as $result) {
 
 			if ($setting['description_limit']) {
 				$description = utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $setting['description_limit']) . '...';
@@ -103,6 +104,7 @@ class ControllerModuleTMBlogArticles extends Controller
 				'comment_href' => $this->url->link('simple_blog/article/view', 'simple_blog_article_id=' . $result['simple_blog_article_id'] . '#comment-section', 'SSL')
 				);
 		}
+	}
 
 
 		$data['text_no_found'] = $this->language->get('text_no_result');

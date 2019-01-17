@@ -165,6 +165,9 @@
 					</div>
 					<?php }?>
 				</header>
+				</div>
+				</body>
+				</html>
 
 
 

@@ -1,0 +1,7 @@
+Sitemap: google_sitemap URL
+
+User-agent: *
+
+Disallow: /admin/
+
+Allow: /
