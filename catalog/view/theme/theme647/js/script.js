@@ -773,7 +773,7 @@ $(window).resize(function () {
 $('#fixed-filter').on('click', function() {
 	$('html, body').animate({
 		'scrollTop':   $("#filter-content").offset().top
-	  }, 2000);
+	  }, 1);
 })
 
 function replaceForm() {

@@ -1502,6 +1502,7 @@ section.top {
   max-height: 500px;
   overflow-y: auto;
   overflow-x: hidden;
+  z-index: 99999;
 }
 #livesearch_search_results li img {
   float: left;
@@ -1597,6 +1598,7 @@ section.top {
     padding: 2px;
     position: absolute;
     top: -10px;
+    left: 0;
     max-width: 31px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1624,6 +1626,13 @@ section.top {
   max-height: 500px;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.cart .toggle_cont li:last-child {
+  position: sticky;
+bottom: 0;
+background: #F4F4F4;
+width: 100%;
 }
 .cart .toggle_cont img {
   max-width: 50px;
@@ -1691,6 +1700,7 @@ section.top {
 /* ===================   Product Layout   =================== */
 .product-layout {
   margin-bottom: 30px;
+  padding: 0;
 }
 .product-thumb * + .rating {
   margin-bottom: 11px;
@@ -1848,6 +1858,7 @@ bottom: 10px;
 }
 .product-grid .list-unstyled li {
   margin-top: 0 !important;
+  font-weight: 600;
 }
 
 /* ==================   SALE, NEW Message   =================== */
@@ -6262,7 +6273,7 @@ display: none;
   position: fixed;
   z-index: 999;
   left: 0;
-  top: 30%;
+  top: 46%;
   display: block;
   cursor: pointer;
   }
