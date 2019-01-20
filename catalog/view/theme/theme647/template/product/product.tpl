@@ -437,7 +437,7 @@
 																			class="product-btn"><?php echo $button_cart; ?></button>
 																		<?php } else { ?>
 																			<span
-																			class="<?php echo($stock_status <= 0 ? 'out-stock' : 'stock'); ?>  disable-cart"><?php echo $stock; ?>
+																			class="<?php echo($stock_status <= 0 ? 'out-stock' : 'stock'); ?>  disable-cart">Out Of Stock
 																			</span>
 																			<?php } ?>
 																			<button class="product-btn wishlist" onclick="wishlist.add('<?php echo $product_id; ?>');">

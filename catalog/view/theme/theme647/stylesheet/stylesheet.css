@@ -1662,6 +1662,10 @@ width: 100%;
 }
 .cart .table > tbody > tr > td {
   border-top: none;
+  padding: 0;
+}
+.cart .table > tbody > tr > td .name,  .cart .table > tbody > tr > td .name+div{
+  padding: 0 5px;
 }
 
 .cart .table.total tr:nth-child(4) td strong,
@@ -1859,8 +1863,13 @@ bottom: 10px;
 .product-grid .list-unstyled li {
   margin-top: 0 !important;
   font-weight: 600;
+  text-align: center;
+  color: #333;
+  background: #eee;
 }
-
+.product-grid hr{
+  border-top: 2px solid #868686;
+}
 /* ==================   SALE, NEW Message   =================== */
 .sale, .new_pr {
   font-size: 12px;
@@ -5037,7 +5046,7 @@ table .cart-remove-btn{
   border: 1px solid #e0e0e0;
   border-top-width: 2px;
 }
-.cart-wrapper .cart-remove-btn, .cart-wrapper .cart-remove-btn, .account-address td a{
+.cart-wrapper .cart-remove-btn, .cart-wrapper .cart-remove-btn, .account-address #content td a{
   font-size: 26px;
 }
 
@@ -5642,7 +5651,7 @@ label .img-thumbnail{
   }
 }
 
-.account-address .table, .account-address-delete .table {
+.account-address #content .table, #content .account-address-delete .table {
   width: 50%;
   margin: 0 auto;
 }
@@ -6266,6 +6275,10 @@ display: none;
     padding: 10px 0;
     text-align: center;
 }
+#payment input[type="checkbox"]{
+  display: inline-block;
+    vertical-align: middle;
+}
 #fixed-filter{
   background: #111;
   color: #fff;
@@ -6276,5 +6289,14 @@ display: none;
   top: 46%;
   display: block;
   cursor: pointer;
+  }
+}
+@media only screen and (min-width : 200px) and (max-width : 640px) {
+  #logo a{
+    display: inline-block;
+    background: url(/image/catalog/logos/fav-new.png) no-repeat center;
+  }
+  #logo a img{
+      visibility:hidden; 
   }
 }
