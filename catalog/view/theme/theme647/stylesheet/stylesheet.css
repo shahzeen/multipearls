@@ -1622,7 +1622,7 @@ section.top {
 .cart .toggle_cont {
   z-index: 1001;
   min-width: 260px;
-  padding: 10px 10px 5px;
+  padding: 0;
   max-height: 500px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -1662,7 +1662,7 @@ width: 100%;
 }
 .cart .table > tbody > tr > td {
   border-top: none;
-  padding: 0;
+  padding: 5px;
 }
 .cart .table > tbody > tr > td .name,  .cart .table > tbody > tr > td .name+div{
   padding: 0 5px;
@@ -1877,15 +1877,15 @@ bottom: 10px;
   font-weight: 700;
   display: inline-block;
   width: 50px;
-  height: 50px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+  height: 35px;
+  /* -webkit-border-radius: 50%; */
+  /* -moz-border-radius: 50%; */
+  /* border-radius: 50%; */
   text-transform: uppercase;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #eac322;
+  background-color: rgba(22, 255, 19, 0.1);
   color: #111;
   z-index: 9;
   text-align: center;
@@ -3636,7 +3636,7 @@ margin-bottom: 20px;
   header .nav > .toggle {
     line-height: 56px;
   }
-  
+
   .cart > button, .nav > .toggle {
     color: #111;
     font-size: 28px;
@@ -3662,7 +3662,7 @@ margin-bottom: 20px;
 
   .single-category .panel-collapse{
   padding-top: 10px;
-}  
+}
   .sale, .new_pr{
     width: 40px;
     height: 40px;
@@ -6297,6 +6297,6 @@ display: none;
     background: url(/image/catalog/logos/fav-new.png) no-repeat center;
   }
   #logo a img{
-      visibility:hidden; 
+      visibility:hidden;
   }
 }

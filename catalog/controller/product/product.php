@@ -327,10 +327,19 @@ class ControllerProductProduct extends Controller {
 			$data['discounts'] = array();
 
 			foreach ($discounts as $discount) {
-				$data['discounts'][] = array(
-					'quantity' => $discount['quantity'],
-					'price'    => $this->currency->format($this->tax->calculate($discount['price'], $product_info['tax_class_id'], $this->config->get('config_tax')))
-				);
+				if((float)$product_info['special']){
+					if($product_info['special']>$discount['price']){
+						$this->data['discounts'][] = array(
+							'quantity' => $discount['quantity'],
+							'price'    => $this->currency->format($this->tax->calculate($discount['price'], $product_info['tax_class_id'], $this->config->get('config_tax')))
+						);
+					}
+				}else{
+					$this->data['discounts'][] = array(
+						'quantity' => $discount['quantity'],
+						'price'    => $this->currency->format($this->tax->calculate($discount['price'], $product_info['tax_class_id'], $this->config->get('config_tax')))
+					);
+				}
 			}
 
 			$data['options'] = array();
