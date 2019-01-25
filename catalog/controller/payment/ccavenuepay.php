@@ -205,9 +205,7 @@ class ControllerPaymentCcavenuepay extends Controller{
 			}
 			if ($order_status == "Success")
 			{
-				$sessionOrderInfo = $this->model_checkout_order->getOrder($this->session->data['order_id']);
-				if ($response_array['order_id'] == $sessionOrderInfo['order_id'] && $response_array['amount'] == $sessionOrderInfo['total'])
-				{
+				
 					$payment_status_message = $this->language->get('success_comment');
 					$payment_status = true;
 					$order_status_id = $this->config->get('ccavenuepay_completed_status_id');

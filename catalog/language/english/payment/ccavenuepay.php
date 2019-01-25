@@ -7,8 +7,7 @@ Author		  : CCAvenue
 */
 // Text
 $_['heading_title'] = 'Thank you for shopping with %s .... ';
-$_['text_title'] = 'CCAvenue MCPG<br/><img src="https://www.ccavenue.com/images_shoppingcart/ccavenue_pay_options.gif" width="80%" />';
-$_['text_response'] = 'Response from CCAvenue MCPG:';
+$_['text_title'] = 'Internet Banking / Credit / Debit / Mobile Wallet';
 $_['text_payment_wait'] = '<b><span style="color: #FF0000">Please wait...</span></b><br />If you are not automatically re-directed in 20 seconds, please click <a href="%s">here</a>.';
 $_['text_reason'] = 'REASON';
 $_['text_attn_email'] = 'ATTN: CCAvenue MCPG Order %s needs manual verification';
