@@ -233,15 +233,6 @@ class ControllerPaymentCcavenuepay extends Controller{
 						$mail->sethtml(html_entity_decode($payment_confirmation_mail_body, ENT_QUOTES, 'UTF-8'));
 						$mail->send();
 					}
-				}
-				else
-				{
-					$order_id = $sessionOrderInfo['order_id'];
-					$payment_status_message = $this->language->get('tampared_data_comment');
-					$payment_status = false;
-					$order_status_id = 8;
-					$this->model_checkout_order->addOrderHistory($order_id, $order_status_id, $payment_status_message, TRUE);
-				}
 			}
 			else if ($order_status == "Aborted")
 			{
