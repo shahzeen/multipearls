@@ -3674,9 +3674,6 @@ margin-bottom: 20px;
   }
 }
 @media (max-width: 600px) {
-  .hidden-in-mobile{
-    display: none;
-  }
   .rd-mobilepanel_title {
     font-size: 18px;
     display: none;
@@ -4508,6 +4505,9 @@ aside #blog-search a:before {
     box-shadow: none;
     border: 0;
     border-bottom: 1px solid #eee;
+  }
+  .hidden-in-mobile{
+    display: none;
   }
   .product_tabs .nav-tabs > li{
     float: left;
