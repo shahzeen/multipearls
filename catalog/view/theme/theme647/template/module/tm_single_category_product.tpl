@@ -797,6 +797,9 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </a>
 </div>
 <div class="caption">
+<div class="name">
+		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+	</div>
 	<?php if ($product['price']) { ?>
 	<div class="price">
 		<?php if (!$product['special']) { ?>
@@ -813,9 +816,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 		<?php } ?>
 	</div>
 	<?php } ?>
-	<div class="name">
-		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
-	</div>
 </div>
 </div>
 <?php } ?>
@@ -1177,6 +1177,9 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </a>
 </div>
 <div class="caption">
+<div class="name">
+		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+	</div>
 	<?php if ($product['price']) { ?>
 	<div class="price">
 		<?php if (!$product['special']) { ?>
@@ -1193,9 +1196,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 		<?php } ?>
 	</div>
 	<?php } ?>
-	<div class="name">
-		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
-	</div>
 </div>
 
 </div>
@@ -1557,6 +1557,9 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </a>
 </div>
 <div class="caption">
+<div class="name">
+		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+	</div>
 	<?php if ($product['price']) { ?>
 	<div class="price">
 		<?php if (!$product['special']) { ?>
@@ -1573,9 +1576,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 		<?php } ?>
 	</div>
 	<?php } ?>
-	<div class="name">
-		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
-	</div>
 </div>
 </div>
 <?php } ?>

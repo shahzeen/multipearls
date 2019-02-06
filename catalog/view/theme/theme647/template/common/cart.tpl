@@ -69,7 +69,7 @@
 			</li>
 			<?php } else { ?>
 			<li>
-				<p class="text-center"><?php echo $text_empty; ?></p>
+				<p class="text-center" style="margin-bottom:0;"><?php echo $text_empty; ?></p>
 			</li>
 			<?php } ?>
 		</ul>
