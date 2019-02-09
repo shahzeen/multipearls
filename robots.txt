@@ -2,7 +2,7 @@ Sitemap: google_sitemap URL
 
 User-agent: *
 
+Allow: /
 Disallow: /admin/
 Disallow: /image/cache/
-
-Allow: /
+Disallow: /system/

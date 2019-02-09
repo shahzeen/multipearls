@@ -14,17 +14,16 @@
 <script type="application/ld+json">
 {
   "@context" : "http://schema.org",
-  "@type" : "LocalBusiness",
+  "@type" : "WebSite",
   "name" : "Bulkins by Multipearls - The Wholesale Store",
-  "image" : "https://www.bulkins.com/image/catalog/Logo's/logo-1.png",
-  "email" : "contact@bulkins.com",
-  "address" : {
-    "@type" : "PostalAddress",
-    "addressLocality" : "Mumbai",
-    "addressRegion" : "Maharashtra",
-    "addressCountry" : "India"
-  },
-  "url" : "https://www.bulkins.com/"
+  "image" : "https://www.bulkins.com/image/catalog/logos/logo-1.png",
+  "url" : "https://www.bulkins.com/",
+   "potentialAction": {     
+    "@type": "SearchAction",     
+    "target": "https://www.bulkins.com/index.php?route=product/search&search={search_term_string}",
+    "query-input": "required name=search_term_string"   
+  }, 
+  "description":""
 }
 </script>
 		<meta charset="UTF-8"/>
