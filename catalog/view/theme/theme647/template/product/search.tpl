@@ -75,7 +75,7 @@
                       <button type="button" id="grid-view" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="material-design-two375"></i></button>
                   </div>
               </div>
-              <div class="product-filter_elem sort">
+              <div class="product-filter_elem sort pull-right">
                   <label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
                   <select id="input-sort" class="form-control col-sm-3" onchange="location = this.value;">
                       <?php foreach ($sorts as $sorts) { ?>
@@ -87,20 +87,6 @@
                       <?php } ?>
                   </select>
               </div>
-              <div class="product-filter_elem show pull-right">
-                  <label class="control-label" for="input-limit"><?php echo $text_limit; ?></label>
-                  <select id="input-limit" class="form-control" onchange="location = this.value;">
-                      <?php foreach ($limits as $limits) { ?>
-                          <?php if ($limits['value'] == $limit) { ?>
-                              <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
-                          <?php } else { ?>
-                              <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
-                          <?php } ?>
-                      <?php } ?>
-                  </select>
-              </div>
-
-
           </div>
 
 	  <div class="row"> 

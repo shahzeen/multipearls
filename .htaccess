@@ -1,3 +1,5 @@
+ErrorDocument 404 https://www.bulkins.com/
+
 # 1.To use URL Alias you need to be running apache with mod_rewrite enabled. 
 
 # 2. In your opencart directory rename htaccess.txt to .htaccess.
@@ -24,6 +26,13 @@ RewriteRule sitemap.xml /index.php?route=feed/google_sitemap
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^?]*) /index.php?_route_=$1 [L,QSA]
+RewriteCond %{QUERY_STRING} ^route=common/home$
+RewriteCond %{REQUEST_METHOD} !^POST$
+RewriteRule ^index\.php$ http://%{HTTP_HOST}? [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.bulkins.com/$1 [L,R=301] 
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ https://www.bulkins.com/$1 [L,R=301]
 
 
 

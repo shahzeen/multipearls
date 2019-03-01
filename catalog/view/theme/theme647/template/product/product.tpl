@@ -22,8 +22,8 @@
 			$content_right = 'col-sm-7';
 		} else {
 			$content_width = 'col-sm-12';
-			$content_left = 'col-sm-5 col-lg-5';
-			$content_right = 'col-sm-7 col-lg-7';
+			$content_left = 'col-sm-5 col-lg-6';
+			$content_right = 'col-sm-7 col-lg-6';
 		} ?>
 
 		<div id="content" class="<?php echo $content_width; ?> product_page"><?php echo $content_top; ?>
