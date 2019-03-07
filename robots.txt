@@ -38,6 +38,5 @@ User-agent: *
     Disallow: /*?av
     Disallow: /admin/
     Disallow: /system/
-    Disallow: /catalog/
 
     Sitemap: http://www.bulkins.com/index.php?route=feed/google_sitemap

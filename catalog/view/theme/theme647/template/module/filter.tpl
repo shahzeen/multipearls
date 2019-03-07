@@ -1,12 +1,11 @@
 <div id="filter-content">
 <div class="panel-group" id="accordion">
-<div class="panel panel-default">
 	<?php foreach ($filter_groups as $index=>$filter_group) { ?>
-	<div class="custom-panel-block">
+	<div class="panel panel-default custom-panel-block">
 	<div class="panel-heading">
 	<a href="#<?php echo $index; ?>" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"><?php echo $filter_group['name']; ?></a>
 	</div>
-	<div id="<?php echo $index; ?>" class="panel-collapse collapse in">
+	<div id="<?php echo $index; ?>" class="panel-collapse collapse">
     <div class="panel-body">
 			<div class="box-filter">
 				<div>
@@ -38,7 +37,6 @@
 	<?php } ?>
 	 <div class="panel-footer text-right">
 	<button type="button" id="button-filter" class="btn btn-filter"><?php echo $button_filter; ?></button>
-  </div>
   </div>
 </div>
 </div>

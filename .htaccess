@@ -17,6 +17,23 @@ Order deny,allow
 Deny from all
 </FilesMatch>
 
+# ------------- GTMatrix Suggested Changes --------------------
+<IfModule mod_headers.c>
+  <FilesMatch ".(js|css|xml|gz|html)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+# One year for image files
+<filesMatch ".(jpg|jpeg|png|gif|ico)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+# One month for css and js
+<filesMatch ".(css|js)$">
+Header set Cache-Control "max-age=2628000, public"
+</filesMatch>
+# ------------- GTMatrix Suggested Changes Ends here --------------------
+
 # SEO URL Settings
 RewriteEngine On
 # If your opencart installation does not run on the main web folder make sure you folder it does run in ie. / becomes /shop/ 
@@ -57,3 +74,4 @@ RewriteRule ^(.*)$ https://www.bulkins.com/$1 [L,R=301]
 
 # 6. set max time for input to be recieved. Uncomment this line if you have a lot of product options or are getting errors where forms are not saving all fields
 # php_value max_input_time 200
+
