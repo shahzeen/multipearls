@@ -701,7 +701,6 @@ border: 1px solid #eee;
 body {
   /* font: 12px "multipearls-font", sans-serif; */
   font-family: proxima-soft, sans-serif, monospace, "multipearls-font";
-  line-height: 1.7;
   background: #fff;
   color: #111;
   overflow-x: hidden;
@@ -1712,9 +1711,6 @@ background: #ffffff;
   margin-bottom: 30px;
   padding: 10px;
 }
-.product-thumb .image + .caption {
-  margin-top: 15px;
-}
 .product-thumb hr {
   margin-top: 25px;
   margin-bottom: 23px;
@@ -1744,6 +1740,8 @@ background: #ffffff;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  border: 1px solid rgba(0,47,52,.2);
+  text-align: center;
 }
 .product-thumb .aside {
   display: none;
@@ -1849,10 +1847,6 @@ bottom: 10px;
 .clearfix + .product-list .product-thumb {
   border-top: 1px solid #e0e0e0;
   padding-top: 30px;
-}
-.product-thumb{
-  border: 1px solid rgba(0,47,52,.2);
-  padding: 10px;
 }
 .product-thumb:hover{
   box-shadow: 0px 0px 14px 1px #f5f5f5;
@@ -2161,10 +2155,9 @@ html[lang="de"] .sale, html[lang="de"] .new_pr {
   .fancybox-prev {
     left: -30px;
   }
-  .product-rating-status span.fa-stack {
-    font-size: 4rem;
-    margin-right: 20px;
-}
+  .product_page-right{
+    background: #f3f3f3;
+  }
 .rating>.fa-stack:nth-child(5){
   margin-right: 3rem;
 }
@@ -4455,7 +4448,7 @@ aside #blog-search a:before {
 .rating-section .rating{
   text-transform: capitalize;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .product_tabs .tab-content {
     border: 2px solid #f5f5f5;
   }
@@ -4469,7 +4462,7 @@ aside #blog-search a:before {
     width: 80%;
   }
  .product_page-right{
-  background: #f3f3f3;
+    background: #f3f3f3;
     transform: skew(-20deg);
     -ms-transform: skew(-20deg); /* IE 9 */
     -webkit-transform: skew(-20deg); /* Safari */
@@ -4482,7 +4475,11 @@ aside #blog-search a:before {
     -webkit-transform: skew(20deg); /* Safari */
     transform: skew(20deg);
     padding-left: 9%;
-}
+  }
+.product-rating-status span.fa-stack {
+  font-size: 4rem;
+  margin-right: 20px;
+  }
   .product_page-right #product{
     padding-left: 25%;
   }

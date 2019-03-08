@@ -1,6 +1,6 @@
     <?php
 
-    class ControllerExtensionCommonSeoUrlCommonHome extends Controller {
+    class ControllerCommonSeoUrl extends Controller {
         public function index() {
             if ($this->config->get('config_seo_url') && !$this->config->get('seo_url_common_home_status')) {
                 $this->url->addRewrite($this);
