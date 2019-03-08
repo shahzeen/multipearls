@@ -701,7 +701,6 @@ border: 1px solid #eee;
 body {
   /* font: 12px "multipearls-font", sans-serif; */
   font-family: proxima-soft, sans-serif, monospace, "multipearls-font";
-  line-height: 1.7;
   background: #fff;
   color: #111;
   overflow-x: hidden;
@@ -1025,6 +1024,9 @@ header .nav i {
   html[lang="ru"] header .nav {
     font-size: 12px;
     line-height: 12px;
+  }
+  .container {
+    width: 100%;
   }
 }
 header .nav .toggle_cont li > a, header .nav .toggle_cont li > a i, header .nav .toggle_cont li > a span {
@@ -1748,9 +1750,10 @@ background: #ffffff;
   display: none;
 }
 .product-thumb .name {
-  font-size: 16px;
+  font-size: 14px;
   color: #111;
   text-transform: capitalize;
+  padding: 0 5px;
 }
 .product-thumb .name a{
   overflow: hidden;
@@ -1833,6 +1836,21 @@ bottom: 10px;
 @media (min-width: 768px) {
   .product-list .product-thumb .caption {
     margin-top: 0;
+  }
+  .owl-item .product-thumb .name{
+    position: absolute;
+    width: 100%;
+    bottom: 24px;
+    background: rgba(0,0,0,0.6);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+   .owl-item .product-thumb .name a{
+      color: #fff;
+      vertical-align: middle;
+  }
+  .single-category .owl-item .product-thumb .name{
+    bottom: 0;
   }
 }
 @media (min-width: 992px) {
@@ -3170,7 +3188,7 @@ input[type="checkbox"][name="agree"] + label:before, input[type="checkbox"][name
   border-top: 2px solid #000;
   letter-spacing: 2px;
   white-space: nowrap;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 /*================ Sub-menu lvl1  ===============*/

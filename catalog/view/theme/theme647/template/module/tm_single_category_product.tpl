@@ -419,22 +419,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 	<div class="name">
 		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
 	</div>
-	<?php if ($product['price']) { ?>
-	<div class="price">
-		<?php if (!$product['special']) { ?>
-		<?php echo $product['price']; ?>
-		<?php } else { ?>
-		<span
-		class="price-new"><?php echo $product['special']; ?></span>
-		<span
-		class="price-old"><?php echo $product['price']; ?></span>
-		<?php } ?>
-		<?php if ($product['tax']) { ?>
-		<span
-		class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-		<?php } ?>
-	</div>
-	<?php } ?>
 </div>
 </div>
 
@@ -800,22 +784,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 <div class="name">
 		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
 	</div>
-	<?php if ($product['price']) { ?>
-	<div class="price">
-		<?php if (!$product['special']) { ?>
-		<?php echo $product['price']; ?>
-		<?php } else { ?>
-		<span
-		class="price-new"><?php echo $product['special']; ?></span>
-		<span
-		class="price-old"><?php echo $product['price']; ?></span>
-		<?php } ?>
-		<?php if ($product['tax']) { ?>
-		<span
-		class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-		<?php } ?>
-	</div>
-	<?php } ?>
 </div>
 </div>
 <?php } ?>
@@ -1180,22 +1148,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 <div class="name">
 		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
 	</div>
-	<?php if ($product['price']) { ?>
-	<div class="price">
-		<?php if (!$product['special']) { ?>
-		<?php echo $product['price']; ?>
-		<?php } else { ?>
-		<span
-		class="price-new"><?php echo $product['special']; ?></span>
-		<span
-		class="price-old"><?php echo $product['price']; ?></span>
-		<?php } ?>
-		<?php if ($product['tax']) { ?>
-		<span
-		class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-		<?php } ?>
-	</div>
-	<?php } ?>
 </div>
 
 </div>
@@ -1560,22 +1512,6 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 <div class="name">
 		<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
 	</div>
-	<?php if ($product['price']) { ?>
-	<div class="price">
-		<?php if (!$product['special']) { ?>
-		<?php echo $product['price']; ?>
-		<?php } else { ?>
-		<span
-		class="price-new"><?php echo $product['special']; ?></span>
-		<span
-		class="price-old"><?php echo $product['price']; ?></span>
-		<?php } ?>
-		<?php if ($product['tax']) { ?>
-		<span
-		class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-		<?php } ?>
-	</div>
-	<?php } ?>
 </div>
 </div>
 <?php } ?>
