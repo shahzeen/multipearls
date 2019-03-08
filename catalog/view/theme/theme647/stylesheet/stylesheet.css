@@ -701,6 +701,7 @@ border: 1px solid #eee;
 body {
   /* font: 12px "multipearls-font", sans-serif; */
   font-family: proxima-soft, sans-serif, monospace, "multipearls-font";
+  line-height: 1.7;
   background: #fff;
   color: #111;
   overflow-x: hidden;

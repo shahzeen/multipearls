@@ -65,12 +65,9 @@
 		<script>
 			;
 			(function ($) {
-				
 				$(window).load(function () {
 					var o = $('.sf-menu');
-					o.superfish({
-						//speedOut: 'slow' 
-					});
+					o.superfish();
 					o.find('li a').each(function () {
 						if ($(location).attr('href').indexOf($(this).attr('href')) >= 0){
 							$(this).addClass('active');
