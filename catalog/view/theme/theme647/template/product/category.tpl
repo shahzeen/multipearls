@@ -353,7 +353,7 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </div>
 <?php } ?>
 <div class="image">
-	<a class="lazy" style="padding-bottom: <?php echo ($product['img-height']/$product['img-width']*100); ?>%"
+	<a style="padding-bottom: <?php echo ($product['img-height']/$product['img-width']*100); ?>%"
 		href="<?php echo $product['href']; ?>">
 		<img alt="<?php echo $product['name']; ?>"
 		title="<?php echo $product['name']; ?>"
