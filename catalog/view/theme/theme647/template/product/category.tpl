@@ -353,7 +353,7 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 </div>
 <?php } ?>
 <div class="image">
-	<a style="padding-bottom: <?php echo ($product['img-height']/$product['img-width']*100); ?>%"
+	<a class="lazy" style="padding-bottom: <?php echo ($product['img-height']/$product['img-width']*100); ?>%"
 		href="<?php echo $product['href']; ?>">
 		<img alt="<?php echo $product['name']; ?>"
 		title="<?php echo $product['name']; ?>"
@@ -371,7 +371,7 @@ onclick="cart.addPopup($(this),'<?php echo $product['product_id']; ?>');">
 		<?php if (!$product['special']) { ?>
 		<?php echo $product['price']; ?>
 		<?php } else { ?>
-		<span class="price-new"><?php echo $product['special']; ?>/ Sample</span> 
+		<span class="price-new"><?php echo $product['special']; ?></span> 
 		<span class="price-old"><?php echo $product['price']; ?></span>
 		<?php } ?>
 		<?php if ($product['tax']) { ?>
