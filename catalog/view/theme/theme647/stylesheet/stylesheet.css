@@ -1973,10 +1973,6 @@ section.top {
   font-size: 15px;
 }
 
-.rating>.fa-stack:nth-child(5), .related-products .rating>.fa-stack:nth-child(5) {
-  margin-right: 17px;
-}
-
 .product-list .product-thumb>.price, .product-list .product-thumb>.cart-button {
   display: none;
 }
@@ -2167,10 +2163,9 @@ html[lang="de"] .sale, html[lang="de"] .new_pr {
 .fa-stack {
   font-size: 25px;
   line-height: 24px;
-  width: 0;
+  width: 10px;
   height: 0;
   vertical-align: top;
-  margin-right: 10px;
 }
 
 .fa-stack i {
@@ -2364,7 +2359,7 @@ html[lang="de"] .sale, html[lang="de"] .new_pr {
   .product_page-right {
     background: #f3f3f3;
   }
-  .rating>.fa-stack:nth-child(5) {
+  .rating-section .rating>.fa-stack:nth-child(5) {
     margin-right: 3rem;
   }
   .product-reviews .fa-stack {
@@ -2494,7 +2489,7 @@ aside .row {
 
 .single-category .nav-tabs, .box_html h3 {
   border-bottom: none;
-  margin: 5rem 0;
+  margin: 5rem 0 1rem;
 }
 
 .single-category .nav-tabs>li {
@@ -4880,7 +4875,7 @@ aside #blog-search a:before {
   }
   .product-rating-status span.fa-stack {
     font-size: 4rem;
-    margin-right: 20px;
+    margin-right: 8px;
   }
   .product_page-right #product {
     padding-left: 25%;
@@ -5125,6 +5120,7 @@ aside #blog-search a:before {
   height: 50px;
   padding-top: 12px;
   text-align: center;
+  transition: ease all 0.1s;
 }
 
 #product .radio input[type="radio"]:checked+label {
