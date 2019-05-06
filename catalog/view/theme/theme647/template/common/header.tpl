@@ -98,7 +98,7 @@
 			<p id="gl_path" class="hidden"><?php echo $theme_path; ?></p>
 			<div id="page">
 				<header>
-					<div class="container">
+					<div class="container currency-container">
 						<?php echo $language; ?>
 						<?php echo $currency; ?>
 					</div>
